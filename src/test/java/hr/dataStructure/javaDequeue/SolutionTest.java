@@ -1,3 +1,14 @@
+/*
+ * HackerRank - Java - Data Structures - Java Dequeue
+ *
+ * @author: Manny egalli64@gmail.com
+ * @see:    https://thisthread.blogspot.com/2018/07/hackerrank-java-dequeue.html
+ *          https://www.hackerrank.com/challenges/java-dequeue/problem
+ * <p>
+ * n = total number of integers
+ * m = window size
+ * calculate the highest number of unique elements in any window
+ */
 package hr.dataStructure.javaDequeue;
 
 import org.junit.jupiter.api.Test;

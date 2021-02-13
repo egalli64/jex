@@ -2,10 +2,10 @@
  * HackerRank - Java - Data Structures - Java Dequeue
  *
  * @author: Manny egalli64@gmail.com
- * @see:    http://thisthread.blogspot.com/2018/07/hackerrank-java-dequeue.html
+ * @see:    https://thisthread.blogspot.com/2018/07/hackerrank-java-dequeue.html
  *          https://www.hackerrank.com/challenges/java-dequeue/problem
  * <p>
- * n = number of integers to be read
+ * n = total number of integers
  * m = window size
  * calculate the highest number of unique elements in any window
  */
