@@ -69,6 +69,6 @@ class SolutionTest {
     @Test
     void testBadLeap() {
         Solution.setGame(new int[] {0, 0, 0, 0, 0});
-        assertThrows(AssertionError.class, () -> Solution.canWin(42))
+        assertThrows(AssertionError.class, () -> Solution.canWin(42));
     }
 }
