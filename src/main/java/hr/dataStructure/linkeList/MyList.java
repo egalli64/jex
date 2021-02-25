@@ -1,5 +1,10 @@
 package hr.dataStructure.linkeList;
 
+import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Queue;
+import java.util.Set;
+
 public class MyList {
     static class Node {
         int data;
@@ -71,6 +76,32 @@ public class MyList {
             current.next = runner;
             current = runner;
         }
+    }
+
+    /**
+     * Based on
+     * Practice > Data Structures > Linked Lists > Find Merge Point of Two Lists
+     * https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem
+     *
+     * Given pointers to the head nodes of two linked lists that merge together at some point,
+     * find the node where the two lists merge
+     */
+    public int mergeNode(Node other) {
+        Set<Node> nodes = new HashSet<>();
+        Node current = head;
+        while(current != null) {
+            nodes.add(current);
+            current = current.next;
+        }
+
+        while(other != null) {
+            if(nodes.contains(other)) {
+                return other.data;
+            }
+            other = other.next;
+        }
+
+        throw new IllegalStateException("Can't find merge node");
     }
 
     @Override
