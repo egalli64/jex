@@ -32,22 +32,22 @@ public class Solution {
      * Unbalanced BST - Insert a node below the passed node (it could be null!)
      */
     public static Node insert(Node root, int data) {
-        if(root == null) {
+        if (root == null) {
             return new Node(data);
         }
 
         Node current = root;
 
-        for(;;) {
-            if(data < current.data) {
-                if(current.left == null) {
+        for (; ; ) {
+            if (data < current.data) {
+                if (current.left == null) {
                     current.left = new Node(data);
                     break;
                 } else {
                     current = current.left;
                 }
             } else {
-                if(current.right == null) {
+                if (current.right == null) {
                     current.right = new Node(data);
                     break;
                 } else {
@@ -57,6 +57,28 @@ public class Solution {
         }
 
         return root;
+    }
+
+    /*
+     * Practice > Data Structures > Trees > Tree: Huffman Decoding
+     * https://www.hackerrank.com/challenges/tree-huffman-decoding/problem
+     *
+     * Passed a string of 0/1 (left-right) and the relative Huffman tree
+     * generate and print the decoded word
+     * - the node definition should have a char data and an int frequency (not used by the code)
+     * - however I didn't test the code, just run it
+     */
+    void decode(String s, Node root) {
+        StringBuilder sb = new StringBuilder();
+        Node current = root;
+        for (char c : s.toCharArray()) {
+            current = c == '0' ? current.left : current.right;
+            if (current.data != '\0') {
+                sb.append(current.data);
+                current = root;
+            }
+        }
+        System.out.print(sb);
     }
 
     private static class Node {
