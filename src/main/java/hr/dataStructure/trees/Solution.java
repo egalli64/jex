@@ -37,7 +37,6 @@ public class Solution {
         }
 
         Node current = root;
-
         for (; ; ) {
             if (data < current.data) {
                 if (current.left == null) {
@@ -57,6 +56,26 @@ public class Solution {
         }
 
         return root;
+    }
+
+    /*
+     * Practice > Data Structures > Trees > Binary Search Tree : Lowest Common Ancestor
+     * https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem
+     *
+     * return the lowest common ancestor (LCA) of v1 and v2 in the passed BST
+     */
+    public static Node lca(Node root, int v1, int v2) {
+        while (root != null) {
+            if (root.data > v1 && root.data > v2) {
+                root = root.left;
+            } else if (root.data < v1 && root.data < v2) {
+                root = root.right;
+            } else {
+                return root;
+            }
+        }
+
+        throw new IllegalStateException();
     }
 
     /*
