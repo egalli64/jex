@@ -21,54 +21,54 @@ package hr.dataStructure.d1Array2;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
 
 class SolutionTest {
     @Test
     void testGiven1() {
         Solution.setGame(new int[] {0, 0, 0, 0, 0});
-        assertTrue(Solution.canWin(3));
+        assertThat(Solution.canWin(3)).isTrue();
     }
 
     @Test
     void testGiven2() {
         Solution.setGame(new int[] {0, 0, 0, 1, 1, 1});
-        assertTrue(Solution.canWin(5));
+        assertThat(Solution.canWin(5)).isTrue();
     }
 
     @Test
     void testGiven3() {
         Solution.setGame(new int[] {0, 0, 1, 1, 1, 0});
-        assertFalse(Solution.canWin(3));
+        assertThat(Solution.canWin(3)).isFalse();
     }
 
     @Test
     void testGiven4() {
         Solution.setGame(new int[] {0, 1, 0});
-        assertFalse(Solution.canWin(1));
+        assertThat(Solution.canWin(1)).isFalse();
     }
 
     @Test
     void testAlternate() {
         Solution.setGame(new int[] {0, 1, 0, 1});
-        assertTrue(Solution.canWin(2));
+        assertThat(Solution.canWin(2)).isTrue();
     }
 
     @Test
     void testBarrierOne() {
         Solution.setGame(new int[] {0, 1, 1, 0, 0, 1, 0, 0, 1});
-        assertTrue(Solution.canWin(4));
+        assertThat(Solution.canWin(4)).isTrue();
     }
 
     @Test
     void testBarrierTwo() {
         Solution.setGame(new int[] {0, 1, 0, 0, 0, 1, 0, 1, 1});
-        assertTrue(Solution.canWin(4));
+        assertThat(Solution.canWin(4)).isTrue();
     }
 
     @Test
     void testBadLeap() {
         Solution.setGame(new int[] {0, 0, 0, 0, 0});
-        assertThrows(AssertionError.class, () -> Solution.canWin(42));
+        assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> Solution.canWin(42));
     }
 }

@@ -5,13 +5,10 @@
  */
 package hr.dataStructure.arrays.arrayManipulation;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
 class SolutionTest {
-
     @Test
     void arrayManipulationProvided0() {
         int n = 5;
@@ -20,7 +17,7 @@ class SolutionTest {
         long actual = Solution.arrayManipulation(n, queries);
         long expected = 200;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -31,7 +28,7 @@ class SolutionTest {
         long actual = Solution.arrayManipulation(n, queries);
         long expected = 10;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -42,6 +39,6 @@ class SolutionTest {
         long actual = Solution.arrayManipulation(n, queries);
         long expected = 31;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

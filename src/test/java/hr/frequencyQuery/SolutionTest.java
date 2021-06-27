@@ -1,11 +1,10 @@
 package hr.frequencyQuery;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class SolutionTest {
     @Test
@@ -14,7 +13,7 @@ class SolutionTest {
         var actual = Solution.freqQuery(List.of(List.of(1, 5), List.of(1, 6), List.of(3, 2), List.of(1, 10),
                 List.of(1, 10), List.of(1, 6), List.of(2, 5), List.of(3, 2)));
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -23,7 +22,7 @@ class SolutionTest {
         var actual = Solution.freqQuery(List.of(List.of(1, 3), List.of(2, 3), List.of(3, 2), List.of(1, 4),
                 List.of(1, 5), List.of(1, 5), List.of(1, 4), List.of(3, 2), List.of(2, 4), List.of(3, 2)));
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -32,7 +31,7 @@ class SolutionTest {
         var actual = Solution.freqQuery(List.of( //
                 List.of(1, 42), List.of(3, 1), List.of(1, 42), List.of(3, 2), List.of(1, 42), List.of(3, 3)));
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -43,7 +42,7 @@ class SolutionTest {
                 List.of(2, 42), List.of(2, 42), List.of(2, 42), List.of(3, 3) //
         )); //
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -51,6 +50,6 @@ class SolutionTest {
         var expected = List.of(1);
         var actual = Solution.freqQuery(List.of(List.of(2, 42), List.of(1, 42), List.of(1, 42), List.of(3, 2)));
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

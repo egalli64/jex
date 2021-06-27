@@ -1,11 +1,7 @@
 package hr.dataStructure.trees.swapNodes;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
-import java.util.Arrays;
 
 class SolutionTest {
     @Test
@@ -15,7 +11,7 @@ class SolutionTest {
 
         int[][] expected = {{3, 1, 2}, {2, 1, 3}};
         int[][] actual = Solution.swapNodes(indices, queries);
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -31,7 +27,7 @@ class SolutionTest {
                 {9, 5, 14, 8, 2, 13, 7, 12, 4, 1, 3, 17, 11, 16, 6, 10, 15}
         };
         int[][] actual = Solution.swapNodes(indices, queries);
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -47,6 +43,6 @@ class SolutionTest {
                 {2, 6, 9, 4, 1, 3, 7, 5, 10, 8, 11}
         };
         int[][] actual = Solution.swapNodes(indices, queries);
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }
