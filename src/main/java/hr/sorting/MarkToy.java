@@ -3,7 +3,6 @@
  * Practice - Algorithms - Greedy - Mark and Toys
  *
  * https://www.hackerrank.com/challenges/mark-and-toys/problem
- * https://www.hackerrank.com/challenges/java-reflection-attributes/problem
  */
 package hr.sorting;
 
