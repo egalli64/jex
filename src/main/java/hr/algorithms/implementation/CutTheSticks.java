@@ -10,7 +10,6 @@ package hr.algorithms.implementation;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TreeMap;
 
 public class CutTheSticks {
     public static List<Integer> cutTheSticks(List<Integer> arr) {
