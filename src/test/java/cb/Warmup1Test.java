@@ -18,4 +18,9 @@ class Warmup1Test {
         assertThat(Warmup1.diff21(input)).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @CsvSource({"93,true", "90,true", "89,false"})
+    void nearHundredExamples(int input, boolean expected) {
+        assertThat(Warmup1.nearHundred(input)).isEqualTo(expected);
+    }
 }

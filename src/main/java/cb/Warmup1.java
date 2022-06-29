@@ -24,4 +24,14 @@ public class Warmup1 {
     public static int diff21(int n) {
         return n <= 21 ? 21 - n : 2 * (n - 21);
     }
+
+    /**
+     * codingbat.com/prob/p184004
+     *
+     * @param n an integer
+     * @return true if n distance to 100 or 200 is within 10
+     */
+    public static boolean nearHundred(int n) {
+        return n >= 90 && n <= 110 || n >= 190 && n <= 210;
+    }
 }
