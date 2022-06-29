@@ -11,4 +11,11 @@ class Warmup1Test {
     void sleepInExamples(boolean weekday, boolean vacation, boolean expected) {
         assertThat(Warmup1.sleepIn(weekday, vacation)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"19,2", "10,11", "21,0"})
+    void diff21Examples(int input, int expected) {
+        assertThat(Warmup1.diff21(input)).isEqualTo(expected);
+    }
+
 }
