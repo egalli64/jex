@@ -23,4 +23,23 @@ class Warmup1Test {
     void nearHundredExamples(int input, boolean expected) {
         assertThat(Warmup1.nearHundred(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"1,ktten", "0,itten", "4,kittn"})
+    void missingCharExamples(int input, String expected) {
+        assertThat(Warmup1.missingChar("kitten", input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"cat,tcatt", "Hello,oHelloo", "a,aaa"})
+    void backAroundExamples(String input, String expected) {
+        assertThat(Warmup1.backAround(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"hi there,true", "hi,true", "hello hi,false"})
+    void startHiExamples(String input, boolean expected) {
+        assertThat(Warmup1.startHi(input)).isEqualTo(expected);
+    }
+
 }

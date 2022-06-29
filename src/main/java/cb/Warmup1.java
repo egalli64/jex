@@ -34,4 +34,37 @@ public class Warmup1 {
     public static boolean nearHundred(int n) {
         return n >= 90 && n <= 110 || n >= 190 && n <= 210;
     }
+
+    /**
+     * codingbat.com/prob/p190570
+     *
+     * @param str a non-empty string
+     * @param n a valid index for the string
+     * @return a copy of the original string, less the char at n position
+     */
+    public static String missingChar(String str, int n) {
+        return str.substring(0, n) + str.substring(n+1);
+    }
+
+    /**
+     * codingbat.com/prob/p161642
+     *
+     * @param str a non-empty string
+     * @return a copy of the original string with the last char added at the front and back
+     */
+    public static String backAround(String str) {
+        String tag = str.substring(str.length() - 1);
+        return tag + str + tag;
+    }
+
+    /**
+     * codingbat.com/prob/p191022
+     *
+     * @param str a possibly empty string
+     * @return true if the string starts with "hi"
+     */
+    public static boolean startHi(String str) {
+        return str.startsWith("hi");
+    }
+
 }
