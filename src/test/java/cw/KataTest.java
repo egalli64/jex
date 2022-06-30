@@ -3,10 +3,7 @@ package cw;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class KataTest {
-
     @Test
     public void multiTableGiven1() {
         String actual = Kata.multiTable(5);
