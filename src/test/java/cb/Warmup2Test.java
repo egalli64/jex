@@ -18,4 +18,15 @@ class Warmup2Test {
         assertThat(Warmup2.stringTimes("Hi", input)).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @CsvSource({"axxbb,true", "axaxax,false", "xxxxx,true"})
+    void doubleXExamples(String input, boolean expected) {
+        assertThat(Warmup2.doubleX(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"hixxhi,1", "xaxxaxaxx,1", "axxxaaxx,2"})
+    void last2Examples(String input, int expected) {
+        assertThat(Warmup2.last2(input)).isEqualTo(expected);
+    }
 }
