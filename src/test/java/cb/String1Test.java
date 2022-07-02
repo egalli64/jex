@@ -23,4 +23,22 @@ class String1Test {
     void firstHalfExamples(String input, String expected) {
         assertThat(String1.firstHalf(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"Hello,There,ellohere", "java,code,avaode", "shotl,java,hotlava"})
+    void nonStartExamples(String left, String right, String expected) {
+        assertThat(String1.nonStart(left, right)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"Hello,true,H", "Hello,false,o", "oh,true,o"})
+    void theEndExamples(String s, boolean front, String expected) {
+        assertThat(String1.theEnd(s, front)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"oddly,true", "y,false", "oddy,false"})
+    void endsLyExamples(String s, Boolean expected) {
+        assertThat(String1.endsLy(s)).isEqualTo(expected);
+    }
 }

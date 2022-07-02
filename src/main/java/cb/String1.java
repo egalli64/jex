@@ -34,4 +34,37 @@ public class String1 {
     public static String firstHalf(String str) {
         return str.substring(0, str.length() / 2);
     }
+
+    /**
+     * codingbat.com/prob/p143825
+     *
+     * @param a a non-empty string
+     * @param b a non-empty string
+     * @return a concatenation of the two input strings, but their first char
+     */
+    public static String nonStart(String a, String b) {
+        return a.substring(1) + b.substring(1);
+    }
+
+    /**
+     * codingbat.com/prob/p162477
+     *
+     * @param str a non-empty string
+     * @param front true for begin, false for end
+     * @return a string containing just the first or last char from input
+     */
+    public static String theEnd(String str, boolean front) {
+        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
+    }
+
+    /**
+     * codingbat.com/prob/p103895
+     *
+     * @param str a possibly empty string
+     * @return true if it ends in "ly"
+     */
+    public static boolean endsLy(String str) {
+        int len = str.length();
+        return len > 1 && str.charAt(len - 2) == 'l' && str.charAt(len - 1) == 'y';
+    }
 }
