@@ -65,4 +65,24 @@ class Array1Test {
         assertThat(Array1.reverse3(input)).containsExactly(expected);
     }
 
+    @Test
+    void middleWayExample1() {
+        int[] left = {1, 2, 3};
+        int[] right = {4, 5, 6};
+        int[] expected = {2, 5};
+        assertThat(Array1.middleWay(left, right)).containsExactly(expected);
+    }
+
+    @Test
+    void no23Example1() {
+        int[] input = {4, 5};
+        assertThat(Array1.no23(input)).isTrue();
+    }
+
+    @Test
+    void fix23Example1() {
+        int[] input = {1, 2, 3};
+        int[] expected = {1, 2, 0};
+        assertThat(Array1.fix23(input)).containsExactly(expected);
+    }
 }

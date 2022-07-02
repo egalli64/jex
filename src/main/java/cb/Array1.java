@@ -34,4 +34,41 @@ public class Array1 {
     public static int[] reverse3(int[] nums) {
         return new int[]{nums[2], nums[1], nums[0]};
     }
+
+    /**
+     * codingbat.com/prob/p146449
+     *
+     * @param a an array sized 3
+     * @param b an array sized 3
+     * @return an array containing the central values from the input arrays
+     */
+    public static int[] middleWay(int[] a, int[] b) {
+        return new int[]{a[1], b[1]};
+    }
+
+    /**
+     * codingbat.com/prob/p175689
+     *
+     * @param nums an array sized 2
+     * @return true if no 2, 3 in it
+     */
+    public static boolean no23(int[] nums) {
+        return nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3;
+    }
+
+    /**
+     * codingbat.com/prob/p120347
+     *
+     * @param nums an array sized 3
+     * @return the changed array, if there is 2, 3 -> 2, 0
+     */
+    public static int[] fix23(int[] nums) {
+        for (int i = 0; i < 2; i++) {
+            if(nums[i] == 2 && nums[i+1] == 3) {
+                nums[i+1] = 0;
+                break;
+            }
+        }
+        return nums;
+    }
 }
