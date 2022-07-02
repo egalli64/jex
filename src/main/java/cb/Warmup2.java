@@ -65,4 +65,68 @@ public class Warmup2 {
         }
         return count;
     }
+
+    /**
+     * codingbat.com/prob/p136041
+     *
+     * @param nums a possibly empty array
+     * @return true if contains the sequence 1, 2, 3
+     */
+    public static boolean array123(int[] nums) {
+        int next = 1;
+        for (int num : nums) {
+            if (num == next) {
+                if (num == 3) {
+                    return true;
+                }
+                next += 1;
+            } else {
+                next = num == 1 ? 2 : 1;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * codingbat.com/prob/p121596
+     *
+     * @param str a possibly empty string
+     * @return a substring extracting char in position 0, 1, 4, ..., prev + 1, prev + 3, ...
+     */
+    public static String altPairs(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); ) {
+            result.append(str.charAt(i));
+            i += (i % 2 == 1) ? 3 : 1;
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p170221
+     *
+     * @param nums a possibly empty array
+     * @return true if it does not contain any chained triplet
+     */
+    public static boolean noTriples(int[] nums) {
+        if(nums.length < 3) {
+            return true;
+        }
+
+        int count = 1;
+        int triplet = nums[0];
+        for(int i = 1; i < nums.length; i++) {
+            if(nums[i] == triplet) {
+                count += 1;
+                if(count == 3) {
+                    return false;
+                }
+            } else {
+                count = 1;
+                triplet = nums[i];
+            }
+        }
+        return true;
+    }
 }

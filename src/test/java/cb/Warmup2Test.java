@@ -1,5 +1,6 @@
 package cb;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -29,4 +30,28 @@ class Warmup2Test {
     void last2Examples(String input, int expected) {
         assertThat(Warmup2.last2(input)).isEqualTo(expected);
     }
+
+    @Test
+    void array123Example1() {
+        int[] input = {1, 1, 2, 3, 1};
+        assertThat(Warmup2.array123(input)).isTrue();
+    }
+
+    @ParameterizedTest
+    @CsvSource({"kitten,kien", "Chocolate,Chole", "CodingHorror,Congrr"})
+    void altPairsExamples(String input, String expected) {
+        assertThat(Warmup2.altPairs(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void array123Empty() {
+        assertThat(Warmup2.altPairs("")).isEqualTo("");
+    }
+
+    @Test
+    void noTriplesExample1() {
+        int[] input = {1, 1, 2, 2, 1};
+        assertThat(Warmup2.noTriples(input)).isTrue();
+    }
+
 }
