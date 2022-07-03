@@ -3,7 +3,12 @@
  */
 package cb;
 
+import java.util.Arrays;
+
 public class Logic2 {
+    private Logic2() {
+    }
+
     /**
      * codingbat.com/prob/p183562
      *
@@ -54,5 +59,64 @@ public class Logic2 {
         }
 
         return Math.max(a, b);
+    }
+
+    /**
+     * codingbat.com/prob/p148972
+     * 
+     * @param a a value
+     * @param b a value
+     * @param c a value
+     * @return the sum of the passed value, if not duplicated
+     */
+    public static int loneSum(int a, int b, int c) {
+        int sum = 0;
+        if(a != b && a != c) {
+            sum += a;
+        }
+        if(b != a && b != c) {
+            sum += b;
+        }
+        if(c != a && c != b) {
+            sum += c;
+        }
+        return sum;
+    }
+
+    /**
+     * codingbat.com/prob/p186753
+     * 
+     * @param a a value
+     * @param b a value
+     * @param c a value
+     * @return sum each value rounded to multiple of 10
+     */
+    public static int roundSum(int a, int b, int c) {
+        return round10(a) + round10(b) + round10(c);
+    }
+
+    /**
+     * Helper for {@linkplain Logic2#roundSum(int, int, int)}
+     * 
+     * @param num a value
+     * @return the value rounded to multiple of 10
+     */
+    private static int round10(int num) {
+        int last = num % 10;
+        return last < 5 ? num - last : num + 10 - last;
+    }
+
+    /**
+     * codingbat.com/prob/p198700
+     * 
+     * @param a an int
+     * @param b an int
+     * @param c an int
+     * @return true if the three values are evenly spaced (but not necessary ordered)
+     */
+    public static boolean evenlySpaced(int a, int b, int c) {
+        int[] values = {a,b,c};
+        Arrays.sort(values);
+        return values[1] - values[0] == values[2] - values[1];
     }
 }
