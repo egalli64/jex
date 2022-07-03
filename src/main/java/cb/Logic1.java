@@ -45,4 +45,44 @@ public class Logic1 {
     public static boolean love6(int a, int b) {
         return a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6;
     }
+
+    /**
+     * codingbat.com/prob/p118290
+     * 
+     * @param n a non-negative number
+     * @return if n is 1 or 2 more than a multiple of 20
+     */
+    public static boolean more20(int n) {
+        int checked = n % 20;
+        return checked == 1 || checked == 2;
+    }
+
+    /**
+     * codingbat.com/prob/p193613
+     * 
+     * @param num a non-negative number
+     * @return true if it is within 2 of a multiple of 10
+     */
+    public static boolean nearTen(int num) {
+        int checked = num % 10;
+        return checked > 7 || checked < 3;
+    }
+
+    /**
+     * codingbat.com/prob/p177181
+     * 
+     * @param tea   a non negative value
+     * @param candy a non negative value
+     * @return 1 if both are at least 5; 2 if one is at least the double of the other; 0 if either is less than 5
+     */
+    public static int teaParty(int tea, int candy) {
+        if (tea < 5 || candy < 5) {
+            return 0;
+        }
+        if (tea >= candy * 2 || candy >= tea * 2) {
+            return 2;
+        }
+
+        return 1;
+    }
 }
