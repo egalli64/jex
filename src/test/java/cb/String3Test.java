@@ -23,4 +23,23 @@ class String3Test {
     void sameEndsExamples(String input, String expected) {
         assertThat(String3.sameEnds(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"Hello there,llo,He there", "Hello there,e,Hllo thr", "Hello there,x,Hello there"})
+    void withoutStringExamples(String base, String remove, String expected) {
+        assertThat(String3.withoutString(base, remove)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"abcXXXabc,1", "xxxabyyyycd,3", "a,0"})
+    void countTripleExamples(String s, int expected) {
+        assertThat(String3.countTriple(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"abXYZba,ab", "abca,a", "aba,aba", "123and then 321,123"})
+    void mirrorEndsExamples(String s, String expected) {
+        assertThat(String3.mirrorEnds(s)).isEqualTo(expected);
+    }
+
 }

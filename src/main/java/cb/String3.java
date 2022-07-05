@@ -80,4 +80,49 @@ public class String3 {
 
         return result.toString();
     }
+
+    /**
+     * codingbat.com/prob/p192570
+     *
+     * @param base a string
+     * @param remove a non-empty string to be removed
+     * @return a copy of base without any remove (case-insensitive!) in it
+     */
+    public static String withoutString(String base, String remove) {
+        return base.replaceAll("(?i)" + remove, "");
+    }
+
+    /**
+     * codingbat.com/prob/p195714
+     *
+     * @param str a string
+     * @return how many (possibly overlapping) same char triplet are in the string
+     */
+    public static int countTriple(String str) {
+        int result = 0;
+
+        for (int i = 0; i < str.length() - 2; i++) {
+            if(str.charAt(i) == str.charAt(i+1) && str.charAt(i) == str.charAt(i+2)) {
+                result += 1;
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p139411
+     *
+     * @param string a string
+     * @return the longest palindromic section of the string
+     */
+    public static String mirrorEnds(String string) {
+        int i = 0;
+        for(int j = string.length() - 1; i < j; i++, j--) {
+            if(string.charAt(i) != string.charAt(j)) {
+                break;
+            }
+        }
+        return i == string.length() / 2 ? string : string.substring(0, i);
+    }
 }
