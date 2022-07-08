@@ -75,4 +75,32 @@ class Array3Test {
         int[] expected = {1, 1, 2};
         assertThat(Array3.seriesUp(input)).containsExactly(expected);
     }
+
+    @Test
+    void fix34Example1() {
+        int[] input = {1, 3, 1, 4};
+        int[] expected = {1, 3, 4, 1};
+        assertThat(Array3.fix34(input)).containsExactly(expected);
+    }
+
+    @Test
+    void fix34Mixed() {
+        int[] input = {5, 3, 5, 4, 5, 4, 5, 4, 3, 5, 3, 5};
+        int[] expected = {5, 3, 4, 5, 5, 5, 5, 5, 3, 4, 3, 4};
+        assertThat(Array3.fix34(input)).containsExactly(expected);
+    }
+
+    @Test
+    void linearInExample1() {
+        int[] outer = {1, 2, 4, 6};
+        int[] inner = {2, 4};
+        assertThat(Array3.linearIn(outer, inner)).isTrue();
+    }
+
+    @Test
+    void maxMirrorExample1() {
+        int[] input = {1, 2, 3, 8, 9, 3, 2, 1};
+        int expected = 3;
+        assertThat(Array3.maxMirror(input)).isEqualTo(expected);
+    }
 }

@@ -68,4 +68,74 @@ public class Array3 {
 
         return result;
     }
+
+    /**
+     * codingbat.com/prob/p159339
+     *
+     * @param nums contains the same number of 3 and 4
+     * @return 3 are in fixed position, 4 should follow
+     */
+    public static int[] fix34(int[] nums) {
+        int fourPos = -1;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 3) {
+                i += 1;
+                for (int j = fourPos + 1; j < nums.length; j++) {
+                    if (nums[j] == 4) {
+                        nums[j] = nums[i];
+                        nums[i] = 4;
+                        fourPos = j;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p134022
+     *
+     * @param outer a "container" sorted array
+     * @param inner a "contained" sorted array
+     * @return true if inner is actually in outer
+     */
+    public static boolean linearIn(int[] outer, int[] inner) {
+        int i = 0;
+        for (int j = 0; i < inner.length && j < outer.length; ) {
+            if (inner[i] > outer[j]) {
+                j += 1;
+            } else if (inner[i] != outer[j]) {
+                return false;
+            } else {
+                i += 1;
+            }
+        }
+        return i == inner.length;
+    }
+
+    /**
+     * codingbat.com/prob/p196409
+     *
+     * @param nums an array
+     * @return max count of "mirrored" elements
+     */
+    public static int maxMirror(int[] nums) {
+        int result = 0;
+
+        for (int left = 0; left < nums.length; left++) {
+            for (int right = nums.length - 1; right > -1; right--) {
+                int current = 0;
+
+                for (int i = left, j = right; i < nums.length && j > -1 && nums[i] == nums[j]; i++, j--) {
+                    current += 1;
+                }
+
+                result = Math.max(result, current);
+            }
+        }
+
+        return result;
+    }
 }
