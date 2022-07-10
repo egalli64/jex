@@ -1,6 +1,8 @@
 package cb;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.List;
 
@@ -68,5 +70,25 @@ class AP1Test {
         int forbiddenLen = 4;
         List<String> expected = List.of("a", "bb", "b", "ccc");
         assertThat(AP1.wordsWithoutList(input, forbiddenLen)).containsExactlyElementsOf(expected);
+    }
+
+    @Test
+    void scores100Example1() {
+        int[] input = {1, 100, 100};
+        assertThat(AP1.scores100(input)).isTrue();
+    }
+
+    @Test
+    void wordsCountExample1() {
+        String[] input = {"a", "bb", "b", "ccc"};
+        int len = 1;
+        int expected = 2;
+        assertThat(AP1.wordsCount(input, len)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"10,true", "22,false", "220,false"})
+    void hasOneExamples(int number, boolean expected) {
+        assertThat(AP1.hasOne(number)).isEqualTo(expected);
     }
 }

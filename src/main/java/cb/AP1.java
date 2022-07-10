@@ -67,4 +67,51 @@ public class AP1 {
         }
         return result;
     }
+
+    /**
+     * codingbat.com/prob/p179487
+     *
+     * @param scores an array sized 2+
+     * @return if there is at least a couple of 100 next to each other
+     */
+    public static boolean scores100(int[] scores) {
+        for (int i = 0; i < scores.length - 1; i++) {
+            if (scores[i] == 100 && scores[i + 1] == 100) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * codingbat.com/prob/p124620
+     *
+     * @param words an array
+     * @param len   a string length
+     * @return how may string of the given length are in the input array
+     */
+    public static int wordsCount(String[] words, int len) {
+        int count = 0;
+        for (String word : words) {
+            if (word.length() == len) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * codingbat.com/prob/p191212
+     *
+     * @param n a positive number
+     * @return true if it contains the cipher 1
+     */
+    public static boolean hasOne(int n) {
+        for (; n > 0; n /= 10) {
+            if (n % 10 == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
