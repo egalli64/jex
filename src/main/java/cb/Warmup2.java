@@ -7,8 +7,10 @@ public class Warmup2 {
     /**
      * codingbat.com/prob/p142270
      *
-     * <p>Java 11 is currently _not_ supported by CodingBat
-     * <p>For a pre-11 solution see {@linkplain Warmup2#stringTimes(String, int)}
+     * <p>
+     * Java 11 is currently _not_ supported by CodingBat
+     * <p>
+     * For a pre-11 solution see {@linkplain Warmup2#stringTimes(String, int)}
      *
      * @param str a possibly empty string
      * @param n   multiplier
@@ -21,7 +23,8 @@ public class Warmup2 {
     /**
      * codingbat.com/prob/p142270
      *
-     * <p>For a Java 11 solution see {@linkplain Warmup2#stringTimes11(String, int)}
+     * <p>
+     * For a Java 11 solution see {@linkplain Warmup2#stringTimes11(String, int)}
      *
      * @param str a possibly empty string
      * @param n   multiplier
@@ -60,7 +63,7 @@ public class Warmup2 {
         final int end = str.length() - 2;
         String tag = str.substring(end);
         int count = 0;
-        for (int pos = -1; (pos = str.indexOf(tag, pos + 1)) < end; ) {
+        for (int pos = -1; (pos = str.indexOf(tag, pos + 1)) < end;) {
             count += 1;
         }
         return count;
@@ -95,7 +98,7 @@ public class Warmup2 {
      */
     public static String altPairs(String str) {
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < str.length(); ) {
+        for (int i = 0; i < str.length();) {
             result.append(str.charAt(i));
             i += (i % 2 == 1) ? 3 : 1;
         }
@@ -110,16 +113,16 @@ public class Warmup2 {
      * @return true if it does not contain any chained triplet
      */
     public static boolean noTriples(int[] nums) {
-        if(nums.length < 3) {
+        if (nums.length < 3) {
             return true;
         }
 
         int count = 1;
         int triplet = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            if(nums[i] == triplet) {
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == triplet) {
                 count += 1;
-                if(count == 3) {
+                if (count == 3) {
                     return false;
                 }
             } else {
@@ -128,5 +131,34 @@ public class Warmup2 {
             }
         }
         return true;
+    }
+
+    /**
+     * codingbat.com/prob/p101475
+     * 
+     * @param str a string
+     * @param n   a non negative number
+     * @return n times the first 3 chars (or less)
+     */
+    public static String frontTimes(String str, int n) {
+        int len = str.length() < 3 ? str.length() : 3;
+        String base = str.substring(0, len);
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            result.append(base);
+        }
+        return result.toString();
+    }
+
+    /**
+     * Solution currently not supported by CodingBat (Java 11 required)
+     * 
+     * @param str a string
+     * @param n   a non negative number
+     * @return n times the first 3 chars (or less)
+     */
+    public static String frontTimes11(String s, int n) {
+        return s.substring(0, s.length() < 3 ? s.length() : 3).repeat(n);
     }
 }
