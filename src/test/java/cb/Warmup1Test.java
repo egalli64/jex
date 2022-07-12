@@ -42,4 +42,21 @@ class Warmup1Test {
         assertThat(Warmup1.startHi(input)).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @CsvSource({"13,20,10,true", "20,19,10,true", "20,10,13,true"})
+    void hasTeenExamples(int first, int second, int third, boolean expected) {
+        assertThat(Warmup1.hasTeen(first, second, third)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"mix snacks,true", "pix snacks,true", "piz snacks,false"})
+    void mixStartExamples(String input, boolean expected) {
+        assertThat(Warmup1.mixStart(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"8,13,8", "13,8,8", "13,7,0"})
+    void close10Examples(int first, int second, int expected) {
+        assertThat(Warmup1.close10(first, second)).isEqualTo(expected);
+    }
 }

@@ -7,7 +7,7 @@ public class Warmup1 {
     /**
      * codingbat.com/prob/p187868
      *
-     * @param weekday true from Monday to Friday
+     * @param weekday  true from Monday to Friday
      * @param vacation true if it is a day off
      * @return true if not a weekday or in vacation
      */
@@ -39,11 +39,11 @@ public class Warmup1 {
      * codingbat.com/prob/p190570
      *
      * @param str a non-empty string
-     * @param n a valid index for the string
+     * @param n   a valid index for the string
      * @return a copy of the original string, less the char at n position
      */
     public static String missingChar(String str, int n) {
-        return str.substring(0, n) + str.substring(n+1);
+        return str.substring(0, n) + str.substring(n + 1);
     }
 
     /**
@@ -67,4 +67,52 @@ public class Warmup1 {
         return str.startsWith("hi");
     }
 
+    /**
+     * codingbat.com/prob/p178986
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return true if an input value (or more) are in [13..19]
+     */
+    public static boolean hasTeen(int a, int b, int c) {
+        return isTeen(a) || isTeen(b) || isTeen(c);
+    }
+
+    /**
+     * Helper for {@linkplain Warmup1#hasTeen(int, int, int)}
+     * 
+     * @param value a value
+     * @return true if the input value is in [13..19]
+     */
+    private static boolean isTeen(int value) {
+        return value > 12 && value < 20;
+    }
+
+    /**
+     * codingbat.com/prob/p151713
+     * 
+     * @param str a string
+     * @return true if it begins by "?ix"
+     */
+    public static boolean mixStart(String str) {
+        return str.length() > 2 && str.charAt(1) == 'i' && str.charAt(2) == 'x';
+    }
+
+    /**
+     * codingbat.com/prob/p172021
+     * 
+     * @param a first value
+     * @param b second value
+     * @return the nearest to 10, or 0 for a tie
+     */
+    public static int close10(int a, int b) {
+        int distA = Math.abs(a - 10);
+        int distB = Math.abs(b - 10);
+
+        if (distA == distB) {
+            return 0;
+        }
+        return distA < distB ? a : b;
+    }
 }
