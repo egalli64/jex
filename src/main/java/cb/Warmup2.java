@@ -161,4 +161,35 @@ public class Warmup2 {
     public static String frontTimes11(String s, int n) {
         return s.substring(0, s.length() < 3 ? s.length() : 3).repeat(n);
     }
+
+    /**
+     * codingbat.com/prob/p165666
+     * 
+     * @param str a string
+     * @return copy of input string stripped of chars in odd position
+     */
+    public static String stringBits(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += 2) {
+            result.append(str.charAt(i));
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p184031
+     * 
+     * @param nums an array
+     * @return the number of 9 in it
+     */
+    public static int arrayCount9(int[] nums) {
+        int counter = 0;
+        for (int i : nums) {
+            if (i == 9) {
+                counter += 1;
+            }
+        }
+        return counter;
+    }
 }
