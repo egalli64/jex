@@ -1,5 +1,6 @@
 package cb;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -41,4 +42,22 @@ class String1Test {
     void endsLyExamples(String s, Boolean expected) {
         assertThat(String1.endsLy(s)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"Candy,and", "and,and", "solving,lvi"})
+    void middleThreeExamples(String s, String expected) {
+        assertThat(String1.middleThree(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"last,chars,ls", "yo,java,ya"})
+    void lastCharsExamples(String left, String right, String expected) {
+        assertThat(String1.lastChars(left, right)).isEqualTo(expected);
+    }
+
+    @Test
+    void lastCharsEmptyRight() {
+        assertThat(String1.lastChars("hi", "")).isEqualTo("h@");
+    }
+
 }

@@ -49,7 +49,7 @@ public class String1 {
     /**
      * codingbat.com/prob/p162477
      *
-     * @param str a non-empty string
+     * @param str   a non-empty string
      * @param front true for begin, false for end
      * @return a string containing just the first or last char from input
      */
@@ -66,5 +66,29 @@ public class String1 {
     public static boolean endsLy(String str) {
         int len = str.length();
         return len > 1 && str.charAt(len - 2) == 'l' && str.charAt(len - 1) == 'y';
+    }
+
+    /**
+     * codingbat.com/prob/p115863
+     * 
+     * @param str a string of odd length, at least 3
+     * @return the three central chars as string
+     */
+    public static String middleThree(String str) {
+        int begin = str.length() / 2 - 1;
+        return str.substring(begin, begin + 3);
+    }
+    
+    /**
+     * 
+     * @param a first string, possibly empty
+     * @param b second string, possibly empty
+     * @return two char string, first of a + last of b (@ if missing)
+     */
+    public static String lastChars(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        result.append(a.isEmpty() ? '@' : a.charAt(0));
+        result.append(b.isEmpty() ? '@' : b.charAt(b.length() - 1));        
+        return result.toString();
     }
 }
