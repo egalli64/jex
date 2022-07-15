@@ -1,10 +1,9 @@
 package cb;
 
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 class String1Test {
     @ParameterizedTest
@@ -50,24 +49,14 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"last,chars,ls", "yo,java,ya"})
+    @CsvSource({"last,chars,ls", "yo,java,ya", "hi,'',h@"})
     void lastCharsExamples(String left, String right, String expected) {
         assertThat(String1.lastChars(left, right)).isEqualTo(expected);
     }
 
-    @Test
-    void lastCharsEmptyRight() {
-        assertThat(String1.lastChars("hi", "")).isEqualTo("h@");
-    }
-
     @ParameterizedTest
-    @CsvSource({"redxx,red", "blueTimes,blue"})
+    @CsvSource({"redxx,red", "blueTimes,blue", "xxred,''"})
     void seeColorExamples(String input, String expected) {
         assertThat(String1.seeColor(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void seeColorNotSeen() {
-        assertThat(String1.seeColor("xxred")).isEmpty();
     }
 }
