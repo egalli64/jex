@@ -78,7 +78,7 @@ public class String1 {
         int begin = str.length() / 2 - 1;
         return str.substring(begin, begin + 3);
     }
-    
+
     /**
      * 
      * @param a first string, possibly empty
@@ -88,7 +88,23 @@ public class String1 {
     public static String lastChars(String a, String b) {
         StringBuilder result = new StringBuilder();
         result.append(a.isEmpty() ? '@' : a.charAt(0));
-        result.append(b.isEmpty() ? '@' : b.charAt(b.length() - 1));        
+        result.append(b.isEmpty() ? '@' : b.charAt(b.length() - 1));
         return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p199216
+     * 
+     * @param str a possibly empty string
+     * @return "red", "blue", or "", accordingly to the starting tag
+     */
+    public static String seeColor(String str) {
+        String[] tags = { "red", "blue" };
+        for (String tag : tags) {
+            if (str.startsWith(tag)) {
+                return tag;
+            }
+        }
+        return "";
     }
 }

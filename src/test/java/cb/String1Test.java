@@ -60,4 +60,14 @@ class String1Test {
         assertThat(String1.lastChars("hi", "")).isEqualTo("h@");
     }
 
+    @ParameterizedTest
+    @CsvSource({"redxx,red", "blueTimes,blue"})
+    void seeColorExamples(String input, String expected) {
+        assertThat(String1.seeColor(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void seeColorNotSeen() {
+        assertThat(String1.seeColor("xxred")).isEmpty();
+    }
 }
