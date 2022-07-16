@@ -85,4 +85,48 @@ public class Logic1 {
 
         return 1;
     }
+
+    /**
+     * codingbat.com/prob/p113261
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return true if a value is the sum of the other two ones
+     */
+    public static boolean twoAsOne(int a, int b, int c) {
+        return a == b + c || b == a + c || c == a + b;
+    }
+
+    /**
+     * codingbat.com/prob/p169213
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return true if at least two values have the same last decimal cipher
+     */
+    public static boolean lastDigit(int a, int b, int c) {
+        a %= 10;
+        b %= 10;
+        c %= 10;
+        return a == b || b == c || c == a;
+    }
+
+    /**
+     * codingbat.com/prob/p115384
+     * 
+     * @param a first value
+     * @param b second value
+     * @return 0, the smaller, the bigger, in case:
+     *         <li>they are equal,
+     *         <li>they are equal modulo 5
+     *         <li>otherwise
+     */
+    public static int maxMod5(int a, int b) {
+        if (a == b) {
+            return 0;
+        }
+        return a % 5 == b % 5 ? Math.min(a, b) : Math.max(a, b);
+    }
 }

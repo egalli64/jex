@@ -41,4 +41,23 @@ class Logic1Test {
     void teaPartyExamples(int tea, int candy, int expected) {
         assertThat(Logic1.teaParty(tea, candy)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1, 2, 3, true", "3, 1, 2, true", "3, 2, 2, false" })
+    void twoAsOneExamples(int a, int b, int c, boolean expected) {
+        assertThat(Logic1.twoAsOne(a, b, c)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "23, 19, 13, true", "23, 19, 12, false", "23, 19, 3, true" })
+    void lastDigitExamples(int a, int b, int c, boolean expected) {
+        assertThat(Logic1.lastDigit(a, b, c)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "2,3,3", "6,2,6", "3,2,3" })
+    void maxMod5Examples(int a, int b, int expected) {
+        assertThat(Logic1.maxMod5(a, b)).isEqualTo(expected);
+    }
+
 }
