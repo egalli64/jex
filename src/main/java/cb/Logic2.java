@@ -71,13 +71,13 @@ public class Logic2 {
      */
     public static int loneSum(int a, int b, int c) {
         int sum = 0;
-        if(a != b && a != c) {
+        if (a != b && a != c) {
             sum += a;
         }
-        if(b != a && b != c) {
+        if (b != a && b != c) {
             sum += b;
         }
-        if(c != a && c != b) {
+        if (c != a && c != b) {
             sum += c;
         }
         return sum;
@@ -115,8 +115,79 @@ public class Logic2 {
      * @return true if the three values are evenly spaced (but not necessary ordered)
      */
     public static boolean evenlySpaced(int a, int b, int c) {
-        int[] values = {a,b,c};
+        int[] values = { a, b, c };
         Arrays.sort(values);
         return values[1] - values[0] == values[2] - values[1];
+    }
+
+    /**
+     * codingbat.com/prob/p130788
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return sum, but 13 and follower do not count
+     */
+    public static int luckySum(int a, int b, int c) {
+        boolean skip = false;
+        int sum = 0;
+
+        if (a == 13) {
+            skip = true;
+        } else {
+            sum += a;
+        }
+
+        if (b == 13) {
+            skip = true;
+        } else if (!skip) {
+            sum += b;
+            skip = false;
+        }
+
+        if (c != 13 && !skip) {
+            sum += c;
+        }
+
+        return sum;
+    }
+
+    /**
+     * codingbat.com/prob/p138990
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return true if, considering b and c,
+     *         <li>one is close (<2) to a
+     *         <li>the other is far (>1) to both the others
+     */
+    public static boolean closeFar(int a, int b, int c) {
+        return close(b, a) && far(c, a, b) || close(c, a) && far(b, a, c);
+    }
+
+    private static boolean close(int checked, int a) {
+        return Math.abs(checked - a) < 2;
+    }
+
+    private static boolean far(int checked, int first, int second) {
+        return Math.abs(checked - first) > 1 && Math.abs(checked - second) > 1;
+    }
+
+    /**
+     * codingbat.com/prob/p191363
+     * 
+     * @param small number of chunks sized one
+     * @param big   number of chunks sized five
+     * @param goal  the target
+     * @return how many small chunk are used (big first), or -1
+     */
+    public static int makeChocolate(int small, int big, int goal) {
+        while (goal >= 5 && big > 0) {
+            goal -= 5;
+            big -= 1;
+        }
+
+        return (small >= goal) ? Math.min(small, goal) : -1;
     }
 }
