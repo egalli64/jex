@@ -32,7 +32,7 @@ public class Array1 {
      * @return a reversed copy of the input array
      */
     public static int[] reverse3(int[] nums) {
-        return new int[]{nums[2], nums[1], nums[0]};
+        return new int[] { nums[2], nums[1], nums[0] };
     }
 
     /**
@@ -43,7 +43,7 @@ public class Array1 {
      * @return an array containing the central values from the input arrays
      */
     public static int[] middleWay(int[] a, int[] b) {
-        return new int[]{a[1], b[1]};
+        return new int[] { a[1], b[1] };
     }
 
     /**
@@ -64,11 +64,52 @@ public class Array1 {
      */
     public static int[] fix23(int[] nums) {
         for (int i = 0; i < 2; i++) {
-            if(nums[i] == 2 && nums[i+1] == 3) {
-                nums[i+1] = 0;
+            if (nums[i] == 2 && nums[i + 1] == 3) {
+                nums[i + 1] = 0;
                 break;
             }
         }
         return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p199519
+     * 
+     * @param nums an array of ints of even length, at least 2
+     * @return a new array containing only the middle two elements
+     */
+    public static int[] makeMiddle(int[] nums) {
+        int middle = nums.length / 2;
+        return new int[] { nums[middle - 1], nums[middle] };
+    }
+
+    /**
+     * codingbat.com/prob/p155713
+     * 
+     * @param nums an array of ints of odd length, at least 3
+     * @return a new array containing only the middle three elements
+     */
+    public static int[] midThree(int[] nums) {
+        int middle = nums.length / 2;
+        return new int[] { nums[middle - 1], nums[middle], nums[middle + 1] };
+    }
+
+    /**
+     * codingbat.com/prob/p197308
+     * 
+     * @param nums an array
+     * @return true if 1 followed by 3 in the first / last two position
+     */
+    public static boolean unlucky1(int[] nums) {
+        if (nums.length > 1 && nums[0] == 1 && nums[1] == 3) {
+            return true;
+        }
+
+        final int last = nums.length - 1;
+        if (nums.length > 2 && (nums[1] == 1 && nums[2] == 3 || nums[last - 1] == 1 && nums[last] == 3)) {
+            return true;
+        }
+
+        return false;
     }
 }
