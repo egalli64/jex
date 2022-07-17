@@ -115,4 +115,90 @@ public class Warmup1 {
         }
         return distA < distB ? a : b;
     }
+
+    /**
+     * codingbat.com/prob/p173784
+     * 
+     * @param str a string
+     * @return true if it contains [1..3] 'e'
+     */
+    public static boolean stringE(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e') {
+                count += 1;
+            }
+        }
+        return count > 0 && count < 4;
+    }
+
+    /**
+     * codingbat.com/prob/p196441
+     * 
+     * @param str a non-empty string
+     * @param n   1 or more
+     * @return a string with chars in position 0, and then every Nth char
+     */
+    public static String everyNth(String str, int n) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += n) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p181646
+     * 
+     * @param aSmile first monkey smiling
+     * @param bSmile second monkey smiling
+     * @return true if both or neither are smiling
+     */
+    public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+        return !(aSmile ^ bSmile);
+    }
+
+    /**
+     * codingbat.com/prob/p140449
+     * 
+     * @param talking parrot state
+     * @param hour    in [0..23]
+     * @return true if talking before 7 or after 20
+     */
+    public static boolean parrotTrouble(boolean talking, int hour) {
+        return talking && (hour < 7 || hour > 20);
+    }
+
+    /**
+     * codingbat.com/prob/p159227
+     * 
+     * @param a        first value
+     * @param b        second value
+     * @param negative flag
+     * @return true
+     *         <li>if one is negative and the other positive
+     *         <li>both are negative and the flag is true
+     */
+    public static boolean posNeg(int a, int b, boolean negative) {
+        if (!negative) {
+            return (a >= 0 && b < 0) || (a < 0 && b >= 0);
+        } else {
+            return a < 0 && b < 0;
+        }
+    }
+
+    /**
+     * codingbat.com/prob/p123384
+     * 
+     * @param str a possibly empty string
+     * @return swap first / last char
+     */
+    public static String frontBack(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+
+        final int last = str.length() - 1;
+        return str.substring(last) + str.substring(1, last) + str.charAt(0);
+    }
 }
