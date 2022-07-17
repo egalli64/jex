@@ -107,4 +107,105 @@ public class String1 {
         }
         return "";
     }
+
+    /**
+     * codingbat.com/prob/p172063
+     * 
+     * @param str a possibly empty string
+     * @return the first two chars (if available) times 3
+     */
+    public static String extraFront(String str) {
+        int end = Math.min(str.length(), 2);
+        String tag = str.substring(0, end);
+        StringBuilder result = new StringBuilder(tag);
+        for (int i = 0; i < 2; i++) {
+            result.append(tag);
+        }
+        return result.toString();
+    }
+
+    /**
+     * Java 11 currently not supported by Coding Bat
+     * 
+     * @param str a possibly empty string
+     * @return the first two chars (if available) times 3
+     */
+    public static String extraFront11(String str) {
+        int end = Math.min(str.length(), 2);
+        return str.substring(0, end).repeat(3);
+    }
+
+    /**
+     * codingbat.com/prob/p141494
+     * 
+     * @param str  a non-empty string
+     * @param word a non-empty checking string
+     * @return the start of str if matches with word (first char excluded)
+     *         <li>empty string otherwise
+     */
+    public static String startWord(String str, String word) {
+        if (str.length() < word.length()) {
+            return "";
+        }
+
+        String tag = str.substring(0, word.length());
+        return tag.substring(1).equals(word.substring(1)) ? tag : "";
+    }
+
+    /**
+     * codingbat.com/prob/p161056
+     * 
+     * @param a first string
+     * @param b second string
+     * @return first + second + second + first
+     */
+    public static String makeAbba(String a, String b) {
+        return a + b + b + a;
+    }
+
+    /**
+     * codingbat.com/prob/p147483
+     * 
+     * @param tag  the tag name
+     * @param word the element content
+     * @return the element
+     */
+    public static String makeTags(String tag, String word) {
+        return "<" + tag + ">" + word + "</" + tag + ">";
+    }
+
+    /**
+     * codingbat.com/prob/p108853
+     * 
+     * @param str a string sized 2+
+     * @return 3 copies of the last 2 chars
+     */
+    public static String extraEnd(String str) {
+        String tag = str.substring(str.length() - 2);
+        StringBuilder result = new StringBuilder(tag);
+        for (int i = 0; i < 2; i++) {
+            result.append(tag);
+        }
+        return result.toString();
+    }
+
+    /**
+     * Java 11 currently not supported by Coding Bat
+     * 
+     * @param str a string sized 2+
+     * @return 3 copies of the last 2 chars
+     */
+    public static String extraEnd11(String str) {
+        return str.substring(str.length() - 2).repeat(3);
+    }
+
+    /**
+     * codingbat.com/prob/p163411
+     * 
+     * @param str a possibly empty string
+     * @return the first two chars (when available) as string
+     */
+    public static String firstTwo(String str) {
+        return str.substring(0, Math.min(str.length(), 2));
+    }
 }
