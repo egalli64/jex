@@ -78,4 +78,40 @@ class Warmup2Test {
         int expected = 1;
         assertThat(Warmup2.arrayCount9(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "xxcaazz,xxbaaz,3", "abc,abc,2", "abc,axc,0" })
+    void stringMatchExamples(String left, String right, int expected) {
+        assertThat(Warmup2.stringMatch(left, right)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "yakpak,pak", "pakyak,pak", "yak123ya,123ya" })
+    void stringYakExamples(String input, String expected) {
+        assertThat(Warmup2.stringYak(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void has271Example1() {
+        int[] input = { 1, 2, 7, 1 };
+        assertThat(Warmup2.has271(input)).isTrue();
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abcxx,1", "xxx,2", "xxxx,3" })
+    void countXXExamples(String input, int expected) {
+        assertThat(Warmup2.countXX(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Code,CCoCodCode", "abc,aababc", "ab,aab" })
+    void stringSplosionExamples(String input, String expected) {
+        assertThat(Warmup2.stringSplosion(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void arrayFront9Example1() {
+        int[] input = { 1, 2, 9, 3, 4 };
+        assertThat(Warmup2.arrayFront9(input)).isTrue();
+    }
 }

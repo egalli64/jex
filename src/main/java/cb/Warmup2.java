@@ -192,4 +192,111 @@ public class Warmup2 {
         }
         return counter;
     }
+
+    /**
+     * codingbat.com/prob/p198640
+     * 
+     * @param a first string
+     * @param b second string
+     * @return how many same length 2 substring are in the same position
+     */
+    public static int stringMatch(String a, String b) {
+        int count = 0;
+
+        final int len = Math.min(a.length(), b.length());
+        for (int i = 0; i < len - 1; i++) {
+            if (a.charAt(i) == b.charAt(i) && a.charAt(i + 1) == b.charAt(i + 1)) {
+                count += 1;
+            }
+        }
+
+        return count;
+    }
+
+    /**
+     * codingbat.com/prob/p126212
+     * 
+     * @param str a string
+     * @return a copy of input, with all "y?k" removed
+     */
+    public static String stringYak(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char cur = str.charAt(i);
+            if (cur == 'y' && i < str.length() - 2 && str.charAt(i + 2) == 'k') {
+                i += 2;
+            } else {
+                result.append(cur);
+            }
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p167430
+     * 
+     * @param nums an array
+     * @return check pattern [x, x+5, x-1 (delta 2)]
+     */
+    public static boolean has271(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            int x = nums[i];
+            if (nums[i + 1] == x + 5 && Math.abs(nums[i + 2] - (x - 1)) < 3) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * codingbat.com/prob/p194667
+     * 
+     * @param str a string
+     * @return the number of possibly overlapping "xx"
+     */
+    public static int countXX(String str) {
+        int count = 0;
+
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == 'x' && str.charAt(i + 1) == 'x') {
+                count += 1;
+            }
+        }
+
+        return count;
+    }
+
+    /**
+     * https://codingbat.com/prob/p117334
+     * 
+     * @param str a string
+     * @return the concatenation of all the substrings
+     */
+    public static String stringSplosion(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            result.append(str.substring(0, i + 1));
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p186031
+     * 
+     * @param nums a possibly empty array
+     * @return true if there is a 9 in the first four positions
+     */
+    public static boolean arrayFront9(int[] nums) {
+        int end = Math.min(nums.length, 4);
+        for (int i = 0; i < end; i++) {
+            if (nums[i] == 9) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
