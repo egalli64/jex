@@ -201,4 +201,83 @@ public class Warmup1 {
         final int last = str.length() - 1;
         return str.substring(last) + str.substring(1, last) + str.charAt(0);
     }
+
+    /**
+     * codingbat.com/prob/p154485
+     * 
+     * @param a first value
+     * @param b second value
+     * @return the values sum, doubled if they are same
+     */
+    public static int sumDouble(int a, int b) {
+        return (a + b) * (a == b ? 2 : 1);
+    }
+
+    /**
+     * codingbat.com/prob/p182873
+     * 
+     * @param a first value
+     * @param b second value
+     * @return true if one if them is 10 or if their sum is 10
+     */
+    public static boolean makes10(int a, int b) {
+        return a == 10 || b == 10 || a + b == 10;
+    }
+
+    /**
+     * codingbat.com/prob/p191914
+     * 
+     * @param str a string
+     * @return add prefix "not" but do not double it
+     */
+    public static String notString(String str) {
+        String prefix = "not";
+        if (str.startsWith(prefix)) {
+            return str;
+        } else {
+            return prefix + " " + str;
+        }
+    }
+
+    /**
+     * codingbat.com/prob/p136351
+     * 
+     * @param str a possibly empty string
+     * @return Three times the first three chars (if available)
+     */
+    public static String front3(String str) {
+        String tag = str.substring(0, Math.min(str.length(), 3));
+        return tag + tag + tag;
+    }
+
+    /**
+     * Java 11 currently not supported by Coding Bat
+     * 
+     * @param str a possibly empty string
+     * @return Three times the first three chars (if available)
+     */
+    public static String front3J11(String str) {
+        return str.substring(0, Math.min(str.length(), 3)).repeat(3);
+    }
+
+    /**
+     * codingbat.com/prob/p112564
+     * 
+     * @param n a non negative number
+     * @return if it is a multiple of 3 or 5
+     */
+    public static boolean or35(int n) {
+        return n % 3 == 0 || n % 5 == 0;
+    }
+
+    /**
+     * codingbat.com/prob/p183592
+     * 
+     * @param str a possibly empty string
+     * @return add the first 2 char (when available) to begin and end
+     */
+    public static String front22(String str) {
+        String tag = str.substring(0, Math.min(str.length(), 2));
+        return tag + str + tag;
+    }
 }

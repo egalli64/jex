@@ -95,4 +95,47 @@ class Warmup1Test {
     void frontBackExamples(String input, String expected) {
         assertThat(Warmup1.frontBack(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1,2,3", "3,2,5", "2,2,8" })
+    void sumDoubleExamples(int a, int b, int expected) {
+        assertThat(Warmup1.sumDouble(a, b)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "9,10,true", "9,9,false", "1,9,true" })
+    void makes10Examples(int a, int b, boolean expected) {
+        assertThat(Warmup1.makes10(a, b)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "candy,not candy", "x,not x", "not bad,not bad" })
+    void notStringExamples(String input, String expected) {
+        assertThat(Warmup1.notString(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Java,JavJavJav", "Chocolate,ChoChoCho", "abc,abcabcabc" })
+    void front3Examples(String input, String expected) {
+        assertThat(Warmup1.front3(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Java,JavJavJav", "Chocolate,ChoChoCho", "abc,abcabcabc" })
+    void front3J11Examples(String input, String expected) {
+        assertThat(Warmup1.front3J11(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "3,true", "10,true", "8,false" })
+    void or35Examples(int input, boolean expected) {
+        assertThat(Warmup1.or35(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "kitten,kikittenki", "Ha,HaHaHa", "abc,ababcab" })
+    void front22Examples(String input, String expected) {
+        assertThat(Warmup1.front22(input)).isEqualTo(expected);
+    }
+
 }
