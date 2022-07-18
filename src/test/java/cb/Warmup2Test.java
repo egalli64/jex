@@ -114,4 +114,10 @@ class Warmup2Test {
         int[] input = { 1, 2, 9, 3, 4 };
         assertThat(Warmup2.arrayFront9(input)).isTrue();
     }
+
+    @ParameterizedTest
+    @CsvSource({ "xxHxix,xHix", "abxxxcd,abcd", "xabxxxcdx,xabcdx" })
+    void stringXExamples(String input, String expected) {
+        assertThat(Warmup2.stringX(input)).isEqualTo(expected);
+    }
 }
