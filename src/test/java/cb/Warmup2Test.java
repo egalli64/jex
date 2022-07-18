@@ -120,4 +120,11 @@ class Warmup2Test {
     void stringXExamples(String input, String expected) {
         assertThat(Warmup2.stringX(input)).isEqualTo(expected);
     }
+
+    @Test
+    void array667Example1() {
+        int[] input = { 6, 6, 2 };
+        int expected = 1;
+        assertThat(Warmup2.array667(input)).isEqualTo(expected);
+    }
 }
