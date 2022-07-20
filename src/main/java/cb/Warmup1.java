@@ -365,4 +365,90 @@ public class Warmup1 {
     public static int intMax(int a, int b, int c) {
         return Math.max(Math.max(a, b), c);
     }
+
+    /**
+     * codingbat.com/prob/p132134
+     * 
+     * @param a first value
+     * @param b second value
+     * @return true if they are both in [30..40] or [40..50]
+     */
+    public static boolean in3050(int a, int b) {
+        return in3040(a) && in3040(b) || in4050(a) && in4050(b);
+    }
+
+    /**
+     * Helper for {@linkplain Warmup1#in3050(int, int)}
+     * 
+     * @param value a value
+     * @return true if in [30..40]
+     */
+    private static boolean in3040(int value) {
+        return value > 29 && value < 41;
+    }
+
+    /**
+     * Helper for {@linkplain Warmup1#in3050(int, int)}
+     * 
+     * @param value a value
+     * @return true if in [40..50]
+     */
+    private static boolean in4050(int value) {
+        return value > 39 && value < 51;
+    }
+
+    /**
+     * codingbat.com/prob/p177372
+     * 
+     * @param a first positive value
+     * @param b second positive value
+     * @return the largest in [10..20] or 0
+     */
+    public static int max1020(int a, int b) {
+        if (b > a) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        if (in1020(a)) {
+            return a;
+        }
+        if (in1020(b)) {
+            return b;
+        }
+        return 0;
+    }
+
+    /**
+     * Helper for {@linkplain Warmup1#max1020(int, int)}
+     * 
+     * @param value a value
+     * @return true if in [10..20]
+     */
+    private static boolean in1020(int value) {
+        return value > 9 && value < 21;
+    }
+
+    /**
+     * codingbat.com/prob/p125339
+     * 
+     * @param a first non-negative value
+     * @param b second non-negative value
+     * @return true if they have the same last digit
+     */
+    public static boolean lastDigit(int a, int b) {
+        return a % 10 == b % 10;
+    }
+
+    /**
+     * codingbat.com/prob/p125268
+     * 
+     * @param str a possibly empty string
+     * @return the last 3 chars (or less) to upper
+     */
+    public static String endUp(String str) {
+        int pos = str.length() - Math.min(3, str.length());
+        return str.substring(0, pos) + str.substring(pos).toUpperCase();
+    }
 }
