@@ -80,7 +80,9 @@ public class Warmup1 {
     }
 
     /**
-     * Helper for {@linkplain Warmup1#hasTeen(int, int, int)}
+     * Helper for:
+     * <li>{@linkplain Warmup1#hasTeen(int, int, int)}
+     * <li>{@linkplain Warmup1#loneTeen(int, int)}
      * 
      * @param value a value
      * @return true if the input value is in [13..19]
@@ -279,5 +281,48 @@ public class Warmup1 {
     public static String front22(String str) {
         String tag = str.substring(0, Math.min(str.length(), 2));
         return tag + str + tag;
+    }
+
+    /**
+     * codingbat.com/prob/p192082
+     * 
+     * @param temp1 first temperature
+     * @param temp2 second temperature
+     * @return true if one is less than 0 and the other is greater than 100
+     */
+    public static boolean icyHot(int temp1, int temp2) {
+        return temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100;
+    }
+
+    /**
+     * codingbat.com/prob/p144535
+     * 
+     * @param a first value
+     * @param b second value
+     * @return true if either of them is in the range 10..20 inclusive
+     */
+    public static boolean in1020(int a, int b) {
+        return isIn1020(a) || isIn1020(b);
+    }
+
+    /**
+     * Helper for {@linkplain Warmup1#in1020(int, int)}
+     * 
+     * @param value a value
+     * @return true if in [10..20]
+     */
+    private static boolean isIn1020(int value) {
+        return value > 9 && value < 21;
+    }
+
+    /**
+     * codingbat.com/prob/p165701
+     * 
+     * @param a first value
+     * @param b second value
+     * @return return true if only one is in [13 .. 19]
+     */
+    public static boolean loneTeen(int a, int b) {
+        return isTeen(a) ^ isTeen(b);
     }
 }
