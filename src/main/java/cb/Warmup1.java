@@ -325,4 +325,44 @@ public class Warmup1 {
     public static boolean loneTeen(int a, int b) {
         return isTeen(a) ^ isTeen(b);
     }
+
+    /**
+     * codingbat.com/prob/p100905
+     * 
+     * @param str a string
+     * @return copy without "del", if in position 1
+     */
+    public static String delDel(String str) {
+        return str.indexOf("del") == 1 ? str.charAt(0) + str.substring(4) : str;
+    }
+
+    /**
+     * codingbat.com/prob/p199720
+     * 
+     * @param str a possibly empty string
+     * @return "oz", if they are at the beginning in that places
+     */
+    public static String startOz(String str) {
+        StringBuilder result = new StringBuilder();
+        if (str.length() > 0 && str.charAt(0) == 'o') {
+            result.append('o');
+        }
+        if (str.length() > 1 && str.charAt(1) == 'z') {
+            result.append('z');
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * https://codingbat.com/prob/p101887
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return the biggest one
+     */
+    public static int intMax(int a, int b, int c) {
+        return Math.max(Math.max(a, b), c);
+    }
 }

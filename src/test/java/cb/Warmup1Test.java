@@ -155,4 +155,22 @@ class Warmup1Test {
     void loneTeenExamples(int first, int second, boolean expected) {
         assertThat(Warmup1.loneTeen(first, second)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "adelbc,abc", "adelHello,aHello", "adedbc,adedbc" })
+    void delDelExamples(String input, String expected) {
+        assertThat(Warmup1.delDel(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "ozymandias,oz", "bzoo,z", "oxx,o" })
+    void startOzExamples(String input, String expected) {
+        assertThat(Warmup1.startOz(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "1, 2, 3, 3", "1, 3, 2, 3", "3, 2, 1, 3" })
+    void intMaxExamples(int a, int b, int c, int expected) {
+        assertThat(Warmup1.intMax(a, b, c)).isEqualTo(expected);
+    }
 }
