@@ -208,4 +208,37 @@ public class String1 {
     public static String firstTwo(String str) {
         return str.substring(0, Math.min(str.length(), 2));
     }
+
+    /**
+     * codingbat.com/prob/p130896
+     * 
+     * @param str a string sized at least 2
+     * @return removed first and last
+     */
+    public static String withoutEnd(String str) {
+        return str.substring(1, str.length() - 1);
+    }
+
+    /**
+     * codingbat.com/prob/p168564
+     * 
+     * @param a first string, possibly empty
+     * @param b second string, possibly empty, differently sized
+     * @return short+long+short
+     */
+    public static String comboString(String a, String b) {
+        String shortOne = a.length() < b.length() ? a : b;
+        String longOne = a.length() > b.length() ? a : b;
+        return shortOne + longOne + shortOne;
+    }
+
+    /**
+     * codingbat.com/prob/p197720
+     * 
+     * @param str a string sized 2+
+     * @return the first 2 chars moved to the end
+     */
+    public static String left2(String str) {
+        return str.substring(2) + str.substring(0, 2);
+    }
 }
