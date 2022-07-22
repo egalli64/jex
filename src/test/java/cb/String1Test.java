@@ -143,4 +143,40 @@ class String1Test {
     void middleTwoExamples(String input, String expected) {
         assertThat(String1.middleTwo(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "Hello,2,Helo", "Chocolate,3,Choate", "Chocolate,1,Ce" })
+    void nTwiceExamples(String s, int n, String expected) {
+        assertThat(String1.nTwice(s, n)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "java,0,ja", "java,2,va", "java,3,ja" })
+    void twoCharExamples(String s, int n, String expected) {
+        assertThat(String1.twoChar(s, n)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "badxx,true", "xbadxx,true", "xxbadxx,false" })
+    void hasBadExamples(String s, boolean expected) {
+        assertThat(String1.hasBad(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "hello,he", "hi,hi", "h,h@" })
+    void atFirstExamples(String s, String expected) {
+        assertThat(String1.atFirst(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abc,cat,abcat", "dog,cat,dogcat", "abc,'',abc" })
+    void conCatExamples(String s, String t, String expected) {
+        assertThat(String1.conCat(s, t)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "coding,codign", "cat,cta", "ab,ba" })
+    void lastTwoExamples(String s, String expected) {
+        assertThat(String1.lastTwo(s)).isEqualTo(expected);
+    }
 }

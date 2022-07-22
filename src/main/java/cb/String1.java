@@ -272,4 +272,81 @@ public class String1 {
         final int middle = str.length() / 2;
         return str.substring(middle - 1, middle + 1);
     }
+
+    /**
+     * codingbat.com/prob/p174148
+     * 
+     * @param str a string size n+
+     * @param n   a non-negative integer
+     * @return the first and last n chars
+     */
+    public static String nTwice(String str, int n) {
+        return str.substring(0, n) + str.substring(str.length() - n);
+    }
+
+    /**
+     * codingbat.com/prob/p144623
+     * 
+     * @param str   a string sized 2+
+     * @param index an integer
+     * @return a string length 2 from the given index, or the first 2 chars
+     */
+    public static String twoChar(String str, int index) {
+        if (index < 0 || index > str.length() - 2) {
+            index = 0;
+        }
+        return str.substring(index, index + 2);
+    }
+
+    /**
+     * codingbat.com/prob/p139075
+     * 
+     * @param str a possibly empty string
+     * @return true if "bad" is @ pos 0 or 1
+     */
+    public static boolean hasBad(String str) {
+        return str.lastIndexOf("bad", 1) > -1;
+    }
+
+    /**
+     * codingbat.com/prob/p139076
+     * 
+     * @param str a possibly empty string
+     * @return first 2 chars, padded with '@' when too short
+     */
+    public static String atFirst(String str) {
+        int len = Math.min(str.length(), 2);
+        StringBuilder result = new StringBuilder(str.substring(0, len));
+        for (int i = len; i < 2; i++) {
+            result.append('@');
+        }
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p132118
+     * 
+     * @param a first string, possibly empty
+     * @param b second string, possibly empty
+     * @return concatenated string, but no dup for last1/first2 char
+     */
+    public static String conCat(String a, String b) {
+        if (a.isEmpty() || b.isEmpty() || a.charAt(a.length() - 1) != b.charAt(0)) {
+            return a + b;
+        }
+        return a + b.substring(1);
+    }
+
+    /**
+     * codingbat.com/prob/p194786
+     * 
+     * @param str a possibly empty string
+     * @return last two chars, if available, swapped
+     */
+    public static String lastTwo(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+        return str.substring(0, str.length() - 2) + str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
+    }
 }
