@@ -179,4 +179,22 @@ class String1Test {
     void lastTwoExamples(String s, String expected) {
         assertThat(String1.lastTwo(s)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "edited,true", "edit,false", "ed,true" })
+    void frontAgainExamples(String s, boolean expected) {
+        assertThat(String1.frontAgain(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Hello,Hi,loHi", "Hello,java,ellojava", "java,Hello,javaello" })
+    void minCatExamples(String s, String t, String expected) {
+        assertThat(String1.minCat(s, t)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "HelloHe,lloHe", "HelloHi,HelloHi", "Hi,''" })
+    void without2Examples(String s, String expected) {
+        assertThat(String1.without2(s)).isEqualTo(expected);
+    }
 }

@@ -349,4 +349,45 @@ public class String1 {
         }
         return str.substring(0, str.length() - 2) + str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
     }
+
+    /**
+     * codingbat.com/prob/p196652
+     * 
+     * @param str a string
+     * @return true if the first 2 chars are also at the end
+     */
+    public static boolean frontAgain(String str) {
+        int len = str.length();
+        if (len < 2) {
+            return false;
+        }
+        return str.charAt(0) == str.charAt(len - 2) && str.charAt(1) == str.charAt(len - 1);
+    }
+
+    /**
+     * codingbat.com/prob/p105745
+     * 
+     * @param a left, possibly empty, string
+     * @param b right, possibly empty, string
+     * @return concatenation of the two strings, cutting the head of the longest one to make them same sized
+     */
+    public static String minCat(String a, String b) {
+        int len = Math.min(a.length(), b.length());
+        return a.substring(a.length() - len) + b.substring(b.length() - len);
+    }
+
+    /**
+     * codingbat.com/prob/p142247
+     * 
+     * @param str a possibly empty string
+     * @return cut the 2 starting chars, if they are also at the end
+     */
+    public static String without2(String str) {
+        if (str.length() < 2 //
+                || str.charAt(0) != str.charAt(str.length() - 2) //
+                || str.charAt(1) != str.charAt(str.length() - 1)) {
+            return str;
+        }
+        return str.substring(2);
+    }
 }
