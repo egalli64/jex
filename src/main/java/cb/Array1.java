@@ -185,4 +185,36 @@ public class Array1 {
         }
         return result;
     }
+
+    /**
+     * codingbat.com/prob/p101230
+     * 
+     * @param nums a non empty array
+     * @return first and last
+     */
+    public static int[] makeEnds(int[] nums) {
+        return new int[] { nums[0], nums[nums.length - 1] };
+    }
+
+    /**
+     * codingbat.com/prob/p171022
+     * 
+     * @param nums an array sized 2
+     * @return true if contains 2 or 3
+     */
+    public static boolean has23(int[] nums) {
+        return nums[0] == 2 || nums[1] == 2 || nums[0] == 3 || nums[1] == 3;
+    }
+
+    /**
+     * codingbat.com/prob/p137188
+     * 
+     * @param nums a non empty array
+     * @return an array double sized, all zeroes, same last element
+     */
+    public static int[] makeLast(int[] nums) {
+        int result[] = new int[nums.length * 2];
+        result[result.length - 1] = nums[nums.length - 1];
+        return result;
+    }
 }

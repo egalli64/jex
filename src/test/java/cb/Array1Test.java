@@ -145,4 +145,24 @@ class Array1Test {
         int expected = 3;
         assertThat(Array1.sum2(input)).isEqualTo(expected);
     }
+
+    @Test
+    void makeEndsExample1() {
+        int[] input = { 1, 2, 3 };
+        int[] expected = { 1, 3 };
+        assertThat(Array1.makeEnds(input)).containsExactly(expected);
+    }
+
+    @Test
+    void has23Example1() {
+        int[] input = { 2, 5 };
+        assertThat(Array1.has23(input)).isTrue();
+    }
+
+    @Test
+    void makeLastExample1() {
+        int[] input = { 4, 5, 6 };
+        int[] expected = { 0, 0, 0, 0, 0, 6 };
+        assertThat(Array1.makeLast(input)).containsExactly(expected);
+    }
 }
