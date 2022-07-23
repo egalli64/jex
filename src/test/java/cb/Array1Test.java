@@ -105,4 +105,44 @@ class Array1Test {
         int[] input = { 1, 3, 4, 5 };
         assertThat(Array1.unlucky1(input)).isTrue();
     }
+
+    @Test
+    void sameFirstLastExample1() {
+        int[] input = { 1, 2, 3 };
+        assertThat(Array1.sameFirstLast(input)).isFalse();
+    }
+
+    @Test
+    void makePiExample1() {
+        int[] expected = { 3, 1, 4 };
+        assertThat(Array1.makePi()).containsExactly(expected);
+    }
+
+    @Test
+    void sum3Example1() {
+        int[] input = { 1, 2, 3 };
+        int expected = 6;
+        assertThat(Array1.sum3(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void rotateLeft3Example1() {
+        int[] input = { 1, 2, 3 };
+        int[] expected = { 2, 3, 1 };
+        assertThat(Array1.rotateLeft3(input)).containsExactly(expected);
+    }
+
+    @Test
+    void maxEnd3Example1() {
+        int[] input = { 1, 2, 3 };
+        int[] expected = { 3, 3, 3 };
+        assertThat(Array1.maxEnd3(input)).containsExactly(expected);
+    }
+
+    @Test
+    void sum2Example1() {
+        int[] input = { 1, 2, 3 };
+        int expected = 3;
+        assertThat(Array1.sum2(input)).isEqualTo(expected);
+    }
 }

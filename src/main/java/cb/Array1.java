@@ -112,4 +112,77 @@ public class Array1 {
 
         return false;
     }
+
+    /**
+     * codingbat.com/prob/p118976
+     * 
+     * @param nums an array of integers
+     * @return true if is not empty and first and last are equals
+     */
+    public static boolean sameFirstLast(int[] nums) {
+        return nums.length > 0 && nums[0] == nums[nums.length - 1];
+    }
+
+    /**
+     * codingbat.com/prob/p167011
+     * 
+     * @return an array containing the first 3 digits of pi
+     */
+    public static int[] makePi() {
+        return new int[] { 3, 1, 4 };
+    }
+
+    /**
+     * codingbat.com/prob/p175763
+     * 
+     * @param nums an array sized 3
+     * @return the sum of all the elements
+     */
+    public static int sum3(int[] nums) {
+        return nums[0] + nums[1] + nums[2];
+    }
+
+    /**
+     * codingbat.com/prob/p185139
+     * 
+     * @param nums an array sized 3
+     * @return a rotation left
+     */
+    public static int[] rotateLeft3(int[] nums) {
+        int temp = nums[0];
+        nums[0] = nums[1];
+        nums[1] = nums[2];
+        nums[2] = temp;
+
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p146256
+     * 
+     * @param nums an array sized 3
+     * @return all set as the max value between first and last
+     */
+    public static int[] maxEnd3(int[] nums) {
+        int value = Math.max(nums[0], nums[2]);
+        for (int i = 0; i < 2; i++) {
+            nums[i] = value;
+        }
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p190968
+     * 
+     * @param nums a possibly empty array
+     * @return the sum of the first two elements, if available
+     */
+    public static int sum2(int[] nums) {
+        int len = Math.min(nums.length, 2);
+        int result = 0;
+        for (int i = 0; i < len; i++) {
+            result += nums[i];
+        }
+        return result;
+    }
 }
