@@ -129,4 +129,48 @@ public class Logic1 {
         }
         return a % 5 == b % 5 ? Math.min(a, b) : Math.max(a, b);
     }
+
+    /**
+     * codingbat.com/prob/p103360
+     * 
+     * @param you  [0..10]
+     * @param date [0..10]
+     * @return a value in [0..2]
+     *         <li>0: at least a 2-
+     *         <li>2: at least a 8+
+     *         <li>1: otherwise
+     */
+    public static int dateFashion(int you, int date) {
+        if (you < 3 || date < 3) {
+            return 0;
+        }
+        if (you > 7 || date > 7) {
+            return 2;
+        }
+
+        return 1;
+    }
+
+    /**
+     * codingbat.com/prob/p141061
+     * 
+     * @param temp     the current Fahrenheit temperature
+     * @param isSummer summer flag
+     * @return true if temp is in [60..90], upper limit 100 in summer
+     */
+    public static boolean squirrelPlay(int temp, boolean isSummer) {
+        return temp >= 60 && temp <= 90 + (isSummer ? 10 : 0);
+    }
+
+    /**
+     * codingbat.com/prob/p183071
+     * 
+     * @param a first value
+     * @param b second value
+     * @return the sum, but [10..19] leads to 20
+     */
+    public static int sortaSum(int a, int b) {
+        int sum = a + b;
+        return sum < 10 || sum > 19 ? sum : 20;
+    }
 }
