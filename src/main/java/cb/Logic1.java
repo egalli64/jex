@@ -221,4 +221,39 @@ public class Logic1 {
     public static boolean specialEleven(int n) {
         return n % 11 < 2;
     }
+
+    /**
+     * codingbat.com/prob/p159612
+     * 
+     * @param n non-negative
+     * @return true if multiple of 3 or 5, not both
+     */
+    public static boolean old35(int n) {
+        return n % 3 == 0 ^ n % 5 == 0;
+    }
+
+    /**
+     * codingbat.com/prob/p133158
+     * 
+     * @param n non-negative
+     * @return true if added 1 or 2 gets multiple of 20
+     */
+    public static boolean less20(int n) {
+        return n % 20 > 17;
+    }
+
+    /**
+     * codingbat.com/prob/p178728
+     * 
+     * @param a first value
+     * @param b second value
+     * @return the sum, or, if a value is in [13..19] then 19
+     */
+    public static int teenSum(int a, int b) {
+        return isTeen(a) || isTeen(b) ? 19 : a + b;
+    }
+
+    private static boolean isTeen(int value) {
+        return value > 12 && value < 20;
+    }
 }

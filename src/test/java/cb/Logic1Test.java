@@ -95,4 +95,16 @@ class Logic1Test {
     void specialElevenExamples(int input, boolean expected) {
         assertThat(Logic1.specialEleven(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "18,true", "19,true", "20,false" })
+    void less20Examples(int input, boolean expected) {
+        assertThat(Logic1.less20(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "3,4,7", "10,13,19", "13,2,19" })
+    void teenSumExamples(int a, int b, int expected) {
+        assertThat(Logic1.teenSum(a, b)).isEqualTo(expected);
+    }
 }
