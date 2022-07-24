@@ -107,4 +107,22 @@ class Logic1Test {
     void teenSumExamples(int a, int b, int expected) {
         assertThat(Logic1.teenSum(a, b)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "false, false, false, true", "false, false, true, false", "true, false, false, false" })
+    void answerCellExamples(boolean am, boolean mom, boolean sleep, boolean expected) {
+        assertThat(Logic1.answerCell(am, mom, sleep)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "fig,Fizz", "dib,Buzz", "fib,FizzBuzz" })
+    void fizzStringExamples(String input, String expected) {
+        assertThat(Logic1.fizzString(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "1,1!", "2,2!", "3,Fizz!" })
+    void fizzString2Examples(int input, String expected) {
+        assertThat(Logic1.fizzString2(input)).isEqualTo(expected);
+    }
 }

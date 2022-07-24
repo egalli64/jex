@@ -253,7 +253,97 @@ public class Logic1 {
         return isTeen(a) || isTeen(b) ? 19 : a + b;
     }
 
+    /**
+     * Helper for {@linkplain Logic1#teenSum(int, int)}
+     * 
+     * @param value an integer
+     * @return true if in [13..19]
+     */
     private static boolean isTeen(int value) {
         return value > 12 && value < 20;
+    }
+
+    /**
+     * codingbat.com/prob/p110973
+     * 
+     * @param isMorning when called
+     * @param isMom     mom called
+     * @param isAsleep  sleeping
+     * @return true if not sleeping, in the morning only mom
+     * 
+     *         <pre>
+     * AM   Mom Sleep
+     * T    T   T       F
+     * T    T   F       T <--
+     * T    F   T       F
+     * T    F   F       F
+     * F    T   T       F
+     * F    T   F       T <--
+     * F    F   T       F
+     * F    F   F       T <--
+     *         </pre>
+     */
+    public static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        return !isAsleep && (isMom || !isMorning);
+    }
+
+    /**
+     * codingbat.com/prob/p137136
+     * 
+     * @param str a possibly empty string
+     * @return
+     *         <li>"Fizz" if starts by 'f'
+     *         <li>"Buzz" if ends be 'b'
+     *         <li>"FizzBuzz" for both
+     *         <li>input otherwise
+     */
+    public static String fizzString(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
+
+        boolean fizz = str.charAt(0) == 'f';
+        boolean buzz = str.charAt(str.length() - 1) == 'b';
+        if (!fizz && !buzz) {
+            return str;
+        }
+
+        StringBuilder result = new StringBuilder();
+        if (fizz) {
+            result.append("Fizz");
+        }
+        if (buzz) {
+            result.append("Buzz");
+        }
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p115243
+     * 
+     * @param n an integer
+     * @return the number as string followed by '!' but
+     *         <li>"Fizz" instead of 3 and multiples
+     *         <li>"Buzz" instead of 5 and multiples
+     *         <li>"FizzBuzz" for multiples of both 3 and 5
+     */
+    public static String fizzString2(int n) {
+        StringBuilder result = new StringBuilder();
+
+        boolean fizzOrBuzz = false;
+        if (n % 3 == 0) {
+            fizzOrBuzz = true;
+            result.append("Fizz");
+        }
+        if (n % 5 == 0) {
+            fizzOrBuzz = true;
+            result.append("Buzz");
+        }
+        if (!fizzOrBuzz) {
+            result.append(n);
+        }
+
+        result.append('!');
+        return result.toString();
     }
 }
