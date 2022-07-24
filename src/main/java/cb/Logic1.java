@@ -173,4 +173,52 @@ public class Logic1 {
         int sum = a + b;
         return sum < 10 || sum > 19 ? sum : 20;
     }
+
+    /**
+     * codingbat.com/prob/p160543
+     * 
+     * @param day      [0..6]
+     * @param vacation true on holiday
+     * @return
+     *         <li>"7:00" on working weekdays
+     *         <li>"10:00" on working weekends
+     *         <li>"10:00" on vacation weekdays
+     *         <li>"off" on vacation weekends
+     */
+    public static String alarmClock(int day, boolean vacation) {
+        if (day > 0 && day < 6 && !vacation) {
+            return "7:00";
+        }
+        if (vacation && (day == 0 || day == 6)) {
+            return "off";
+        }
+
+        return "10:00";
+    }
+
+    /**
+     * codingbat.com/prob/p137365
+     * 
+     * @param n           an integer
+     * @param outsideMode a flag
+     * @return
+     *         <li>true in [1..10] flag off
+     *         <li>true if not in [2..9] flag on
+     */
+    public static boolean in1To10(int n, boolean outsideMode) {
+        if (!outsideMode) {
+            return n > 0 && n < 11;
+        }
+        return n < 2 || n > 9;
+    }
+
+    /**
+     * codingbat.com/prob/p100962
+     * 
+     * @param n a non-negative value
+     * @return true if multiple of 11 (plus 0 or 1)
+     */
+    public static boolean specialEleven(int n) {
+        return n % 11 < 2;
+    }
 }
