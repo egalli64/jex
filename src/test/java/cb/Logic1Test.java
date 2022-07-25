@@ -125,4 +125,10 @@ class Logic1Test {
     void fizzString2Examples(int input, String expected) {
         assertThat(Logic1.fizzString2(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1, 2, 4, false, true", "1, 2, 1, false, false", "1, 1, 2, true, true" })
+    void inOrderExamples(int a, int b, int c, boolean flag, boolean expected) {
+        assertThat(Logic1.inOrder(a, b, c, flag)).isEqualTo(expected);
+    }
 }
