@@ -149,4 +149,34 @@ class Logic1Test {
     void withoutDoublesExamples(int a, int b, boolean change, int expected) {
         assertThat(Logic1.withoutDoubles(a, b, change)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "2, 2, 2, 10", "2, 2, 1, 0", "0, 0, 0, 5" })
+    void redTicketExamples(int a, int b, int c, int expected) {
+        assertThat(Logic1.redTicket(a, b, c)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "1, 2, 3, 0", "2, 2, 2, 20", "1, 1, 2, 10" })
+    void greenTicketExamples(int a, int b, int c, int expected) {
+        assertThat(Logic1.greenTicket(a, b, c)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "9, 1, 0, 10", "9, 2, 0, 0", "6, 1, 4, 10" })
+    void blueTicketExamples(int a, int b, int c, int expected) {
+        assertThat(Logic1.blueTicket(a, b, c)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "12, 23, true", "12, 43, false", "12, 44, false" })
+    void shareDigitExamples(int first, int second, boolean expected) {
+        assertThat(Logic1.shareDigit(first, second)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "2, 3, 5", "8, 3, 8", "8, 1, 9" })
+    void sumLimitExamples(int a, int b, int expected) {
+        assertThat(Logic1.sumLimit(a, b)).isEqualTo(expected);
+    }
 }
