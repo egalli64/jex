@@ -47,10 +47,22 @@ class String2Test {
     void prefixAgainExamples(String s, int n, boolean expected) {
         assertThat(String2.prefixAgain(s, n)).isEqualTo(expected);
     }
-    
+
     @ParameterizedTest
     @CsvSource({ "xy*yzz,true", "xy*zzz,false", "*xa*az,true" })
     void sameStarCharExamples(String input, boolean expected) {
         assertThat(String2.sameStarChar(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abc hi ho,1", "ABChi hi,2", "hihi,2" })
+    void countHiExamples(String input, int expected) {
+        assertThat(String2.countHi(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "catdog,true", "catcat,false", "1cat1cadodog,true" })
+    void catDogExamples(String input, boolean expected) {
+        assertThat(String2.catDog(input)).isEqualTo(expected);
     }
 }
