@@ -373,4 +373,52 @@ public class Logic1 {
     public static boolean inOrder(int a, int b, int c, boolean bOk) {
         return c > b && (bOk || b > a);
     }
+
+    /**
+     * codingbat.com/prob/p140272
+     * 
+     * @param a       first value
+     * @param b       second value
+     * @param c       third value
+     * @param equalOk flag for equality
+     * @return true if the values are (strictly) increasing
+     */
+    public static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        return equalOk ? a <= b && b <= c : a < b && b < c;
+    }
+
+    /**
+     * https://codingbat.com/prob/p179196
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return true if one is 10+ distant from another one
+     */
+    public static boolean lessBy10(int a, int b, int c) {
+        return isFar10(a, b) || isFar10(b, c) || isFar10(a, c);
+    }
+
+    /**
+     * Helper for {@linkplain Logic1#lessBy10(int, int, int)}
+     * 
+     * @param left  first value
+     * @param right second value
+     * @return true if distance is 10+
+     */
+    private static boolean isFar10(int left, int right) {
+        return Math.abs(left - right) >= 10;
+    }
+
+    /**
+     * codingbat.com/prob/p115233
+     * 
+     * @param die1      [1..6]
+     * @param die2      [1..6]
+     * @param noDoubles when true, in case of double one value is increased (wrapping around)
+     * @return the sum
+     */
+    public static int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        return die1 + (noDoubles && die1 == die2 ? 1 + die2 % 6 : die2);
+    }
 }

@@ -131,4 +131,22 @@ class Logic1Test {
     void inOrderExamples(int a, int b, int c, boolean flag, boolean expected) {
         assertThat(Logic1.inOrder(a, b, c, flag)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "2, 5, 11, false, true", "5, 7, 6, false, false", "5, 5, 7, true, true" })
+    void inOrderEqualExamples(int a, int b, int c, boolean flag, boolean expected) {
+        assertThat(Logic1.inOrderEqual(a, b, c, flag)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "1, 7, 11, true", "1, 7, 10, false", "11, 1, 7, true" })
+    void lessBy10Examples(int a, int b, int c, boolean expected) {
+        assertThat(Logic1.lessBy10(a, b, c)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "2,3,true,5", "3,3,true,7", "3,3,false,6" })
+    void withoutDoublesExamples(int a, int b, boolean change, int expected) {
+        assertThat(Logic1.withoutDoubles(a, b, change)).isEqualTo(expected);
+    }
 }
