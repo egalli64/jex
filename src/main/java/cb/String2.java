@@ -167,4 +167,22 @@ public class String2 {
         return count;
     }
 
+    /**
+     * codingbat.com/prob/p126880
+     * 
+     * @param a first
+     * @param b second
+     * @return true if one ends with other (case insensitive)
+     */
+    public static boolean endOther(String a, String b) {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a.length() == b.length()) {
+            return a.equals(b);
+        }
+        String shorter = a.length() < b.length() ? a : b;
+        String longer = a.length() > b.length() ? a : b;
+        String other = longer.substring(longer.length() - shorter.length());
+        return shorter.equals(other);
+    }
 }
