@@ -77,4 +77,17 @@ class String2Test {
     void xyzThereExamples(String input, boolean expected) {
         assertThat(String2.xyzThere(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "aaxbby,true", "aaxbb,false", "yaaxbb,false" })
+    void xyBalanceExamples(String input, boolean expected) {
+        assertThat(String2.xyBalance(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abc,xyz,axbycz", "Hi,There,HTihere", "xxxx,There,xTxhxexre" })
+    void mixStringExamples(String a, String b, String expected) {
+        assertThat(String2.mixString(a, b)).isEqualTo(expected);
+    }
+
 }

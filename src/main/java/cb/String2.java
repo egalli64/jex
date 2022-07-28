@@ -207,4 +207,36 @@ public class String2 {
 
         return false;
     }
+
+    /**
+     * codingbat.com/prob/p134250
+     * 
+     * @param str
+     * @return true if the string is x-y balanced - a y balances all the previous x
+     */
+    public static boolean xyBalance(String str) {
+        return str.indexOf('x', str.lastIndexOf('y') + 1) == -1;
+    }
+
+    /**
+     * codingbat.com/prob/p125185
+     * 
+     * @param a first
+     * @param b second
+     * @return mix a and b, one char for each, leftover as tail
+     */
+    public static String mixString(String a, String b) {
+        StringBuilder result = new StringBuilder();
+
+        final int len = Math.min(a.length(), b.length());
+        for (int i = 0; i < len; i++) {
+            result.append(a.charAt(i));
+            result.append(b.charAt(i));
+        }
+
+        String longest = a.length() > b.length() ? a : b;
+        result.append(longest.substring(len));
+
+        return result.toString();
+    }
 }
