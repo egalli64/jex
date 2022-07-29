@@ -239,4 +239,57 @@ public class String2 {
 
         return result.toString();
     }
+
+    /**
+     * codingbat.com/prob/p128796
+     * 
+     * @param str
+     * @param n   [0..len]
+     * @return scaling n concatenated fragments of str
+     */
+    public static String repeatFront(String str, int n) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = n; i > 0; i--) {
+            result.append(str.substring(0, i));
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p109637
+     * 
+     * @param word  a word
+     * @param sep   a connector
+     * @param count an integer
+     * @return count times word connected by sep
+     */
+    public static String repeatSeparator(String word, String sep, int count) {
+        if (count == 0) {
+            return "";
+        }
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 1; i < count; i++) {
+            result.append(word);
+            result.append(sep);
+        }
+        result.append(word);
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p159772
+     * 
+     * @param str a string
+     * @return true if "xyz" is in the middle
+     */
+    public static boolean xyzMiddle(String str) {
+        int len = str.length();
+        int pos = str.indexOf("xyz", len / 2 - 3);
+        return len > 2 && Math.abs(pos - (len - (pos + 3))) < 2;
+    }
 }
