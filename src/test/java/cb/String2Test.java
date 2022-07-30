@@ -107,4 +107,22 @@ class String2Test {
     void xyzMiddleExamples(String input, boolean expected) {
         assertThat(String2.xyzMiddle(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "breadjambread,jam", "xxbreadjambreadyy,jam", "xxbreadyy,''" })
+    void getSandwichExamples(String s, String expected) {
+        assertThat(String2.getSandwich(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abc,bca", "tca,cat", "tcagdo,catdog" })
+    void oneTwoExamples(String s, String expected) {
+        assertThat(String2.oneTwo(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "zipXzap,zpXzp", "zopzop,zpzp", "zzzopzop,zzzpzp" })
+    void zipZapExamples(String s, String expected) {
+        assertThat(String2.zipZap(s)).isEqualTo(expected);
+    }
 }

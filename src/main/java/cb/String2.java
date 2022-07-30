@@ -292,4 +292,56 @@ public class String2 {
         int pos = str.indexOf("xyz", len / 2 - 3);
         return len > 2 && Math.abs(pos - (len - (pos + 3))) < 2;
     }
+
+    /**
+     * codingbat.com/prob/p129952
+     * 
+     * @param str a string
+     * @return the substring enclosed in two extreme "bread", or empty
+     */
+    public static String getSandwich(String str) {
+        int first = str.indexOf("bread");
+        int second = str.lastIndexOf("bread");
+        return first == second ? "" : str.substring(first + 5, second);
+    }
+
+    /**
+     * codingbat.com/prob/p122943
+     * 
+     * @param str a string
+     * @return swap each three letter group so that 123 -> 231
+     */
+    public static String oneTwo(String str) {
+        StringBuilder result = new StringBuilder();
+        int len = str.length() - str.length() % 3;
+        for (int i = 0; i < len; i += 3) {
+            result.append(str.charAt(i + 1));
+            result.append(str.charAt(i + 2));
+            result.append(str.charAt(i));
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * codingbat.com/prob/p180759
+     * 
+     * @param str a string
+     * @return remove each central char in "z?p" patterns
+     */
+    public static String zipZap(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char cur = str.charAt(i);
+            result.append(cur);
+
+            if (cur == 'z' && i < str.length() - 2 && str.charAt(i + 2) == 'p') {
+                result.append('p');
+                i += 2;
+            }
+        }
+
+        return result.toString();
+    }
 }
