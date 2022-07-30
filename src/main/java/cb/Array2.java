@@ -108,4 +108,72 @@ public class Array2 {
         }
         return result;
     }
+
+    /**
+     * codingbat.com/prob/p196640
+     * 
+     * @param nums non-empty
+     * @return difference between largest and smallest value
+     */
+    public static int bigDiff(int[] nums) {
+        int small = nums[0];
+        int large = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] < small) {
+                small = nums[i];
+            } else if (nums[i] > large) {
+                large = nums[i];
+            }
+        }
+
+        return large - small;
+    }
+
+    /**
+     * codingbat.com/prob/p136585
+     * 
+     * @param nums sized 3+
+     * @return "centered" integer average, ignoring both one extreme left and right
+     */
+    public static int centeredAverage(int[] nums) {
+        int small = nums[0];
+        int large = nums[0];
+        int sum = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            sum += nums[i];
+            if (nums[i] < small) {
+                small = nums[i];
+            } else if (nums[i] > large) {
+                large = nums[i];
+            }
+        }
+        return (sum - large - small) / (nums.length - 2);
+    }
+
+    /**
+     * codingbat.com/prob/p111327
+     * 
+     * @param nums an array
+     * @return sum of elements, ignoring sections delimited by 6 and 7
+     */
+    public static int sum67(int[] nums) {
+        int result = 0;
+
+        boolean excluded = false;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 6) {
+                excluded = true;
+            }
+            if (!excluded) {
+                result += nums[i];
+            }
+            if (nums[i] == 7) {
+                excluded = false;
+            }
+        }
+
+        return result;
+    }
 }
