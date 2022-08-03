@@ -151,4 +151,22 @@ class Array2Test {
         int target = 1;
         assertThat(Array2.isEverywhere(input, target)).isTrue();
     }
+
+    @Test
+    void either24Example1() {
+        int[] input = { 1, 2, 2 };
+        assertThat(Array2.either24(input)).isTrue();
+    }
+
+    @Test
+    void has77Example1() {
+        int[] input = { 1, 7, 7 };
+        assertThat(Array2.has77(input)).isTrue();
+    }
+
+    @Test
+    void has12Example1() {
+        int[] input = { 1, 3, 2 };
+        assertThat(Array2.has12(input)).isTrue();
+    }
 }
