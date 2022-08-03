@@ -131,4 +131,24 @@ class Array2Test {
         int[] values = { 1, 4, 1 };
         assertThat(Array2.more14(values)).isTrue();
     }
+
+    @Test
+    void only14Example1() {
+        int[] values = { 1, 4, 1, 4 };
+        assertThat(Array2.only14(values)).isTrue();
+    }
+
+    @Test
+    void fizzArray2Example1() {
+        int input = 4;
+        String[] expected = { "0", "1", "2", "3" };
+        assertThat(Array2.fizzArray2(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void isEverywhereExample1() {
+        int[] input = { 1, 2, 1, 3 };
+        int target = 1;
+        assertThat(Array2.isEverywhere(input, target)).isTrue();
+    }
 }

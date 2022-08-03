@@ -230,4 +230,53 @@ public class Array2 {
 
         return deltaOneFour > 0;
     }
+
+    /**
+     * codingbat.com/prob/p186672
+     * 
+     * @param nums an array
+     * @return true if only 1 and 4
+     */
+    public static boolean only14(int[] nums) {
+        for (int num : nums) {
+            if (num != 1 && num != 4) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * codingbat.com/prob/p178353
+     * 
+     * @param n non-negative
+     * @return the strings from zero up to n (excluded)
+     */
+    public static String[] fizzArray2(int n) {
+        String[] result = new String[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = String.valueOf(i);
+        }
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p110222
+     * 
+     * @param nums an array
+     * @param val  a value
+     * @return true if any element is val or has val as neighbor
+     * @apiNote curiously, if the array is to short to check, true is expected
+     */
+    public static boolean isEverywhere(int[] nums, int val) {
+        if (nums.length == 0 || nums.length == 1 && nums[0] != val) {
+            return true;
+        }
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != val && nums[i - 1] != val) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
