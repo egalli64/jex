@@ -169,4 +169,22 @@ class Array2Test {
         int[] input = { 1, 3, 2 };
         assertThat(Array2.has12(input)).isTrue();
     }
+
+    @Test
+    void modThreeExample1() {
+        int[] input = { 2, 1, 3, 5 };
+        assertThat(Array2.modThree(input)).isTrue();
+    }
+
+    @Test
+    void haveThreeExample1() {
+        int[] input = { 3, 1, 3, 1, 3 };
+        assertThat(Array2.haveThree(input)).isTrue();
+    }
+
+    @Test
+    void twoTwoExample1() {
+        int[] input = { 4, 2, 2, 3 };
+        assertThat(Array2.twoTwo(input)).isTrue();
+    }
 }

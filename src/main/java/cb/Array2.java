@@ -345,4 +345,78 @@ public class Array2 {
 
         return false;
     }
+
+    /**
+     * codingbat.com/prob/p159979
+     * 
+     * @param nums an array
+     * @return true if it has a sub of 3 even or odd values
+     */
+    public static boolean modThree(int[] nums) {
+        if (nums.length < 3) {
+            return false;
+        }
+
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i - 1] % 2 == 0 && nums[i] % 2 == 0 && nums[i + 1] % 2 == 0) {
+                return true;
+            }
+            if (nums[i - 1] % 2 == 1 && nums[i] % 2 == 1 && nums[i + 1] % 2 == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * codingbat.com/prob/p109783
+     * 
+     * @param nums an array
+     * @return true if there are exactly three _separated_ 3
+     */
+    public static boolean haveThree(int[] nums) {
+        if (nums.length < 5) {
+            return false;
+        }
+
+        int count = nums[0] == 3 ? 1 : 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == 3) {
+                if (nums[i - 1] == 3) {
+                    return false;
+                }
+                count += 1;
+            }
+        }
+
+        return count == 3;
+    }
+
+    /**
+     * codingbat.com/prob/p102145
+     * 
+     * @param nums an array
+     * @return true if each 2 is not alone
+     */
+    public static boolean twoTwo(int[] nums) {
+        if (nums.length < 2) {
+            return nums.length == 0 ? true : nums[0] != 2;
+        }
+
+        if (nums[0] == 2 && nums[1] != 2) {
+            return false;
+        }
+
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i - 1] != 2 && nums[i + 1] != 2) {
+                return false;
+            }
+        }
+
+        if (nums.length > 2 && nums[nums.length - 1] == 2 && nums[nums.length - 2] != 2) {
+            return false;
+        }
+
+        return true;
+    }
 }
