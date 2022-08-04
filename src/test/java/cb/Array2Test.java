@@ -216,4 +216,24 @@ class Array2Test {
         assertThat(Array2.fizzArray3(begin, end)).isEqualTo(expected);
     }
 
+    @Test
+    void shiftLeftExample1() {
+        int[] input = { 6, 2, 5, 3 };
+        int[] expected = { 2, 5, 3, 6 };
+        assertThat(Array2.shiftLeft(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void tenRunExample1() {
+        int[] input = { 2, 10, 3, 4, 20, 5 };
+        int[] expected = { 2, 10, 10, 10, 20, 20 };
+        assertThat(Array2.tenRun(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void pre4Example1() {
+        int[] input = { 1, 2, 4, 1 };
+        int[] expected = { 1, 2 };
+        assertThat(Array2.pre4(input)).isEqualTo(expected);
+    }
 }

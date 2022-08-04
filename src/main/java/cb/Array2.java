@@ -3,6 +3,8 @@
  */
 package cb;
 
+import java.util.Arrays;
+
 public class Array2 {
     /**
      * codingbat.com/prob/p162010
@@ -468,5 +470,58 @@ public class Array2 {
             result[i] = start + i;
         }
         return result;
+    }
+
+    /**
+     * codingbat.com/prob/p105031
+     * 
+     * @param nums an array
+     * @return left shifted array
+     */
+    public static int[] shiftLeft(int[] nums) {
+        if (nums.length != 0) {
+            int buffer = nums[0];
+
+            for (int i = 1; i < nums.length; i++) {
+                nums[i - 1] = nums[i];
+            }
+            nums[nums.length - 1] = buffer;
+        }
+
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p199484
+     * 
+     * @param nums an array
+     * @return 10x changes the followers to itself, until next 10x
+     */
+    public static int[] tenRun(int[] nums) {
+        boolean active = false;
+        int changer = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 10 == 0) {
+                changer = nums[i];
+                active = true;
+            } else if (active) {
+                nums[i] = changer;
+            }
+        }
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p100246
+     * 
+     * @param nums non-empty with at least a 4
+     * @return the array up to the first 4 in array
+     */
+    public static int[] pre4(int[] nums) {
+        int i = 0;
+        while (nums[i] != 4) {
+            i += 1;
+        }
+        return Arrays.copyOf(nums, i);
     }
 }
