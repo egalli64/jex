@@ -524,4 +524,54 @@ public class Array2 {
         }
         return Arrays.copyOf(nums, i);
     }
+
+    /**
+     * codingbat.com/prob/p164144
+     * 
+     * @param nums non-empty, with at least a 4
+     * @return the array following the last 4 in the array
+     */
+    public static int[] post4(int[] nums) {
+        int i = nums.length - 1;
+        while (nums[i] != 4) {
+            i -= 1;
+        }
+        return Arrays.copyOfRange(nums, i + 1, nums.length);
+    }
+
+    /**
+     * codingbat.com/prob/p169506
+     * 
+     * @param nums an array
+     * @param val  to be changed
+     * @return changed val with the highest neighbor, when not in extreme position
+     */
+    public static int[] notAlone(int[] nums, int val) {
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i] == val && nums[i] != nums[i - 1] && nums[i] != nums[i + 1]) {
+                nums[i] = Math.max(nums[i - 1], nums[i + 1]);
+            }
+        }
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p193753
+     * 
+     * @param nums an array
+     * @return rearrange with zeroes at the beginning
+     */
+    public static int[] zeroFront(int[] nums) {
+        int[] result = new int[nums.length];
+
+        int j = result.length - 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                result[j] = nums[i];
+                j -= 1;
+            }
+        }
+
+        return result;
+    }
 }

@@ -236,4 +236,26 @@ class Array2Test {
         int[] expected = { 1, 2 };
         assertThat(Array2.pre4(input)).isEqualTo(expected);
     }
+
+    @Test
+    void post4Example1() {
+        int[] input = { 2, 4, 1, 2 };
+        int[] expected = { 1, 2 };
+        assertThat(Array2.post4(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void notAloneExample10() {
+        int[] input = { 1, 1, 1, 2 };
+        int value = 1;
+        int[] expected = { 1, 1, 1, 2 };
+        assertThat(Array2.notAlone(input, value)).isEqualTo(expected);
+    }
+
+    @Test
+    void zeroFrontExample1() {
+        int[] input = { 1, 0, 0, 1 };
+        int[] expected = { 0, 0, 1, 1 };
+        assertThat(Array2.zeroFront(input)).isEqualTo(expected);
+    }
 }
