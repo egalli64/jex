@@ -1,8 +1,8 @@
 package cb;
 
-import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
@@ -187,4 +187,33 @@ class Array2Test {
         int[] input = { 4, 2, 2, 3 };
         assertThat(Array2.twoTwo(input)).isTrue();
     }
+
+    @Test
+    void sameEndsExample1() {
+        int[] input = { 5, 6, 45, 99, 13, 5, 6 };
+        int len = 1;
+        assertThat(Array2.sameEnds(input, len)).isFalse();
+    }
+
+    @Test
+    void sameEndsExample2() {
+        int[] input = { 5, 6, 45, 99, 13, 5, 6 };
+        int len = 2;
+        assertThat(Array2.sameEnds(input, len)).isFalse();
+    }
+
+    @Test
+    void tripleUpExample1() {
+        int[] input = { 1, 4, 5, 6, 2 };
+        assertThat(Array2.tripleUp(input)).isTrue();
+    }
+
+    @Test
+    void fizzArray3Example1() {
+        int begin = 5;
+        int end = 10;
+        int[] expected = { 5, 6, 7, 8, 9 };
+        assertThat(Array2.fizzArray3(begin, end)).isEqualTo(expected);
+    }
+
 }

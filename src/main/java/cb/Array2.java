@@ -419,4 +419,54 @@ public class Array2 {
 
         return true;
     }
+
+    /**
+     * codingbat.com/prob/p134300
+     * 
+     * @param nums an array sized len or less
+     * @param len  an int less or equal to nums length
+     * @return true if the first len elements are also in the end
+     */
+    public static boolean sameEnds(int[] nums, int len) {
+        for (int i = 0; i < len; i++) {
+            int pos = nums.length - len + i;
+            if (nums[i] != nums[pos]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * codingbat.com/prob/p137874
+     * 
+     * @param nums an array
+     * @return true if contains a sub of three increasing adjacent ints
+     */
+    public static boolean tripleUp(int[] nums) {
+        if (nums.length < 3) {
+            return false;
+        }
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i - 1] == nums[i] - 1 && nums[i] == nums[i + 1] - 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * codingbat.com/prob/p142539
+     * 
+     * @param start first (included)
+     * @param end   last (excluded), not smaller than first
+     * @return
+     */
+    public static int[] fizzArray3(int start, int end) {
+        int[] result = new int[end - start];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = start + i;
+        }
+        return result;
+    }
 }
