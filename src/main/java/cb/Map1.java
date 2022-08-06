@@ -49,4 +49,53 @@ public class Map1 {
         }
         return map;
     }
+
+    /**
+     * codingbat.com/prob/p148813
+     *
+     * @param map a map
+     * @return the map, if key "a" has a value, set it to "b" too; remove "c"
+     */
+    public static Map<String, String> mapShare(Map<String, String> map) {
+        String aValue = map.get("a");
+        if (aValue != null) {
+            map.put("b", aValue);
+        }
+        map.remove("c");
+        return map;
+    }
+
+    /**
+     * codingbat.com/prob/p107259
+     *
+     * @param map a map
+     * @return if keys a and b are both present, add "ab" -> value a + value b
+     */
+    public static Map<String, String> mapAB(Map<String, String> map) {
+        String a = map.get("a");
+        String b = map.get("b");
+        if (a != null && b != null) {
+            map.put("ab", a + b);
+        }
+
+        return map;
+    }
+
+    /**
+     * codingbat.com/prob/p196458
+     *
+     * @param map a map
+     * @return <pre>
+     * if key "ice cream" -> value, set key "yogurt" -> value;
+     * if key "spinach" -> value, set it to "nuts";
+     * </pre>
+     */
+    public static Map<String, String> topping2(Map<String, String> map) {
+        String value = map.get("ice cream");
+        if(value != null) {
+            map.put("yogurt", value);
+        }
+        map.replace("spinach", "nuts");
+        return map;
+    }
 }

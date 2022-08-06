@@ -1,10 +1,11 @@
 package cb;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class Map1Test {
     @Test
@@ -14,7 +15,7 @@ class Map1Test {
         input.put("b", "dirt");
         Map<String, String> expected = Map.of("a", "", "b", "candy");
 
-        Assertions.assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -23,7 +24,7 @@ class Map1Test {
         input.put("a", "candy");
         Map<String, String> expected = Map.of("a", "", "b", "candy");
 
-        Assertions.assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -34,7 +35,7 @@ class Map1Test {
         input.put("c", "meh");
         Map<String, String> expected = Map.of("a", "", "b", "candy", "c", "meh");
 
-        Assertions.assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -43,7 +44,7 @@ class Map1Test {
         input.put("ice cream", "peanuts");
         Map<String, String> expected = Map.of("bread", "butter", "ice cream", "cherry");
 
-        Assertions.assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -51,7 +52,7 @@ class Map1Test {
         Map<String, String> input = new HashMap<>();
         Map<String, String> expected = Map.of("bread", "butter");
 
-        Assertions.assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -60,7 +61,7 @@ class Map1Test {
         input.put("pancake", "syrup");
         Map<String, String> expected = Map.of("bread", "butter", "pancake", "syrup");
 
-        Assertions.assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -71,7 +72,7 @@ class Map1Test {
         input.put("c", "cake");
         Map<String, String> expected = Map.of("c", "cake");
 
-        Assertions.assertThat(Map1.mapAB2(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.mapAB2(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
     @Test
@@ -81,7 +82,36 @@ class Map1Test {
         input.put("b", "bbb");
         Map<String, String> expected = Map.of("a", "aaa", "b", "bbb");
 
-        Assertions.assertThat(Map1.mapAB2(input)).containsExactlyInAnyOrderEntriesOf(expected);
+        assertThat(Map1.mapAB2(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
 
+    @Test
+    void mapShareExample1() {
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "aaa");
+        input.put("b", "bbb");
+        input.put("c", "ccc");
+        Map<String, String> expected = Map.of("a", "aaa", "b", "aaa");
+
+        assertThat(Map1.mapShare(input)).containsExactlyInAnyOrderEntriesOf(expected);
+    }
+
+    @Test
+    void mapABExample1() {
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "Hi");
+        input.put("b", "There");
+        Map<String, String> expected = Map.of("a", "Hi", "b", "There", "ab", "HiThere");
+
+        assertThat(Map1.mapAB(input)).containsExactlyInAnyOrderEntriesOf(expected);
+    }
+
+    @Test
+    void topping2Example1() {
+        Map<String, String> input = new HashMap<>();
+        input.put("ice cream", "cherry");
+        Map<String, String> expected = Map.of("yogurt", "cherry", "ice cream", "cherry");
+
+        assertThat(Map1.topping2(input)).containsExactlyInAnyOrderEntriesOf(expected);
+    }
 }
