@@ -114,4 +114,34 @@ class Map1Test {
 
         assertThat(Map1.topping2(input)).containsExactlyInAnyOrderEntriesOf(expected);
     }
+
+    @Test
+    void topping3Example1() {
+        Map<String, String> input = new HashMap<>();
+        input.put("potato", "ketchup");
+        Map<String, String> expected = Map.of("potato", "ketchup", "fries", "ketchup");
+
+        assertThat(Map1.topping3(input)).containsExactlyInAnyOrderEntriesOf(expected);
+    }
+
+    @Test
+    void mapAB3Example1() {
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "aaa");
+        input.put("c", "cake");
+        Map<String, String> expected = Map.of("a", "aaa", "b", "aaa", "c", "cake");
+
+        assertThat(Map1.mapAB3(input)).containsExactlyInAnyOrderEntriesOf(expected);
+    }
+
+    @Test
+    void mapAB4Example1() {
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "aaa");
+        input.put("b", "bb");
+        input.put("c", "cake");
+        Map<String, String> expected = Map.of("a", "aaa", "b", "bb", "c", "aaa");
+
+        assertThat(Map1.mapAB4(input)).containsExactlyInAnyOrderEntriesOf(expected);
+    }
 }

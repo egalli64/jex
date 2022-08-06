@@ -92,10 +92,75 @@ public class Map1 {
      */
     public static Map<String, String> topping2(Map<String, String> map) {
         String value = map.get("ice cream");
-        if(value != null) {
+        if (value != null) {
             map.put("yogurt", value);
         }
         map.replace("spinach", "nuts");
+        return map;
+    }
+
+    /**
+     * codingbat.com/prob/p128461
+     *
+     * @param map a map
+     * @return <pre>
+     * if key "potato" -> value, then "fries" -> value
+     * if key "salad" -> value, then "spinach" -> value
+     * </pre>
+     */
+    public static Map<String, String> topping3(Map<String, String> map) {
+        String potato = map.get("potato");
+        if (potato != null) {
+            map.put("fries", potato);
+        }
+
+        String salad = map.get("salad");
+        if (salad != null) {
+            map.put("spinach", salad);
+        }
+
+        return map;
+    }
+
+    /**
+     * codingbat.com/prob/p115012
+     *
+     * @param map a map
+     * @return if only one between keys "a" or "b" has a value, set the other to that value
+     */
+    public static Map<String, String> mapAB3(Map<String, String> map) {
+        String a = map.get("a");
+        String b = map.get("b");
+
+        if (a != null && b == null) {
+            map.put("b", a);
+        }
+        if (a == null && b != null) {
+            map.put("a", b);
+        }
+        return map;
+    }
+
+    /**
+     * codingbat.com/prob/p136950
+     *
+     * @param map a map
+     * @return <pre>
+     * if key "a" and key "b" have values with different lengths, set "c" -> the longest
+     * if they have the same length -> set both to empty strings
+     * </pre>
+     */
+    public static Map<String, String> mapAB4(Map<String, String> map) {
+        String a = map.get("a");
+        String b = map.get("b");
+        if (a != null && b != null) {
+            if (a.length() == b.length()) {
+                map.put("a", "");
+                map.put("b", "");
+            } else {
+                map.put("c", a.length() > b.length() ? a : b);
+            }
+        }
         return map;
     }
 }
