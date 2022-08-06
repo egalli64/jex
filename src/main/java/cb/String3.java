@@ -84,7 +84,7 @@ public class String3 {
     /**
      * codingbat.com/prob/p192570
      *
-     * @param base a string
+     * @param base   a string
      * @param remove a non-empty string to be removed
      * @return a copy of base without any remove (case-insensitive!) in it
      */
@@ -102,7 +102,7 @@ public class String3 {
         int result = 0;
 
         for (int i = 0; i < str.length() - 2; i++) {
-            if(str.charAt(i) == str.charAt(i+1) && str.charAt(i) == str.charAt(i+2)) {
+            if (str.charAt(i) == str.charAt(i + 1) && str.charAt(i) == str.charAt(i + 2)) {
                 result += 1;
             }
         }
@@ -118,11 +118,118 @@ public class String3 {
      */
     public static String mirrorEnds(String string) {
         int i = 0;
-        for(int j = string.length() - 1; i < j; i++, j--) {
-            if(string.charAt(i) != string.charAt(j)) {
+        for (int j = string.length() - 1; i < j; i++, j--) {
+            if (string.charAt(i) != string.charAt(j)) {
                 break;
             }
         }
         return i == string.length() / 2 ? string : string.substring(0, i);
+    }
+
+    /**
+     * codingbat.com/prob/p141736
+     * 
+     * @param str a string
+     * @return true if number "is" == number "not"
+     */
+    public static boolean equalIsNot(String str) {
+        String[] tags = { "is", "not" };
+        int[] counters = new int[2];
+
+        for (int i = 0; i < tags.length; i++) {
+            int pos = 0;
+            while ((pos = str.indexOf(tags[i], pos)) != -1) {
+                counters[i] += 1;
+                pos += 1;
+            }
+        }
+        return counters[0] == counters[1];
+    }
+
+    /**
+     * codingbat.com/prob/p197890
+     * 
+     * @param str a string
+     * @return sum of all the digits in the string
+     */
+    public static int sumDigits(String str) {
+        int result = 0;
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                result += c - '0';
+            }
+        }
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p179479
+     * 
+     * @param str a string
+     * @return size of the largest sequence of same char
+     */
+    public static int maxBlock(String str) {
+        int result = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char cur = str.charAt(i);
+            int candidate = 1;
+            for (int j = i + 1; j < str.length() && cur == str.charAt(j); j++) {
+                i++;
+                candidate += 1;
+            }
+            result = Math.max(candidate, result);
+        }
+
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p121193
+     * 
+     * @param str a string
+     * @return sum of numbers (sequence of digit) in the string
+     */
+    public static int sumNumbers(String str) {
+        int result = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char cur = str.charAt(i);
+            int number = Character.isDigit(cur) ? cur - '0' : 0;
+            for (int j = i + 1; j < str.length() && Character.isDigit(cur = str.charAt(j)); j++) {
+                i++;
+                number *= 10;
+                number += cur - '0';
+            }
+            result += number;
+        }
+
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p154137
+     * 
+     * @param str a string
+     * @return "is" without letters around is replaced by "is not"
+     */
+    public static String notReplace(String str) {
+        StringBuilder result = new StringBuilder(str);
+
+        int pos = -1;
+        while ((pos = result.indexOf("is", pos)) != -1) {
+            if (pos != 0 && Character.isLetter(result.charAt(pos - 1))) {
+                pos += 3;
+                continue;
+            }
+            if (pos != result.length() - 2 && Character.isLetter(result.charAt(pos + 2))) {
+                pos += 3;
+                continue;
+            }
+            result.insert(pos + 2, " not");
+            pos += 6;
+        }
+
+        return result.toString();
     }
 }
