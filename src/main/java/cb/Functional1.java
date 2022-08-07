@@ -54,12 +54,55 @@ public class Functional1 {
     }
 
     /**
-     * Variation on {@linkplain Functional1#rightDigit(List)}, new list is generated and returned
+     * Variation to {@linkplain Functional1#rightDigit(List)}, new list is generated and returned
      *
      * @param nums a int list of non-negative numbers
      * @return for each number just the rightmost decimal cipher is kept
      */
     public static List<Integer> rightDigitOther(List<Integer> nums) {
         return nums.stream().map(x -> x % 10).collect(Collectors.toList());
+    }
+
+    /**
+     * codingbat.com/prob/p139586
+     * 
+     * @param nums integers
+     * @return each value squared
+     */
+    public static List<Integer> square(List<Integer> nums) {
+        nums.replaceAll(x -> x * x);
+        return nums;
+    }
+
+    /**
+     * Variation to {@linkplain Functional1#square(List)}, new list is generated and returned
+     * 
+     * @param nums integers
+     * @return each value squared
+     */
+    public static List<Integer> squareByMapping(List<Integer> nums) {
+        return nums.stream().map(x -> x * x).collect(Collectors.toList());
+    }
+
+    /**
+     * codingbat.com/prob/p170181
+     * 
+     * @param strings a list
+     * @return each string with a '*' in the end
+     */
+    public static List<String> addStar(List<String> strings) {
+        strings.replaceAll(x -> x + '*');
+        return strings;
+    }
+
+    /**
+     * codingbat.com/prob/p177528
+     * 
+     * @param strings a list
+     * @return each string prefixed and postfixed by 'y'
+     */
+    public static List<String> moreY(List<String> strings) {
+        strings.replaceAll(x -> 'y' + x + 'y');
+        return strings;
     }
 }
