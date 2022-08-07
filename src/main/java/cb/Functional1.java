@@ -65,7 +65,7 @@ public class Functional1 {
 
     /**
      * codingbat.com/prob/p139586
-     * 
+     *
      * @param nums integers
      * @return each value squared
      */
@@ -76,7 +76,7 @@ public class Functional1 {
 
     /**
      * Variation to {@linkplain Functional1#square(List)}, new list is generated and returned
-     * 
+     *
      * @param nums integers
      * @return each value squared
      */
@@ -86,7 +86,7 @@ public class Functional1 {
 
     /**
      * codingbat.com/prob/p170181
-     * 
+     *
      * @param strings a list
      * @return each string with a '*' in the end
      */
@@ -97,12 +97,61 @@ public class Functional1 {
 
     /**
      * codingbat.com/prob/p177528
-     * 
+     *
      * @param strings a list
      * @return each string prefixed and postfixed by 'y'
      */
     public static List<String> moreY(List<String> strings) {
         strings.replaceAll(x -> 'y' + x + 'y');
         return strings;
+    }
+
+    /**
+     * codingbat.com/prob/p103869
+     *
+     * @param nums a list
+     * @return each element is increased and multiplied by 10
+     */
+    public static List<Integer> math1(List<Integer> nums) {
+        nums.replaceAll(x -> (x + 1) * 10);
+        return nums;
+    }
+
+    /**
+     * codingbat.com/prob/p186894
+     *
+     * @param strings a list
+     * @return each string is lowercase
+     */
+    public static List<String> lower(List<String> strings) {
+        strings.replaceAll(String::toLowerCase);
+        return strings;
+    }
+
+    /**
+     * codingbat.com/prob/p105967
+     *
+     * @param strings a list
+     * @return no x in any string
+     */
+    public static List<String> noX(List<String> strings) {
+        strings.replaceAll(Functional1::noX);
+        return strings;
+    }
+
+    /**
+     * Helper for {@linkplain Functional1#noX(List)}
+     *
+     * @param s a string
+     * @return no 'x' in it
+     */
+    private static String noX(String s) {
+        StringBuilder result = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (c != 'x') {
+                result.append(c);
+            }
+        }
+        return result.toString();
     }
 }
