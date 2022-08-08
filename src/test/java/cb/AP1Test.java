@@ -166,7 +166,6 @@ class AP1Test {
         assertThat(AP1.wordsWithoutClassic(input, target)).isEqualTo(expected);
     }
 
-
     @Test
     void scoresSpecialExample1() {
         int[] left = {12, 10, 4};
@@ -200,5 +199,28 @@ class AP1Test {
         int last = 4;
         int expected = 1;
         assertThat(AP1.bigHeights(input, first, last)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"bb,1,zz,2,-1", "bb,1,aa,2,1", "bb,1,bb,1,0"})
+    void userCompareExamples(String left, int leftId, String right, int rightId, int expected) {
+        assertThat(AP1.userCompare(left, leftId, right, rightId)).isEqualTo(expected);
+    }
+
+    @Test
+    void mergeTwoExample1() {
+        String[] left = {"a", "c", "z"};
+        String[] right = {"b", "f", "z"};
+        int n = 3;
+        String[] expected = {"a", "b", "c"};
+        assertThat(AP1.mergeTwo(left, right, n)).isEqualTo(expected);
+    }
+
+    @Test
+    void commonTwoExample4() {
+        String[] left = {"a", "a", "b", "b", "c"};
+        String[] right = {"a", "b", "b", "b", "c"};
+        int expected = 3;
+        assertThat(AP1.commonTwo(left, right)).isEqualTo(expected);
     }
 }
