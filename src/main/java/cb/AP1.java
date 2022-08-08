@@ -4,6 +4,7 @@
 package cb;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AP1 {
@@ -114,4 +115,49 @@ public class AP1 {
         }
         return false;
     }
+
+    /**
+     * codingbat.com/prob/p194530
+     *
+     * @param scores in non-decreasing order
+     * @return true if 3 adjacent scores differ from min to max by at most 2
+     */
+    public static boolean scoresClump(int[] scores) {
+        for (int i = 2; i < scores.length; i++) {
+            if(scores[i] - scores[i-2] < 3) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * codingbat.com/prob/p183837
+     *
+     * @param words an array
+     * @param n size of the new array
+     * @return the first n strings from input
+     */
+    public static String[] wordsFront(String[] words, int n) {
+        return Arrays.copyOf(words, n);
+    }
+
+    /**
+     * codingbat.com/prob/p165941
+     *
+     * @param n positive, non-zero
+     * @return true if each digit is a divisor of n
+     */
+    public static boolean dividesSelf(int n) {
+        int partial = n;
+        while( partial > 0) {
+            int digit = partial % 10;
+            if(digit == 0 || n % digit != 0) {
+                return false;
+            }
+            partial /= 10;
+        }
+        return true;
+    }
 }
+
