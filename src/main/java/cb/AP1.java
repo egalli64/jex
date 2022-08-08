@@ -226,5 +226,74 @@ public class AP1 {
 
         return count;
     }
+
+    /**
+     * codingbat.com/prob/p180365
+     *
+     * @param key     right answers, not empty
+     * @param answers actual answers, same size
+     * @return score, +4 correct, -1 wrong, 0 skip "?"
+     */
+    public static int scoreUp(String[] key, String[] answers) {
+        int result = 0;
+
+        for (int i = 0; i < key.length; i++) {
+            if (answers[i].equals(key[i])) {
+                result += 4;
+            } else if (!answers[i].equals("?")) {
+                result -= 1;
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p121236
+     *
+     * @param words  an array
+     * @param target a string
+     * @return input without any target in it
+     */
+    public static String[] wordsWithout(String[] words, String target) {
+        return Arrays.stream(words).filter(x -> !x.equals(target)).toArray(String[]::new);
+    }
+
+
+    /**
+     * A classic alternative to {@linkplain AP1#wordsWithout(String[], String)}
+     *
+     * @param words  an array
+     * @param target a string
+     * @return input without any target in it
+     */
+    public static String[] wordsWithoutClassic(String[] words, String target) {
+        String[] result = new String[words.length];
+        int count = 0;
+        for (String word : words) {
+            if (!word.equals(target)) {
+                result[count++] = word;
+            }
+        }
+        return Arrays.copyOf(result, count);
+    }
+
+    /**
+     * codingbat.com/prob/p140485
+     *
+     * @param a non-negatives
+     * @param b non-negatives
+     * @return the sum of largest 10x value in both array (or zero)
+     */
+    public static int scoresSpecial(int[] a, int[] b) {
+        int result = 0;
+        result += largestSpecialScore(a);
+        result += largestSpecialScore(b);
+        return result;
+    }
+
+    private static int largestSpecialScore(int[] values) {
+        return Arrays.stream(values).filter(x -> x % 10 == 0).max().orElse(0);
+    }
 }
 

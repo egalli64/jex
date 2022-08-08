@@ -142,4 +142,36 @@ class AP1Test {
         assertThat(AP1.matchUp(left, right)).isEqualTo(expected);
     }
 
+    @Test
+    void scoreUpExample1() {
+        String[] keys = {"a", "a", "b", "b"};
+        String[] answers = {"a", "c", "b", "c"};
+        int expected = 6;
+        assertThat(AP1.scoreUp(keys, answers)).isEqualTo(expected);
+    }
+
+    @Test
+    void wordsWithoutExample1() {
+        String[] input = {"a", "b", "c", "a"};
+        String target = "a";
+        String[] expected = {"b", "c"};
+        assertThat(AP1.wordsWithout(input, target)).isEqualTo(expected);
+    }
+
+    @Test
+    void wordsWithoutClassicExample1() {
+        String[] input = {"a", "b", "c", "a"};
+        String target = "a";
+        String[] expected = {"b", "c"};
+        assertThat(AP1.wordsWithoutClassic(input, target)).isEqualTo(expected);
+    }
+
+
+    @Test
+    void scoresSpecialExample1() {
+        int[] left = {12, 10, 4};
+        int[] right = {2, 20, 30};
+        int expected = 40;
+        assertThat(AP1.scoresSpecial(left, right)).isEqualTo(expected);
+    }
 }
