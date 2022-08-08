@@ -124,7 +124,7 @@ public class AP1 {
      */
     public static boolean scoresClump(int[] scores) {
         for (int i = 2; i < scores.length; i++) {
-            if(scores[i] - scores[i-2] < 3) {
+            if (scores[i] - scores[i - 2] < 3) {
                 return true;
             }
         }
@@ -135,7 +135,7 @@ public class AP1 {
      * codingbat.com/prob/p183837
      *
      * @param words an array
-     * @param n size of the new array
+     * @param n     size of the new array
      * @return the first n strings from input
      */
     public static String[] wordsFront(String[] words, int n) {
@@ -150,14 +150,81 @@ public class AP1 {
      */
     public static boolean dividesSelf(int n) {
         int partial = n;
-        while( partial > 0) {
+        while (partial > 0) {
             int digit = partial % 10;
-            if(digit == 0 || n % digit != 0) {
+            if (digit == 0 || n % digit != 0) {
                 return false;
             }
             partial /= 10;
         }
         return true;
+    }
+
+    /**
+     * codingbat.com/prob/p134174
+     *
+     * @param nums  an array size count+, with at least count even integers
+     * @param count non-negative
+     * @return the first count non-negative values in input
+     */
+    public static int[] copyEvens(int[] nums, int count) {
+        int[] result = new int[count];
+
+        for (int i = 0, j = 0; j < count; i++) {
+            if (nums[i] % 2 == 0) {
+                result[j++] = nums[i];
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * codingbat.com/prob/p130124
+     *
+     * @param nums  an array with at least count "endy" values
+     * @param count non-negative
+     * @return the first count "endy", in range [0..10] or [90..100], elements from input
+     */
+    public static int[] copyEndy(int[] nums, int count) {
+        int[] result = new int[count];
+
+        for (int i = 0, j = 0; j < count; i++) {
+            if (isEndy(nums[i])) {
+                result[j++] = nums[i];
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Helper for {@linkplain AP1#copyEndy(int[], int)}
+     *
+     * @param value a value
+     * @return true if in [0..10] or [90..100]
+     */
+    private static boolean isEndy(int value) {
+        return value >= 0 && value <= 10 || value >= 90 && value <= 100;
+    }
+
+    /**
+     * codingbat.com/prob/p139677
+     *
+     * @param a an array of possibly empty strings
+     * @param b another array, same size
+     * @return how many strings in the same position starts with the same letter
+     */
+    public static int matchUp(String[] a, String[] b) {
+        int count = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (!a[i].isEmpty() && !b[i].isEmpty() && a[i].charAt(0) == b[i].charAt(0)) {
+                count += 1;
+            }
+        }
+
+        return count;
     }
 }
 

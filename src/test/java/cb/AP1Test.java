@@ -117,4 +117,29 @@ class AP1Test {
     void dividesSelfExamples(int number, boolean expected) {
         assertThat(AP1.dividesSelf(number)).isEqualTo(expected);
     }
+
+    @Test
+    void copyEvensExample2() {
+        int[] input = {3, 2, 4, 5, 8};
+        int n = 3;
+        int[] expected = {2, 4, 8};
+        assertThat(AP1.copyEvens(input, n)).isEqualTo(expected);
+    }
+
+    @Test
+    void copyEndyExample1() {
+        int[] input = {9, 11, 90, 22, 6};
+        int n = 2;
+        int[] expected = {9, 90};
+        assertThat(AP1.copyEndy(input, n)).isEqualTo(expected);
+    }
+
+    @Test
+    void matchUpExample1() {
+        String[] left = {"aa", "bb", "cc"};
+        String[] right = {"aaa", "xx", "bb"};
+        int expected = 1;
+        assertThat(AP1.matchUp(left, right)).isEqualTo(expected);
+    }
+
 }
