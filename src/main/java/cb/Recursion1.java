@@ -45,7 +45,7 @@ public class Recursion1 {
 
     /**
      * codingbat.com/prob/p170371
-     * 
+     *
      * @param str a string
      * @return the number of lowercase 'x' chars in the string
      */
@@ -55,7 +55,7 @@ public class Recursion1 {
 
     /**
      * Helper for {@linkplain Recursion1#countX(String)}
-     * 
+     *
      * @param str a string
      * @param beg the initial position to consider in the string
      * @return the number of 'x' from beg in the string
@@ -69,7 +69,7 @@ public class Recursion1 {
 
     /**
      * codingbat.com/prob/p170924
-     * 
+     *
      * @param str a string
      * @return a string where each "pi" is replaced be "3.14"
      */
@@ -79,7 +79,7 @@ public class Recursion1 {
 
     /**
      * Helper for {@linkplain Recursion1#changePi(String)}
-     * 
+     *
      * @param str a string
      * @param beg the initial position to consider in the string
      * @return a string where each "pi" is replaced be "3.14"
@@ -94,7 +94,7 @@ public class Recursion1 {
 
     /**
      * codingbat.com/prob/p135988
-     * 
+     *
      * @param nums  an array
      * @param index first position to consider
      * @return count the 11 in the specified part of the array
@@ -104,5 +104,47 @@ public class Recursion1 {
             return 0;
         }
         return (nums[index] == 11 ? 1 : 0) + array11(nums, index + 1);
+    }
+
+    /**
+     * codingbat.com/prob/p183649
+     *
+     * @param bunnies non-negative
+     * @return number of ears, no loop or multiplication allowed
+     */
+    public static int bunnyEars(int bunnies) {
+        if (bunnies == 0) {
+            return 0;
+        }
+        return 2 + bunnyEars(bunnies - 1);
+    }
+
+    /**
+     * codingbat.com/prob/p120015
+     *
+     * @param n non-negative
+     * @return 0, 1, 2, 3, 4, 5, 6, 7, 8, ... -> 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+     */
+    public static int fibonacci(int n) {
+        if (n < 1) {
+            return 0;
+        } else if (n < 3) {
+            return 1;
+        }
+
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    /**
+     * codingbat.com/prob/p194781
+     *
+     * @param rows non-negative
+     * @return 0, 1, 2, 3, 4, 5, ... -> 0, 1, 3, 6, 10, 15, ...
+     */
+    public static int triangle(int rows) {
+        if (rows < 2) {
+            return rows;
+        }
+        return rows + triangle(rows - 1);
     }
 }
