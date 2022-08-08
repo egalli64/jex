@@ -174,4 +174,31 @@ class AP1Test {
         int expected = 40;
         assertThat(AP1.scoresSpecial(left, right)).isEqualTo(expected);
     }
+
+    @Test
+    void sumHeightsExample1() {
+        int[] input = {5, 3, 6, 7, 2};
+        int first = 2;
+        int last = 4;
+        int expected = 6;
+        assertThat(AP1.sumHeights(input, first, last)).isEqualTo(expected);
+    }
+
+    @Test
+    void sumHeights2Example1() {
+        int[] input = {5, 3, 6, 7, 2};
+        int first = 2;
+        int last = 4;
+        int expected = 7;
+        assertThat(AP1.sumHeights2(input, first, last)).isEqualTo(expected);
+    }
+
+    @Test
+    void bigHeightsExample1() {
+        int[] input = {5, 3, 6, 7, 2};
+        int first = 2;
+        int last = 4;
+        int expected = 1;
+        assertThat(AP1.bigHeights(input, first, last)).isEqualTo(expected);
+    }
 }
