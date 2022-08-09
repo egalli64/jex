@@ -147,4 +147,47 @@ public class Recursion1 {
         }
         return rows + triangle(rows - 1);
     }
+
+    /**
+     * codingbat.com/prob/p163932
+     *
+     * @param n non-negative
+     * @return sum of digits
+     */
+    public static int sumDigits(int n) {
+        if (n < 10) {
+            return n;
+        }
+
+        return n % 10 + sumDigits(n / 10);
+    }
+
+    /**
+     * codingbat.com/prob/p192383
+     *
+     * @param n non-negative
+     * @return number of 8s, but 8 with another 8 to its left counts 2
+     */
+    public static int count8(int n) {
+        if (n < 18) {
+            return n == 8 ? 1 : 0;
+        }
+        return (n % 100 == 88 ? 2 : n % 10 == 8 ? 1 : 0) + count8(n / 10);
+    }
+
+    /**
+     * codingbat.com/prob/p158888
+     *
+     * @param base 1+
+     * @param n    1+
+     * @return base ** n
+     */
+    public static int powerN(int base, int n) {
+        assert n > 0;
+
+        if (n == 1) {
+            return base;
+        }
+        return base * powerN(base, n - 1);
+    }
 }

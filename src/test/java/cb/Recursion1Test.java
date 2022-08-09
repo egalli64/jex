@@ -59,4 +59,22 @@ class Recursion1Test {
     void triangleExamples(int input, int expected) {
         assertThat(Recursion1.triangle(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"126,9", "49,13", "12,3"})
+    void sumDigitsExamples(int input, int expected) {
+        assertThat(Recursion1.sumDigits(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"8,1", "818,2", "8818,4"})
+    void count8Examples(int input, int expected) {
+        assertThat(Recursion1.count8(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"3,1,3", "3,2,9", "3,3,27"})
+    void powerNExamples(int base, int exp, int expected) {
+        assertThat(Recursion1.powerN(base, exp)).isEqualTo(expected);
+    }
 }
