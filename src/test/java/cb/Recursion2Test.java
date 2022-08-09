@@ -71,4 +71,11 @@ class Recursion2Test {
         int[] values = {5, 5, 6, 1};
         assertThat(Recursion2.splitOdd10(values)).isTrue();
     }
+
+    @Test
+    void groupSum6Example1() {
+        int[] values = {5, 6, 2};
+        int target = 8;
+        assertThat(Recursion2.groupSum6(0, values, target)).isTrue();
+    }
 }
