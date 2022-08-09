@@ -466,7 +466,7 @@ public class Recursion1 {
      * Helper for {@linkplain Recursion1#stringClean(String)}
      *
      * @param sb a mutable string
-     * @param i current position
+     * @param i  current position
      * @return no double chars from i on
      */
     private static StringBuilder stringClean(StringBuilder sb, int i) {
@@ -479,4 +479,101 @@ public class Recursion1 {
         }
         return stringClean(sb, i + 1);
     }
+
+    /**
+     * codingbat.com/prob/p143900
+     *
+     * @param str a string
+     * @return count of "hi" not prefixed by 'x'
+     */
+    public static int countHi2(String str) {
+        return countHi2(str, 0);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#countHi2(String)}
+     *
+     * @param s a string
+     * @param i a position
+     * @return count of "hi" not prefixed by 'x' from i on
+     */
+    private static int countHi2(String s, int i) {
+        if (i > s.length() - 2) {
+            return 0;
+        }
+        if (s.charAt(i) == 'h' && s.charAt(i + 1) == 'i') {
+            return 1 + countHi2(s, i + 1);
+        } else if (s.charAt(i) == 'x' && s.charAt(i + 1) == 'h') {
+            return countHi2(s, i + 2);
+        } else {
+            return countHi2(s, i + 1);
+        }
+    }
+
+    /**
+     * codingbat.com/prob/p137918
+     *
+     * @param str a string inf format "...(...)..."
+     * @return the substring delimited by '(' and ')'
+     */
+    public static String parenBit(String str) {
+        return str.substring(firstParenLeft(str, 0), lastParenRight(str, str.length() - 1) + 1);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#parenBit(String)}
+     *
+     * @param s string
+     * @param i position
+     * @return the first '(' from i
+     */
+    private static int firstParenLeft(String s, int i) {
+        if (s.charAt(i) == '(') {
+            return i;
+        }
+        return firstParenLeft(s, i + 1);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#parenBit(String)}
+     *
+     * @param s string
+     * @param i position
+     * @return the last ')' up to i
+     */
+    private static int lastParenRight(String s, int i) {
+        if (s.charAt(i) == ')') {
+            return i;
+        }
+        return lastParenRight(s, i - 1);
+    }
+
+    /**
+     * codingbat.com/prob/p183174
+     *
+     * @param str a string
+     * @return true if matching open/close parenthesis
+     */
+    public static boolean nestParen(String str) {
+        return nestParen(str, 0, str.length() - 1);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#nestParen(String)}
+     *
+     * @param s string
+     * @param i left pos
+     * @param j right pos
+     * @return true if all matching from current in
+     */
+    private static boolean nestParen(String s, int i, int j) {
+        if (i > j) {
+            return true;
+        }
+        if (s.charAt(i) != '(' || s.charAt(j) != ')') {
+            return false;
+        }
+        return nestParen(s, i + 1, j - 1);
+    }
+
 }

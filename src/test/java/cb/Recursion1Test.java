@@ -151,4 +151,22 @@ class Recursion1Test {
     void stringCleanExamples(String input, String expected) {
         assertThat(Recursion1.stringClean(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"ahixhi,1", "ahibhi,2", "xhixhi,0"})
+    void countHi2Examples(String input, int expected) {
+        assertThat(Recursion1.countHi2(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"xyz(abc)123,(abc)", "x(hello),(hello)", "(xy)1,(xy)"})
+    void parenBitExamples(String input, String expected) {
+        assertThat(Recursion1.parenBit(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"(()),true", "((())),true", "(((x)),false"})
+    void nestParenExamples(String input, boolean expected) {
+        assertThat(Recursion1.nestParen(input)).isEqualTo(expected);
+    }
 }
