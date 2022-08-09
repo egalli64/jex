@@ -234,4 +234,62 @@ public class Recursion1 {
 
         return str.substring(0, pos) + noX(str.substring(pos + 1));
     }
+
+    /**
+     * codingbat.com/prob/p108997
+     *
+     * @param nums  an array
+     * @param index non-negative, from this position on
+     * @return true if contains 6
+     */
+    public static boolean array6(int[] nums, int index) {
+        if (index > nums.length - 1) {
+            return false;
+        }
+        return nums[index] == 6 || array6(nums, index + 1);
+    }
+
+    /**
+     * codingbat.com/prob/p173469
+     *
+     * @param nums  an array
+     * @param index non-negative, from this position on
+     * @return true if next value is 10x current one
+     */
+    public static boolean array220(int[] nums, int index) {
+        if (index >= nums.length - 1) {
+            return false;
+        } else if (nums[index] * 10 == nums[index + 1]) {
+            return true;
+        }
+        return array220(nums, index + 1);
+    }
+
+    /**
+     * codingbat.com/prob/p183394
+     *
+     * @param str a string
+     * @return the string with '*' added as char connector
+     */
+    public static String allStar(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+        return allStar(new StringBuilder(str), 1).toString();
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#allStar(String)}
+     *
+     * @param sb  a mutable string
+     * @param pos current position for '*' insertion
+     * @return the starred string
+     */
+    private static StringBuilder allStar(StringBuilder sb, int pos) {
+        if (pos > sb.length() - 1) {
+            return sb;
+        }
+        sb.insert(pos, '*');
+        return allStar(sb, pos + 2);
+    }
 }

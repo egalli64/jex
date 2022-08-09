@@ -1,5 +1,6 @@
 package cb;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -36,6 +37,7 @@ class Recursion1Test {
         assertThat(Recursion1.changePi(input)).isEqualTo(expected);
     }
 
+    @Test
     void array11Example1() {
         int[] input = {1, 2, 11};
         int expected = 1;
@@ -94,5 +96,23 @@ class Recursion1Test {
     @CsvSource({"xaxb,ab", "abc,abc", "xx,''"})
     void noXExamples(String input, String expected) {
         assertThat(Recursion1.noX(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void array6Example1() {
+        int[] input = {1, 6, 4};
+        assertThat(Recursion1.array6(input, 0)).isTrue();
+    }
+
+    @Test
+    void array220Example1() {
+        int[] input = {1, 2, 20};
+        assertThat(Recursion1.array220(input, 0)).isTrue();
+    }
+
+    @ParameterizedTest
+    @CsvSource({"hello,h*e*l*l*o", "abc,a*b*c", "ab,a*b"})
+    void allStarExamples(String input, String expected) {
+        assertThat(Recursion1.allStar(input)).isEqualTo(expected);
     }
 }
