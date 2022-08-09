@@ -77,4 +77,22 @@ class Recursion1Test {
     void powerNExamples(int base, int exp, int expected) {
         assertThat(Recursion1.powerN(base, exp)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"xxhixx,1", "xhixhix,2", "hi,1"})
+    void countHiExamples(String input, int expected) {
+        assertThat(Recursion1.countHi(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"codex,codey", "xxhixx,yyhiyy", "xhixhix,yhiyhiy"})
+    void changeXYExamples(String input, String expected) {
+        assertThat(Recursion1.changeXY(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"xaxb,ab", "abc,abc", "xx,''"})
+    void noXExamples(String input, String expected) {
+        assertThat(Recursion1.noX(input)).isEqualTo(expected);
+    }
 }

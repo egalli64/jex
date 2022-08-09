@@ -190,4 +190,48 @@ public class Recursion1 {
         }
         return base * powerN(base, n - 1);
     }
+
+    /**
+     * codingbat.com/prob/p184029
+     *
+     * @param str a string
+     * @return number of "hi" in it
+     */
+    public static int countHi(String str) {
+        if (str.length() < 2) {
+            return 0;
+        }
+        int pos = str.indexOf("hi");
+        return pos == -1 ? 0 : 1 + countHi(str.substring(pos + 2));
+    }
+
+    /**
+     * codingbat.com/prob/p101372
+     *
+     * @param str a string
+     * @return each 'x' changed to 'y'
+     */
+    public static String changeXY(String str) {
+        int pos;
+        if (str.isEmpty() || (pos = str.indexOf('x')) == -1) {
+            return str;
+        }
+
+        return str.substring(0, pos) + 'y' + changeXY(str.substring(pos + 1));
+    }
+
+    /**
+     * codingbat.com/prob/p118230
+     *
+     * @param str a string
+     * @return all 'x' removed
+     */
+    public static String noX(String str) {
+        int pos;
+        if (str.isEmpty() || (pos = str.indexOf('x')) == -1) {
+            return str;
+        }
+
+        return str.substring(0, pos) + noX(str.substring(pos + 1));
+    }
 }
