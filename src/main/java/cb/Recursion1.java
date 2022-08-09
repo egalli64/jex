@@ -292,4 +292,92 @@ public class Recursion1 {
         sb.insert(pos, '*');
         return allStar(sb, pos + 2);
     }
+
+    /**
+     * codingbat.com/prob/p158175
+     *
+     * @param str a string
+     * @return all same-char couple connected by '*'
+     */
+    public static String pairStar(String str) {
+        return str.length() < 2 ? str : pairStar(new StringBuilder(str), 1).toString();
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#pairStar(String)}
+     *
+     * @param sb a mutable string
+     * @param i  current position to be checked for '*' insertion
+     * @return the starred string
+     */
+    private static StringBuilder pairStar(StringBuilder sb, int i) {
+        if (i == sb.length()) {
+            return sb;
+        }
+        if (sb.charAt(i) == sb.charAt(i - 1)) {
+            sb.insert(i, '*');
+        }
+        return pairStar(sb, i + 1);
+    }
+
+    /**
+     * codingbat.com/prob/p105722
+     *
+     * @param str a string
+     * @return all 'x' moved to the end
+     */
+    public static String endX(String str) {
+        int last = lastNotX(str, str.length() - 1);
+        return last > 0 ? endX(new StringBuilder(str), 0, last).toString() : str;
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#endX(String)}
+     *
+     * @param s string
+     * @param i right position
+     * @return the position of the last non-x char
+     */
+    private static int lastNotX(String s, int i) {
+        return i < 1 || s.charAt(i) != 'x' ? i : lastNotX(s, i - 1);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#endX(String)}
+     *
+     * @param sb   a mutable string
+     * @param cur  the position to be checked
+     * @param last the last position to be checked
+     * @return mutable string rearranged
+     */
+    private static StringBuilder endX(StringBuilder sb, int cur, int last) {
+        if (cur > last) {
+            return sb;
+        }
+        if (sb.charAt(cur) == 'x') {
+            sb.deleteCharAt(cur);
+            sb.append('x');
+            last -= 1;
+        } else {
+            cur += 1;
+        }
+        return endX(sb, cur, last);
+    }
+
+    /**
+     * codingbat.com/prob/p154048
+     *
+     * @param str a string
+     * @return the number of same chars separated by one other char
+     */
+    public static int countPairs(String str) {
+        return str.length() < 3 ? 0 : countPairs(str, 0);
+    }
+
+    private static int countPairs(String str, int i) {
+        if (i > str.length() - 3) {
+            return 0;
+        }
+        return (str.charAt(i) == str.charAt(i + 2) ? 1 : 0) + countPairs(str, i + 1);
+    }
 }

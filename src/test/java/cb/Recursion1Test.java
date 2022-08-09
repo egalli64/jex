@@ -115,4 +115,22 @@ class Recursion1Test {
     void allStarExamples(String input, String expected) {
         assertThat(Recursion1.allStar(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"hello,hel*lo", "xxyy,x*xy*y", "aaaa,a*a*a*a"})
+    void pairStarExamples(String input, String expected) {
+        assertThat(Recursion1.pairStar(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"xxre,rexx", "xxhixx,hixxxx", "xhixhix,hihixxx", "x,x", "'',''"})
+    void endXExamples(String input, String expected) {
+        assertThat(Recursion1.endX(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"axa,1", "axax,2", "axbx,1"})
+    void countPairsExamples(String input, int expected) {
+        assertThat(Recursion1.countPairs(input)).isEqualTo(expected);
+    }
 }
