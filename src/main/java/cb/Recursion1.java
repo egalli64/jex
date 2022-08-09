@@ -374,10 +374,109 @@ public class Recursion1 {
         return str.length() < 3 ? 0 : countPairs(str, 0);
     }
 
+    /**
+     * Helper for {@linkplain Recursion1#countPairs(String)}
+     *
+     * @param str a string
+     * @param i   starting position
+     * @return the number of same chars separated by one other char
+     */
     private static int countPairs(String str, int i) {
         if (i > str.length() - 3) {
             return 0;
         }
         return (str.charAt(i) == str.charAt(i + 2) ? 1 : 0) + countPairs(str, i + 1);
+    }
+
+    /**
+     * codingbat.com/prob/p161124
+     *
+     * @param str a string
+     * @return number of sub "abc" and "aba"
+     */
+    public static int countAbc(String str) {
+        return countAbc(str, 0);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#countAbc(String)}
+     *
+     * @param s a string
+     * @param i a position
+     * @return number of sub "abc" and "aba" from i
+     */
+    private static int countAbc(String s, int i) {
+        if (i > s.length() - 3) {
+            return 0;
+        }
+        return (isAbaOrAbc(s, i) ? 1 : 0) + countAbc(s, i + 1);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#countAbc(String)}
+     *
+     * @param s a string
+     * @param i a position
+     * @return true if s from i is "abc" or "aba"
+     */
+    private static boolean isAbaOrAbc(String s, int i) {
+        char last = s.charAt(i + 2);
+        return s.charAt(i) == 'a' && s.charAt(i + 1) == 'b' && (last == 'a' || last == 'c');
+    }
+
+    /**
+     * codingbat.com/prob/p167015
+     *
+     * @param str a string
+     * @return number of non-overlapping substring "11"
+     */
+    public static int count11(String str) {
+        return count11(str, 0);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#count11(String)}
+     *
+     * @param s a string
+     * @param i from this position
+     * @return number of non-overlapping substring "11"
+     */
+    private static int count11(String s, int i) {
+        if (i > s.length() - 2) {
+            return 0;
+        }
+        if (s.charAt(i) == '1' && s.charAt(i + 1) == '1') {
+            return 1 + count11(s, i + 2);
+        } else {
+            return count11(s, i + 1);
+        }
+    }
+
+    /**
+     * codingbat.com/prob/p104029
+     *
+     * @param str a string
+     * @return no double chars left
+     */
+    public static String stringClean(String str) {
+        return stringClean(new StringBuilder(str), 0).toString();
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#stringClean(String)}
+     *
+     * @param sb a mutable string
+     * @param i current position
+     * @return no double chars from i on
+     */
+    private static StringBuilder stringClean(StringBuilder sb, int i) {
+        if (i > sb.length() - 2) {
+            return sb;
+        }
+        if (sb.charAt(i) == sb.charAt(i + 1)) {
+            sb.deleteCharAt(i + 1);
+            return stringClean(sb, i);
+        }
+        return stringClean(sb, i + 1);
     }
 }

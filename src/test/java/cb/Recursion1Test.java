@@ -133,4 +133,22 @@ class Recursion1Test {
     void countPairsExamples(String input, int expected) {
         assertThat(Recursion1.countPairs(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"abc,1", "abcxxabc,2", "abaxxaba,2"})
+    void countAbcExamples(String input, int expected) {
+        assertThat(Recursion1.countAbc(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"11abc11,2", "abc11x11x11,3", "111,1"})
+    void count11Examples(String input, int expected) {
+        assertThat(Recursion1.count11(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"yyzzza,yza", "abbbcdd,abcd", "Hello,Helo"})
+    void stringCleanExamples(String input, String expected) {
+        assertThat(Recursion1.stringClean(input)).isEqualTo(expected);
+    }
 }
