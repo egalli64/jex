@@ -175,4 +175,16 @@ class Recursion1Test {
     void strCountExamples(String s, String sub, int expected) {
         assertThat(Recursion1.strCount(s, sub)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"catcowcat,cat,2,true", "catcowcat,cow,2,false", "catcowcat,cow,1,true"})
+    void strCopiesExamples(String s, String sub, int n, boolean expected) {
+        assertThat(Recursion1.strCopies(s, sub, n)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"catcowcat,cat,9", "catcowcat,cow,3", "cccatcowcatxx,cat,9", "xyx,z,0", "z,z,1"})
+    void strDistExamples(String s, String sub, int expected) {
+        assertThat(Recursion1.strDist(s, sub)).isEqualTo(expected);
+    }
 }
