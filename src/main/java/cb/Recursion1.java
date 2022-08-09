@@ -576,4 +576,52 @@ public class Recursion1 {
         return nestParen(s, i + 1, j - 1);
     }
 
+    /**
+     * codingbat.com/prob/p186177
+     *
+     * @param str string
+     * @param sub non-empty
+     * @return count non overlapping sub in str
+     */
+    public static int strCount(String str, String sub) {
+        return strCount(str, 0, sub);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#strCount(String, String)}
+     *
+     * @param str string
+     * @param i   from position
+     * @param sub non-empty
+     * @return count non overlapping sub in str from i on
+     */
+    private static int strCount(String str, int i, String sub) {
+        if (str.length() - i < sub.length()) {
+            return 0;
+        }
+        if (isMatching(str, i, sub, 0)) {
+            return 1 + strCount(str, i + sub.length(), sub);
+        } else {
+            return strCount(str, i + 1, sub);
+        }
+    }
+
+    /**
+     * Helper for {@linkplain Recursion1#strCount(String, String)}
+     *
+     * @param str string
+     * @param i   start position in str
+     * @param sub substring
+     * @param j   start position in sub
+     * @return true if str and sub match from i, j on
+     */
+    private static boolean isMatching(String str, int i, String sub, int j) {
+        if (j == sub.length()) {
+            return true;
+        }
+        if (str.charAt(i) != sub.charAt(j)) {
+            return false;
+        }
+        return isMatching(str, i + 1, sub, j + 1);
+    }
 }
