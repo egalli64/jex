@@ -92,4 +92,16 @@ class Recursion2Test {
         int target = 10;
         assertThat(Recursion2.groupSumClump(0, values, target)).isTrue();
     }
+
+    @Test
+    void splitArrayExample1() {
+        int[] values = {2, 2};
+        assertThat(Recursion2.splitArray(values)).isTrue();
+    }
+
+    @Test
+    void split53Example1() {
+        int[] values = {1, 1};
+        assertThat(Recursion2.split53(values)).isTrue();
+    }
 }
