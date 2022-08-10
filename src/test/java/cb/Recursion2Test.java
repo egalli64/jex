@@ -78,4 +78,18 @@ class Recursion2Test {
         int target = 8;
         assertThat(Recursion2.groupSum6(0, values, target)).isTrue();
     }
+
+    @Test
+    void groupNoAdjExample1() {
+        int[] values = {2, 5, 10, 4};
+        int target = 12;
+        assertThat(Recursion2.groupNoAdj(0, values, target)).isTrue();
+    }
+
+    @Test
+    void groupSumClumpExample1() {
+        int[] values = {2, 4, 8};
+        int target = 10;
+        assertThat(Recursion2.groupSumClump(0, values, target)).isTrue();
+    }
 }

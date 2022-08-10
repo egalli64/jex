@@ -91,20 +91,83 @@ public class Recursion2 {
      * @return true if target could be reach, all 6 in array must be used!
      */
     public static boolean groupSum6(int start, int[] nums, int target) {
-        if(start == nums.length) {
+        if (start == nums.length) {
             return target == 0;
         }
-        if(target < 0) {
+        if (target < 0) {
             return false;
         }
 
-        if(groupSum6(start + 1, nums, target - nums[start])) {
+        if (groupSum6(start + 1, nums, target - nums[start])) {
             return true;
         } else {
-            if(nums[start] == 6) {
+            if (nums[start] == 6) {
                 return false;
             }
             return groupSum6(start + 1, nums, target);
         }
+    }
+
+    /**
+     * codingbat.com/prob/p169605
+     *
+     * @param start  first element to consider
+     * @param nums   array
+     * @param target the required total
+     * @return true if target could be reached without using adjacent element in the array
+     */
+    public static boolean groupNoAdj(int start, int[] nums, int target) {
+        return groupNoAdj(start, nums, target, true);
+    }
+
+    /**
+     * Helper for {@linkplain Recursion2#groupNoAdj(int, int[], int)}
+     *
+     * @param start      first element to consider
+     * @param nums       array
+     * @param target     the required total
+     * @param selectable true if the current element could be considered
+     * @return true if target could be reached
+     */
+    private static boolean groupNoAdj(int start, int[] nums, int target, boolean selectable) {
+        if (start == nums.length) {
+            return target == 0;
+        }
+        if (target < 0) {
+            return false;
+        }
+
+        if (selectable && groupNoAdj(start + 1, nums, target - nums[start], false)) {
+            return true;
+        } else {
+            return groupNoAdj(start + 1, nums, target, true);
+        }
+    }
+
+    /**
+     * codingbat.com/prob/p105136
+     *
+     * @param start  first element to consider
+     * @param nums   array
+     * @param target the required total
+     * @return true if target could be reached (with groups of equal values)
+     */
+    public static boolean groupSumClump(int start, int[] nums, int target) {
+        if (start == nums.length) {
+            return target == 0;
+        }
+        if (target < 0) {
+            return false;
+        }
+
+        int size = 1;
+        while (start + size < nums.length && nums[start] == nums[start + size]) {
+            size += 1;
+        }
+
+        int value = nums[start] * size;
+        int next = start + size;
+
+        return groupSumClump(next, nums, target - value) || groupSumClump(next, nums, target);
     }
 }
