@@ -7,6 +7,7 @@
  */
 package hr.algorithms.strings;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class Gemstones {
@@ -33,5 +34,32 @@ public class Gemstones {
         }
 
         return counter;
+    }
+
+    public static int gemstones2(List<String> arr) {
+        String base = arr.get(0);
+        for (int i = 1; i < arr.size(); i++) {
+            base = intersectionNoDuplicates(base, arr.get(i));
+        }
+        return base.length();
+    }
+
+    private static String intersectionNoDuplicates(String s, String t) {
+        HashSet<Character> sh = new HashSet<>();
+        for (int i = 0; i < s.length(); i++) {
+            sh.add(s.charAt(i));
+        }
+
+        HashSet<Character> th = new HashSet<>();
+        for (int i = 0; i < t.length(); i++) {
+            th.add(t.charAt(i));
+        }
+
+        sh.retainAll(th);
+        StringBuilder result = new StringBuilder(sh.size());
+        for(char c : sh) {
+            result.append(c);
+        }
+        return result.toString();
     }
 }
