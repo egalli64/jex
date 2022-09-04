@@ -1,11 +1,11 @@
 /*
- * Prepare > Algorithms > Implementation > Palindrome Index
+ * Prepare > Algorithms > String > Palindrome Index
  * https://www.hackerrank.com/challenges/palindrome-index/
  * <p>
  * Given a non-empty string of chars in [a-z]
  * return the index of a char that, when removed, makes it a palindrome
- * or -1 of already a palindrome or can't be made in it
- */
+ * or -1 of already a palindrome
+  */
 package hr.algorithms.strings;
 
 public class PalindromeIndex {
