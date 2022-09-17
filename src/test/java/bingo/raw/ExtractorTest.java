@@ -1,9 +1,18 @@
+/*
+    Raw Bingo - A simple CLI app emulating a bingo game
+    Only minimal Java features used
+
+    Hosted on https://github.com/egalli64/jex
+ */
 package bingo.raw;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class ExtractorTest {
+    /**
+     * A 1-based extractor should provide just 1 as value
+     */
     @Test
     void extractSingle() {
         Extractor extractor = new Extractor(1);
@@ -11,6 +20,9 @@ class ExtractorTest {
         Assertions.assertThat(actual).isEqualTo(1);
     }
 
+    /**
+     * Asking for more values than expected would lead to an ArrayIndexOutOfBoundsException
+     */
     @Test
     void extractSingleOutOfBound() {
         Extractor extractor = new Extractor(1);
@@ -23,6 +35,9 @@ class ExtractorTest {
         }
     }
 
+    /**
+     * The default Extractor gives all values in [1..90]
+     */
     @Test
     void extractPlain() {
         Extractor extractor = new Extractor();
