@@ -21,24 +21,40 @@ public class CardRow {
      */
     private int extracted;
 
+    /**
+     * Ctor
+     *
+     * @param numbers the current row
+     */
     public CardRow(int[] numbers) {
         Arrays.sort(numbers);
         this.numbers = numbers;
         this.extracted = 0;
     }
 
-    public boolean check(int current) {
+    /**
+     * Is the current number in this row?
+     *
+     * @param current the extracted number
+     * @return the adjusted hit count, or 0 for a miss
+     */
+    public int check(int current) {
         for (int number : numbers) {
             if (number == current) {
                 extracted += 1;
-                return true;
+                return extracted;
             }
         }
-        return false;
+        return 0;
     }
 
-    public boolean isWinning() {
-        return extracted == numbers.length;
+    /**
+     * Hit count for the row
+     *
+     * @return [0 .. size]
+     */
+    public int getExtracted() {
+        return extracted;
     }
 
     @Override

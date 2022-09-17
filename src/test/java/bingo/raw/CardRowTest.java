@@ -16,8 +16,8 @@ class CardRowTest {
     @Test
     void check42() {
         CardRow row = new CardRow(new int[]{82, 13, 42, 5, 18});
-        boolean actual = row.check(42);
-        Assertions.assertThat(actual).isTrue();
+        int actual = row.check(42);
+        Assertions.assertThat(actual).isNotZero();
     }
 
     /**
@@ -26,20 +26,20 @@ class CardRowTest {
     @Test
     void checkMissing() {
         CardRow row = new CardRow(new int[]{82, 13, 42, 5, 18});
-        boolean actual = row.check(21);
-        Assertions.assertThat(actual).isFalse();
+        int actual = row.check(21);
+        Assertions.assertThat(actual).isZero();
     }
 
     /**
      * After checking all values in a row, the row is a winner
      */
     @Test
-    void isWinningPositive() {
+    void checkForWinPositive() {
         int[] input = {82, 13, 42, 5, 18};
         CardRow row = new CardRow(input);
         for (int current : input) {
-            Assertions.assertThat(row.check(current)).isTrue();
+            Assertions.assertThat(row.check(current)).isNotZero();
         }
-        Assertions.assertThat(row.isWinning()).isTrue();
+        Assertions.assertThat(row.getExtracted()).isEqualTo(input.length);
     }
 }
