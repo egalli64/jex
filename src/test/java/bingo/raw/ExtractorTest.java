@@ -3,20 +3,20 @@ package bingo.raw;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class BoardTest {
+class ExtractorTest {
     @Test
     void extractSingle() {
-        Board board = new Board(1);
-        int actual = board.extract();
+        Extractor extractor = new Extractor(1);
+        int actual = extractor.extract();
         Assertions.assertThat(actual).isEqualTo(1);
     }
 
     @Test
     void extractSingleOutOfBound() {
-        Board board = new Board(1);
-        board.extract();
+        Extractor extractor = new Extractor(1);
+        extractor.extract();
         try {
-            board.extract();
+            extractor.extract();
             Assertions.fail("An ArrayIndexOutOfBoundsException was expected!");
         } catch (ArrayIndexOutOfBoundsException ex) {
             // as expected
@@ -24,11 +24,11 @@ class BoardTest {
     }
 
     @Test
-    void extract90() {
-        Board board = new Board(90);
+    void extractPlain() {
+        Extractor extractor = new Extractor();
         int actual = 0;
         for (int i = 0; i < 90; i++) {
-            actual += board.extract();
+            actual += extractor.extract();
         }
         Assertions.assertThat(actual).isEqualTo(91 * 45);
     }
