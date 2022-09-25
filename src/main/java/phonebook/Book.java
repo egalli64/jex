@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Map;
@@ -53,13 +54,38 @@ public class Book implements AutoCloseable {
     }
 
     /**
-     * Insert new entry in the book
+     * Insert a new entry in the book
      *
      * @param name        key
      * @param phoneNumber value
+     * @return true if added
      */
-    public void insert(String name, String phoneNumber) {
-        logger.trace("Inserting {}: {}", name, phoneNumber);
+    public boolean insert(String name, String phoneNumber) {
+        logger.trace("Try to insert {}: {}", name, phoneNumber);
+        return map.putIfAbsent(name, phoneNumber) == null;
+    }
+
+    /**
+     * Remove an entry
+     *
+     * @param name key
+     * @return true if removed
+     */
+    public boolean remove(String name) {
+        return map.remove(name) != null;
+    }
+
+    /**
+     * Print the current phonebook
+     *
+     * @param out where to print
+     */
+    public void print(PrintStream out) {
+        out.println("--- The current phonebook ---");
+        for (var entry : map.entrySet()) {
+            out.println(entry);
+        }
+        out.println("---");
     }
 
     /**
