@@ -5,7 +5,12 @@
  */
 package bingo.sf;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * The numbers to be extracted in random order
@@ -20,22 +25,23 @@ public class Extractor {
     /**
      * the current sequence
      */
-    private final int[] numbers;
+    private final List<Integer> numbers;
     /**
-     * next extraction index
+     * for the next extraction
      */
-    private int next;
+    private Iterator<Integer> it;
 
     public Extractor() {
         this(DEFAULT_SIZE);
     }
 
+    /**
+     * Prepare a random sequence in [1 .. size]
+     *
+     * @param size the biggest value generated
+     */
     public Extractor(int size) {
-        numbers = new int[size];
-        for (int i = 0; i < size; i++) {
-            numbers[i] = i + 1;
-        }
-
+        numbers = IntStream.rangeClosed(1, size).boxed().collect(Collectors.toCollection(ArrayList::new));
         shuffle();
     }
 
@@ -43,25 +49,17 @@ public class Extractor {
      * Randomly shuffle the numbers, the next extraction will return the first one
      */
     public void shuffle() {
-        Random random = new Random();
-
-        for (int i = 0; i < numbers.length; i++) {
-            int j = random.nextInt(numbers.length);
-            int temp = numbers[i];
-            numbers[i] = numbers[j];
-            numbers[j] = temp;
-        }
-
-        next = 0;
+        Collections.shuffle(numbers);
+        it = numbers.iterator();
     }
 
     /**
      * The next extracted number
      *
      * @return a number in [1..size]
-     * @throws ArrayIndexOutOfBoundsException if the numbers has already been fully used
+     * @throws java.util.NoSuchElementException if the numbers has already been fully used
      */
     public int extract() {
-        return numbers[next++];
+        return it.next();
     }
 }

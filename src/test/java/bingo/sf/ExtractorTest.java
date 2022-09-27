@@ -8,6 +8,8 @@ package bingo.sf;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
+
 class ExtractorTest {
     /**
      * A 1-based extractor should provide just 1 as value
@@ -26,12 +28,8 @@ class ExtractorTest {
     void extractSingleOutOfBound() {
         Extractor extractor = new Extractor(1);
         extractor.extract();
-        try {
-            extractor.extract();
-            Assertions.fail("An ArrayIndexOutOfBoundsException was expected!");
-        } catch (ArrayIndexOutOfBoundsException ex) {
-            // as expected
-        }
+
+        Assertions.assertThatExceptionOfType(NoSuchElementException.class).isThrownBy(extractor::extract);
     }
 
     /**
