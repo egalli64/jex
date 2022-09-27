@@ -8,13 +8,16 @@ package bingo.sf;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 class CardRowTest {
     /**
      * If a value is in the row, its check should succeed
      */
     @Test
     void check42() {
-        CardRow row = new CardRow(new int[]{82, 13, 42, 5, 18});
+        CardRow row = new CardRow(Arrays.asList(82, 13, 42, 5, 18));
         int actual = row.check(42);
         Assertions.assertThat(actual).isNotZero();
     }
@@ -24,7 +27,7 @@ class CardRowTest {
      */
     @Test
     void checkMissing() {
-        CardRow row = new CardRow(new int[]{82, 13, 42, 5, 18});
+        CardRow row = new CardRow(Arrays.asList(82, 13, 42, 5, 18));
         int actual = row.check(21);
         Assertions.assertThat(actual).isZero();
     }
@@ -34,11 +37,11 @@ class CardRowTest {
      */
     @Test
     void checkForWinPositive() {
-        int[] input = {82, 13, 42, 5, 18};
+        List<Integer> input = Arrays.asList(82, 13, 42, 5, 18);
         CardRow row = new CardRow(input);
         for (int current : input) {
             Assertions.assertThat(row.check(current)).isNotZero();
         }
-        Assertions.assertThat(row.getExtracted()).isEqualTo(input.length);
+        Assertions.assertThat(row.getExtracted()).isEqualTo(input.size());
     }
 }

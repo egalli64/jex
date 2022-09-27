@@ -8,7 +8,8 @@ package bingo.sf;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The card for a game
@@ -27,7 +28,7 @@ public class Card {
     /**
      * the card's rows
      */
-    private final CardRow[] rows;
+    private final List<CardRow> rows;
 
     /**
      * Take care of initializing its rows using the passed generator
@@ -35,13 +36,13 @@ public class Card {
      * @param extractor the number provider
      */
     public Card(Extractor extractor) {
-        this.rows = new CardRow[ROW_NR];
+        rows = new ArrayList<>(ROW_NR);
         for (int i = 0; i < ROW_NR; i++) {
-            int[] row = new int[ROW_SZ];
+            List<Integer> row = new ArrayList<>(ROW_SZ);
             for (int j = 0; j < ROW_SZ; j++) {
-                row[j] = extractor.extract();
+                row.add(extractor.extract());
             }
-            rows[i] = new CardRow(row);
+            rows.add(new CardRow(row));
         }
         logger.trace("Generated card {}", this);
     }
@@ -65,6 +66,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return Arrays.toString(rows);
+        return rows.toString();
     }
 }

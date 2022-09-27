@@ -5,7 +5,7 @@
  */
 package bingo.sf;
 
-import java.util.Arrays;
+import java.util.List;
 
 /**
  * A single row in a bingo card
@@ -14,7 +14,7 @@ public class CardRow {
     /**
      * the sorted numbers
      */
-    private final int[] numbers;
+    private final List<Integer> numbers;
     /**
      * found matches
      */
@@ -25,8 +25,8 @@ public class CardRow {
      *
      * @param numbers the current row
      */
-    public CardRow(int[] numbers) {
-        Arrays.sort(numbers);
+    public CardRow(List<Integer> numbers) {
+        numbers.sort(null);
         this.numbers = numbers;
         this.extracted = 0;
     }
@@ -58,6 +58,6 @@ public class CardRow {
 
     @Override
     public String toString() {
-        return Arrays.toString(numbers);
+        return numbers.toString();
     }
 }

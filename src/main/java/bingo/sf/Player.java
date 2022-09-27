@@ -5,7 +5,8 @@
  */
 package bingo.sf;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A player owns one or more cards
@@ -14,7 +15,7 @@ public class Player {
     /**
      * cards owned by the player
      */
-    private final Card[] cards;
+    private final List<Card> cards;
 
     /**
      * Each player owns a few cards.
@@ -25,9 +26,9 @@ public class Player {
      * @param extractor the number generator
      */
     public Player(int nr, Extractor extractor) {
-        cards = new Card[nr];
+        cards = new ArrayList<>(nr);
         for (int i = 0; i < nr; i++) {
-            cards[i] = new Card(extractor);
+            cards.add(new Card(extractor));
         }
     }
 
@@ -52,6 +53,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return Arrays.toString(cards);
+        return cards.toString();
     }
 }
