@@ -13,18 +13,15 @@ package hr.algorithms.greedy;
 
 public class SherlockAndTheBeast {
     public static String decentNumber(int n) {
-        if (n % 3 == 0) {
-            return "5".repeat(n);
+        int fives = n;
+        while(fives % 3 != 0) {
+            fives -= 1;
         }
 
-        for (int i = n - 1; i >= 3; i--) {
-            if (i % 3 == 0 && (n - i) % 5 == 0) {
+        for (int i = fives; i >= 0; i-=3) {
+            if ((n - i) % 5 == 0) {
                 return "5".repeat(i) + "3".repeat(n - i);
             }
-        }
-
-        if (n % 5 == 0) {
-            return "3".repeat(n);
         }
 
         return "-1";
