@@ -14,7 +14,7 @@ import java.util.Scanner;
  * User interaction through CLI
  */
 public class ConsoleMain implements AutoCloseable {
-    private static final Logger logger = LoggerFactory.getLogger(ConsoleMain.class);
+    private static final Logger log = LoggerFactory.getLogger(ConsoleMain.class);
     private static final String DEFAULT_FILENAME = "phonebook.dump";
 
     private final Book book;
@@ -32,14 +32,14 @@ public class ConsoleMain implements AutoCloseable {
      */
     public static void main(String[] args) {
         String filename = args.length == 0 ? DEFAULT_FILENAME : args[0];
-        logger.trace("Using file {} to persist the phonebook", filename);
+        log.trace("Using file {} to persist the phonebook", filename);
 
         try (ConsoleMain cm = new ConsoleMain(filename)) {
             cm.inputManager();
         } catch (Exception ex) {
-            logger.error("Input interrupted?", ex);
+            log.error("Input interrupted?", ex);
         }
-        System.out.println("Terminating");
+        System.out.println("See you later");
     }
 
     /**
@@ -53,11 +53,12 @@ public class ConsoleMain implements AutoCloseable {
             book.print(System.out);
             System.out.print("[I]nsert, [R]emove, e[X]it? ");
             command = getCommand();
-            logger.trace("Command is {}", command);
+            log.trace("Command is {}", command);
             switch (command) {
-                case INSERT -> insert();
-                case REMOVE -> remove();
-                case UNKNOWN -> System.out.println("Unknown command");
+            case INSERT -> insert();
+            case REMOVE -> remove();
+            case UNKNOWN -> System.out.println("Unknown command");
+            case EXIT -> log.debug("Terminating");
             }
         } while (command != Command.EXIT);
     }
