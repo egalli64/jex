@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The board, a trapezium scaling rightward where each cell is a hexagon
+ * The board, a rhomboid scaling rightward where each cell is a hexagon
  */
 public class Board {
     /**
