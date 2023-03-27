@@ -75,6 +75,10 @@ public class Board {
         return cells.get(i).get(j).getColor();
     }
 
+    public Color winner() {
+        return Color.NONE;
+    }
+
     /**
      * RED goes LEFT to RIGHT - BLUE TOP to BOTTOM
      */
@@ -108,6 +112,18 @@ public class Board {
         }
 
         /**
+         * Legacy constructor - similar to the Exercism Connect problem setup
+         *
+         * @param rows a matrix where each character is a pawn
+         */
+        public BoardBuilder(String[] rows) {
+            this(rows.length);
+            for (String row : rows) {
+                add(row);
+            }
+        }
+
+        /**
          * Constructor
          *
          * @param size board size
@@ -127,6 +143,7 @@ public class Board {
                 add(c);
             }
             i += 1;
+            j = 0;
             return this;
         }
 
@@ -140,12 +157,8 @@ public class Board {
          * Terminal operation
          *
          * @return the generated board
-         * @throws IllegalStateException if the process was not completed
          */
         public Board toBoard() {
-            if (i != size || j != size) {
-                throw new IllegalStateException(String.format("Mismatching sizes: %d, %d, %d", size, i, j));
-            }
             return board;
         }
     }

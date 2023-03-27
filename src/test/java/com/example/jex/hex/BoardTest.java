@@ -9,7 +9,6 @@ package com.example.jex.hex;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
 
 class BoardTest {
     @Test
@@ -19,12 +18,13 @@ class BoardTest {
     }
 
     @Test
-    void buildUncompleted() {
-        assertThatIllegalStateException().isThrownBy(() -> new Board.BoardBuilder().toBoard());
+    void buildDefaultSizeEmpty() {
+        Board board = new Board.BoardBuilder().toBoard();
+        assertThat(board.size()).isEqualTo(Board.DEFAULT_SIZE);
     }
 
     @Test
-    void buildSingle() {
+    void buildSingleBlue() {
         Board board = new Board.BoardBuilder(1).add("B").toBoard();
         assertThat(board.size()).isOne();
         assertThat(board.check(0, 0)).isEqualTo(Color.BLUE);
