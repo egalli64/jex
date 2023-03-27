@@ -135,21 +135,25 @@ public class Board {
             this.board = new Board(size);
         }
 
+        /**
+         * Place the passed pawns on the current row
+         *
+         * @param row the pawn in the current row, as char in a string
+         * @return this board builder
+         */
         public BoardBuilder add(String row) {
-            if (row.length() != size) {
+            if (row.length() != size || i >= size) {
                 throw new IllegalArgumentException("Bad input: " + row);
             }
+
             for (char c : row.toCharArray()) {
-                add(c);
+                board.set(i, j, Color.from(c));
+                j += 1;
             }
+
             i += 1;
             j = 0;
-            return this;
-        }
 
-        public BoardBuilder add(char cell) {
-            board.set(i, j, Color.from(cell));
-            j += 1;
             return this;
         }
 
