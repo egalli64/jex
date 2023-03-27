@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class LegacyTest {
     @Test
     void empty() {
-        Board board = new Board.BoardBuilder(0).toBoard();
+        Board board = Board.create(new String[]{});
         assertThat(board.winner()).isEqualTo(Color.NONE);
     }
 
@@ -29,7 +29,7 @@ class LegacyTest {
     void computeWinnerFiveEmpty() {
         var input = new String[]{".....", ".....", ".....", ".....", "....."};
 
-        Board board = new Board.BoardBuilder(input).toBoard();
+        Board board = Board.create(input);
         assertThat(board.winner()).isEqualTo(Color.NONE);
     }
 
@@ -37,7 +37,7 @@ class LegacyTest {
     void computeWinnerSingleBlue() {
         var input = new String[]{"B"};
 
-        Board board = new Board.BoardBuilder(input).toBoard();
+        Board board = Board.create(input);
         assertThat(board.winner()).isEqualTo(Color.BLUE);
     }
 
@@ -45,7 +45,7 @@ class LegacyTest {
     void computeWinnerSingleRed() {
         var input = new String[]{"R"};
 
-        Board board = new Board.BoardBuilder(input).toBoard();
+        Board board = Board.create(input);
         assertThat(board.winner()).isEqualTo(Color.RED);
     }
 
@@ -53,7 +53,7 @@ class LegacyTest {
     void computeWinnerFourEdgesOnly() {
         var input = new String[]{"RRRB", "B..B", "B..B", "BRRR"};
 
-        Board board = new Board.BoardBuilder(input).toBoard();
+        Board board = Board.create(input);
         assertThat(board.winner()).isEqualTo(Color.NONE);
     }
 
@@ -61,7 +61,7 @@ class LegacyTest {
     void computeWinnerFiveIllegalDiagonal() {
         var input = new String[]{"RB..R", "BRRRR", "BRB.R", ".BR.B", "RRBBB"};
 
-        Board board = new Board.BoardBuilder(input).toBoard();
+        Board board = Board.create(input);
         assertThat(board.winner()).isEqualTo(Color.NONE);
     }
 
@@ -69,7 +69,7 @@ class LegacyTest {
     void computeWinnerFourCrossingRed() {
         var input = new String[]{".B..", "BRRR", "BRB.", "RRBR"};
 
-        Board board = new Board.BoardBuilder(input).toBoard();
+        Board board = Board.create(input);
         assertThat(board.winner()).isEqualTo(Color.RED);
     }
 }

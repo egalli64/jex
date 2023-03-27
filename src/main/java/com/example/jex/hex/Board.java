@@ -6,21 +6,13 @@
  */
 package com.example.jex.hex;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * The board, a rhombus scaling rightward where each cell is a hexagon
  */
 public class Board {
-    public static final int DEFAULT_SIZE = 11;
-
-    /**
-     * Placeholder for non-assigned cell
-     */
-    private final static Pawn emptyCell = new Pawn(Color.NONE);
-
     /**
      * Extra nodes, to ease the job of checking the winner
      */
@@ -29,9 +21,7 @@ public class Board {
     private final List<List<Pawn>> cells;
 
     /**
-     * Private constructor, to be used by BoardBuilder - create an empty board
-     *
-     * @param size the board size
+     * Constructor - used by factory method
      */
     private Board(int size) {
         owners = List.of( //
@@ -41,50 +31,60 @@ public class Board {
                 new Pawn(Color.BLUE)   // Edge.BOTTOM
         );
 
-        cells = Stream.generate( //
-                        () -> Stream.generate(() -> emptyCell).limit(size).collect(Collectors.toList())) //
-                .limit(size).collect(Collectors.toList());
+        cells = new ArrayList<>(size);
     }
 
     /**
-     * Place a new pawn on the board, as part of the initial board setup
+     * Factory method
      *
-     * @param i     row
-     * @param j     column
-     * @param color pawn color
-     * @throws IllegalStateException if the cell is already taken
+     * @param lines each line is converted to a row in the board
+     * @return the generated board
+     * @throws NullPointerException     if lines is null
+     * @throws IllegalArgumentException if lines is not a "squared" array of strings
      */
-    private void set(int i, int j, Color color) {
-        if (color != Color.NONE) {
-            List<Pawn> row = cells.get(i);
-            if (row.get(j).getColor() != Color.NONE) {
-                throw new IllegalStateException(String.format("Cell (%d, %d) already taken", i, j));
+    public static Board create(String[] lines) {
+        Board board = new Board(lines.length);
+        if (lines.length == 0) {
+            return board;
+        }
+
+        for (int i = 0; i < lines.length; i++) {
+            String line = lines[i];
+            if (line.length() != lines.length) {
+                throw new IllegalArgumentException(String.format("Row [%s] length is not %d!", line, lines.length));
             }
 
-            Pawn cur = new Pawn(color);
-            row.set(j, cur);
+            List<Pawn> row = new ArrayList<>(lines.length);
+            board.cells.add(row);
 
-            if (i == 0) {
-                union(cur, Edge.TOP);
-            } else {
-                union(cur, i - 1, j);
-                if (j < cells.size() - 1) {
-                    union(cur, i - 1, j + 1);
+            for (int j = 0; j < line.length(); j++) {
+                Pawn pawn = new Pawn(Color.from(line.charAt(j)));
+                row.add(pawn);
+                if (pawn.getColor() == Color.NONE) {
+                    continue;
+                }
+
+                if (i == 0) {
+                    board.union(pawn, Edge.TOP);
+                } else {
+                    board.union(pawn, i - 1, j);
+                    if (j < board.cells.size() - 1) {
+                        board.union(pawn, i - 1, j + 1);
+                    }
+                }
+                if (j == 0) {
+                    board.union(pawn, Edge.LEFT);
+                } else {
+                    board.union(pawn, i, j - 1);
                 }
             }
-            if (j == 0) {
-                union(cur, Edge.LEFT);
-            } else {
-                union(cur, i, j - 1);
-            }
-
-            if (i == cells.size() - 1) {
-                union(cur, Edge.BOTTOM);
-            }
-            if (j == cells.size() - 1) {
-                union(cur, Edge.RIGHT);
-            }
+            board.union(row.get(row.size() - 1), Edge.RIGHT);
         }
+
+        List<Pawn> bottom = board.cells.get(board.size() - 1);
+        bottom.forEach(pawn -> board.union(pawn, Edge.BOTTOM));
+
+        return board;
     }
 
     /**
@@ -178,86 +178,5 @@ public class Board {
      */
     public enum Edge {
         LEFT, RIGHT, TOP, BOTTOM
-    }
-
-    /**
-     * Builder for Hex Board
-     */
-    public static class BoardBuilder {
-        /**
-         * Board size
-         */
-        private final int size;
-        private final Board board;
-        /**
-         * Current row to build
-         */
-        private int i;
-        /**
-         * Current column to build
-         */
-        private int j;
-
-        /**
-         * No-arg constructor - for the default size board
-         */
-        public BoardBuilder() {
-            this(DEFAULT_SIZE);
-        }
-
-        /**
-         * Legacy constructor - similar to the Exercism Connect problem setup
-         *
-         * @param rows a matrix where each character is a pawn
-         */
-        public BoardBuilder(String[] rows) {
-            this(rows.length);
-            for (String row : rows) {
-                add(row);
-            }
-        }
-
-        /**
-         * Constructor
-         *
-         * @param size board size
-         */
-        public BoardBuilder(int size) {
-            this.size = size;
-            this.i = 0;
-            this.j = 0;
-            this.board = new Board(size);
-        }
-
-        /**
-         * Place the passed pawns on the current row
-         *
-         * @param row the pawn in the current row, as char in a string
-         * @return this board builder
-         */
-        public BoardBuilder add(String row) {
-            if (row.length() != size || i >= size) {
-                throw new IllegalArgumentException("Bad input: " + row);
-            }
-
-            for (char c : row.toCharArray()) {
-                board.set(i, j, Color.from(c));
-                j += 1;
-            }
-
-            i += 1;
-            j = 0;
-
-            return this;
-        }
-
-        /**
-         * Terminal operation
-         *
-         * @return the generated board
-         */
-        public Board toBoard() {
-            return board;
-        }
     }
 }
