@@ -102,7 +102,7 @@ public class Board {
             pawn.addSize(other.getSize());
         } else {
             pawn.setParent(other);
-            other.addSize(other.getSize());
+            other.addSize(pawn.getSize());
         }
     }
 
