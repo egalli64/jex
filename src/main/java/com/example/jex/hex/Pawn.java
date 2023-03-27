@@ -78,24 +78,4 @@ public class Pawn {
         return "Pawn{" + "color=" + color + ", groupSize=" + groupSize + '}';
     }
 
-    /**
-     * Pawn color
-     */
-    public enum Color {
-        RED, BLUE, NONE;
-
-        /**
-         * Factory method
-         *
-         * @param c the character representing a color: R or B
-         * @return the associated color, or NONE
-         */
-        public static Color from(char c) {
-            return switch (c) {
-                case 'R' -> RED;
-                case 'B' -> BLUE;
-                default -> NONE;
-            };
-        }
-    }
 }
