@@ -24,12 +24,7 @@ public class Board {
     /**
      * Extra nodes, to ease the job of checking the winner
      */
-    private final static List<Pawn> owners = List.of( //
-            new Pawn(Color.RED),   // Edge.LEFT
-            new Pawn(Color.RED),   // Edge.RIGHT
-            new Pawn(Color.BLUE),  // Edge.TOP
-            new Pawn(Color.BLUE)   // Edge.BOTTOM
-    );
+    private final List<Pawn> owners;
 
     private final List<List<Pawn>> cells;
 
@@ -39,6 +34,13 @@ public class Board {
      * @param size the board size
      */
     private Board(int size) {
+        owners = List.of( //
+                new Pawn(Color.RED),   // Edge.LEFT
+                new Pawn(Color.RED),   // Edge.RIGHT
+                new Pawn(Color.BLUE),  // Edge.TOP
+                new Pawn(Color.BLUE)   // Edge.BOTTOM
+        );
+
         cells = Stream.generate( //
                         () -> Stream.generate(() -> emptyCell).limit(size).collect(Collectors.toList())) //
                 .limit(size).collect(Collectors.toList());
@@ -58,8 +60,93 @@ public class Board {
             if (row.get(j).getColor() != Color.NONE) {
                 throw new IllegalStateException(String.format("Cell (%d, %d) already taken", i, j));
             }
-            row.set(j, new Pawn(color));
+
+            Pawn cur = new Pawn(color);
+            row.set(j, cur);
+
+            if (i == 0) {
+                union(cur, Edge.TOP);
+            } else {
+                union(cur, i - 1, j);
+                if (j < cells.size() - 1) {
+                    union(cur, i - 1, j + 1);
+                }
+            }
+            if (j == 0) {
+                union(cur, Edge.LEFT);
+            } else {
+                union(cur, i, j - 1);
+            }
+
+            if (i == cells.size() - 1) {
+                union(cur, Edge.BOTTOM);
+            }
+            if (j == cells.size() - 1) {
+                union(cur, Edge.RIGHT);
+            }
         }
+    }
+
+    /**
+     * Connect a cell to an edge, when required
+     *
+     * @param pawn the pawn in the current cell
+     * @param edge an edge
+     */
+    public void union(Pawn pawn, Edge edge) {
+        union(pawn, owners.get(edge.ordinal()));
+    }
+
+    /**
+     * Connect a cell to the cell in a given position, when required
+     *
+     * @param pawn the pawn in the current cell
+     * @param i    other cell row
+     * @param j    other cell column
+     */
+    public void union(Pawn pawn, int i, int j) {
+        union(pawn, cells.get(i).get(j));
+    }
+
+    /**
+     * If the pawns have the same color, should be in the same group.
+     * Find the leaders, if different, unify the two groups.
+     *
+     * @param pawn  a pawn
+     * @param other another pawn
+     */
+    private void union(Pawn pawn, Pawn other) {
+        if (pawn.getColor() != other.getColor()) {
+            return;
+        }
+
+        pawn = find(pawn);
+        other = find(other);
+        if (pawn == other) {
+            return;
+        }
+
+        if (other.getGroupSize() < pawn.getGroupSize()) {
+            other.setParent(pawn);
+            pawn.addGroupSize(other.getGroupSize());
+        } else {
+            pawn.setParent(other);
+            other.addGroupSize(pawn.getGroupSize());
+        }
+    }
+
+    /**
+     * Find the pawn group leader. In the process, short the path to it.
+     *
+     * @param pawn a pawn
+     * @return the pawn group leader
+     */
+    private Pawn find(Pawn pawn) {
+        while (pawn != pawn.getParent()) {
+            pawn.setParent(pawn.getParent());
+            pawn = pawn.getParent();
+        }
+        return pawn;
     }
 
     /**
@@ -76,6 +163,13 @@ public class Board {
     }
 
     public Color winner() {
+        if (owners.get(0).getParent() == owners.get(1).getParent()) {
+            return Color.RED;
+        }
+        if (owners.get(2).getParent() == owners.get(3).getParent()) {
+            return Color.BLUE;
+        }
+
         return Color.NONE;
     }
 

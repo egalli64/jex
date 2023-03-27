@@ -58,8 +58,8 @@ class LegacyTest {
     }
 
     @Test
-    void computeWinnerFourIllegalDiagonal() {
-        var input = new String[]{"RB..", "BRRR", "BRB.", "RBRR"};
+    void computeWinnerFiveIllegalDiagonal() {
+        var input = new String[]{"RB..R", "BRRRR", "BRB.R", ".BR.B", "RRBBB"};
 
         Board board = new Board.BoardBuilder(input).toBoard();
         assertThat(board.winner()).isEqualTo(Color.NONE);
