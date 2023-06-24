@@ -66,5 +66,6 @@ class Triangle {
 /**
  * Specific exception for this class only
  */
+@SuppressWarnings("serial")
 class TriangleException extends Exception {
 }
