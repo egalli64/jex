@@ -1,5 +1,6 @@
 /**
- * https://codingbat.com/java/Warmup-1
+ * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
+ * My repo: https://github.com/egalli64/jex/
  */
 package com.codingbat;
 
@@ -13,6 +14,21 @@ public class Warmup1 {
      */
     public static boolean sleepIn(boolean weekday, boolean vacation) {
         return !weekday || vacation;
+    }
+
+    /**
+     * codingbat.com/prob/p187868
+     *
+     * @param weekday  true from Monday to Friday
+     * @param vacation true if it is a day off
+     * @return true if not a weekday or in vacation
+     */
+    public static boolean sleepInVerbose(boolean weekday, boolean vacation) {
+        if (weekday == false || vacation == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -50,7 +66,8 @@ public class Warmup1 {
      * codingbat.com/prob/p161642
      *
      * @param str a non-empty string
-     * @return a copy of the original string with the last char added at the front and back
+     * @return a copy of the original string with the last char added at the front
+     *         and back
      */
     public static String backAround(String str) {
         String tag = str.substring(str.length() - 1);

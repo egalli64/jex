@@ -13,6 +13,13 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
+    @CsvSource({ "false,false,true", "true,false,false", "false,true,true" })
+    void sleepInVerboseExamples(boolean weekday, boolean vacation, boolean expected) {
+        assertThat(Warmup1.sleepInVerbose(weekday, vacation)).isEqualTo(expected);
+    }
+
+
+    @ParameterizedTest
     @CsvSource({ "19,2", "10,11", "21,0" })
     void diff21Examples(int input, int expected) {
         assertThat(Warmup1.diff21(input)).isEqualTo(expected);
