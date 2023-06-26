@@ -1,6 +1,7 @@
 /**
  * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
  * monkeyTrouble - codingbat.com/prob/p181646
+ * Check trouble caused by monkeys
  * 
  * My repo - https://github.com/egalli64/jex/
  */
@@ -8,7 +9,7 @@ package com.codingbat.warmup1;
 
 public class MonkeyTrouble {
     /**
-     * Check trouble caused by monkeys
+     * Plain
      * 
      * @param aSmile first monkey smiling
      * @param bSmile second monkey smiling
@@ -19,7 +20,7 @@ public class MonkeyTrouble {
     }
 
     /**
-     * Check verbosely trouble caused by monkeys
+     * Exposing full details
      * 
      * @param aSmile first monkey smiling
      * @param bSmile second monkey smiling
@@ -34,7 +35,7 @@ public class MonkeyTrouble {
     }
 
     /**
-     * Check obscurely trouble caused by monkeys
+     * Using exclusive or
      * 
      * @param aSmile first monkey smiling
      * @param bSmile second monkey smiling

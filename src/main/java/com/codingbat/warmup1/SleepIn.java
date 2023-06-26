@@ -1,6 +1,7 @@
 /**
  * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
  * sleepIn - codingbat.com/prob/p187868
+ * Check if the caller can sleep
  * 
  * My repo - https://github.com/egalli64/jex/
  */
@@ -8,7 +9,7 @@ package com.codingbat.warmup1;
 
 public class SleepIn {
     /**
-     * Check if the caller can sleep
+     * Plain
      * 
      * @param weekday  true from Monday to Friday
      * @param vacation true if it is a day off
@@ -19,7 +20,7 @@ public class SleepIn {
     }
 
     /**
-     * Check verbosely if the caller can sleep
+     * Exposing full details
      *
      * @param weekday  true from Monday to Friday
      * @param vacation true if it is a day off

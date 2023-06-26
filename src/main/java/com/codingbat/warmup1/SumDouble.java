@@ -20,7 +20,7 @@ public class SumDouble {
     }
 
     /**
-     * Verbose
+     * Exposing full details
      * 
      * @param a first value
      * @param b second value
