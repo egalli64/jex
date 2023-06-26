@@ -6,43 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p181646
-     * 
-     * @param aSmile first monkey smiling
-     * @param bSmile second monkey smiling
-     * @return true if both or neither are smiling
-     */
-    public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        return aSmile == bSmile;
-    }
-
-    /**
-     * codingbat.com/prob/p181646 - verbose
-     * 
-     * @param aSmile first monkey smiling
-     * @param bSmile second monkey smiling
-     * @return true if both or neither are smiling
-     */
-    public static boolean monkeyTroubleVerbose(boolean aSmile, boolean bSmile) {
-        if ((aSmile == true && bSmile == true) || (aSmile == false && bSmile == false)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * codingbat.com/prob/p181646 - obscure
-     * 
-     * @param aSmile first monkey smiling
-     * @param bSmile second monkey smiling
-     * @return true if both or neither are smiling
-     */
-    public static boolean monkeyTroubleObscure(boolean aSmile, boolean bSmile) {
-        return !(aSmile ^ bSmile);
-    }
-
-    /**
      * codingbat.com/prob/p116624
      *
      * @param n an integer
