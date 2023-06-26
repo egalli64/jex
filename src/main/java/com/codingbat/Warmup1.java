@@ -6,16 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p116624
-     *
-     * @param n an integer
-     * @return the absolute difference between n and 21, doubled if n is over 21
-     */
-    public static int diff21(int n) {
-        return n <= 21 ? 21 - n : 2 * (n - 21);
-    }
-
-    /**
      * codingbat.com/prob/p184004
      *
      * @param n an integer
