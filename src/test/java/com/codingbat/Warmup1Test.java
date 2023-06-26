@@ -1,3 +1,7 @@
+/**
+ * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
+ * My repo: https://github.com/egalli64/jex/
+ */
 package com.codingbat;
 
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,19 +10,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup1Test {
-    @ParameterizedTest
-    @CsvSource({ "false,false,true", "true,false,false", "false,true,true" })
-    void sleepInExamples(boolean weekday, boolean vacation, boolean expected) {
-        assertThat(Warmup1.sleepIn(weekday, vacation)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "false,false,true", "true,false,false", "false,true,true" })
-    void sleepInVerboseExamples(boolean weekday, boolean vacation, boolean expected) {
-        assertThat(Warmup1.sleepInVerbose(weekday, vacation)).isEqualTo(expected);
-    }
-
-
     @ParameterizedTest
     @CsvSource({ "19,2", "10,11", "21,0" })
     void diff21Examples(int input, int expected) {

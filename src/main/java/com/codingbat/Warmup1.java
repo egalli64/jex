@@ -6,29 +6,40 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p187868
-     *
-     * @param weekday  true from Monday to Friday
-     * @param vacation true if it is a day off
-     * @return true if not a weekday or in vacation
+     * codingbat.com/prob/p181646
+     * 
+     * @param aSmile first monkey smiling
+     * @param bSmile second monkey smiling
+     * @return true if both or neither are smiling
      */
-    public static boolean sleepIn(boolean weekday, boolean vacation) {
-        return !weekday || vacation;
+    public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+        return aSmile == bSmile;
     }
 
     /**
-     * codingbat.com/prob/p187868
-     *
-     * @param weekday  true from Monday to Friday
-     * @param vacation true if it is a day off
-     * @return true if not a weekday or in vacation
+     * codingbat.com/prob/p181646 - verbose
+     * 
+     * @param aSmile first monkey smiling
+     * @param bSmile second monkey smiling
+     * @return true if both or neither are smiling
      */
-    public static boolean sleepInVerbose(boolean weekday, boolean vacation) {
-        if (weekday == false || vacation == true) {
+    public static boolean monkeyTroubleVerbose(boolean aSmile, boolean bSmile) {
+        if ((aSmile == true && bSmile == true) || (aSmile == false && bSmile == false)) {
             return true;
         } else {
             return false;
         }
+    }
+
+    /**
+     * codingbat.com/prob/p181646 - obscure
+     * 
+     * @param aSmile first monkey smiling
+     * @param bSmile second monkey smiling
+     * @return true if both or neither are smiling
+     */
+    public static boolean monkeyTroubleObscure(boolean aSmile, boolean bSmile) {
+        return !(aSmile ^ bSmile);
     }
 
     /**
@@ -164,17 +175,6 @@ public class Warmup1 {
             result.append(str.charAt(i));
         }
         return result.toString();
-    }
-
-    /**
-     * codingbat.com/prob/p181646
-     * 
-     * @param aSmile first monkey smiling
-     * @param bSmile second monkey smiling
-     * @return true if both or neither are smiling
-     */
-    public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        return aSmile == bSmile;
     }
 
     /**
