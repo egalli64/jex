@@ -200,17 +200,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p154485
-     * 
-     * @param a first value
-     * @param b second value
-     * @return the values sum, doubled if they are same
-     */
-    public static int sumDouble(int a, int b) {
-        return (a + b) * (a == b ? 2 : 1);
-    }
-
-    /**
      * codingbat.com/prob/p182873
      * 
      * @param a first value

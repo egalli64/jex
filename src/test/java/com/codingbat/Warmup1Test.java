@@ -95,12 +95,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1,2,3", "3,2,5", "2,2,8" })
-    void sumDoubleExamples(int a, int b, int expected) {
-        assertThat(Warmup1.sumDouble(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "9,10,true", "9,9,false", "1,9,true" })
     void makes10Examples(int a, int b, boolean expected) {
         assertThat(Warmup1.makes10(a, b)).isEqualTo(expected);
