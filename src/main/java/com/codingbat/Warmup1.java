@@ -131,17 +131,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p140449
-     * 
-     * @param talking parrot state
-     * @param hour    in [0..23]
-     * @return true if talking before 7 or after 20
-     */
-    public static boolean parrotTrouble(boolean talking, int hour) {
-        return talking && (hour < 7 || hour > 20);
-    }
-
-    /**
      * codingbat.com/prob/p159227
      * 
      * @param a        first value

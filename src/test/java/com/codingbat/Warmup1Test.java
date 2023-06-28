@@ -65,12 +65,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "true, 6, true", "true, 7, false", "false, 6, false" })
-    void parrotTroubleExamples(boolean talk, int hour, boolean expected) {
-        assertThat(Warmup1.parrotTrouble(talk, hour)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "1, -1, false, true", "-1, 1, false, true", "-4, -5, true, true" })
     void posNegExamples(int first, int second, boolean flag, boolean expected) {
         assertThat(Warmup1.posNeg(first, second, flag)).isEqualTo(expected);
