@@ -1,12 +1,15 @@
-/**
- * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
- * sleepIn - codingbat.com/prob/p187868
- * Check if the caller can sleep
- * 
- * My repo - https://github.com/egalli64/jex/
+/*
+  CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
+
+  My repo - https://github.com/egalli64/jex/
  */
 package com.codingbat.warmup1;
 
+/**
+ * sleepIn - codingbat.com/prob/p187868
+ * <p>
+ * Check if the caller can sleep
+ */
 public class SleepIn {
     /**
      * Plain

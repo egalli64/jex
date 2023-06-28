@@ -1,12 +1,15 @@
-/**
- * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
- * sumDouble - codingbat.com/prob/p181646
- * Add the two input values, with a possible doubling
- * 
- * My repo - https://github.com/egalli64/jex/
+/*
+  CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
+
+  My repo - https://github.com/egalli64/jex/
  */
 package com.codingbat.warmup1;
 
+/**
+ * sumDouble - codingbat.com/prob/p181646
+ * <p>
+ * Add the two input values, with a possible doubling
+ */
 public class SumDouble {
     /**
      * Plain

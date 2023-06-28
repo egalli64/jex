@@ -1,8 +1,7 @@
-/**
- * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
- * diff21 - codingbat.com/prob/p116624
- * 
- * My repo - https://github.com/egalli64/jex/
+/*
+  CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
+
+  My repo - https://github.com/egalli64/jex/
  */
 package com.codingbat.warmup1;
 

@@ -1,8 +1,7 @@
-/**
- * CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
- * monkeyTrouble - codingbat.com/prob/p181646
- * 
- * My repo - https://github.com/egalli64/jex/
+/*
+  CodingBat Java Warmup 1 - https://codingbat.com/java/Warmup-1
+
+  My repo - https://github.com/egalli64/jex/
  */
 package com.codingbat.warmup1;
 
