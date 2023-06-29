@@ -179,17 +179,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p182873
-     * 
-     * @param a first value
-     * @param b second value
-     * @return true if one if them is 10 or if their sum is 10
-     */
-    public static boolean makes10(int a, int b) {
-        return a == 10 || b == 10 || a + b == 10;
-    }
-
-    /**
      * codingbat.com/prob/p191914
      * 
      * @param str a string
