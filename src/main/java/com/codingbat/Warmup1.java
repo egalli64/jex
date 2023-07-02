@@ -6,16 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p184004
-     *
-     * @param n an integer
-     * @return true if n distance to 100 or 200 is within 10
-     */
-    public static boolean nearHundred(int n) {
-        return n >= 90 && n <= 110 || n >= 190 && n <= 210;
-    }
-
-    /**
      * codingbat.com/prob/p190570
      *
      * @param str a non-empty string
