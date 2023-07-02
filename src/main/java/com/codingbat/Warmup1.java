@@ -120,24 +120,6 @@ public class Warmup1 {
         return result.toString();
     }
 
-    /**
-     * codingbat.com/prob/p159227
-     * 
-     * @param a        first value
-     * @param b        second value
-     * @param negative flag
-     * @return true
-     *         <li>if one is negative and the other positive
-     *         <li>both are negative and the flag is true
-     */
-    public static boolean posNeg(int a, int b, boolean negative) {
-        if (!negative) {
-            return (a >= 0 && b < 0) || (a < 0 && b >= 0);
-        } else {
-            return a < 0 && b < 0;
-        }
-    }
-
     /*-
      * a+  b+  neg return 
      * T   T   T   F   
