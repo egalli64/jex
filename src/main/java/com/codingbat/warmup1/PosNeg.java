@@ -25,7 +25,7 @@ public class PosNeg {
         if (negative) {
             return a < 0 && b < 0;
         } else {
-            return (a >= 0 && b < 0) || (a < 0 && b >= 0);
+            return a >= 0 && b < 0 || a < 0 && b >= 0;
         }
     }
 
@@ -40,6 +40,6 @@ public class PosNeg {
      *         <li>both are negative and the flag is true
      */
     public static boolean oneLiner(int a, int b, boolean negative) {
-        return negative ? a < 0 && b < 0 : (a >= 0 && b < 0) || (a < 0 && b >= 0);
+        return negative ? a < 0 && b < 0 : a >= 0 && b < 0 || a < 0 && b >= 0;
     }
 }
