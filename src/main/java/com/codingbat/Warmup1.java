@@ -6,18 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p161642
-     *
-     * @param str a non-empty string
-     * @return a copy of the original string with the last char added at the front
-     *         and back
-     */
-    public static String backAround(String str) {
-        String tag = str.substring(str.length() - 1);
-        return tag + str + tag;
-    }
-
-    /**
      * codingbat.com/prob/p191022
      *
      * @param str a possibly empty string

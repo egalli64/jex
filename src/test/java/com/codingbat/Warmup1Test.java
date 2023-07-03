@@ -11,12 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup1Test {
     @ParameterizedTest
-    @CsvSource({ "cat,tcatt", "Hello,oHelloo", "a,aaa" })
-    void backAroundExamples(String input, String expected) {
-        assertThat(Warmup1.backAround(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "hi there,true", "hi,true", "hello hi,false" })
     void startHiExamples(String input, boolean expected) {
         assertThat(Warmup1.startHi(input)).isEqualTo(expected);
