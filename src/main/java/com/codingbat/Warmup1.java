@@ -103,27 +103,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p144535
-     * 
-     * @param a first value
-     * @param b second value
-     * @return true if either of them is in the range 10..20 inclusive
-     */
-    public static boolean in1020(int a, int b) {
-        return isIn1020(a) || isIn1020(b);
-    }
-
-    /**
-     * Helper for {@linkplain Warmup1#in1020(int, int)}
-     * 
-     * @param value a value
-     * @return true if in [10..20]
-     */
-    private static boolean isIn1020(int value) {
-        return value > 9 && value < 21;
-    }
-
-    /**
      * codingbat.com/prob/p165701
      * 
      * @param a first value
