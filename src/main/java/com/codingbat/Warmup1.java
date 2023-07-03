@@ -151,21 +151,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p191914
-     * 
-     * @param str a string
-     * @return add prefix "not" but do not double it
-     */
-    public static String notString(String str) {
-        String prefix = "not";
-        if (str.startsWith(prefix)) {
-            return str;
-        } else {
-            return prefix + " " + str;
-        }
-    }
-
-    /**
      * codingbat.com/prob/p136351
      * 
      * @param str a possibly empty string

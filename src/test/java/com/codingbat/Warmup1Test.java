@@ -71,12 +71,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "candy,not candy", "x,not x", "not bad,not bad" })
-    void notStringExamples(String input, String expected) {
-        assertThat(Warmup1.notString(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Java,JavJavJav", "Chocolate,ChoChoCho", "abc,abcabcabc" })
     void front3Examples(String input, String expected) {
         assertThat(Warmup1.front3(input)).isEqualTo(expected);
