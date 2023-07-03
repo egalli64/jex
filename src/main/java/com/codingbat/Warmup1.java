@@ -103,17 +103,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p192082
-     * 
-     * @param temp1 first temperature
-     * @param temp2 second temperature
-     * @return true if one is less than 0 and the other is greater than 100
-     */
-    public static boolean icyHot(int temp1, int temp2) {
-        return temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100;
-    }
-
-    /**
      * codingbat.com/prob/p144535
      * 
      * @param a first value

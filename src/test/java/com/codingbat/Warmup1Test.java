@@ -47,12 +47,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "120, -1, true", "-1, 120, true", "2, 120, false" })
-    void icyHotExamples(int first, int second, boolean expected) {
-        assertThat(Warmup1.icyHot(first, second)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "12, 99, true", "21, 12, true", "8, 99, false" })
     void in1020Examples(int first, int second, boolean expected) {
         assertThat(Warmup1.in1020(first, second)).isEqualTo(expected);
