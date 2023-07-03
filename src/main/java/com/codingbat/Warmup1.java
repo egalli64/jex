@@ -125,27 +125,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p136351
-     * 
-     * @param str a possibly empty string
-     * @return Three times the first three chars (if available)
-     */
-    public static String front3(String str) {
-        String tag = str.substring(0, Math.min(str.length(), 3));
-        return tag + tag + tag;
-    }
-
-    /**
-     * Java 11 currently not supported by Coding Bat
-     * 
-     * @param str a possibly empty string
-     * @return Three times the first three chars (if available)
-     */
-    public static String front3J11(String str) {
-        return str.substring(0, Math.min(str.length(), 3)).repeat(3);
-    }
-
-    /**
      * codingbat.com/prob/p112564
      * 
      * @param n a non negative number

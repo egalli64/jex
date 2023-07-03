@@ -59,18 +59,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Java,JavJavJav", "Chocolate,ChoChoCho", "abc,abcabcabc" })
-    void front3Examples(String input, String expected) {
-        assertThat(Warmup1.front3(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Java,JavJavJav", "Chocolate,ChoChoCho", "abc,abcabcabc" })
-    void front3J11Examples(String input, String expected) {
-        assertThat(Warmup1.front3J11(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "3,true", "10,true", "8,false" })
     void or35Examples(int input, boolean expected) {
         assertThat(Warmup1.or35(input)).isEqualTo(expected);
