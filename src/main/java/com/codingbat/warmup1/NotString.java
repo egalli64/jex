@@ -44,8 +44,9 @@ public class NotString {
      * @return the input prefixed by "not"
      */
     public static String checkBySubstring(String str) {
-        if (str.length() < 3 || !str.substring(0, 3).equals("not")) {
-            return "not " + str;
+        String prefix = "not";
+        if (str.length() < 3 || !str.substring(0, 3).equals(prefix)) {
+            return prefix + " " + str;
         } else {
             return str;
         }
