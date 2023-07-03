@@ -11,12 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup1Test {
     @ParameterizedTest
-    @CsvSource({ "hi there,true", "hi,true", "hello hi,false" })
-    void startHiExamples(String input, boolean expected) {
-        assertThat(Warmup1.startHi(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "13,20,10,true", "20,19,10,true", "20,10,13,true" })
     void hasTeenExamples(int first, int second, int third, boolean expected) {
         assertThat(Warmup1.hasTeen(first, second, third)).isEqualTo(expected);

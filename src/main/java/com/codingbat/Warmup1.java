@@ -6,16 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p191022
-     *
-     * @param str a possibly empty string
-     * @return true if the string starts with "hi"
-     */
-    public static boolean startHi(String str) {
-        return str.startsWith("hi");
-    }
-
-    /**
      * codingbat.com/prob/p178986
      * 
      * @param a first value
