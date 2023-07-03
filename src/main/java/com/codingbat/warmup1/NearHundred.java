@@ -12,6 +12,22 @@ package com.codingbat.warmup1;
  */
 public class NearHundred {
     /**
+     * With full details
+     *
+     * @param n an integer
+     * @return true if n distance to 100 or 200 is within 10
+     */
+    public static boolean plain(int n) {
+        if (Math.abs(100 - n) <= 10) {
+            return true;
+        } else if (Math.abs(200 - n) <= 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Check interval
      *
      * @param n an integer
