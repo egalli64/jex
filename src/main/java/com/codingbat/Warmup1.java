@@ -113,16 +113,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p112564
-     * 
-     * @param n a non negative number
-     * @return if it is a multiple of 3 or 5
-     */
-    public static boolean or35(int n) {
-        return n % 3 == 0 || n % 5 == 0;
-    }
-
-    /**
      * codingbat.com/prob/p183592
      * 
      * @param str a possibly empty string

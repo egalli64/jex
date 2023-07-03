@@ -53,12 +53,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "3,true", "10,true", "8,false" })
-    void or35Examples(int input, boolean expected) {
-        assertThat(Warmup1.or35(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "kitten,kikittenki", "Ha,HaHaHa", "abc,ababcab" })
     void front22Examples(String input, String expected) {
         assertThat(Warmup1.front22(input)).isEqualTo(expected);
