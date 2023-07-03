@@ -59,12 +59,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "code,eodc", "a,a", "ab,ba" })
-    void frontBackExamples(String input, String expected) {
-        assertThat(Warmup1.frontBack(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Java,JavJavJav", "Chocolate,ChoChoCho", "abc,abcabcabc" })
     void front3Examples(String input, String expected) {
         assertThat(Warmup1.front3(input)).isEqualTo(expected);

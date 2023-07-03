@@ -125,21 +125,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p123384
-     * 
-     * @param str a possibly empty string
-     * @return swap first / last char
-     */
-    public static String frontBack(String str) {
-        if (str.length() < 2) {
-            return str;
-        }
-
-        final int last = str.length() - 1;
-        return str.substring(last) + str.substring(1, last) + str.charAt(0);
-    }
-
-    /**
      * codingbat.com/prob/p136351
      * 
      * @param str a possibly empty string
