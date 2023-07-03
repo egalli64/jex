@@ -6,17 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p190570
-     *
-     * @param str a non-empty string
-     * @param n   a valid index for the string
-     * @return a copy of the original string, less the char at n position
-     */
-    public static String missingChar(String str, int n) {
-        return str.substring(0, n) + str.substring(n + 1);
-    }
-
-    /**
      * codingbat.com/prob/p161642
      *
      * @param str a non-empty string

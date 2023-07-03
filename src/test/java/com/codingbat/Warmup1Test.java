@@ -11,12 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup1Test {
     @ParameterizedTest
-    @CsvSource({ "1,ktten", "0,itten", "4,kittn" })
-    void missingCharExamples(int input, String expected) {
-        assertThat(Warmup1.missingChar("kitten", input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "cat,tcatt", "Hello,oHelloo", "a,aaa" })
     void backAroundExamples(String input, String expected) {
         assertThat(Warmup1.backAround(input)).isEqualTo(expected);
