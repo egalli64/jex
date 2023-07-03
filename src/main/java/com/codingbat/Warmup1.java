@@ -113,17 +113,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p183592
-     * 
-     * @param str a possibly empty string
-     * @return add the first 2 char (when available) to begin and end
-     */
-    public static String front22(String str) {
-        String tag = str.substring(0, Math.min(str.length(), 2));
-        return tag + str + tag;
-    }
-
-    /**
      * codingbat.com/prob/p192082
      * 
      * @param temp1 first temperature
