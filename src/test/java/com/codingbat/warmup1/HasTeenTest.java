@@ -18,7 +18,7 @@ class HasTeenTest {
 
     @ParameterizedTest
     @CsvSource({ "10,false", "13,true", "19,true", "20,false" })
-    void solutionExamples(int value, boolean expected) {
+    void isTeenExamples(int value, boolean expected) {
         assertThat(HasTeen.isTeen(value)).isEqualTo(expected);
     }
 }
