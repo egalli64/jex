@@ -12,7 +12,7 @@ package com.codingbat.warmup1;
  */
 public class In1020 {
     /**
-     * codingbat.com/prob/p144535
+     * The actual job is delegated to {@linkplain In1020#isInRange(int)} 
      * 
      * @param a first value
      * @param b second value
