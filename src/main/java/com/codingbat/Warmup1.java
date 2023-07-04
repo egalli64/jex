@@ -6,18 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p178986
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return true if an input value (or more) are in [13..19]
-     */
-    public static boolean hasTeen(int a, int b, int c) {
-        return isTeen(a) || isTeen(b) || isTeen(c);
-    }
-
-    /**
      * Helper for:
      * <li>{@linkplain Warmup1#hasTeen(int, int, int)}
      * <li>{@linkplain Warmup1#loneTeen(int, int)}
