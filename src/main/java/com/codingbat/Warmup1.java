@@ -6,18 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * Helper for:
-     * <li>{@linkplain Warmup1#hasTeen(int, int, int)}
-     * <li>{@linkplain Warmup1#loneTeen(int, int)}
-     * 
-     * @param value a value
-     * @return true if the input value is in [13..19]
-     */
-    private static boolean isTeen(int value) {
-        return value > 12 && value < 20;
-    }
-
-    /**
      * codingbat.com/prob/p151713
      * 
      * @param str a string
@@ -88,17 +76,6 @@ public class Warmup1 {
      */
     public static boolean posNegEx(int a, int b, boolean negative) {
         return a > 0 ^ b > 0 && !negative || a < 0 && b < 0 && negative;
-    }
-
-    /**
-     * codingbat.com/prob/p165701
-     * 
-     * @param a first value
-     * @param b second value
-     * @return return true if only one is in [13 .. 19]
-     */
-    public static boolean loneTeen(int a, int b) {
-        return isTeen(a) ^ isTeen(b);
     }
 
     /**
