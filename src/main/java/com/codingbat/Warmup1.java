@@ -69,24 +69,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p199720
-     * 
-     * @param str a possibly empty string
-     * @return "oz", if they are at the beginning in that places
-     */
-    public static String startOz(String str) {
-        StringBuilder result = new StringBuilder();
-        if (str.length() > 0 && str.charAt(0) == 'o') {
-            result.append('o');
-        }
-        if (str.length() > 1 && str.charAt(1) == 'z') {
-            result.append('z');
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p101887
      * 
      * @param a first value
