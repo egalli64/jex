@@ -79,16 +79,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p100905
-     * 
-     * @param str a string
-     * @return copy without "del", if in position 1
-     */
-    public static String delDel(String str) {
-        return str.indexOf("del") == 1 ? str.charAt(0) + str.substring(4) : str;
-    }
-
-    /**
      * codingbat.com/prob/p199720
      * 
      * @param str a possibly empty string

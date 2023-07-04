@@ -41,12 +41,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "adelbc,abc", "adelHello,aHello", "adedbc,adedbc" })
-    void delDelExamples(String input, String expected) {
-        assertThat(Warmup1.delDel(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "ozymandias,oz", "bzoo,z", "oxx,o" })
     void startOzExamples(String input, String expected) {
         assertThat(Warmup1.startOz(input)).isEqualTo(expected);
