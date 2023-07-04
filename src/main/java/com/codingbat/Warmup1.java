@@ -6,16 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p151713
-     * 
-     * @param str a string
-     * @return true if it begins by "?ix"
-     */
-    public static boolean mixStart(String str) {
-        return str.length() > 2 && str.charAt(1) == 'i' && str.charAt(2) == 'x';
-    }
-
-    /**
      * codingbat.com/prob/p172021
      * 
      * @param a first value

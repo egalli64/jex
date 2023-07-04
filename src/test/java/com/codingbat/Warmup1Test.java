@@ -11,12 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup1Test {
     @ParameterizedTest
-    @CsvSource({ "mix snacks,true", "pix snacks,true", "piz snacks,false" })
-    void mixStartExamples(String input, boolean expected) {
-        assertThat(Warmup1.mixStart(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "8,13,8", "13,8,8", "13,7,0" })
     void close10Examples(int first, int second, int expected) {
         assertThat(Warmup1.close10(first, second)).isEqualTo(expected);
