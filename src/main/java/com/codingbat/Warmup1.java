@@ -69,18 +69,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p101887
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return the biggest one
-     */
-    public static int intMax(int a, int b, int c) {
-        return Math.max(Math.max(a, b), c);
-    }
-
-    /**
      * codingbat.com/prob/p132134
      * 
      * @param a first value

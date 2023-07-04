@@ -35,12 +35,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1, 2, 3, 3", "1, 3, 2, 3", "3, 2, 1, 3" })
-    void intMaxExamples(int a, int b, int c, int expected) {
-        assertThat(Warmup1.intMax(a, b, c)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "30, 31, true", "30, 41, false", "40, 50, true" })
     void in3050Examples(int a, int b, boolean expected) {
         assertThat(Warmup1.in3050(a, b)).isEqualTo(expected);
