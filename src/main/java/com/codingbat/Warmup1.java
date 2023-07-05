@@ -6,22 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p173784
-     * 
-     * @param str a string
-     * @return true if it contains [1..3] 'e'
-     */
-    public static boolean stringE(String str) {
-        int count = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'e') {
-                count += 1;
-            }
-        }
-        return count > 0 && count < 4;
-    }
-
-    /**
      * codingbat.com/prob/p196441
      * 
      * @param str a non-empty string
