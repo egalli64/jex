@@ -51,38 +51,6 @@ public class Warmup1 {
         return a > 0 ^ b > 0 && !negative || a < 0 && b < 0 && negative;
     }
 
-    /**
-     * codingbat.com/prob/p177372
-     * 
-     * @param a first positive value
-     * @param b second positive value
-     * @return the largest in [10..20] or 0
-     */
-    public static int max1020(int a, int b) {
-        if (b > a) {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
-
-        if (in1020(a)) {
-            return a;
-        }
-        if (in1020(b)) {
-            return b;
-        }
-        return 0;
-    }
-
-    /**
-     * Helper for {@linkplain Warmup1#max1020(int, int)}
-     * 
-     * @param value a value
-     * @return true if in [10..20]
-     */
-    private static boolean in1020(int value) {
-        return value > 9 && value < 21;
-    }
 
     /**
      * codingbat.com/prob/p125339
