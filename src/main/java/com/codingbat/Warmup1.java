@@ -52,37 +52,6 @@ public class Warmup1 {
     }
 
     /**
-     * codingbat.com/prob/p132134
-     * 
-     * @param a first value
-     * @param b second value
-     * @return true if they are both in [30..40] or [40..50]
-     */
-    public static boolean in3050(int a, int b) {
-        return in3040(a) && in3040(b) || in4050(a) && in4050(b);
-    }
-
-    /**
-     * Helper for {@linkplain Warmup1#in3050(int, int)}
-     * 
-     * @param value a value
-     * @return true if in [30..40]
-     */
-    private static boolean in3040(int value) {
-        return value > 29 && value < 41;
-    }
-
-    /**
-     * Helper for {@linkplain Warmup1#in3050(int, int)}
-     * 
-     * @param value a value
-     * @return true if in [40..50]
-     */
-    private static boolean in4050(int value) {
-        return value > 39 && value < 51;
-    }
-
-    /**
      * codingbat.com/prob/p177372
      * 
      * @param a first positive value
