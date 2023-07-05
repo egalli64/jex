@@ -6,23 +6,6 @@ package com.codingbat;
 
 public class Warmup1 {
     /**
-     * codingbat.com/prob/p172021
-     * 
-     * @param a first value
-     * @param b second value
-     * @return the nearest to 10, or 0 for a tie
-     */
-    public static int close10(int a, int b) {
-        int distA = Math.abs(a - 10);
-        int distB = Math.abs(b - 10);
-
-        if (distA == distB) {
-            return 0;
-        }
-        return distA < distB ? a : b;
-    }
-
-    /**
      * codingbat.com/prob/p173784
      * 
      * @param str a string
