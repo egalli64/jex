@@ -23,12 +23,6 @@ class Warmup1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "7, 17, true", "6, 17, false", "3, 113, true" })
-    void lastDigitExamples(int a, int b, boolean expected) {
-        assertThat(Warmup1.lastDigit(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,HeLLO", "hi there,hi thERE", "hi,HI" })
     void endUpExamples(String input, String expected) {
         assertThat(Warmup1.endUp(input)).isEqualTo(expected);

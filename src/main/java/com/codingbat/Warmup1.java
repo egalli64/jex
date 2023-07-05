@@ -35,18 +35,6 @@ public class Warmup1 {
         return a > 0 ^ b > 0 && !negative || a < 0 && b < 0 && negative;
     }
 
-
-    /**
-     * codingbat.com/prob/p125339
-     * 
-     * @param a first non-negative value
-     * @param b second non-negative value
-     * @return true if they have the same last digit
-     */
-    public static boolean lastDigit(int a, int b) {
-        return a % 10 == b % 10;
-    }
-
     /**
      * codingbat.com/prob/p125268
      * 
