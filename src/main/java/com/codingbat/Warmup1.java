@@ -34,15 +34,4 @@ public class Warmup1 {
     public static boolean posNegEx(int a, int b, boolean negative) {
         return a > 0 ^ b > 0 && !negative || a < 0 && b < 0 && negative;
     }
-
-    /**
-     * codingbat.com/prob/p125268
-     * 
-     * @param str a possibly empty string
-     * @return the last 3 chars (or less) to upper
-     */
-    public static String endUp(String str) {
-        int pos = str.length() - Math.min(3, str.length());
-        return str.substring(0, pos) + str.substring(pos).toUpperCase();
-    }
 }

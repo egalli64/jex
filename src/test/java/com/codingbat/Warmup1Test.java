@@ -21,10 +21,4 @@ class Warmup1Test {
     void posNegExExamples(int first, int second, boolean flag, boolean expected) {
         assertThat(Warmup1.posNegEx(first, second, flag)).isEqualTo(expected);
     }
-
-    @ParameterizedTest
-    @CsvSource({ "Hello,HeLLO", "hi there,hi thERE", "hi,HI" })
-    void endUpExamples(String input, String expected) {
-        assertThat(Warmup1.endUp(input)).isEqualTo(expected);
-    }
 }
