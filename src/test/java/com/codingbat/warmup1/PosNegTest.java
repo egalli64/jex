@@ -22,4 +22,10 @@ class PosNegTest {
     void oneLinerExamples(int first, int second, boolean flag, boolean expected) {
         assertThat(PosNeg.oneLiner(first, second, flag)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1, -1, false, true", "-1, 1, false, true", "-4, -5, true, true" })
+    void posNegExExamples(int first, int second, boolean flag, boolean expected) {
+        assertThat(PosNeg.obscure(first, second, flag)).isEqualTo(expected);
+    }
 }

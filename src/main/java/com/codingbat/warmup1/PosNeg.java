@@ -42,4 +42,21 @@ public class PosNeg {
     public static boolean oneLiner(int a, int b, boolean negative) {
         return negative ? a < 0 && b < 0 : a >= 0 && b < 0 || a < 0 && b >= 0;
     }
+
+    /*-
+     * Checking the truth table
+     * 
+     * a+  b+  neg return 
+     * T   T   T   F   
+     * T   T   F   F
+     * T   F   T   F
+     * T   F   F   T <-
+     * F   T   T   F
+     * F   T   F   T <-
+     * F   F   T   T <-
+     * F   F   F   F
+     */
+    public static boolean obscure(int a, int b, boolean negative) {
+        return a > 0 ^ b > 0 && !negative || a < 0 && b < 0 && negative;
+    }
 }
