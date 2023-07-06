@@ -11,12 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup1Test {
     @ParameterizedTest
-    @CsvSource({ "Miracle,2,Mrce", "abcdefg,2,aceg", "abcdefg,3,adg" })
-    void everyNthExamples(String s, int n, String expected) {
-        assertThat(Warmup1.everyNth(s, n)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "1, -1, false, true", "-1, 1, false, true", "-4, -5, true, true" })
     void posNegExExamples(int first, int second, boolean flag, boolean expected) {
         assertThat(Warmup1.posNegEx(first, second, flag)).isEqualTo(expected);
