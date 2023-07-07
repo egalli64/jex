@@ -5,16 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p171896
-     *
-     * @param name a string representing a name
-     * @return "Hello <name>!"
-     */
-    public static String helloName(String name) {
-        return "Hello " + name + '!';
-    }
-
-    /**
      * codingbat.com/prob/p184030
      *
      * @param out  a 4-char template in which word has to be inserted
