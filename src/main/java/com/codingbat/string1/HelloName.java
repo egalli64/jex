@@ -28,8 +28,8 @@ public class HelloName {
      * @return "Hello <name>!"
      */
     public static String builder(String name) {
-        StringBuilder result = new StringBuilder(name);
-        result.insert(0, "Hello ");
+        StringBuilder result = new StringBuilder("Hello ");
+        result.append(name);
         result.append('!');
         return result.toString();
     }
@@ -41,6 +41,6 @@ public class HelloName {
      * @return "Hello <name>!"
      */
     public static String builderCompact(String name) {
-        return new StringBuilder(name).insert(0, "Hello ").append('!').toString();
+        return new StringBuilder("Hello ").append(name).append('!').toString();
     }
 }
