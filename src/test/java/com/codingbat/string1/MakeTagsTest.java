@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class MakeTagsTest {
     @ParameterizedTest
     @CsvSource({ "i,Yay,<i>Yay</i>", "i,Hello,<i>Hello</i>", "cite,Yay,<cite>Yay</cite>" })
-    void makeTagsExamples(String tag, String content, String expected) {
+    void solutionExamples(String tag, String content, String expected) {
         assertThat(MakeTags.solution(tag, content)).isEqualTo(expected);
     }
 }
