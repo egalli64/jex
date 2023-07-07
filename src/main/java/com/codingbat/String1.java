@@ -143,17 +143,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p147483
-     * 
-     * @param tag  the tag name
-     * @param word the element content
-     * @return the element
-     */
-    public static String makeTags(String tag, String word) {
-        return "<" + tag + ">" + word + "</" + tag + ">";
-    }
-
-    /**
      * codingbat.com/prob/p108853
      * 
      * @param str a string sized 2+

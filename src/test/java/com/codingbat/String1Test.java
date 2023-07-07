@@ -73,12 +73,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "i,Yay,<i>Yay</i>", "i,Hello,<i>Hello</i>", "cite,Yay,<cite>Yay</cite>" })
-    void makeTagsExamples(String tag, String content, String expected) {
-        assertThat(String1.makeTags(tag, content)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,lololo", "ab,ababab", "Hi,HiHiHi" })
     void extraEndExamples(String input, String expected) {
         assertThat(String1.extraEnd(input)).isEqualTo(expected);
