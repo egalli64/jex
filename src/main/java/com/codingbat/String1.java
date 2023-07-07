@@ -143,17 +143,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p161056
-     * 
-     * @param a first string
-     * @param b second string
-     * @return first + second + second + first
-     */
-    public static String makeAbba(String a, String b) {
-        return a + b + b + a;
-    }
-
-    /**
      * codingbat.com/prob/p147483
      * 
      * @param tag  the tag name

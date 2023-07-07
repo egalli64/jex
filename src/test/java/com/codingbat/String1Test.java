@@ -73,12 +73,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hi,Bye,HiByeByeHi", "Yo,Alice,YoAliceAliceYo", "What,Up,WhatUpUpWhat" })
-    void makeAbbaExamples(String a, String b, String expected) {
-        assertThat(String1.makeAbba(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "i,Yay,<i>Yay</i>", "i,Hello,<i>Hello</i>", "cite,Yay,<cite>Yay</cite>" })
     void makeTagsExamples(String tag, String content, String expected) {
         assertThat(String1.makeTags(tag, content)).isEqualTo(expected);
