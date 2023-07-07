@@ -6,7 +6,7 @@
 package com.codingbat.string1;
 
 /**
- * makeAbba - codingbat.com/prob/p147483
+ * makeTags - codingbat.com/prob/p147483
  * <p>
  * make HTML tags concatenating strings
  */
