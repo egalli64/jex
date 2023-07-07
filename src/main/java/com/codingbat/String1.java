@@ -132,21 +132,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p108853
-     * 
-     * @param str a string sized 2+
-     * @return 3 copies of the last 2 chars
-     */
-    public static String extraEnd(String str) {
-        String tag = str.substring(str.length() - 2);
-        StringBuilder result = new StringBuilder(tag);
-        for (int i = 0; i < 2; i++) {
-            result.append(tag);
-        }
-        return result.toString();
-    }
-
-    /**
      * Java 11 currently not supported by Coding Bat
      * 
      * @param str a string sized 2+

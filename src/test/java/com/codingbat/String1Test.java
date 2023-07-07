@@ -68,12 +68,6 @@ class String1Test {
 
     @ParameterizedTest
     @CsvSource({ "Hello,lololo", "ab,ababab", "Hi,HiHiHi" })
-    void extraEndExamples(String input, String expected) {
-        assertThat(String1.extraEnd(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Hello,lololo", "ab,ababab", "Hi,HiHiHi" })
     void extraEnd11Examples(String input, String expected) {
         assertThat(String1.extraEnd11(input)).isEqualTo(expected);
     }
