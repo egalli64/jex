@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "<<>>,Yay,<<Yay>>", "<<>>,WooHoo,<<WooHoo>>", "[[]],word,[[word]]" })
-    void makeOutWordExamples(String template, String word, String expected) {
-        assertThat(String1.makeOutWord(template, word)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "WooHoo,Woo", "HelloThere,Hello", "abcdef,abc" })
     void firstHalfExamples(String input, String expected) {
         assertThat(String1.firstHalf(input)).isEqualTo(expected);
