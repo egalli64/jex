@@ -67,12 +67,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hello,ell", "java,av", "coding,odin" })
-    void withoutEndExamples(String input, String expected) {
-        assertThat(String1.withoutEnd(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,hi,hiHellohi", "hi,Hello,hiHellohi", "aaa,b,baaab" })
     void comboStringExamples(String a, String b, String expected) {
         assertThat(String1.comboString(a, b)).isEqualTo(expected);

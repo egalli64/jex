@@ -132,16 +132,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p130896
-     * 
-     * @param str a string sized at least 2
-     * @return removed first and last
-     */
-    public static String withoutEnd(String str) {
-        return str.substring(1, str.length() - 1);
-    }
-
-    /**
      * codingbat.com/prob/p168564
      * 
      * @param a first string, possibly empty
