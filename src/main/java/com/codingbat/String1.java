@@ -142,16 +142,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p163411
-     * 
-     * @param str a possibly empty string
-     * @return the first two chars (when available) as string
-     */
-    public static String firstTwo(String str) {
-        return str.substring(0, Math.min(str.length(), 2));
-    }
-
-    /**
      * codingbat.com/prob/p130896
      * 
      * @param str a string sized at least 2
