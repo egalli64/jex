@@ -5,16 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p172267
-     *
-     * @param str a string even sized
-     * @return the str first half
-     */
-    public static String firstHalf(String str) {
-        return str.substring(0, str.length() / 2);
-    }
-
-    /**
      * codingbat.com/prob/p143825
      *
      * @param a a non-empty string
