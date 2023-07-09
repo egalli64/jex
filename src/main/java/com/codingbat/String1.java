@@ -132,19 +132,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p168564
-     * 
-     * @param a first string, possibly empty
-     * @param b second string, possibly empty, differently sized
-     * @return short+long+short
-     */
-    public static String comboString(String a, String b) {
-        String shortOne = a.length() < b.length() ? a : b;
-        String longOne = a.length() > b.length() ? a : b;
-        return shortOne + longOne + shortOne;
-    }
-
-    /**
      * codingbat.com/prob/p197720
      * 
      * @param str a string sized 2+

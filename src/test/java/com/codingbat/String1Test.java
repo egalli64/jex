@@ -67,12 +67,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hello,hi,hiHellohi", "hi,Hello,hiHellohi", "aaa,b,baaab" })
-    void comboStringExamples(String a, String b, String expected) {
-        assertThat(String1.comboString(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,lloHe", "java,vaja", "Hi,Hi" })
     void left2Examples(String input, String expected) {
         assertThat(String1.left2(input)).isEqualTo(expected);
