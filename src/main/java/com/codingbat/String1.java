@@ -121,16 +121,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p197720
-     * 
-     * @param str a string sized 2+
-     * @return the first 2 chars moved to the end
-     */
-    public static String left2(String str) {
-        return str.substring(2) + str.substring(0, 2);
-    }
-
-    /**
      * codingbat.com/prob/p130781
      * 
      * @param str a string sized 2+
