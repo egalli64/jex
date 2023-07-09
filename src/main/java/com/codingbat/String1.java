@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p143825
-     *
-     * @param a a non-empty string
-     * @param b a non-empty string
-     * @return a concatenation of the two input strings, but their first char
-     */
-    public static String nonStart(String a, String b) {
-        return a.substring(1) + b.substring(1);
-    }
-
-    /**
      * codingbat.com/prob/p162477
      *
      * @param str   a non-empty string
