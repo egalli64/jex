@@ -110,16 +110,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p174254
-     * 
-     * @param str a possibly empty string
-     * @return cut first and last, when available
-     */
-    public static String withouEnd2(String str) {
-        return (str.length() < 3) ? "" : str.substring(1, str.length() - 1);
-    }
-
-    /**
      * codingbat.com/prob/p137729
      * 
      * @param str a string of even length, 2+

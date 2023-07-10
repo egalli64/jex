@@ -55,12 +55,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hello,ell", "abc,b", "ab,''" })
-    void withouEnd2Examples(String input, String expected) {
-        assertThat(String1.withouEnd2(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "string,ri", "code,od", "Practice,ct" })
     void middleTwoExamples(String input, String expected) {
         assertThat(String1.middleTwo(input)).isEqualTo(expected);
