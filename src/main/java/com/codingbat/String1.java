@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p162477
-     *
-     * @param str   a non-empty string
-     * @param front true for begin, false for end
-     * @return a string containing just the first or last char from input
-     */
-    public static String theEnd(String str, boolean front) {
-        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
-    }
-
-    /**
      * codingbat.com/prob/p103895
      *
      * @param str a possibly empty string

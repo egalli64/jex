@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "Hello,true,H", "Hello,false,o", "oh,true,o" })
-    void theEndExamples(String s, boolean front, String expected) {
-        assertThat(String1.theEnd(s, front)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "oddly,true", "y,false", "oddy,false" })
     void endsLyExamples(String s, Boolean expected) {
         assertThat(String1.endsLy(s)).isEqualTo(expected);
