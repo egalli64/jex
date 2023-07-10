@@ -110,17 +110,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p137729
-     * 
-     * @param str a string of even length, 2+
-     * @return the middle two chars
-     */
-    public static String middleTwo(String str) {
-        final int middle = str.length() / 2;
-        return str.substring(middle - 1, middle + 1);
-    }
-
-    /**
      * codingbat.com/prob/p174148
      * 
      * @param str a string size n+

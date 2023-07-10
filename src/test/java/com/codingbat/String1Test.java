@@ -55,12 +55,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "string,ri", "code,od", "Practice,ct" })
-    void middleTwoExamples(String input, String expected) {
-        assertThat(String1.middleTwo(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,2,Helo", "Chocolate,3,Choate", "Chocolate,1,Ce" })
     void nTwiceExamples(String s, int n, String expected) {
         assertThat(String1.nTwice(s, n)).isEqualTo(expected);
