@@ -121,16 +121,6 @@ public class String1 {
     }
 
     /**
-     * codingbat.com/prob/p130781
-     * 
-     * @param str a string sized 2+
-     * @return the last 2 chars moved to the begin
-     */
-    public static String right2(String str) {
-        return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
-    }
-
-    /**
      * codingbat.com/prob/p174254
      * 
      * @param str a possibly empty string
