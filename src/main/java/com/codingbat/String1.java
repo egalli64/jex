@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p115863
-     * 
-     * @param str a string of odd length, at least 3
-     * @return the three central chars as string
-     */
-    public static String middleThree(String str) {
-        int begin = str.length() / 2 - 1;
-        return str.substring(begin, begin + 3);
-    }
-
-    /**
      * 
      * @param a first string, possibly empty
      * @param b second string, possibly empty
