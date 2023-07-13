@@ -5,20 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p144623
-     * 
-     * @param str   a string sized 2+
-     * @param index an integer
-     * @return a string length 2 from the given index, or the first 2 chars
-     */
-    public static String twoChar(String str, int index) {
-        if (index < 0 || index > str.length() - 2) {
-            index = 0;
-        }
-        return str.substring(index, index + 2);
-    }
-
-    /**
      * codingbat.com/prob/p139075
      * 
      * @param str a possibly empty string

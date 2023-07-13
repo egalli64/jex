@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "java,0,ja", "java,2,va", "java,3,ja" })
-    void twoCharExamples(String s, int n, String expected) {
-        assertThat(String1.twoChar(s, n)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "badxx,true", "xbadxx,true", "xxbadxx,false" })
     void hasBadExamples(String s, boolean expected) {
         assertThat(String1.hasBad(s)).isEqualTo(expected);
