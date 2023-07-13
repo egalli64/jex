@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p174148
-     * 
-     * @param str a string size n+
-     * @param n   a non-negative integer
-     * @return the first and last n chars
-     */
-    public static String nTwice(String str, int n) {
-        return str.substring(0, n) + str.substring(str.length() - n);
-    }
-
-    /**
      * codingbat.com/prob/p144623
      * 
      * @param str   a string sized 2+
