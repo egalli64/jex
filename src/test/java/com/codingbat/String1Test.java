@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "hippo,hi,hi", "hippo,xip,hip", "hippo,i,h" })
-    void startWordExamples(String s, String check, String expected) {
-        assertThat(String1.startWord(s, check)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,2,Helo", "Chocolate,3,Choate", "Chocolate,1,Ce" })
     void nTwiceExamples(String s, int n, String expected) {
         assertThat(String1.nTwice(s, n)).isEqualTo(expected);

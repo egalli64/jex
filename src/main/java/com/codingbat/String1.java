@@ -5,23 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p141494
-     * 
-     * @param str  a non-empty string
-     * @param word a non-empty checking string
-     * @return the start of str if matches with word (first char excluded)
-     *         <li>empty string otherwise
-     */
-    public static String startWord(String str, String word) {
-        if (str.length() < word.length()) {
-            return "";
-        }
-
-        String tag = str.substring(0, word.length());
-        return tag.substring(1).equals(word.substring(1)) ? tag : "";
-    }
-
-    /**
      * codingbat.com/prob/p174148
      * 
      * @param str a string size n+
