@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p103895
-     *
-     * @param str a possibly empty string
-     * @return true if it ends in "ly"
-     */
-    public static boolean endsLy(String str) {
-        int len = str.length();
-        return len > 1 && str.charAt(len - 2) == 'l' && str.charAt(len - 1) == 'y';
-    }
-
-    /**
      * codingbat.com/prob/p115863
      * 
      * @param str a string of odd length, at least 3
