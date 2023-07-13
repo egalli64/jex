@@ -5,22 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p199216
-     * 
-     * @param str a possibly empty string
-     * @return "red", "blue", or "", accordingly to the starting tag
-     */
-    public static String seeColor(String str) {
-        String[] tags = { "red", "blue" };
-        for (String tag : tags) {
-            if (str.startsWith(tag)) {
-                return tag;
-            }
-        }
-        return "";
-    }
-
-    /**
      * codingbat.com/prob/p172063
      * 
      * @param str a possibly empty string

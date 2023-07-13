@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "redxx,red", "blueTimes,blue", "xxred,''" })
-    void seeColorExamples(String input, String expected) {
-        assertThat(String1.seeColor(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,HeHeHe", "ab,ababab", "H,HHH" })
     void extraFrontExamples(String input, String expected) {
         assertThat(String1.extraFront(input)).isEqualTo(expected);
