@@ -7,18 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "Hello,HeHeHe", "ab,ababab", "H,HHH" })
-    void extraFrontExamples(String input, String expected) {
-        assertThat(String1.extraFront(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Hello,HeHeHe", "ab,ababab", "H,HHH" })
-    void extraFront11Examples(String input, String expected) {
-        assertThat(String1.extraFront11(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "hippo,hi,hi", "hippo,xip,hip", "hippo,i,h" })
     void startWordExamples(String s, String check, String expected) {
         assertThat(String1.startWord(s, check)).isEqualTo(expected);

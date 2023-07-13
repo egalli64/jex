@@ -5,33 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p172063
-     * 
-     * @param str a possibly empty string
-     * @return the first two chars (if available) times 3
-     */
-    public static String extraFront(String str) {
-        int end = Math.min(str.length(), 2);
-        String tag = str.substring(0, end);
-        StringBuilder result = new StringBuilder(tag);
-        for (int i = 0; i < 2; i++) {
-            result.append(tag);
-        }
-        return result.toString();
-    }
-
-    /**
-     * Java 11 currently not supported by Coding Bat
-     * 
-     * @param str a possibly empty string
-     * @return the first two chars (if available) times 3
-     */
-    public static String extraFront11(String str) {
-        int end = Math.min(str.length(), 2);
-        return str.substring(0, end).repeat(3);
-    }
-
-    /**
      * codingbat.com/prob/p141494
      * 
      * @param str  a non-empty string
