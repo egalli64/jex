@@ -5,16 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p139075
-     * 
-     * @param str a possibly empty string
-     * @return true if "bad" is @ pos 0 or 1
-     */
-    public static boolean hasBad(String str) {
-        return str.lastIndexOf("bad", 1) > -1;
-    }
-
-    /**
      * codingbat.com/prob/p139076
      * 
      * @param str a possibly empty string
