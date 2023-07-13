@@ -12,7 +12,7 @@ package com.codingbat.string1;
  */
 public class MiddleThree {
     /**
-     * codingbat.com/prob/p115863
+     * substring
      * 
      * @param str a string
      * @return the three central chars
