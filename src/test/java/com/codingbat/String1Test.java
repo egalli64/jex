@@ -13,12 +13,6 @@ class String1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hello,lololo", "ab,ababab", "Hi,HiHiHi" })
-    void extraEnd11Examples(String input, String expected) {
-        assertThat(String1.extraEnd11(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,2,Helo", "Chocolate,3,Choate", "Chocolate,1,Ce" })
     void nTwiceExamples(String s, int n, String expected) {
         assertThat(String1.nTwice(s, n)).isEqualTo(expected);

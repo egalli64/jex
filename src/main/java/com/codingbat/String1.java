@@ -22,16 +22,6 @@ public class String1 {
     }
 
     /**
-     * Java 11 currently not supported by Coding Bat
-     * 
-     * @param str a string sized 2+
-     * @return 3 copies of the last 2 chars
-     */
-    public static String extraEnd11(String str) {
-        return str.substring(str.length() - 2).repeat(3);
-    }
-
-    /**
      * codingbat.com/prob/p174148
      * 
      * @param str a string size n+
