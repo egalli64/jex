@@ -5,19 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * 
-     * @param a first string, possibly empty
-     * @param b second string, possibly empty
-     * @return two char string, first of a + last of b (@ if missing)
-     */
-    public static String lastChars(String a, String b) {
-        StringBuilder result = new StringBuilder();
-        result.append(a.isEmpty() ? '@' : a.charAt(0));
-        result.append(b.isEmpty() ? '@' : b.charAt(b.length() - 1));
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p199216
      * 
      * @param str a possibly empty string

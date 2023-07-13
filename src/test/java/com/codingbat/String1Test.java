@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "last,chars,ls", "yo,java,ya", "hi,'',h@" })
-    void lastCharsExamples(String left, String right, String expected) {
-        assertThat(String1.lastChars(left, right)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "redxx,red", "blueTimes,blue", "xxred,''" })
     void seeColorExamples(String input, String expected) {
         assertThat(String1.seeColor(input)).isEqualTo(expected);
