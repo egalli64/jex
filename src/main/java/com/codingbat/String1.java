@@ -5,19 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p194786
-     * 
-     * @param str a possibly empty string
-     * @return last two chars, if available, swapped
-     */
-    public static String lastTwo(String str) {
-        if (str.length() < 2) {
-            return str;
-        }
-        return str.substring(0, str.length() - 2) + str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
-    }
-
-    /**
      * codingbat.com/prob/p196652
      * 
      * @param str a string
