@@ -5,20 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p196652
-     * 
-     * @param str a string
-     * @return true if the first 2 chars are also at the end
-     */
-    public static boolean frontAgain(String str) {
-        int len = str.length();
-        if (len < 2) {
-            return false;
-        }
-        return str.charAt(0) == str.charAt(len - 2) && str.charAt(1) == str.charAt(len - 1);
-    }
-
-    /**
      * codingbat.com/prob/p105745
      * 
      * @param a left, possibly empty, string

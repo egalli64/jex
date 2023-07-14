@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "edited,true", "edit,false", "ed,true" })
-    void frontAgainExamples(String s, boolean expected) {
-        assertThat(String1.frontAgain(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,Hi,loHi", "Hello,java,ellojava", "java,Hello,javaello" })
     void minCatExamples(String s, String t, String expected) {
         assertThat(String1.minCat(s, t)).isEqualTo(expected);
