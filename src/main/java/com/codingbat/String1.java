@@ -5,27 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p110141
-     * 
-     * @param str a possibly empty string
-     * @return remove the first two chars, if not 'a', 'b'
-     */
-    public static String deFront(String str) {
-        StringBuilder result = new StringBuilder();
-        if (!str.isEmpty() && str.charAt(0) == 'a') {
-            result.append('a');
-        }
-        if (str.length() > 1 && str.charAt(1) == 'b') {
-            result.append('b');
-        }
-        if (str.length() > 2) {
-            result.append(str.substring(2));
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p151940
      * 
      * @param str a possibly empty string

@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "Hello,llo", "java,va", "away,aay" })
-    void deFrontExamples(String s, String expected) {
-        assertThat(String1.deFront(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "xHix,Hi", "xHi,Hi", "Hxix,Hxi" })
     void withoutXExamples(String s, String expected) {
         assertThat(String1.withoutX(s)).isEqualTo(expected);
