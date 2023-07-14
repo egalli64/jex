@@ -5,21 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p142247
-     * 
-     * @param str a possibly empty string
-     * @return cut the 2 starting chars, if they are also at the end
-     */
-    public static String without2(String str) {
-        if (str.length() < 2 //
-                || str.charAt(0) != str.charAt(str.length() - 2) //
-                || str.charAt(1) != str.charAt(str.length() - 1)) {
-            return str;
-        }
-        return str.substring(2);
-    }
-
-    /**
      * codingbat.com/prob/p110141
      * 
      * @param str a possibly empty string
