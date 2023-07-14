@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "hello,he", "hi,hi", "h,h@" })
-    void atFirstExamples(String s, String expected) {
-        assertThat(String1.atFirst(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abc,cat,abcat", "dog,cat,dogcat", "abc,'',abc" })
     void conCatExamples(String s, String t, String expected) {
         assertThat(String1.conCat(s, t)).isEqualTo(expected);

@@ -5,21 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p139076
-     * 
-     * @param str a possibly empty string
-     * @return first 2 chars, padded with '@' when too short
-     */
-    public static String atFirst(String str) {
-        int len = Math.min(str.length(), 2);
-        StringBuilder result = new StringBuilder(str.substring(0, len));
-        for (int i = len; i < 2; i++) {
-            result.append('@');
-        }
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p132118
      * 
      * @param a first string, possibly empty
