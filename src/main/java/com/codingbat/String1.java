@@ -5,18 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p105745
-     * 
-     * @param a left, possibly empty, string
-     * @param b right, possibly empty, string
-     * @return concatenation of the two strings, cutting the head of the longest one to make them same sized
-     */
-    public static String minCat(String a, String b) {
-        int len = Math.min(a.length(), b.length());
-        return a.substring(a.length() - len) + b.substring(b.length() - len);
-    }
-
-    /**
      * codingbat.com/prob/p142247
      * 
      * @param str a possibly empty string
