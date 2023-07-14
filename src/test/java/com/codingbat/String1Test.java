@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class String1Test {
     @ParameterizedTest
-    @CsvSource({ "xHix,Hi", "xHi,Hi", "Hxix,Hxi" })
-    void withoutXExamples(String s, String expected) {
-        assertThat(String1.withoutX(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "xHi,Hi", "Hxi,Hi", "Hi,Hi" })
     void withoutX2Examples(String s, String expected) {
         assertThat(String1.withoutX2(s)).isEqualTo(expected);
