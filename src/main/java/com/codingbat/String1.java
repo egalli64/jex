@@ -5,20 +5,6 @@ package com.codingbat;
 
 public class String1 {
     /**
-     * codingbat.com/prob/p132118
-     * 
-     * @param a first string, possibly empty
-     * @param b second string, possibly empty
-     * @return concatenated string, but no dup for last1/first2 char
-     */
-    public static String conCat(String a, String b) {
-        if (a.isEmpty() || b.isEmpty() || a.charAt(a.length() - 1) != b.charAt(0)) {
-            return a + b;
-        }
-        return a + b.substring(1);
-    }
-
-    /**
      * codingbat.com/prob/p194786
      * 
      * @param str a possibly empty string
