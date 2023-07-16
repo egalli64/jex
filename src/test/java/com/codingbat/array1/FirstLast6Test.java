@@ -7,24 +7,24 @@ package com.codingbat.array1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.Test;
+import java.util.stream.Stream;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class FirstLast6Test {
-    @Test
-    void firstLast6Example1() {
-        int[] input = { 1, 2, 6 };
-        assertThat(FirstLast6.solution(input)).isTrue();
+    public static Stream<Arguments> provider() {
+        return Stream.of( //
+                Arguments.of(new int[] { 1, 2, 6 }, true), //
+                Arguments.of(new int[] { 6, 1, 2, 3 }, true), //
+                Arguments.of(new int[] { 13, 6, 1, 2, 3 }, false) //
+        );
     }
 
-    @Test
-    void firstLast6Example2() {
-        int[] input = { 6, 1, 2, 3 };
-        assertThat(FirstLast6.solution(input)).isTrue();
-    }
-
-    @Test
-    void firstLast6Example3() {
-        int[] input = { 13, 6, 1, 2, 3 };
-        assertThat(FirstLast6.solution(input)).isFalse();
+    @ParameterizedTest
+    @MethodSource("provider")
+    public void solutionExamples(int[] input, boolean expected) {
+        assertThat(FirstLast6.solution(input)).isEqualTo(expected);
     }
 }
