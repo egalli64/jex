@@ -102,16 +102,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p118976
-     * 
-     * @param nums an array of integers
-     * @return true if is not empty and first and last are equals
-     */
-    public static boolean sameFirstLast(int[] nums) {
-        return nums.length > 0 && nums[0] == nums[nums.length - 1];
-    }
-
-    /**
      * codingbat.com/prob/p167011
      * 
      * @return an array containing the first 3 digits of pi

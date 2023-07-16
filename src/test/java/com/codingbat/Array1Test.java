@@ -89,12 +89,6 @@ class Array1Test {
     }
 
     @Test
-    void sameFirstLastExample1() {
-        int[] input = { 1, 2, 3 };
-        assertThat(Array1.sameFirstLast(input)).isFalse();
-    }
-
-    @Test
     void makePiExample1() {
         int[] expected = { 3, 1, 4 };
         assertThat(Array1.makePi()).containsExactly(expected);
