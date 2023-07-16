@@ -7,16 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p185685
-     *
-     * @param nums a non-empty array of int
-     * @return true if first or last element is 6
-     */
-    public static boolean firstLast6(int[] nums) {
-        return nums[0] == 6 || nums[nums.length - 1] == 6;
-    }
-
-    /**
      * codingbat.com/prob/p191991
      *
      * @param a first non-empty array of int

@@ -6,24 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array1Test {
     @Test
-    void firstLast6Example1() {
-        int[] input = { 1, 2, 6 };
-        assertThat(Array1.firstLast6(input)).isTrue();
-    }
-
-    @Test
-    void firstLast6Example2() {
-        int[] input = { 6, 1, 2, 3 };
-        assertThat(Array1.firstLast6(input)).isTrue();
-    }
-
-    @Test
-    void firstLast6Example3() {
-        int[] input = { 13, 6, 1, 2, 3 };
-        assertThat(Array1.firstLast6(input)).isFalse();
-    }
-
-    @Test
     void commonEndExample1() {
         int[] first = { 1, 2, 3 };
         int[] second = { 7, 3 };
