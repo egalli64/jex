@@ -6,27 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array1Test {
     @Test
-    void commonEndExample1() {
-        int[] first = { 1, 2, 3 };
-        int[] second = { 7, 3 };
-        assertThat(Array1.commonEnd(first, second)).isTrue();
-    }
-
-    @Test
-    void commonEndExample2() {
-        int[] first = { 1, 2, 3 };
-        int[] second = { 7, 3, 2 };
-        assertThat(Array1.commonEnd(first, second)).isFalse();
-    }
-
-    @Test
-    void commonEndExample3() {
-        int[] first = { 1, 2, 3 };
-        int[] second = { 1, 3 };
-        assertThat(Array1.commonEnd(first, second)).isTrue();
-    }
-
-    @Test
     void reverse3Example1() {
         int[] input = { 1, 2, 3 };
         int[] expected = { 3, 2, 1 };

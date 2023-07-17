@@ -7,17 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p191991
-     *
-     * @param a first non-empty array of int
-     * @param b second non-empty array of int
-     * @return true the two arrays have same first or last element
-     */
-    public static boolean commonEnd(int[] a, int[] b) {
-        return a[0] == b[0] || a[a.length - 1] == b[b.length - 1];
-    }
-
-    /**
      * codingbat.com/prob/p112409
      *
      * @param nums an array of int sized 3
