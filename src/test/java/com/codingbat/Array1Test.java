@@ -47,13 +47,6 @@ class Array1Test {
     }
 
     @Test
-    void maxEnd3Example1() {
-        int[] input = { 1, 2, 3 };
-        int[] expected = { 3, 3, 3 };
-        assertThat(Array1.maxEnd3(input)).containsExactly(expected);
-    }
-
-    @Test
     void sum2Example1() {
         int[] input = { 1, 2, 3 };
         int expected = 3;

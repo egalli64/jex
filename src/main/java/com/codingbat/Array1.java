@@ -81,20 +81,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p146256
-     * 
-     * @param nums an array sized 3
-     * @return all set as the max value between first and last
-     */
-    public static int[] maxEnd3(int[] nums) {
-        int value = Math.max(nums[0], nums[2]);
-        for (int i = 0; i < 2; i++) {
-            nums[i] = value;
-        }
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p190968
      * 
      * @param nums a possibly empty array
