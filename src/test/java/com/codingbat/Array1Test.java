@@ -89,12 +89,6 @@ class Array1Test {
     }
 
     @Test
-    void makePiExample1() {
-        int[] expected = { 3, 1, 4 };
-        assertThat(Array1.makePi()).containsExactly(expected);
-    }
-
-    @Test
     void sum3Example1() {
         int[] input = { 1, 2, 3 };
         int expected = 6;

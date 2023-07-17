@@ -102,15 +102,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p167011
-     * 
-     * @return an array containing the first 3 digits of pi
-     */
-    public static int[] makePi() {
-        return new int[] { 3, 1, 4 };
-    }
-
-    /**
      * codingbat.com/prob/p175763
      * 
      * @param nums an array sized 3
