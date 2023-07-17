@@ -7,16 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p112409
-     *
-     * @param nums an array of int sized 3
-     * @return a reversed copy of the input array
-     */
-    public static int[] reverse3(int[] nums) {
-        return new int[] { nums[2], nums[1], nums[0] };
-    }
-
-    /**
      * codingbat.com/prob/p146449
      *
      * @param a an array sized 3

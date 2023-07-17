@@ -6,27 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array1Test {
     @Test
-    void reverse3Example1() {
-        int[] input = { 1, 2, 3 };
-        int[] expected = { 3, 2, 1 };
-        assertThat(Array1.reverse3(input)).containsExactly(expected);
-    }
-
-    @Test
-    void reverse3Example2() {
-        int[] input = { 5, 11, 9 };
-        int[] expected = { 9, 11, 5 };
-        assertThat(Array1.reverse3(input)).containsExactly(expected);
-    }
-
-    @Test
-    void reverse3Example3() {
-        int[] input = { 7, 0, 0 };
-        int[] expected = { 0, 0, 7 };
-        assertThat(Array1.reverse3(input)).containsExactly(expected);
-    }
-
-    @Test
     void middleWayExample1() {
         int[] left = { 1, 2, 3 };
         int[] right = { 4, 5, 6 };
