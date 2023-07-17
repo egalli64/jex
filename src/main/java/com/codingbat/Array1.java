@@ -91,21 +91,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p185139
-     * 
-     * @param nums an array sized 3
-     * @return a rotation left
-     */
-    public static int[] rotateLeft3(int[] nums) {
-        int temp = nums[0];
-        nums[0] = nums[1];
-        nums[1] = nums[2];
-        nums[2] = temp;
-
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p146256
      * 
      * @param nums an array sized 3

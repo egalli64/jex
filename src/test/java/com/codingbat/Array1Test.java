@@ -68,13 +68,6 @@ class Array1Test {
     }
 
     @Test
-    void rotateLeft3Example1() {
-        int[] input = { 1, 2, 3 };
-        int[] expected = { 2, 3, 1 };
-        assertThat(Array1.rotateLeft3(input)).containsExactly(expected);
-    }
-
-    @Test
     void maxEnd3Example1() {
         int[] input = { 1, 2, 3 };
         int[] expected = { 3, 3, 3 };
