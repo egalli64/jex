@@ -91,16 +91,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p175763
-     * 
-     * @param nums an array sized 3
-     * @return the sum of all the elements
-     */
-    public static int sum3(int[] nums) {
-        return nums[0] + nums[1] + nums[2];
-    }
-
-    /**
      * codingbat.com/prob/p185139
      * 
      * @param nums an array sized 3

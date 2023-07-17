@@ -68,13 +68,6 @@ class Array1Test {
     }
 
     @Test
-    void sum3Example1() {
-        int[] input = { 1, 2, 3 };
-        int expected = 6;
-        assertThat(Array1.sum3(input)).isEqualTo(expected);
-    }
-
-    @Test
     void rotateLeft3Example1() {
         int[] input = { 1, 2, 3 };
         int[] expected = { 2, 3, 1 };
