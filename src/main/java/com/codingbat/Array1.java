@@ -7,17 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p146449
-     *
-     * @param a an array sized 3
-     * @param b an array sized 3
-     * @return an array containing the central values from the input arrays
-     */
-    public static int[] middleWay(int[] a, int[] b) {
-        return new int[] { a[1], b[1] };
-    }
-
-    /**
      * codingbat.com/prob/p175689
      *
      * @param nums an array sized 2
