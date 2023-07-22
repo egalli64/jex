@@ -12,7 +12,7 @@ package com.codingbat.array1;
  */
 public class Sum2 {
     /**
-     * codingbat.com/prob/p190968
+     * Get the actual number of elements to loop on, then accumulate
      * 
      * @param nums a possibly empty array
      * @return the sum of the first two elements, if available
