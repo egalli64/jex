@@ -70,16 +70,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p101230
-     * 
-     * @param nums a non empty array
-     * @return first and last
-     */
-    public static int[] makeEnds(int[] nums) {
-        return new int[] { nums[0], nums[nums.length - 1] };
-    }
-
-    /**
      * codingbat.com/prob/p171022
      * 
      * @param nums an array sized 2

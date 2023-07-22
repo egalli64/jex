@@ -39,13 +39,6 @@ class Array1Test {
     }
 
     @Test
-    void makeEndsExample1() {
-        int[] input = { 1, 2, 3 };
-        int[] expected = { 1, 3 };
-        assertThat(Array1.makeEnds(input)).containsExactly(expected);
-    }
-
-    @Test
     void has23Example1() {
         int[] input = { 2, 5 };
         assertThat(Array1.has23(input)).isTrue();
