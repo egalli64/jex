@@ -81,21 +81,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p190968
-     * 
-     * @param nums a possibly empty array
-     * @return the sum of the first two elements, if available
-     */
-    public static int sum2(int[] nums) {
-        int len = Math.min(nums.length, 2);
-        int result = 0;
-        for (int i = 0; i < len; i++) {
-            result += nums[i];
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p101230
      * 
      * @param nums a non empty array

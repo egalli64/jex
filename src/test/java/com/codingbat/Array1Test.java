@@ -47,13 +47,6 @@ class Array1Test {
     }
 
     @Test
-    void sum2Example1() {
-        int[] input = { 1, 2, 3 };
-        int expected = 3;
-        assertThat(Array1.sum2(input)).isEqualTo(expected);
-    }
-
-    @Test
     void makeEndsExample1() {
         int[] input = { 1, 2, 3 };
         int[] expected = { 1, 3 };
