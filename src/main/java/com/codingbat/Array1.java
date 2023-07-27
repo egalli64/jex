@@ -7,22 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p120347
-     *
-     * @param nums an array sized 3
-     * @return the changed array, if there is 2, 3 -> 2, 0
-     */
-    public static int[] fix23(int[] nums) {
-        for (int i = 0; i < 2; i++) {
-            if (nums[i] == 2 && nums[i + 1] == 3) {
-                nums[i + 1] = 0;
-                break;
-            }
-        }
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p199519
      * 
      * @param nums an array of ints of even length, at least 2
