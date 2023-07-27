@@ -60,18 +60,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p137188
-     * 
-     * @param nums a non empty array
-     * @return an array double sized, all zeroes, same last element
-     */
-    public static int[] makeLast(int[] nums) {
-        int[] result = new int[nums.length * 2];
-        result[result.length - 1] = nums[nums.length - 1];
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p145365
      * 
      * @param nums an array sized 2-

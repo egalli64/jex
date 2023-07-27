@@ -33,13 +33,6 @@ class Array1Test {
     }
 
     @Test
-    void makeLastExample1() {
-        int[] input = { 4, 5, 6 };
-        int[] expected = { 0, 0, 0, 0, 0, 6 };
-        assertThat(Array1.makeLast(input)).containsExactly(expected);
-    }
-
-    @Test
     void double23Example1() {
         int[] input = { 2, 2 };
         assertThat(Array1.double23(input)).isTrue();
