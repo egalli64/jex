@@ -7,16 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p175689
-     *
-     * @param nums an array sized 2
-     * @return true if no 2, 3 in it
-     */
-    public static boolean no23(int[] nums) {
-        return nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3;
-    }
-
-    /**
      * codingbat.com/prob/p120347
      *
      * @param nums an array sized 3

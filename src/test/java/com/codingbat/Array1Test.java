@@ -6,12 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array1Test {
     @Test
-    void no23Example1() {
-        int[] input = { 4, 5 };
-        assertThat(Array1.no23(input)).isTrue();
-    }
-
-    @Test
     void fix23Example1() {
         int[] input = { 1, 2, 3 };
         int[] expected = { 1, 2, 0 };
