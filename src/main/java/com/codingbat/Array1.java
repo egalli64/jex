@@ -44,24 +44,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p109660
-     * 
-     * @param a an array, possibly empty
-     * @param b another array, possibly empty
-     * @return how many arrays have 1 in first position
-     */
-    public static int start1(int[] a, int[] b) {
-        int count = 0;
-        if (a.length > 0 && a[0] == 1) {
-            count += 1;
-        }
-        if (b.length > 0 && b[0] == 1) {
-            count += 1;
-        }
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p109537
      * 
      * @param a first array, sized 2

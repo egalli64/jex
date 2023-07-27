@@ -26,14 +26,6 @@ class Array1Test {
     }
 
     @Test
-    void start1Example1() {
-        int[] first = { 1, 2, 3 };
-        int[] second = { 1, 3 };
-        int expected = 2;
-        assertThat(Array1.start1(first, second)).isEqualTo(expected);
-    }
-
-    @Test
     void biggerTwoExample1() {
         int[] first = { 1, 2 };
         int[] second = { 3, 4 };
