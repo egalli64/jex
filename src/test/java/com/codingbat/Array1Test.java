@@ -33,12 +33,6 @@ class Array1Test {
     }
 
     @Test
-    void double23Example1() {
-        int[] input = { 2, 2 };
-        assertThat(Array1.double23(input)).isTrue();
-    }
-
-    @Test
     void start1Example1() {
         int[] first = { 1, 2, 3 };
         int[] second = { 1, 3 };

@@ -60,27 +60,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p145365
-     * 
-     * @param nums an array sized 2-
-     * @return if contains a couple of 2 or 3
-     */
-    public static boolean double23(int[] nums) {
-        int count2 = 0;
-        int count3 = 0;
-
-        for (int num : nums) {
-            if (num == 2) {
-                count2 += 1;
-            } else if (num == 3) {
-                count3 += 1;
-            }
-        }
-
-        return count2 == 2 || count3 == 2;
-    }
-
-    /**
      * codingbat.com/prob/p109660
      * 
      * @param a an array, possibly empty
