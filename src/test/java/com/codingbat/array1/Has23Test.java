@@ -27,4 +27,11 @@ class Has23Test {
     void solutionExamples(int[] input, boolean expected) {
         assertThat(Has23.solution(input)).isEqualTo(expected);
     }
+    
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void robustnessExamples(int[] input, boolean expected) {
+        assertThat(Has23.robustness(input)).isEqualTo(expected);
+    }
 }
