@@ -7,17 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p199519
-     * 
-     * @param nums an array of ints of even length, at least 2
-     * @return a new array containing only the middle two elements
-     */
-    public static int[] makeMiddle(int[] nums) {
-        int middle = nums.length / 2;
-        return new int[] { nums[middle - 1], nums[middle] };
-    }
-
-    /**
      * codingbat.com/prob/p155713
      * 
      * @param nums an array of ints of odd length, at least 3
