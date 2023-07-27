@@ -44,19 +44,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p109537
-     * 
-     * @param a first array, sized 2
-     * @param b second array, sized 2
-     * @return the array with highest sum, a in case of tie
-     */
-    public static int[] biggerTwo(int[] a, int[] b) {
-        int sumA = a[0] + a[1];
-        int sumB = b[0] + b[1];
-        return sumB > sumA ? b : a;
-    }
-
-    /**
      * codingbat.com/prob/p180840
      * 
      * @param a an array sized 2

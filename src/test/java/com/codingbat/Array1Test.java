@@ -26,13 +26,6 @@ class Array1Test {
     }
 
     @Test
-    void biggerTwoExample1() {
-        int[] first = { 1, 2 };
-        int[] second = { 3, 4 };
-        assertThat(Array1.biggerTwo(first, second)).isEqualTo(second);
-    }
-
-    @Test
     void plusTwoExample1() {
         int[] first = { 1, 2 };
         int[] second = { 3, 4 };
