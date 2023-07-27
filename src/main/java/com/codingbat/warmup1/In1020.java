@@ -29,6 +29,6 @@ public class In1020 {
      * @return true if in [10..20]
      */
     static boolean isInRange(int value) {
-        return value > 9 && value < 21;
+        return value >= 10 && value <= 20;
     }
 }
