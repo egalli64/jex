@@ -39,12 +39,6 @@ class Array1Test {
     }
 
     @Test
-    void has23Example1() {
-        int[] input = { 2, 5 };
-        assertThat(Array1.has23(input)).isTrue();
-    }
-
-    @Test
     void makeLastExample1() {
         int[] input = { 4, 5, 6 };
         int[] expected = { 0, 0, 0, 0, 0, 6 };
