@@ -19,14 +19,6 @@ class Array1Test {
     }
 
     @Test
-    void plusTwoExample1() {
-        int[] first = { 1, 2 };
-        int[] second = { 3, 4 };
-        int[] expected = { 1, 2, 3, 4 };
-        assertThat(Array1.plusTwo(first, second)).isEqualTo(expected);
-    }
-
-    @Test
     void swapEndsExample1() {
         int[] input = { 1, 2, 3, 4 };
         int[] expected = { 4, 2, 3, 1 };

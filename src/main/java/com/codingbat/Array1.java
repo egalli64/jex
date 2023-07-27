@@ -33,17 +33,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p180840
-     * 
-     * @param a an array sized 2
-     * @param b another array sized 2
-     * @return the concatenation of the two arrays
-     */
-    public static int[] plusTwo(int[] a, int[] b) {
-        return new int[] { a[0], a[1], b[0], b[1] };
-    }
-
-    /**
      * codingbat.com/prob/p118044
      * 
      * @param nums a non-empty array
