@@ -6,13 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array1Test {
     @Test
-    void midThreeExample1() {
-        int[] input = { 1, 2, 3, 4, 5 };
-        int[] expected = { 2, 3, 4 };
-        assertThat(Array1.midThree(input)).containsExactly(expected);
-    }
-
-    @Test
     void unlucky1Example1() {
         int[] input = { 1, 3, 4, 5 };
         assertThat(Array1.unlucky1(input)).isTrue();

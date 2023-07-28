@@ -7,17 +7,6 @@ import java.util.Arrays;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p155713
-     * 
-     * @param nums an array of ints of odd length, at least 3
-     * @return a new array containing only the middle three elements
-     */
-    public static int[] midThree(int[] nums) {
-        int middle = nums.length / 2;
-        return new int[] { nums[middle - 1], nums[middle], nums[middle + 1] };
-    }
-
-    /**
      * codingbat.com/prob/p197308
      * 
      * @param nums an array
