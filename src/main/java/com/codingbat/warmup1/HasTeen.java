@@ -24,12 +24,13 @@ public class HasTeen {
     }
 
     /**
-     * Helper for {@linkplain HasTeen#solution(int, int, int)}
-     * 
+     * Helper for {@linkplain HasTeen#solution(int, int, int)}. Check if the passed
+     * value is inside the interval [13..19]
+     *  
      * @param value a value
-     * @return true if the input value is in [13..19]
+     * @return true if the input value is inside
      */
     static boolean isTeen(int value) {
-        return value > 12 && value < 20;
+        return value >= 13 && value <= 19;
     }
 }
