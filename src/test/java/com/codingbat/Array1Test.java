@@ -19,13 +19,6 @@ class Array1Test {
     }
 
     @Test
-    void swapEndsExample1() {
-        int[] input = { 1, 2, 3, 4 };
-        int[] expected = { 4, 2, 3, 1 };
-        assertThat(Array1.swapEnds(input)).isEqualTo(expected);
-    }
-
-    @Test
     void maxTripleExample1() {
         int[] input = { 1, 2, 3 };
         int expected = 3;

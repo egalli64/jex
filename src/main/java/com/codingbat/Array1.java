@@ -33,19 +33,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p118044
-     * 
-     * @param nums a non-empty array
-     * @return first swapped with last
-     */
-    public static int[] swapEnds(int[] nums) {
-        int buffer = nums[0];
-        nums[0] = nums[nums.length - 1];
-        nums[nums.length - 1] = buffer;
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p185176
      * 
      * @param nums an array of odd size, 1+
