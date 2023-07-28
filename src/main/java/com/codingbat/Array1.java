@@ -22,16 +22,6 @@ public class Array1 {
     }
 
     /**
-     * codingbat.com/prob/p185176
-     * 
-     * @param nums an array of odd size, 1+
-     * @return the largest element among first, central, last
-     */
-    public static int maxTriple(int[] nums) {
-        return Math.max(Math.max(nums[0], nums[nums.length - 1]), nums[nums.length / 2]);
-    }
-
-    /**
      * codingbat.com/prob/p142455
      * 
      * @param nums a possibly empty array

@@ -12,13 +12,6 @@ class Array1Test {
     }
 
     @Test
-    void maxTripleExample1() {
-        int[] input = { 1, 2, 3 };
-        int expected = 3;
-        assertThat(Array1.maxTriple(input)).isEqualTo(expected);
-    }
-
-    @Test
     void frontPieceExample1() {
         int[] input = { 1, 2, 3 };
         int[] expected = { 1, 2 };
