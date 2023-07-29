@@ -27,4 +27,10 @@ class MixStartTest {
     void indexExamples(String input, boolean expected) {
         assertThat(MixStart.index(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "mix snacks,true", "pix snacks,true", "piz snacks,false" })
+    void regExExamples(String input, boolean expected) {
+        assertThat(MixStart.regEx(input)).isEqualTo(expected);
+    }
 }

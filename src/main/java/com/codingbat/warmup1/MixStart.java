@@ -38,6 +38,17 @@ public class MixStart {
      * @return true if it begins by "?ix"
      */
     public static boolean index(String str) {
-        return str.length() > 2 && str.indexOf("ix", 1) == 1;
+        return str.indexOf("ix") == 1;
+    }
+    
+
+    /**
+     * check by regular expression
+     * 
+     * @param str a string
+     * @return true if it begins by "?ix"
+     */
+    public static boolean regEx(String str) {
+        return str.matches("^.ix.*");
     }
 }
