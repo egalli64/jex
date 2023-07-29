@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic1Test {
     @ParameterizedTest
-    @CsvSource({ "30,false,false", "50,false,true", "70,true,true" })
-    void cigarPartyExamples(int cigars, boolean isWeekend, boolean expected) {
-        assertThat(Logic1.cigarParty(cigars, isWeekend)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "60,false,0", "65,false,1", "65,true,0" })
     void caughtSpeedingExamples(int speed, boolean isBirthday, int expected) {
         assertThat(Logic1.caughtSpeeding(speed, isBirthday)).isEqualTo(expected);

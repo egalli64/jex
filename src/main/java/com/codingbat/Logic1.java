@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p159531
-     *
-     * @param cigars    number of available cigars
-     * @param isWeekend true if it is Saturday or Sunday
-     * @return true if cigars is in [40..60] during working days, or they are at least 40 in the weekend
-     */
-    public static boolean cigarParty(int cigars, boolean isWeekend) {
-        return cigars >= 40 && (cigars <= 60 || isWeekend);
-    }
-
-    /**
      * codingbat.com/prob/p157733
      *
      * @param speed      driver current speed, as an int
