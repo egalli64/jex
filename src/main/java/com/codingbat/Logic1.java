@@ -5,26 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p157733
-     *
-     * @param speed      driver current speed, as an int
-     * @param isBirthday true if today is their birthday
-     * @return 0, 1, 2 accordingly to the speed, 60, 80, or above. Bonus of 5 for birthday
-     */
-    public static int caughtSpeeding(int speed, boolean isBirthday) {
-        if (isBirthday) {
-            speed -= 5;
-        }
-        if (speed <= 60) {
-            return 0;
-        }
-        if (speed <= 80) {
-            return 1;
-        }
-        return 2;
-    }
-
-    /**
      * codingbat.com/prob/p137742
      *
      * @param a first value
