@@ -5,26 +5,6 @@ package com.codingbat;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p143461
-     * 
-     * @param a first possibly empty array
-     * @param b second possibly empty array
-     * @return a size 2 array from the concatenation of the input
-     */
-    public static int[] make2(int[] a, int[] b) {
-        int[] result = new int[2];
-
-        int lenA = Math.min(2, a.length);
-        System.arraycopy(a, 0, result, 0, lenA);
-
-        for (int i = lenA, j = 0; i < 2; i++, j++) {
-            result[i] = b[j];
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p128270
      * 
      * @param a first possibly empty array
