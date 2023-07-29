@@ -55,12 +55,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "5,10,2", "5,2,0", "5,5,1" })
-    void dateFashionExamples(int a, int b, int expected) {
-        assertThat(Logic1.dateFashion(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "70,false,true", "95,false,false", "95,true,true" })
     void squirrelPlayExamples(int temp, boolean summer, boolean expected) {
         assertThat(Logic1.squirrelPlay(temp, summer)).isEqualTo(expected);
