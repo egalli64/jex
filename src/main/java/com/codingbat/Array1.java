@@ -3,8 +3,6 @@
  */
 package com.codingbat;
 
-import java.util.Arrays;
-
 public class Array1 {
     /**
      * codingbat.com/prob/p197308
@@ -19,16 +17,6 @@ public class Array1 {
 
         final int last = nums.length - 1;
         return nums.length > 2 && (nums[1] == 1 && nums[2] == 3 || nums[last - 1] == 1 && nums[last] == 3);
-    }
-
-    /**
-     * codingbat.com/prob/p142455
-     * 
-     * @param nums a possibly empty array
-     * @return the first two elements (or less)
-     */
-    public static int[] frontPiece(int[] nums) {
-        return Arrays.copyOf(nums, Math.min(nums.length, 2));
     }
 
     /**

@@ -12,13 +12,6 @@ class Array1Test {
     }
 
     @Test
-    void frontPieceExample1() {
-        int[] input = { 1, 2, 3 };
-        int[] expected = { 1, 2 };
-        assertThat(Array1.frontPiece(input)).isEqualTo(expected);
-    }
-
-    @Test
     void make2Example1() {
         int[] first = { 4, 5 };
         int[] second = { 1, 2, 3 };
