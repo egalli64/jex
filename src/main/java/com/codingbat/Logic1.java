@@ -120,17 +120,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p141061
-     * 
-     * @param temp     the current Fahrenheit temperature
-     * @param isSummer summer flag
-     * @return true if temp is in [60..90], upper limit 100 in summer
-     */
-    public static boolean squirrelPlay(int temp, boolean isSummer) {
-        return temp >= 60 && temp <= 90 + (isSummer ? 10 : 0);
-    }
-
-    /**
      * codingbat.com/prob/p183071
      * 
      * @param a first value

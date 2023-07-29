@@ -55,12 +55,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "70,false,true", "95,false,false", "95,true,true" })
-    void squirrelPlayExamples(int temp, boolean summer, boolean expected) {
-        assertThat(Logic1.squirrelPlay(temp, summer)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "3,4,7", "9,4,20", "10,11,21" })
     void sortaSumExamples(int a, int b, int expected) {
         assertThat(Logic1.sortaSum(a, b)).isEqualTo(expected);
