@@ -5,21 +5,6 @@ package com.codingbat;
 
 public class Array1 {
     /**
-     * codingbat.com/prob/p197308
-     * 
-     * @param nums an array
-     * @return true if 1 followed by 3 in the first / last two position
-     */
-    public static boolean unlucky1(int[] nums) {
-        if (nums.length > 1 && nums[0] == 1 && nums[1] == 3) {
-            return true;
-        }
-
-        final int last = nums.length - 1;
-        return nums.length > 2 && (nums[1] == 1 && nums[2] == 3 || nums[last - 1] == 1 && nums[last] == 3);
-    }
-
-    /**
      * codingbat.com/prob/p143461
      * 
      * @param a first possibly empty array
