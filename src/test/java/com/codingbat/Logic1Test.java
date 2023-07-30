@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic1Test {
     @ParameterizedTest
-    @CsvSource({ "20,false", "21,true", "22,true" })
-    void more20Examples(int input, boolean expected) {
-        assertThat(Logic1.more20(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "12,true", "17,false", "19,true" })
     void nearTenExamples(int input, boolean expected) {
         assertThat(Logic1.nearTen(input)).isEqualTo(expected);

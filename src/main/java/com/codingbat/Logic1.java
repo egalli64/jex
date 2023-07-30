@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p118290
-     * 
-     * @param n a non-negative number
-     * @return if n is 1 or 2 more than a multiple of 20
-     */
-    public static boolean more20(int n) {
-        int checked = n % 20;
-        return checked == 1 || checked == 2;
-    }
-
-    /**
      * codingbat.com/prob/p193613
      * 
      * @param num a non-negative number
