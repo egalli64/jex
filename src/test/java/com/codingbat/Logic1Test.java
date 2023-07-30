@@ -37,12 +37,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "3,true", "10,true", "15,false" })
-    void old35Examples(int input, boolean expected) {
-        assertThat(Logic1.old35(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "18,true", "19,true", "20,false" })
     void less20Examples(int input, boolean expected) {
         assertThat(Logic1.less20(input)).isEqualTo(expected);

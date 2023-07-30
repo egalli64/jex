@@ -78,16 +78,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p159612
-     * 
-     * @param n non-negative
-     * @return true if multiple of 3 or 5, not both
-     */
-    public static boolean old35(int n) {
-        return n % 3 == 0 ^ n % 5 == 0;
-    }
-
-    /**
      * codingbat.com/prob/p133158
      * 
      * @param n non-negative
