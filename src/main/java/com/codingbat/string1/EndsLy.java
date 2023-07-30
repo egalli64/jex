@@ -18,7 +18,7 @@ public class EndsLy {
      * @return true if it ends in "ly"
      */
     public static boolean solution(String str) {
-        int len = str.length();
+        final int len = str.length();
         return len > 1 && str.charAt(len - 2) == 'l' && str.charAt(len - 1) == 'y';
     }
 
@@ -41,5 +41,4 @@ public class EndsLy {
     public static boolean startsWith(String str) {
         return str.startsWith("ly", str.length() - 2);
     }
-
 }

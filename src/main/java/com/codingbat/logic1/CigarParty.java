@@ -21,6 +21,6 @@ public class CigarParty {
      *         least 40 in the weekend
      */
     public static boolean solution(int cigars, boolean isWeekend) {
-        return cigars >= 40 && (cigars <= 60 || isWeekend);
+        return cigars >= 40 && (isWeekend || cigars <= 60);
     }
 }
