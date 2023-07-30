@@ -100,28 +100,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p160543
-     * 
-     * @param day      [0..6]
-     * @param vacation true on holiday
-     * @return
-     *         <li>"7:00" on working weekdays
-     *         <li>"10:00" on working weekends
-     *         <li>"10:00" on vacation weekdays
-     *         <li>"off" on vacation weekends
-     */
-    public static String alarmClock(int day, boolean vacation) {
-        if (day > 0 && day < 6 && !vacation) {
-            return "7:00";
-        }
-        if (vacation && (day == 0 || day == 6)) {
-            return "off";
-        }
-
-        return "10:00";
-    }
-
-    /**
      * codingbat.com/prob/p137365
      * 
      * @param n           an integer

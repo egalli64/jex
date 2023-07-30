@@ -49,12 +49,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1,false,7:00", "5,false,7:00", "0,false,10:00" })
-    void alarmClockExamples(int temp, boolean summer, String expected) {
-        assertThat(Logic1.alarmClock(temp, summer)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "5,false,true", "11,false,false", "11,true,true" })
     void in1To10Examples(int n, boolean out, boolean expected) {
         assertThat(Logic1.in1To10(n, out)).isEqualTo(expected);
