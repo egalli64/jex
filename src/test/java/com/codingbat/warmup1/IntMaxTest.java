@@ -18,8 +18,8 @@ class IntMaxTest {
 
     @ParameterizedTest
     @CsvSource({ "1, 2, 3, 3", "1, 3, 2, 3", "3, 2, 1, 3" })
-    void directExamples(int a, int b, int c, int expected) {
-        assertThat(IntMax.direct(a, b, c)).isEqualTo(expected);
+    void compactExamples(int a, int b, int c, int expected) {
+        assertThat(IntMax.compact(a, b, c)).isEqualTo(expected);
     }
 
     @ParameterizedTest

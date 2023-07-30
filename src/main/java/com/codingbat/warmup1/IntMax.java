@@ -31,7 +31,7 @@ public class IntMax {
      * @param c third value
      * @return the biggest one
      */
-    public static int direct(int a, int b, int c) {
+    public static int compact(int a, int b, int c) {
         int ab = a > b ? a : b;
         return c > ab ? c : ab;
     }
