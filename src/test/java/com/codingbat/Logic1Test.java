@@ -43,12 +43,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "5,false,true", "11,false,false", "11,true,true" })
-    void in1To10Examples(int n, boolean out, boolean expected) {
-        assertThat(Logic1.in1To10(n, out)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "22,true", "23,true", "24,false" })
     void specialElevenExamples(int input, boolean expected) {
         assertThat(Logic1.specialEleven(input)).isEqualTo(expected);

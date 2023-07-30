@@ -89,22 +89,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p137365
-     * 
-     * @param n           an integer
-     * @param outsideMode a flag
-     * @return
-     *         <li>true in [1..10] flag off
-     *         <li>true if not in [2..9] flag on
-     */
-    public static boolean in1To10(int n, boolean outsideMode) {
-        if (!outsideMode) {
-            return n > 0 && n < 11;
-        }
-        return n < 2 || n > 9;
-    }
-
-    /**
      * codingbat.com/prob/p100962
      * 
      * @param n a non-negative value
