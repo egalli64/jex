@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p137742
-     *
-     * @param a first value
-     * @param b second value
-     * @return true if a, or b, or their sum, or their difference is 6
-     */
-    public static boolean love6(int a, int b) {
-        return a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6;
-    }
-
-    /**
      * codingbat.com/prob/p118290
      * 
      * @param n a non-negative number
