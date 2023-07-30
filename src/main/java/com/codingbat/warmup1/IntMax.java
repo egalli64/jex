@@ -19,7 +19,7 @@ public class IntMax {
      * @param c third value
      * @return the biggest one
      */
-    public static int mathMax(int a, int b, int c) {
+    public static int solution(int a, int b, int c) {
         return Math.max(Math.max(a, b), c);
     }
 
@@ -34,5 +34,24 @@ public class IntMax {
     public static int direct(int a, int b, int c) {
         int ab = a > b ? a : b;
         return c > ab ? c : ab;
+    }
+
+    /**
+     * Basic implementation
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return the biggest one
+     */
+    public static int verbose(int a, int b, int c) {
+        int result = a;
+        if (b > result) {
+            result = b;
+        }
+        if (c > result) {
+            result = c;
+        }
+        return result;
     }
 }
