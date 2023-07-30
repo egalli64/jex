@@ -89,16 +89,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p100962
-     * 
-     * @param n a non-negative value
-     * @return true if multiple of 11 (plus 0 or 1)
-     */
-    public static boolean specialEleven(int n) {
-        return n % 11 < 2;
-    }
-
-    /**
      * codingbat.com/prob/p159612
      * 
      * @param n non-negative
