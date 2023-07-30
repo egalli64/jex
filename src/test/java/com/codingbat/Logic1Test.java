@@ -49,12 +49,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "3,4,7", "9,4,20", "10,11,21" })
-    void sortaSumExamples(int a, int b, int expected) {
-        assertThat(Logic1.sortaSum(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "1,false,7:00", "5,false,7:00", "0,false,10:00" })
     void alarmClockExamples(int temp, boolean summer, String expected) {
         assertThat(Logic1.alarmClock(temp, summer)).isEqualTo(expected);

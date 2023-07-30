@@ -100,18 +100,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p183071
-     * 
-     * @param a first value
-     * @param b second value
-     * @return the sum, but [10..19] leads to 20
-     */
-    public static int sortaSum(int a, int b) {
-        int sum = a + b;
-        return sum < 10 || sum > 19 ? sum : 20;
-    }
-
-    /**
      * codingbat.com/prob/p160543
      * 
      * @param day      [0..6]
