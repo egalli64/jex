@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p193613
-     * 
-     * @param num a non-negative number
-     * @return true if it is within 2 of a multiple of 10
-     */
-    public static boolean nearTen(int num) {
-        int checked = num % 10;
-        return checked > 7 || checked < 3;
-    }
-
-    /**
      * codingbat.com/prob/p177181
      * 
      * @param tea   a non negative value
