@@ -49,35 +49,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p115243
-     * 
-     * @param n an integer
-     * @return the number as string followed by '!' but
-     *         <li>"Fizz" instead of 3 and multiples
-     *         <li>"Buzz" instead of 5 and multiples
-     *         <li>"FizzBuzz" for multiples of both 3 and 5
-     */
-    public static String fizzString2(int n) {
-        StringBuilder result = new StringBuilder();
-
-        boolean fizzOrBuzz = false;
-        if (n % 3 == 0) {
-            fizzOrBuzz = true;
-            result.append("Fizz");
-        }
-        if (n % 5 == 0) {
-            fizzOrBuzz = true;
-            result.append("Buzz");
-        }
-        if (!fizzOrBuzz) {
-            result.append(n);
-        }
-
-        result.append('!');
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p154188
      * 
      * @param a   first value
