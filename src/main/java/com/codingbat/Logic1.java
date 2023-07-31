@@ -5,18 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p113261
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return true if a value is the sum of the other two ones
-     */
-    public static boolean twoAsOne(int a, int b, int c) {
-        return a == b + c || b == a + c || c == a + b;
-    }
-
-    /**
      * codingbat.com/prob/p169213
      * 
      * @param a first value
