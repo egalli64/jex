@@ -67,27 +67,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p178728
-     * 
-     * @param a first value
-     * @param b second value
-     * @return the sum, or, if a value is in [13..19] then 19
-     */
-    public static int teenSum(int a, int b) {
-        return isTeen(a) || isTeen(b) ? 19 : a + b;
-    }
-
-    /**
-     * Helper for {@linkplain Logic1#teenSum(int, int)}
-     * 
-     * @param value an integer
-     * @return true if in [13..19]
-     */
-    private static boolean isTeen(int value) {
-        return value > 12 && value < 20;
-    }
-
-    /**
      * codingbat.com/prob/p110973
      * 
      * @param isMorning when called

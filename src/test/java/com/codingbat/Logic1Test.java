@@ -31,12 +31,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "3,4,7", "10,13,19", "13,2,19" })
-    void teenSumExamples(int a, int b, int expected) {
-        assertThat(Logic1.teenSum(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "false, false, false, true", "false, false, true, false", "true, false, false, false" })
     void answerCellExamples(boolean am, boolean mom, boolean sleep, boolean expected) {
         assertThat(Logic1.answerCell(am, mom, sleep)).isEqualTo(expected);
