@@ -78,16 +78,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p133158
-     * 
-     * @param n non-negative
-     * @return true if added 1 or 2 gets multiple of 20
-     */
-    public static boolean less20(int n) {
-        return n % 20 > 17;
-    }
-
-    /**
      * codingbat.com/prob/p178728
      * 
      * @param a first value
