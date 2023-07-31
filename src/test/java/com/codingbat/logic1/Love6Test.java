@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class Love6Test {
     @ParameterizedTest
     @CsvSource({ "6,4,true", "4,5,false", "1,5,true" })
-    void love6Examples(int first, int second, boolean expected) {
+    void solutionExamples(int first, int second, boolean expected) {
         assertThat(Love6.solution(first, second)).isEqualTo(expected);
     }
 }

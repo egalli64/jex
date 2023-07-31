@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class Old35Test {
     @ParameterizedTest
     @CsvSource({ "3,true", "10,true", "15,false" })
-    void old35Examples(int input, boolean expected) {
+    void solutionExamples(int input, boolean expected) {
         assertThat(Old35.solution(input)).isEqualTo(expected);
     }
 

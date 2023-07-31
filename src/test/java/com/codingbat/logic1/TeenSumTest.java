@@ -19,7 +19,7 @@ class TeenSumTest {
 
     @ParameterizedTest
     @CsvSource({ "3,false", "20,false", "13,true", "19,true" })
-    void teenSumExamples(int x, boolean expected) {
+    void isTeenExamples(int x, boolean expected) {
         assertThat(TeenSum.isTeen(x)).isEqualTo(expected);
     }
 }

@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class CigarPartyTest {
     @ParameterizedTest
     @CsvSource({ "30,false,false", "50,false,true", "70,true,true" })
-    void cigarPartyExamples(int cigars, boolean isWeekend, boolean expected) {
+    void solutionExamples(int cigars, boolean isWeekend, boolean expected) {
         assertThat(CigarParty.solution(cigars, isWeekend)).isEqualTo(expected);
     }
 }

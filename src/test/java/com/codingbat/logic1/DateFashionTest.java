@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class DateFashionTest {
     @ParameterizedTest
     @CsvSource({ "5,10,2", "5,2,0", "5,5,1" })
-    void dateFashionExamples(int a, int b, int expected) {
+    void solutionExamples(int a, int b, int expected) {
         assertThat(DateFashion.solution(a, b)).isEqualTo(expected);
     }
 }

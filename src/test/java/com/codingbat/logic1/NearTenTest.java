@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class NearTenTest {
     @ParameterizedTest
     @CsvSource({ "12,true", "17,false", "19,true" })
-    void nearTenExamples(int input, boolean expected) {
+    void solutionExamples(int input, boolean expected) {
         assertThat(NearTen.solution(input)).isEqualTo(expected);
     }
 }

@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class SpecialElevenTest {
     @ParameterizedTest
     @CsvSource({ "22,true", "23,true", "24,false" })
-    void specialElevenExamples(int input, boolean expected) {
+    void solutionExamples(int input, boolean expected) {
         assertThat(SpecialEleven.solution(input)).isEqualTo(expected);
     }
 }

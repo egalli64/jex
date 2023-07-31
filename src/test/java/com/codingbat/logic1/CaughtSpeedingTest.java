@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class CaughtSpeedingTest {
     @ParameterizedTest
     @CsvSource({ "60,false,0", "65,false,1", "65,true,0" })
-    void caughtSpeedingExamples(int speed, boolean isBirthday, int expected) {
+    void solutionExamples(int speed, boolean isBirthday, int expected) {
         assertThat(CaughtSpeeding.solution(speed, isBirthday)).isEqualTo(expected);
     }
 }

@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class Less20Test {
     @ParameterizedTest
     @CsvSource({ "18,true", "19,true", "20,false" })
-    void less20Examples(int input, boolean expected) {
+    void solutionExamples(int input, boolean expected) {
         assertThat(Less20.solution(input)).isEqualTo(expected);
     }
 }

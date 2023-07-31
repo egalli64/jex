@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class SquirrelPlayTest {
     @ParameterizedTest
     @CsvSource({ "70,false,true", "95,false,false", "95,true,true" })
-    void squirrelPlayExamples(int temp, boolean summer, boolean expected) {
+    void solutionExamples(int temp, boolean summer, boolean expected) {
         assertThat(SquirrelPlay.solution(temp, summer)).isEqualTo(expected);
     }
 }
