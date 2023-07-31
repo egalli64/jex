@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic1Test {
     @ParameterizedTest
-    @CsvSource({ "6,8,1", "3,8,0", "20,6,2" })
-    void teaPartyExamples(int tea, int candy, int expected) {
-        assertThat(Logic1.teaParty(tea, candy)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "1, 2, 3, true", "3, 1, 2, true", "3, 2, 2, false" })
     void twoAsOneExamples(int a, int b, int c, boolean expected) {
         assertThat(Logic1.twoAsOne(a, b, c)).isEqualTo(expected);

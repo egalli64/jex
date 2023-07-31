@@ -5,24 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p177181
-     * 
-     * @param tea   a non negative value
-     * @param candy a non negative value
-     * @return 1 if both are at least 5; 2 if one is at least the double of the other; 0 if either is less than 5
-     */
-    public static int teaParty(int tea, int candy) {
-        if (tea < 5 || candy < 5) {
-            return 0;
-        }
-        if (tea >= candy * 2 || candy >= tea * 2) {
-            return 2;
-        }
-
-        return 1;
-    }
-
-    /**
      * codingbat.com/prob/p113261
      * 
      * @param a first value
