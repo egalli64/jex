@@ -25,12 +25,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "fig,Fizz", "dib,Buzz", "fib,FizzBuzz" })
-    void fizzStringExamples(String input, String expected) {
-        assertThat(Logic1.fizzString(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "1,1!", "2,2!", "3,Fizz!" })
     void fizzString2Examples(int input, String expected) {
         assertThat(Logic1.fizzString2(input)).isEqualTo(expected);

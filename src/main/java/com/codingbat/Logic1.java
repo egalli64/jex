@@ -49,37 +49,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p137136
-     * 
-     * @param str a possibly empty string
-     * @return
-     *         <li>"Fizz" if starts by 'f'
-     *         <li>"Buzz" if ends be 'b'
-     *         <li>"FizzBuzz" for both
-     *         <li>input otherwise
-     */
-    public static String fizzString(String str) {
-        if (str.isEmpty()) {
-            return str;
-        }
-
-        boolean fizz = str.charAt(0) == 'f';
-        boolean buzz = str.charAt(str.length() - 1) == 'b';
-        if (!fizz && !buzz) {
-            return str;
-        }
-
-        StringBuilder result = new StringBuilder();
-        if (fizz) {
-            result.append("Fizz");
-        }
-        if (buzz) {
-            result.append("Buzz");
-        }
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p115243
      * 
      * @param n an integer
@@ -176,7 +145,8 @@ public class Logic1 {
      * 
      * @param die1      [1..6]
      * @param die2      [1..6]
-     * @param noDoubles when true, in case of double one value is increased (wrapping around)
+     * @param noDoubles when true, in case of double one value is increased
+     *                  (wrapping around)
      * @return the sum
      */
     public static int withoutDoubles(int die1, int die2, boolean noDoubles) {
