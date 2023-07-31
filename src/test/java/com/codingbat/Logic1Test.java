@@ -31,12 +31,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "false, false, false, true", "false, false, true, false", "true, false, false, false" })
-    void answerCellExamples(boolean am, boolean mom, boolean sleep, boolean expected) {
-        assertThat(Logic1.answerCell(am, mom, sleep)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "fig,Fizz", "dib,Buzz", "fib,FizzBuzz" })
     void fizzStringExamples(String input, String expected) {
         assertThat(Logic1.fizzString(input)).isEqualTo(expected);

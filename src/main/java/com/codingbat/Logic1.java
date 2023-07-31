@@ -67,30 +67,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p110973
-     * 
-     * @param isMorning when called
-     * @param isMom     mom called
-     * @param isAsleep  sleeping
-     * @return true if not sleeping, in the morning only mom
-     * 
-     *         <pre>
-     * AM   Mom Sleep
-     * T    T   T       F
-     * T    T   F       T <--
-     * T    F   T       F
-     * T    F   F       F
-     * F    T   T       F
-     * F    T   F       T <--
-     * F    F   T       F
-     * F    F   F       T <--
-     *         </pre>
-     */
-    public static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-        return !isAsleep && (isMom || !isMorning);
-    }
-
-    /**
      * codingbat.com/prob/p137136
      * 
      * @param str a possibly empty string
