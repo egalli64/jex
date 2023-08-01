@@ -8,11 +8,11 @@ package com.codingbat.warmup1;
 /**
  * lastDigit - codingbat.com/prob/p125339
  * <p>
- * Check if the two parameters have the same modulo
+ * Check if the two parameters have the same last digit (base 10 assumed)
  */
 public class LastDigit {
     /**
-     * Compare the result of applying the operator %
+     * Apply the operator % to both parameters, compare the result
      * 
      * @param a first non-negative value
      * @param b second non-negative value
