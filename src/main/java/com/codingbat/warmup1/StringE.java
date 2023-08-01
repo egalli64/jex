@@ -12,7 +12,7 @@ package com.codingbat.warmup1;
  */
 public class StringE {
     /**
-     * Loop on all char and count the 'e'
+     * Loop on all char to count the 'e', then check the count value
      * 
      * @param str a string
      * @return true if it contains [1..3] 'e'
@@ -24,6 +24,6 @@ public class StringE {
                 count += 1;
             }
         }
-        return count > 0 && count < 4;
+        return count >= 1 && count <= 3;
     }
 }
