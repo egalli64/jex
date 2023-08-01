@@ -22,4 +22,10 @@ class HasBadTest {
     void oneLinerExamples(String s, boolean expected) {
         assertThat(HasBad.oneLiner(s)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "badxx,true", "xbadxx,true", "xxbadxx,false" })
+    void verboseExamples(String s, boolean expected) {
+        assertThat(HasBad.verbose(s)).isEqualTo(expected);
+    }
 }

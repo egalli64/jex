@@ -12,6 +12,23 @@ package com.codingbat.string1;
  */
 public class HasBad {
     /**
+     * Extract and compare the substring
+     * 
+     * @param str a possibly empty string
+     * @return true if "bad" is @ pos 0 or 1
+     */
+    public static boolean verbose(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("bad")) {
+            return true;
+        }
+        if (str.length() >= 4 && str.substring(1, 4).equals("bad")) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * String::indexOf()
      * 
      * @param str a possibly empty string
