@@ -19,12 +19,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1, 2, 4, false, true", "1, 2, 1, false, false", "1, 1, 2, true, true" })
-    void inOrderExamples(int a, int b, int c, boolean flag, boolean expected) {
-        assertThat(Logic1.inOrder(a, b, c, flag)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2, 5, 11, false, true", "5, 7, 6, false, false", "5, 5, 7, true, true" })
     void inOrderEqualExamples(int a, int b, int c, boolean flag, boolean expected) {
         assertThat(Logic1.inOrderEqual(a, b, c, flag)).isEqualTo(expected);

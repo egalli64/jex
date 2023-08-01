@@ -37,33 +37,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p154188
-     * 
-     * @param a   first value
-     * @param b   second value
-     * @param c   third value
-     * @param bOk flag
-     * @return true if the values are in order
-     *         <p>
-     *         if the flag is true b is always considered ok
-     * 
-     *         <pre>
-     *  bOk b>a c>b
-     *  T   T   T   T   <--
-     *  T   T   F   F
-     *  T   F   T   T   <--
-     *  T   F   F   F
-     *  F   T   T   T   <--
-     *  F   T   F   F
-     *  F   F   T   F
-     *  F   F   F   F
-     *         </pre>
-     */
-    public static boolean inOrder(int a, int b, int c, boolean bOk) {
-        return c > b && (bOk || b > a);
-    }
-
-    /**
      * codingbat.com/prob/p140272
      * 
      * @param a       first value
