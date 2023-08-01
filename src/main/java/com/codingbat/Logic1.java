@@ -37,19 +37,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p140272
-     * 
-     * @param a       first value
-     * @param b       second value
-     * @param c       third value
-     * @param equalOk flag for equality
-     * @return true if the values are (strictly) increasing
-     */
-    public static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-        return equalOk ? a <= b && b <= c : a < b && b < c;
-    }
-
-    /**
      * codingbat.com/prob/p179196
      * 
      * @param a first value
