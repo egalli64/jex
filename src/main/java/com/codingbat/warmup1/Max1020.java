@@ -8,18 +8,17 @@ package com.codingbat.warmup1;
 /**
  * max1020 - codingbat.com/prob/p177372
  * <p>
- * Get the larger in [10..20]
+ * Get the larger in [10..20], or zero, if both are out of range
  */
 public class Max1020 {
     /**
-     * Ensure, by swap, that a is not less than b. Then return the first in range,
-     * or zero.
+     * Before checking for the larger ensure, by swap, that a is not less than b
      * 
-     * See also {@linkplain Max1020#in1020(int)}
+     * See also {@linkplain Max1020#isIn1020(int)}
      * 
      * @param a first positive value
      * @param b second positive value
-     * @return the larger in [10..20] or 0
+     * @return the larger in [10..20], or 0
      */
     public static int solution(int a, int b) {
         if (b > a) {
@@ -28,13 +27,13 @@ public class Max1020 {
             b = temp;
         }
 
-        if (in1020(a)) {
+        if (isIn1020(a)) {
             return a;
-        }
-        if (in1020(b)) {
+        } else if (isIn1020(b)) {
             return b;
+        } else {
+            return 0;
         }
-        return 0;
     }
 
     /**
@@ -43,7 +42,7 @@ public class Max1020 {
      * @param value a value
      * @return true if in [10..20]
      */
-    static boolean in1020(int value) {
+    static boolean isIn1020(int value) {
         return value >= 10 && value <= 20;
     }
 }

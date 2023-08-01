@@ -12,13 +12,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 class Max1020Test {
     @ParameterizedTest
     @CsvSource({ "11, 19, 19", "19, 11, 19", "11, 9, 11" })
-    void max1020Examples(int a, int b, int expected) {
+    void solutionExamples(int a, int b, int expected) {
         assertThat(Max1020.solution(a, b)).isEqualTo(expected);
     }
 
     @ParameterizedTest
-    @CsvSource({ "11, true", "19, true", "9, false" })
-    void in1020Examples(int value, boolean expected) {
-        assertThat(Max1020.in1020(value)).isEqualTo(expected);
+    @CsvSource({ "10, true", "20, true", "9, false", "21, false" })
+    void isIn1020Examples(int value, boolean expected) {
+        assertThat(Max1020.isIn1020(value)).isEqualTo(expected);
     }
 }
