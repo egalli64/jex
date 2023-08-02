@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic1Test {
     @ParameterizedTest
-    @CsvSource({ "23, 19, 13, true", "23, 19, 12, false", "23, 19, 3, true" })
-    void lastDigitExamples(int a, int b, int c, boolean expected) {
-        assertThat(Logic1.lastDigit(a, b, c)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2,3,3", "6,2,6", "3,2,3" })
     void maxMod5Examples(int a, int b, int expected) {
         assertThat(Logic1.maxMod5(a, b)).isEqualTo(expected);

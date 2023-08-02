@@ -5,21 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p169213
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return true if at least two values have the same last decimal cipher
-     */
-    public static boolean lastDigit(int a, int b, int c) {
-        a %= 10;
-        b %= 10;
-        c %= 10;
-        return a == b || b == c || c == a;
-    }
-
-    /**
      * codingbat.com/prob/p115384
      * 
      * @param a first value
