@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic1Test {
     @ParameterizedTest
-    @CsvSource({ "2,3,3", "6,2,6", "3,2,3" })
-    void maxMod5Examples(int a, int b, int expected) {
-        assertThat(Logic1.maxMod5(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2, 2, 2, 10", "2, 2, 1, 0", "0, 0, 0, 5" })
     void redTicketExamples(int a, int b, int c, int expected) {
         assertThat(Logic1.redTicket(a, b, c)).isEqualTo(expected);

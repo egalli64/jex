@@ -5,23 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p115384
-     * 
-     * @param a first value
-     * @param b second value
-     * @return 0, the smaller, the bigger, in case:
-     *         <li>they are equal,
-     *         <li>they are equal modulo 5
-     *         <li>otherwise
-     */
-    public static int maxMod5(int a, int b) {
-        if (a == b) {
-            return 0;
-        }
-        return a % 5 == b % 5 ? Math.min(a, b) : Math.max(a, b);
-    }
-
-    /**
      * codingbat.com/prob/p170833
      * 
      * @param a [0,1,2]
