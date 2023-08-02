@@ -13,12 +13,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "2,3,true,5", "3,3,true,7", "3,3,false,6" })
-    void withoutDoublesExamples(int a, int b, boolean change, int expected) {
-        assertThat(Logic1.withoutDoubles(a, b, change)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2, 2, 2, 10", "2, 2, 1, 0", "0, 0, 0, 5" })
     void redTicketExamples(int a, int b, int c, int expected) {
         assertThat(Logic1.redTicket(a, b, c)).isEqualTo(expected);

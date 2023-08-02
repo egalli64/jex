@@ -22,19 +22,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p115233
-     * 
-     * @param die1      [1..6]
-     * @param die2      [1..6]
-     * @param noDoubles when true, in case of double one value is increased
-     *                  (wrapping around)
-     * @return the sum
-     */
-    public static int withoutDoubles(int die1, int die2, boolean noDoubles) {
-        return die1 + (noDoubles && die1 == die2 ? 1 + die2 % 6 : die2);
-    }
-
-    /**
      * codingbat.com/prob/p170833
      * 
      * @param a [0,1,2]
