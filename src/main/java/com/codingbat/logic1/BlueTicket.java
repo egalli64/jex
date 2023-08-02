@@ -8,14 +8,15 @@ package com.codingbat.logic1;
 /**
  * blueTicket - https://codingbat.com/prob/p192267
  * <p>
- * The three input values, accordingly to their value, return:
- * <li>20: all same
- * <li>10: a couple
- * <li>0: all different
+ * The three input values (a, b, c), check the sums for each couple (ab, ac, bc)
+ * to return:
+ * <li>10: at least a couple with value 10
+ * <li>5: ab is 10 more than ac or bc
+ * <li>0: otherwise
  */
 public class BlueTicket {
     /**
-     * 
+     * Calculate the couples, check for "ten" couple, then for the difference
      * 
      * @param a ticket
      * @param b ticket
