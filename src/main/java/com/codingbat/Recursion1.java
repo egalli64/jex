@@ -5,19 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p154669
-     *
-     * @param n a (small) non-negative int
-     * @return n! calculated recursively
-     */
-    public static int factorial(int n) {
-        if (n < 2) {
-            return 1;
-        }
-        return n * factorial(n - 1);
-    }
-
-    /**
      * codingbat.com/prob/p107330
      *
      * @param bunnies the non-negative number of bunnies
