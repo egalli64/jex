@@ -39,11 +39,7 @@ public class Double23 {
      * @return true if contains a couple of 2 or 3
      */
     public static boolean solution(int[] nums) {
-        if (nums.length < 2) {
-            return false;
-        }
-
-        if (nums[0] != 2 && nums[0] != 3) {
+        if (nums.length < 2 || nums[0] != 2 && nums[0] != 3) {
             return false;
         }
 
