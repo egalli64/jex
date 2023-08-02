@@ -5,24 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * 
-     * @param a ticket
-     * @param b ticket
-     * @param c ticket
-     * @return all different -> 0; all same -> 20; couple -> 10
-     */
-    public static int greenTicket(int a, int b, int c) {
-        if (a == b && b == c) {
-            return 20;
-        }
-        if (a != b && b != c && a != c) {
-            return 0;
-        }
-
-        return 10;
-    }
-
-    /**
      * codingbat.com/prob/p192267
      * 
      * @param a ticket

@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic1Test {
     @ParameterizedTest
-    @CsvSource({ "1, 2, 3, 0", "2, 2, 2, 20", "1, 1, 2, 10" })
-    void greenTicketExamples(int a, int b, int c, int expected) {
-        assertThat(Logic1.greenTicket(a, b, c)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "9, 1, 0, 10", "9, 2, 0, 0", "6, 1, 4, 10" })
     void blueTicketExamples(int a, int b, int c, int expected) {
         assertThat(Logic1.blueTicket(a, b, c)).isEqualTo(expected);
