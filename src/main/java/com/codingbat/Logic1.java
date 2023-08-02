@@ -5,29 +5,6 @@ package com.codingbat;
 
 public class Logic1 {
     /**
-     * codingbat.com/prob/p192267
-     * 
-     * @param a ticket
-     * @param b ticket
-     * @param c ticket
-     * @return sum ab, bc, ac; all 10 -> 10; ab is 10 + bc or ac -> 5, else 0
-     */
-    public static int blueTicket(int a, int b, int c) {
-        int ab = a + b;
-        int ac = a + c;
-        int bc = b + c;
-
-        if (ab == 10 || ac == 10 || bc == 10) {
-            return 10;
-        }
-        if (ab == 10 + bc || ab == 10 + ac) {
-            return 5;
-        }
-
-        return 0;
-    }
-
-    /**
      * codingbat.com/prob/p153748
      * 
      * @param a [10..99]
