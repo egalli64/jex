@@ -13,12 +13,6 @@ class Logic1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1, 7, 11, true", "1, 7, 10, false", "11, 1, 7, true" })
-    void lessBy10Examples(int a, int b, int c, boolean expected) {
-        assertThat(Logic1.lessBy10(a, b, c)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2,3,true,5", "3,3,true,7", "3,3,false,6" })
     void withoutDoublesExamples(int a, int b, boolean change, int expected) {
         assertThat(Logic1.withoutDoubles(a, b, change)).isEqualTo(expected);

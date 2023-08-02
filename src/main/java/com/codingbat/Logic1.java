@@ -22,29 +22,6 @@ public class Logic1 {
     }
 
     /**
-     * codingbat.com/prob/p179196
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return true if one is 10+ distant from another one
-     */
-    public static boolean lessBy10(int a, int b, int c) {
-        return isFar10(a, b) || isFar10(b, c) || isFar10(a, c);
-    }
-
-    /**
-     * Helper for {@linkplain Logic1#lessBy10(int, int, int)}
-     * 
-     * @param left  first value
-     * @param right second value
-     * @return true if distance is 10+
-     */
-    private static boolean isFar10(int left, int right) {
-        return Math.abs(left - right) >= 10;
-    }
-
-    /**
      * codingbat.com/prob/p115233
      * 
      * @param die1      [1..6]
