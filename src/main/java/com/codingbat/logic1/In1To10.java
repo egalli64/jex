@@ -29,6 +29,17 @@ public class In1To10 {
     }
 
     /**
+     * Same than solution, but using ternary operator
+     * 
+     * @param n           an integer
+     * @param outsideMode a flag
+     * @return true if as stated by the flag
+     */
+    public static boolean oneLiner(int n, boolean outsideMode) {
+        return outsideMode ? n <= 1 || n >= 10 : n >= 1 && n <= 10;
+    }
+
+    /**
      * Check if n is the lower or upper limit, otherwise check if is in or out
      * 
      * @param n           an integer
@@ -43,5 +54,4 @@ public class In1To10 {
         boolean inside = n > 1 && n < 10;
         return outsideMode ? !inside : inside;
     }
-
 }

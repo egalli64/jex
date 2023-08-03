@@ -19,6 +19,12 @@ class In1To10Test {
 
     @ParameterizedTest
     @CsvSource({ "5,false,true", "11,false,false", "11,true,true" })
+    void oneLinerExamples(int n, boolean out, boolean expected) {
+        assertThat(In1To10.oneLiner(n, out)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "5,false,true", "11,false,false", "11,true,true" })
     void alternativeExamples(int n, boolean out, boolean expected) {
         assertThat(In1To10.alternative(n, out)).isEqualTo(expected);
     }
