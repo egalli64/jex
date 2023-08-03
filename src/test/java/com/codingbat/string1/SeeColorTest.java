@@ -22,4 +22,10 @@ class SeeColorTest {
     void linearCheckExamples(String input, String expected) {
         assertThat(SeeColor.linearCheck(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "redxx,red", "blueTimes,blue", "xxred,''" })
+    void verboseExamples(String input, String expected) {
+        assertThat(SeeColor.verbose(input)).isEqualTo(expected);
+    }
 }

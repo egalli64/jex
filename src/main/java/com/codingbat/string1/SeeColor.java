@@ -42,4 +42,20 @@ public class SeeColor {
             return "";
         }
     }
+
+    /**
+     * verbose by substring
+     * 
+     * @param str a possibly empty string
+     * @return "red", "blue", or "", accordingly to the starting tag
+     */
+    public static String verbose(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("red")) {
+            return "red";
+        } else if (str.length() >= 4 && str.substring(0, 4).equals("blue")) {
+            return "blue";
+        } else {
+            return "";
+        }
+    }
 }
