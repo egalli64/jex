@@ -81,19 +81,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p194781
-     *
-     * @param rows non-negative
-     * @return 0, 1, 2, 3, 4, 5, ... -> 0, 1, 3, 6, 10, 15, ...
-     */
-    public static int triangle(int rows) {
-        if (rows < 2) {
-            return rows;
-        }
-        return rows + triangle(rows - 1);
-    }
-
-    /**
      * codingbat.com/prob/p163932
      *
      * @param n non-negative
