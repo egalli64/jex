@@ -5,19 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p107330
-     *
-     * @param bunnies the non-negative number of bunnies
-     * @return the bunny ear count (even bunnies have 3 ears!) calculated recursively
-     */
-    public static int bunnyEars2(int bunnies) {
-        if (bunnies < 1) {
-            return 0;
-        }
-        return (bunnies % 2 == 0 ? 3 : 2) + bunnyEars2(bunnies - 1);
-    }
-
-    /**
      * codingbat.com/prob/p101409
      *
      * @param n non-negative
