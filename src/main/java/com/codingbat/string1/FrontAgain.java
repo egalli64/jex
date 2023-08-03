@@ -21,8 +21,9 @@ public class FrontAgain {
         int len = str.length();
         if (len < 2) {
             return false;
+        } else {
+            return str.charAt(0) == str.charAt(len - 2) && str.charAt(1) == str.charAt(len - 1);
         }
-        return str.charAt(0) == str.charAt(len - 2) && str.charAt(1) == str.charAt(len - 1);
     }
 
     /**
@@ -35,8 +36,9 @@ public class FrontAgain {
         int len = str.length();
         if (len < 2) {
             return false;
+        } else {
+            return str.substring(0, 2).equals(str.substring(len - 2));
         }
-        return str.substring(0, 2).equals(str.substring(len - 2));
     }
 
     /**
