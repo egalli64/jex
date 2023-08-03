@@ -20,9 +20,9 @@ public class LastTwo {
     public static String solution(String str) {
         if (str.length() < 2) {
             return str;
+        } else {
+            final int last = str.length() - 1;
+            return str.substring(0, last - 1) + str.substring(last) + str.substring(last - 1, last);
         }
-
-        final int last = str.length() - 1;
-        return str.substring(0, last - 1) + str.substring(last) + str.substring(last - 1, last);
     }
 }
