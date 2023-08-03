@@ -94,22 +94,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p120015
-     *
-     * @param n non-negative
-     * @return 0, 1, 2, 3, 4, 5, 6, 7, 8, ... -> 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
-     */
-    public static int fibonacci(int n) {
-        if (n < 1) {
-            return 0;
-        } else if (n < 3) {
-            return 1;
-        }
-
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    }
-
-    /**
      * codingbat.com/prob/p194781
      *
      * @param rows non-negative

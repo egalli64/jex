@@ -39,12 +39,6 @@ class Recursion1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"0,0", "1,1", "2,1"})
-    void fibonacciExamples(int input, int expected) {
-        assertThat(Recursion1.fibonacci(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"0,0", "1,1", "2,3"})
     void triangleExamples(int input, int expected) {
         assertThat(Recursion1.triangle(input)).isEqualTo(expected);
