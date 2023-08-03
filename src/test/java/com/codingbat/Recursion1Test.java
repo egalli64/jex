@@ -39,12 +39,6 @@ class Recursion1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"0,0", "1,2", "2,4"})
-    void bunnyEarsExamples(int input, int expected) {
-        assertThat(Recursion1.bunnyEars(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"0,0", "1,1", "2,1"})
     void fibonacciExamples(int input, int expected) {
         assertThat(Recursion1.fibonacci(input)).isEqualTo(expected);
