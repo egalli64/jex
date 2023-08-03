@@ -33,12 +33,6 @@ class Recursion1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"126,9", "49,13", "12,3"})
-    void sumDigitsExamples(int input, int expected) {
-        assertThat(Recursion1.sumDigits(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"8,1", "818,2", "8818,4"})
     void count8Examples(int input, int expected) {
         assertThat(Recursion1.count8(input)).isEqualTo(expected);

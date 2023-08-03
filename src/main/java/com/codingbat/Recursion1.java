@@ -81,20 +81,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p163932
-     *
-     * @param n non-negative
-     * @return sum of digits
-     */
-    public static int sumDigits(int n) {
-        if (n < 10) {
-            return n;
-        }
-
-        return n % 10 + sumDigits(n / 10);
-    }
-
-    /**
      * codingbat.com/prob/p192383
      *
      * @param n non-negative
