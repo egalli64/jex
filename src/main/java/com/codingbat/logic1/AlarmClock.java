@@ -26,11 +26,10 @@ public class AlarmClock {
     public static String solution(int day, boolean vacation) {
         if (day > 0 && day < 6 && !vacation) {
             return "7:00";
-        }
-        if (vacation && (day == 0 || day == 6)) {
+        } else if (vacation && (day == 0 || day == 6)) {
             return "off";
+        } else {
+            return "10:00";
         }
-
-        return "10:00";
     }
 }
