@@ -5,30 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p170371
-     *
-     * @param str a string
-     * @return the number of lowercase 'x' chars in the string
-     */
-    public static int countX(String str) {
-        return str.length() == 0 ? 0 : countX(str, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#countX(String)}
-     *
-     * @param str a string
-     * @param beg the initial position to consider in the string
-     * @return the number of 'x' from beg in the string
-     */
-    private static int countX(String str, int beg) {
-        if (beg < str.length()) {
-            return (str.charAt(beg) == 'x' ? 1 : 0) + countX(str, beg + 1);
-        }
-        return 0;
-    }
-
-    /**
      * codingbat.com/prob/p170924
      *
      * @param str a string
