@@ -44,20 +44,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p184029
-     *
-     * @param str a string
-     * @return number of "hi" in it
-     */
-    public static int countHi(String str) {
-        if (str.length() < 2) {
-            return 0;
-        }
-        int pos = str.indexOf("hi");
-        return pos == -1 ? 0 : 1 + countHi(str.substring(pos + 2));
-    }
-
-    /**
      * codingbat.com/prob/p101372
      *
      * @param str a string
