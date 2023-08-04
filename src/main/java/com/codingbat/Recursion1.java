@@ -68,22 +68,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p158888
-     *
-     * @param base 1+
-     * @param n    1+
-     * @return base ** n
-     */
-    public static int powerN(int base, int n) {
-        assert n > 0;
-
-        if (n == 1) {
-            return base;
-        }
-        return base * powerN(base, n - 1);
-    }
-
-    /**
      * codingbat.com/prob/p184029
      *
      * @param str a string
