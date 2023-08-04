@@ -8,12 +8,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Recursion1Test {
     @ParameterizedTest
-    @CsvSource({"717,2", "7,1", "123,0"})
-    void count7Examples(int input, int expected) {
-        assertThat(Recursion1.count7(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"xxhixx,4", "xhixhix,3", "hi,0"})
     void countXExamples(String input, int expected) {
         assertThat(Recursion1.countX(input)).isEqualTo(expected);

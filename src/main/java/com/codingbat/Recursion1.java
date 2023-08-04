@@ -5,19 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p101409
-     *
-     * @param n non-negative
-     * @return how many 7 are in n (as decimal integer)
-     */
-    public static int count7(int n) {
-        if (n == 0) {
-            return 0;
-        }
-        return (n % 10 == 7 ? 1 : 0) + count7(n / 10);
-    }
-
-    /**
      * codingbat.com/prob/p170371
      *
      * @param str a string
