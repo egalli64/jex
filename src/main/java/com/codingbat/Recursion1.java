@@ -44,21 +44,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p101372
-     *
-     * @param str a string
-     * @return each 'x' changed to 'y'
-     */
-    public static String changeXY(String str) {
-        int pos;
-        if (str.isEmpty() || (pos = str.indexOf('x')) == -1) {
-            return str;
-        }
-
-        return str.substring(0, pos) + 'y' + changeXY(str.substring(pos + 1));
-    }
-
-    /**
      * codingbat.com/prob/p118230
      *
      * @param str a string

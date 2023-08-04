@@ -21,12 +21,6 @@ class Recursion1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"codex,codey", "xxhixx,yyhiyy", "xhixhix,yhiyhiy"})
-    void changeXYExamples(String input, String expected) {
-        assertThat(Recursion1.changeXY(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"xaxb,ab", "abc,abc", "xx,''"})
     void noXExamples(String input, String expected) {
         assertThat(Recursion1.noX(input)).isEqualTo(expected);
