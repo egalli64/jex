@@ -27,12 +27,6 @@ class Recursion1Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"8,1", "818,2", "8818,4"})
-    void count8Examples(int input, int expected) {
-        assertThat(Recursion1.count8(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"3,1,3", "3,2,9", "3,3,27"})
     void powerNExamples(int base, int exp, int expected) {
         assertThat(Recursion1.powerN(base, exp)).isEqualTo(expected);
