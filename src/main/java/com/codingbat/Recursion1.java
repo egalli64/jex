@@ -19,21 +19,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p118230
-     *
-     * @param str a string
-     * @return all 'x' removed
-     */
-    public static String noX(String str) {
-        int pos;
-        if (str.isEmpty() || (pos = str.indexOf('x')) == -1) {
-            return str;
-        }
-
-        return str.substring(0, pos) + noX(str.substring(pos + 1));
-    }
-
-    /**
      * codingbat.com/prob/p108997
      *
      * @param nums  an array

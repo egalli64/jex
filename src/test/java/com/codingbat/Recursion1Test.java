@@ -14,12 +14,6 @@ class Recursion1Test {
         assertThat(Recursion1.array11(input, 0)).isEqualTo(expected);
     }
 
-    @ParameterizedTest
-    @CsvSource({"xaxb,ab", "abc,abc", "xx,''"})
-    void noXExamples(String input, String expected) {
-        assertThat(Recursion1.noX(input)).isEqualTo(expected);
-    }
-
     @Test
     void array6Example1() {
         int[] input = {1, 6, 4};
