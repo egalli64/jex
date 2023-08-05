@@ -5,22 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p173469
-     *
-     * @param nums  an array
-     * @param index non-negative, from this position on
-     * @return true if next value is 10x current one
-     */
-    public static boolean array220(int[] nums, int index) {
-        if (index >= nums.length - 1) {
-            return false;
-        } else if (nums[index] * 10 == nums[index + 1]) {
-            return true;
-        }
-        return array220(nums, index + 1);
-    }
-
-    /**
      * codingbat.com/prob/p183394
      *
      * @param str a string

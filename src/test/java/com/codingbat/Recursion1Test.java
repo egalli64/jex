@@ -1,18 +1,11 @@
 package com.codingbat;
 
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 class Recursion1Test {
-    @Test
-    void array220Example1() {
-        int[] input = {1, 2, 20};
-        assertThat(Recursion1.array220(input, 0)).isTrue();
-    }
-
     @ParameterizedTest
     @CsvSource({"hello,h*e*l*l*o", "abc,a*b*c", "ab,a*b"})
     void allStarExamples(String input, String expected) {
