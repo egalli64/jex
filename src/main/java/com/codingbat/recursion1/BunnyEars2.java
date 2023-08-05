@@ -25,6 +25,8 @@ public class BunnyEars2 {
         if (bunnies == 0) {
             return 0;
         }
-        return (bunnies % 2 == 0 ? 3 : 2) + bunnyEars2(bunnies - 1);
+
+        int count = bunnies % 2 == 0 ? 3 : 2;
+        return count + bunnyEars2(bunnies - 1);
     }
 }
