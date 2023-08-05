@@ -19,20 +19,6 @@ public class Recursion1 {
     }
 
     /**
-     * codingbat.com/prob/p108997
-     *
-     * @param nums  an array
-     * @param index non-negative, from this position on
-     * @return true if contains 6
-     */
-    public static boolean array6(int[] nums, int index) {
-        if (index > nums.length - 1) {
-            return false;
-        }
-        return nums[index] == 6 || array6(nums, index + 1);
-    }
-
-    /**
      * codingbat.com/prob/p173469
      *
      * @param nums  an array

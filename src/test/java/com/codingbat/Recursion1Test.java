@@ -15,12 +15,6 @@ class Recursion1Test {
     }
 
     @Test
-    void array6Example1() {
-        int[] input = {1, 6, 4};
-        assertThat(Recursion1.array6(input, 0)).isTrue();
-    }
-
-    @Test
     void array220Example1() {
         int[] input = {1, 2, 20};
         assertThat(Recursion1.array220(input, 0)).isTrue();
