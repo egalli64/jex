@@ -5,20 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p135988
-     *
-     * @param nums  an array
-     * @param index first position to consider
-     * @return count the 11 in the specified part of the array
-     */
-    public static int array11(int[] nums, int index) {
-        if (index < 0 || index >= nums.length) {
-            return 0;
-        }
-        return (nums[index] == 11 ? 1 : 0) + array11(nums, index + 1);
-    }
-
-    /**
      * codingbat.com/prob/p173469
      *
      * @param nums  an array

@@ -8,13 +8,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Recursion1Test {
     @Test
-    void array11Example1() {
-        int[] input = {1, 2, 11};
-        int expected = 1;
-        assertThat(Recursion1.array11(input, 0)).isEqualTo(expected);
-    }
-
-    @Test
     void array220Example1() {
         int[] input = {1, 2, 20};
         assertThat(Recursion1.array220(input, 0)).isTrue();
