@@ -22,8 +22,9 @@ public class Without2 {
                 || str.charAt(0) != str.charAt(str.length() - 2) //
                 || str.charAt(1) != str.charAt(str.length() - 1)) {
             return str;
+        } else {
+            return str.substring(2);
         }
-        return str.substring(2);
     }
 
     /**
@@ -35,7 +36,8 @@ public class Without2 {
     public static String solution(String str) {
         if (str.length() < 2 || !str.endsWith(str.substring(0, 2))) {
             return str;
+        } else {
+            return str.substring(2);
         }
-        return str.substring(2);
     }
 }
