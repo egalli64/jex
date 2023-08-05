@@ -24,7 +24,7 @@ class Array11Test {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void array11Example1(int[] input, int expected) {
+    void array11Examples(int[] input, int expected) {
         assertThat(Array11.array11(input, 0)).isEqualTo(expected);
     }
 }
