@@ -8,7 +8,8 @@ package com.codingbat.string1;
 /**
  * extraFront - https://codingbat.com/prob/p172063
  * <p>
- * Return "red" or "blue" if the input string starts that way, otherwise ""
+ * Get the first two chars in the input string (or less, if it is shorter than
+ * that). Return that substring multiplied by 3.
  */
 public class ExtraFront {
     /**
@@ -18,8 +19,8 @@ public class ExtraFront {
      * @return the first two chars (if available) times 3
      */
     public static String solution(String str) {
-        int end = Math.min(str.length(), 2);
-        String tag = str.substring(0, end);
+        int len = Math.min(str.length(), 2);
+        String tag = str.substring(0, len);
         return tag + tag + tag;
     }
 
