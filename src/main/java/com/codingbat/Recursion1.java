@@ -5,31 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p170924
-     *
-     * @param str a string
-     * @return a string where each "pi" is replaced be "3.14"
-     */
-    public static String changePi(String str) {
-        return str.length() < 2 ? str : changePi(str, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#changePi(String)}
-     *
-     * @param str a string
-     * @param beg the initial position to consider in the string
-     * @return a string where each "pi" is replaced be "3.14"
-     */
-    private static String changePi(String str, int beg) {
-        int piPos = str.indexOf("pi", beg);
-        if (piPos == -1) {
-            return str.substring(beg);
-        }
-        return str.substring(beg, piPos) + "3.14" + changePi(str, piPos + 2);
-    }
-
-    /**
      * codingbat.com/prob/p135988
      *
      * @param nums  an array

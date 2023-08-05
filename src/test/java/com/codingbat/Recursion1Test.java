@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Recursion1Test {
-    @ParameterizedTest
-    @CsvSource({"xpix,x3.14x", "pipi,3.143.14", "pip,3.14p"})
-    void changePiExamples(String input, String expected) {
-        assertThat(Recursion1.changePi(input)).isEqualTo(expected);
-    }
-
     @Test
     void array11Example1() {
         int[] input = {1, 2, 11};
