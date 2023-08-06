@@ -20,19 +20,12 @@ public class Unlucky1 {
      * @return true if 1 followed by 3 in head or tail
      */
     public static boolean solution(int[] nums) {
-        if (nums.length > 1 && nums[0] == 1 && nums[1] == 3) {
+        if (nums.length > 1 && nums[0] == 1 && nums[1] == 3 || //
+                nums.length > 2 && nums[1] == 1 && nums[2] == 3 || //
+                nums.length > 3 && nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3) {
             return true;
+        } else {
+            return false;
         }
-
-        if (nums.length > 2 && nums[1] == 1 && nums[2] == 3) {
-            return true;
-        }
-
-        final int last = nums.length - 1;
-        if (nums.length > 3 && nums[last - 1] == 1 && nums[last] == 3) {
-            return true;
-        }
-
-        return false;
     }
 }
