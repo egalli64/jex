@@ -5,50 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p105722
-     *
-     * @param str a string
-     * @return all 'x' moved to the end
-     */
-    public static String endX(String str) {
-        int last = lastNotX(str, str.length() - 1);
-        return last > 0 ? endX(new StringBuilder(str), 0, last).toString() : str;
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#endX(String)}
-     *
-     * @param s string
-     * @param i right position
-     * @return the position of the last non-x char
-     */
-    private static int lastNotX(String s, int i) {
-        return i < 1 || s.charAt(i) != 'x' ? i : lastNotX(s, i - 1);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#endX(String)}
-     *
-     * @param sb   a mutable string
-     * @param cur  the position to be checked
-     * @param last the last position to be checked
-     * @return mutable string rearranged
-     */
-    private static StringBuilder endX(StringBuilder sb, int cur, int last) {
-        if (cur > last) {
-            return sb;
-        }
-        if (sb.charAt(cur) == 'x') {
-            sb.deleteCharAt(cur);
-            sb.append('x');
-            last -= 1;
-        } else {
-            cur += 1;
-        }
-        return endX(sb, cur, last);
-    }
-
-    /**
      * codingbat.com/prob/p154048
      *
      * @param str a string
