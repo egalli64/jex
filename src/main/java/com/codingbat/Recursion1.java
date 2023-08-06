@@ -5,33 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p158175
-     *
-     * @param str a string
-     * @return all same-char couple connected by '*'
-     */
-    public static String pairStar(String str) {
-        return str.length() < 2 ? str : pairStar(new StringBuilder(str), 1).toString();
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#pairStar(String)}
-     *
-     * @param sb a mutable string
-     * @param i  current position to be checked for '*' insertion
-     * @return the starred string
-     */
-    private static StringBuilder pairStar(StringBuilder sb, int i) {
-        if (i == sb.length()) {
-            return sb;
-        }
-        if (sb.charAt(i) == sb.charAt(i - 1)) {
-            sb.insert(i, '*');
-        }
-        return pairStar(sb, i + 1);
-    }
-
-    /**
      * codingbat.com/prob/p105722
      *
      * @param str a string
