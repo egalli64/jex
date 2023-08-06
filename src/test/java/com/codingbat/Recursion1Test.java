@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class Recursion1Test {
     @ParameterizedTest
-    @CsvSource({"hello,h*e*l*l*o", "abc,a*b*c", "ab,a*b"})
-    void allStarExamples(String input, String expected) {
-        assertThat(Recursion1.allStar(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"hello,hel*lo", "xxyy,x*xy*y", "aaaa,a*a*a*a"})
     void pairStarExamples(String input, String expected) {
         assertThat(Recursion1.pairStar(input)).isEqualTo(expected);

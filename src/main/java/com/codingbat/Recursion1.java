@@ -5,34 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p183394
-     *
-     * @param str a string
-     * @return the string with '*' added as char connector
-     */
-    public static String allStar(String str) {
-        if (str.length() < 2) {
-            return str;
-        }
-        return allStar(new StringBuilder(str), 1).toString();
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#allStar(String)}
-     *
-     * @param sb  a mutable string
-     * @param pos current position for '*' insertion
-     * @return the starred string
-     */
-    private static StringBuilder allStar(StringBuilder sb, int pos) {
-        if (pos > sb.length() - 1) {
-            return sb;
-        }
-        sb.insert(pos, '*');
-        return allStar(sb, pos + 2);
-    }
-
-    /**
      * codingbat.com/prob/p158175
      *
      * @param str a string
