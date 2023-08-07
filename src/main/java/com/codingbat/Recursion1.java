@@ -5,34 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p104029
-     *
-     * @param str a string
-     * @return no double chars left
-     */
-    public static String stringClean(String str) {
-        return stringClean(new StringBuilder(str), 0).toString();
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#stringClean(String)}
-     *
-     * @param sb a mutable string
-     * @param i  current position
-     * @return no double chars from i on
-     */
-    private static StringBuilder stringClean(StringBuilder sb, int i) {
-        if (i > sb.length() - 2) {
-            return sb;
-        }
-        if (sb.charAt(i) == sb.charAt(i + 1)) {
-            sb.deleteCharAt(i + 1);
-            return stringClean(sb, i);
-        }
-        return stringClean(sb, i + 1);
-    }
-
-    /**
      * codingbat.com/prob/p143900
      *
      * @param str a string
