@@ -8,15 +8,15 @@ package com.codingbat.recursion1;
 /**
  * countPairs - https://codingbat.com/prob/p154048
  * <p>
- * Generate recursively a string having where all '*' have been moved to the end
+ * Count recursively the same chars separated by one char
  */
 public class CountPairs {
     /**
      * Base case: a string shorter than 3 has no pair in it
      * <p>
-     * Recursive part: check if the current element is part of a pair, Return the
-     * result of recursing dropping the first char, adding one if a pair has been
-     * detected.
+     * Recursive part: check if the first char is duplicated after the gap, return
+     * the result of recursing dropping the first char, adding one if a pair has
+     * been detected.
      *
      * @param str a string
      * @return the number of same chars separated by one other char
@@ -65,28 +65,26 @@ public class CountPairs {
     }
 
     /**
-     * Inception for tail recursion on {@linkplain CountPairs#tailRec(String, int)}
-     * <p>
-     * Start checking for pairs starting on the first position
+     * Delegate tail recursion to {@linkplain CountPairs#tailRec(String, int, int)}
      *
      * @param str a string
-     * @return the number of same chars separated by one other char
+     * @return the number of same chars separated by one gap char
      */
     public static int tailRec(String str) {
         return tailRec(str, 0, 0);
     }
 
     /**
-     * Tail recursive helper for {@linkplain CountPairs#alternative(String)}
+     * Tail recursive support for {@linkplain CountPairs#tailRec(String)}
      * <p>
      * Base case: if the checking position is on the second-last element (or more to
-     * the right), no pair could be found
+     * the right), no more pair could be found, return the accumulator
      * <p>
      * Recursive part: if a pair is detected on the current char, increase the
      * accumulator. Return the call on recursing for the next index.
      *
      * @param str a string
-     * @param i   starting position
+     * @param i   current position
      * @return the number of same chars separated by one other char
      */
     static int tailRec(String str, int i, int acc) {
