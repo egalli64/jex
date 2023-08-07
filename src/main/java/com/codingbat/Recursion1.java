@@ -5,42 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p161124
-     *
-     * @param str a string
-     * @return number of sub "abc" and "aba"
-     */
-    public static int countAbc(String str) {
-        return countAbc(str, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#countAbc(String)}
-     *
-     * @param s a string
-     * @param i a position
-     * @return number of sub "abc" and "aba" from i
-     */
-    private static int countAbc(String s, int i) {
-        if (i > s.length() - 3) {
-            return 0;
-        }
-        return (isAbaOrAbc(s, i) ? 1 : 0) + countAbc(s, i + 1);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#countAbc(String)}
-     *
-     * @param s a string
-     * @param i a position
-     * @return true if s from i is "abc" or "aba"
-     */
-    private static boolean isAbaOrAbc(String s, int i) {
-        char last = s.charAt(i + 2);
-        return s.charAt(i) == 'a' && s.charAt(i + 1) == 'b' && (last == 'a' || last == 'c');
-    }
-
-    /**
      * codingbat.com/prob/p167015
      *
      * @param str a string
