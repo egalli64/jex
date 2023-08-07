@@ -30,40 +30,41 @@ public class AllStar {
     }
 
     /**
-     * Inception for {@linkplain AllStar#alternative(StringBuilder, int)}. If the
-     * string is sized less than 2, return it unchanged. Otherwise convert the
-     * string in a string builder, and pass it to the associated recursive method
-     * along with the index of where the first '*' has to be placed.
+     * If the string is sized less than 2, return it unchanged. Otherwise delegate
+     * to {@linkplain AllStar#tailRec(String, int, StringBuilder)}.
      *
      * @param str a string
      * @return the string with '*' added as char connector
      */
-    public static String alternative(String str) {
+    public static String tailRec(String str) {
         if (str.length() < 2) {
             return str;
         }
-        return alternative(new StringBuilder(str), 1).toString();
+        return tailRec(str, 0, new StringBuilder()).toString();
     }
 
     /**
-     * Recursive support for {@linkplain AllStar#allStar(String)}
+     * Tail recursion support for {@linkplain AllStar#tailRec(String)}
      * <p>
-     * Base case: if the position is out of bound, return the string builder
-     * unchanged
+     * Base case: on the string end, push the current char in the accumulator and
+     * return it
      * <p>
-     * Recursive part: insert a '*' in the passed position, recurse adding 2 to the
-     * position
+     * Recursive part: besides the current char, append also a '*' to the
+     * accumulator, recurse for the next position
      *
-     * @param sb  a mutable string
-     * @param pos current position for '*' insertion
+     * @param s   a string
+     * @param i   current position
+     * @param acc accumulator
      * @return the starred string
      */
-    static StringBuilder alternative(StringBuilder sb, int pos) {
-        if (pos >= sb.length()) {
-            return sb;
+    static StringBuilder tailRec(String s, int i, StringBuilder acc) {
+        acc.append(s.charAt(i));
+
+        if (i == s.length() - 1) {
+            return acc;
         }
 
-        sb.insert(pos, '*');
-        return alternative(sb, pos + 2);
+        acc.append('*');
+        return tailRec(s, i + 1, acc);
     }
 }
