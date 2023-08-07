@@ -12,7 +12,7 @@ package com.codingbat.recursion1;
  */
 public class CountHi {
     /**
-     * Base case: a string shorter than 2 has no 'x' in it
+     * Base case: a string shorter than 2 has no 'hi' in it
      * <p>
      * Recursive part: check if the first two chars in the string are 'h' and 'i',
      * then recurse on the rest of the string (next char, if 'hi' not found, skip an
