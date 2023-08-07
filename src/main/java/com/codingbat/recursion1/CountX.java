@@ -20,44 +20,45 @@ public class CountX {
      * @param str a string
      * @return the number of 'x' in it
      */
-    public static int solution(String str) {
+    public static int countX(String str) {
         if (str.isEmpty()) {
             return 0;
         }
 
         int count = str.charAt(0) == 'x' ? 1 : 0;
-        return count + solution(str.substring(1));
+        return count + countX(str.substring(1));
     }
 
     /**
-     * Inception for alternative approach, delegate the real job to
-     * {@linkplain CountX#alternative(String, it)}
+     * Delegate to {@linkplain CountX#tailRec(String, int, int)}
      *
      * @param str a string
      * @return the number of 'x' in it
      */
-    public static int alterative(String str) {
-        return str.isEmpty() ? 0 : alterative(str, 0);
+    public static int tailRec(String str) {
+        return tailRec(str, 0, 0);
     }
 
     /**
-     * Recursive helper for {@linkplain CountX#alternative(String)}
+     * Tail recursion for {@linkplain CountX#tailRec(String)}
      * <p>
-     * Base case: empty string has no 'x' in it
+     * Base case: on the end of the string return the accumulator
      * <p>
-     * Recursive part: check if the current char is an 'x', accordingly to that, add
-     * 1 or 0 to the recursion increasing cur
+     * Recursive part: if the current char is an 'x' increase the accumulator,
+     * recurse increasing the index
      *
      * @param str a string
-     * @param cur the current position
+     * @param i   the current position
      * @return the number of 'x' from here on
      */
-    static int alterative(String str, int cur) {
-        if (cur == str.length()) {
-            return 0;
+    static int tailRec(String str, int i, int acc) {
+        if (i == str.length()) {
+            return acc;
         }
 
-        int count = str.charAt(cur) == 'x' ? 1 : 0;
-        return count + alterative(str, cur + 1);
+        if (str.charAt(i) == 'x') {
+            acc += 1;
+        }
+        return tailRec(str, i + 1, acc);
     }
 }

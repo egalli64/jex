@@ -13,19 +13,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 class CountXTest {
     @ParameterizedTest
     @CsvSource({ "xxhixx,4", "xhixhix,3", "hi,0" })
-    void solutionExamples(String input, int expected) {
-        assertThat(CountX.solution(input)).isEqualTo(expected);
+    void countXExamples(String input, int expected) {
+        assertThat(CountX.countX(input)).isEqualTo(expected);
     }
 
     @ParameterizedTest
     @CsvSource({ "xxhixx,4", "xhixhix,3", "hi,0" })
-    void alterativeExamples(String input, int expected) {
-        assertThat(CountX.alterative(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "xxhixx,4", "xhixhix,3", "hi,0" })
-    void innerAlterativeExamples(String input, int expected) {
-        assertThat(CountX.alterative(input, 0)).isEqualTo(expected);
+    void tailRecExamples(String input, int expected) {
+        assertThat(CountX.tailRec(input)).isEqualTo(expected);
     }
 }
