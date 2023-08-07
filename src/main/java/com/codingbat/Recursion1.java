@@ -5,36 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p143900
-     *
-     * @param str a string
-     * @return count of "hi" not prefixed by 'x'
-     */
-    public static int countHi2(String str) {
-        return countHi2(str, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#countHi2(String)}
-     *
-     * @param s a string
-     * @param i a position
-     * @return count of "hi" not prefixed by 'x' from i on
-     */
-    private static int countHi2(String s, int i) {
-        if (i > s.length() - 2) {
-            return 0;
-        }
-        if (s.charAt(i) == 'h' && s.charAt(i + 1) == 'i') {
-            return 1 + countHi2(s, i + 1);
-        } else if (s.charAt(i) == 'x' && s.charAt(i + 1) == 'h') {
-            return countHi2(s, i + 2);
-        } else {
-            return countHi2(s, i + 1);
-        }
-    }
-
-    /**
      * codingbat.com/prob/p137918
      *
      * @param str a string inf format "...(...)..."
