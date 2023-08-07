@@ -5,34 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p167015
-     *
-     * @param str a string
-     * @return number of non-overlapping substring "11"
-     */
-    public static int count11(String str) {
-        return count11(str, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#count11(String)}
-     *
-     * @param s a string
-     * @param i from this position
-     * @return number of non-overlapping substring "11"
-     */
-    private static int count11(String s, int i) {
-        if (i > s.length() - 2) {
-            return 0;
-        }
-        if (s.charAt(i) == '1' && s.charAt(i + 1) == '1') {
-            return 1 + count11(s, i + 2);
-        } else {
-            return count11(s, i + 1);
-        }
-    }
-
-    /**
      * codingbat.com/prob/p104029
      *
      * @param str a string
