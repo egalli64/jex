@@ -20,7 +20,7 @@ public class PairStar {
      * string from its second char on
      *
      * @param str a string
-     * @return the string with '*' added as char connector
+     * @return the string with '*' added to separate duplicated chars
      */
     public static String pairStar(String str) {
         if (str.length() < 2) {
@@ -36,7 +36,7 @@ public class PairStar {
     }
 
     /**
-     * Inception for {@linkplain PairStar#alternative(StringBuilder, int)}
+     * Inception for {@linkplain PairStar#tailRec(StringBuilder, int)}
      * <p>
      * Convert the passed string in a string builder, start checking it from
      * position 1
@@ -44,12 +44,16 @@ public class PairStar {
      * @param str a string
      * @return all same-char couple connected by '*'
      */
-    public static String alternative(String str) {
-        return str.length() < 2 ? str : alternative(new StringBuilder(str), 1).toString();
+    public static String tailRec(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+
+        return tailRec(str, 0, new StringBuilder()).toString();
     }
 
     /**
-     * Recursive helper for {@linkplain PairStar#alternative(String)}
+     * Recursive helper for {@linkplain PairStar#tailRec(String)}
      * <p>
      * Base case: when the index is out of bound, return the builder unchanged
      * <p>
@@ -60,13 +64,14 @@ public class PairStar {
      * @param i  current position to be checked for '*' insertion
      * @return the starred string
      */
-    static StringBuilder alternative(StringBuilder sb, int i) {
-        if (i == sb.length()) {
-            return sb;
+    static StringBuilder tailRec(String s, int i, StringBuilder acc) {
+        acc.append(s.charAt(i));
+        if (i == s.length() - 1) {
+            return acc;
         }
-        if (sb.charAt(i) == sb.charAt(i - 1)) {
-            sb.insert(i, '*');
+        if (s.charAt(i) == s.charAt(i + 1)) {
+            acc.append('*');
         }
-        return alternative(sb, i + 1);
+        return tailRec(s, i + 1, acc);
     }
 }

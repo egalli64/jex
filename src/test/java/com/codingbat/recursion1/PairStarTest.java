@@ -20,6 +20,6 @@ class PairStarTest {
     @ParameterizedTest
     @CsvSource({ "hello,hel*lo", "xxyy,x*xy*y", "aaaa,a*a*a*a" })
     void alternativeExamples(String input, String expected) {
-        assertThat(PairStar.alternative(input)).isEqualTo(expected);
+        assertThat(PairStar.tailRec(input)).isEqualTo(expected);
     }
 }
