@@ -14,9 +14,8 @@ public class CountAbc {
     /**
      * Base case: a string shorter than 3 has no target in it
      * <p>
-     * Recursive part: check if the current element has a target in it, return what
-     * the recursion on the string stripped of the first char returns, added by 1
-     * when required.
+     * Recursive part: check if the string begins with a target, return the
+     * recursion on the substring on 1, added by 1 when required.
      *
      * @param str a string
      * @return number of sub "abc" and "aba"
@@ -43,11 +42,10 @@ public class CountAbc {
     }
 
     /**
-     * Inception for {@linkplain CountAbc#tailRec(String, int i, int acc)},
-     * following the tail recursive approach
+     * Inception for tail recursion {@linkplain CountAbc#tailRec(String, int, int)}
      *
      * @param str a string
-     * @return number of sub "abc" and "aba"
+     * @return number of sub "abc" and "aba" in it
      */
     public static int tailRec(String str) {
         return tailRec(str, 0, 0);
@@ -56,8 +54,8 @@ public class CountAbc {
     /**
      * Tail recursion for {@linkplain CountAbc#tailRec(String)}
      * <p>
-     * Base case: if the index is too much on the right, no more target could be
-     * found, return the accumulator.
+     * Base case: if the index is too close to the end, no more target could be
+     * found, then return the accumulator.
      * <p>
      * Recursive part: check if the current index refers to a target, recurse
      * increasing the index and, when required, the accumulator.
