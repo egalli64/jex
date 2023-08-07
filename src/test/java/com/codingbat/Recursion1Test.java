@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class Recursion1Test {
     @ParameterizedTest
-    @CsvSource({"axa,1", "axax,2", "axbx,1"})
-    void countPairsExamples(String input, int expected) {
-        assertThat(Recursion1.countPairs(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"abc,1", "abcxxabc,2", "abaxxaba,2"})
     void countAbcExamples(String input, int expected) {
         assertThat(Recursion1.countAbc(input)).isEqualTo(expected);

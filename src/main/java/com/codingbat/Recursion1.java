@@ -5,30 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p154048
-     *
-     * @param str a string
-     * @return the number of same chars separated by one other char
-     */
-    public static int countPairs(String str) {
-        return str.length() < 3 ? 0 : countPairs(str, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#countPairs(String)}
-     *
-     * @param str a string
-     * @param i   starting position
-     * @return the number of same chars separated by one other char
-     */
-    private static int countPairs(String str, int i) {
-        if (i > str.length() - 3) {
-            return 0;
-        }
-        return (str.charAt(i) == str.charAt(i + 2) ? 1 : 0) + countPairs(str, i + 1);
-    }
-
-    /**
      * codingbat.com/prob/p161124
      *
      * @param str a string
