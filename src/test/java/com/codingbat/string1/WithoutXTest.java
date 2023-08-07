@@ -18,8 +18,8 @@ class WithoutXTest {
     }
 
     @ParameterizedTest
-    @CsvSource({ "xHix,Hi", "xHi,Hi", "Hxix,Hxi" })
-    void verboseExamples(String s, String expected) {
-        assertThat(WithoutX.verbose(s)).isEqualTo(expected);
+    @CsvSource({ "'',''", "x,''", "xx,''", "ax,a", "xa,a" })
+    void solutionLimit(String s, String expected) {
+        assertThat(WithoutX.solution(s)).isEqualTo(expected);
     }
 }

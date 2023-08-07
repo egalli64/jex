@@ -17,7 +17,7 @@ public class WithoutX {
      * @param str a possibly empty string
      * @return string without x at begin and end
      */
-    public static String verbose(String str) {
+    public static String solution(String str) {
         if (str.isEmpty()) {
             return str;
         }
@@ -26,27 +26,5 @@ public class WithoutX {
         int len = str.length();
         int end = len > 1 && str.charAt(len - 1) == 'x' ? len - 1 : len;
         return str.substring(begin, end);
-    }
-
-    /**
-     * StringBuilder as mutable string
-     * 
-     * @param str a possibly empty string
-     * @return string without x at begin and end
-     */
-    public static String solution(String str) {
-        if (str.isEmpty()) {
-            return str;
-        }
-        StringBuilder result = new StringBuilder(str);
-        if (result.charAt(0) == 'x') {
-            result.deleteCharAt(0);
-        }
-        int last = result.length() - 1;
-        if (result.charAt(last) == 'x') {
-            result.deleteCharAt(last);
-        }
-
-        return result.toString();
     }
 }
