@@ -20,6 +20,6 @@ class AllStarTest {
     @ParameterizedTest
     @CsvSource({ "hello,h*e*l*l*o", "abc,a*b*c", "ab,a*b" })
     void allternativeExamples(String input, String expected) {
-        assertThat(AllStar.alternative(input)).isEqualTo(expected);
+        assertThat(AllStar.tailRec(input)).isEqualTo(expected);
     }
 }
