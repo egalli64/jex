@@ -5,44 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p137918
-     *
-     * @param str a string inf format "...(...)..."
-     * @return the substring delimited by '(' and ')'
-     */
-    public static String parenBit(String str) {
-        return str.substring(firstParenLeft(str, 0), lastParenRight(str, str.length() - 1) + 1);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#parenBit(String)}
-     *
-     * @param s string
-     * @param i position
-     * @return the first '(' from i
-     */
-    private static int firstParenLeft(String s, int i) {
-        if (s.charAt(i) == '(') {
-            return i;
-        }
-        return firstParenLeft(s, i + 1);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#parenBit(String)}
-     *
-     * @param s string
-     * @param i position
-     * @return the last ')' up to i
-     */
-    private static int lastParenRight(String s, int i) {
-        if (s.charAt(i) == ')') {
-            return i;
-        }
-        return lastParenRight(s, i - 1);
-    }
-
-    /**
      * codingbat.com/prob/p183174
      *
      * @param str a string
