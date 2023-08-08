@@ -5,33 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p118182
-     *
-     * @param str string
-     * @param sub non-empty
-     * @param n   non-negative, number of copies
-     * @return true if there are the required n (overlapping) copies
-     */
-    public static boolean strCopies(String str, String sub, int n) {
-        return strCopies(str, 0, sub) == n;
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#strCopies(String, String, int)}
-     *
-     * @param str string
-     * @param i   start position
-     * @param sub non-empty
-     * @return count sub in str from i
-     */
-    private static int strCopies(String str, int i, String sub) {
-        if (str.length() - i < sub.length()) {
-            return 0;
-        }
-        return (isMatching(str, i, sub, 0) ? 1 : 0) + strCopies(str, i + 1, sub);
-    }
-
-    /**
      * Helper for {@linkplain Recursion1#strCount(String, String)},
      * {@linkplain Recursion1#strCopies(String, String, int)}, and
      * {@linkplain Recursion1#strDist(String, String)}
