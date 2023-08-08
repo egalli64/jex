@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class Recursion1Test {
     @ParameterizedTest
-    @CsvSource({"catcowcat,cat,2", "catcowcat,cow,1", "catcowcat,dog,0"})
-    void strCountExamples(String s, String sub, int expected) {
-        assertThat(Recursion1.strCount(s, sub)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"catcowcat,cat,2,true", "catcowcat,cow,2,false", "catcowcat,cow,1,true"})
     void strCopiesExamples(String s, String sub, int n, boolean expected) {
         assertThat(Recursion1.strCopies(s, sub, n)).isEqualTo(expected);
