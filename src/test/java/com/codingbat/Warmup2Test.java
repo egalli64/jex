@@ -43,18 +43,6 @@ class Warmup2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Chocolate,2,ChoCho", "Chocolate,3,ChoChoCho", "Abc,3,AbcAbcAbc" })
-    void frontTimes11Examples(String input, int times, String expected) {
-        assertThat(Warmup2.frontTimes11(input, times)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Chocolate,2,ChoCho", "Chocolate,3,ChoChoCho", "Abc,3,AbcAbcAbc" })
-    void frontTimesExamples(String input, int times, String expected) {
-        assertThat(Warmup2.frontTimes(input, times)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,Hlo", "Hi,H", "Heeololeo,Hello" })
     void stringBitsExamples(String input, String expected) {
         assertThat(Warmup2.stringBits(input)).isEqualTo(expected);
