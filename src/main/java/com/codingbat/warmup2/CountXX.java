@@ -12,7 +12,7 @@ package com.codingbat.warmup2;
  */
 public class CountXX {
     /**
-     * 
+     * Loop and check the current char and the next one. Be careful about limits!
      * 
      * @param str a string
      * @return number of "xx"
