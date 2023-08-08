@@ -189,24 +189,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p194667
-     * 
-     * @param str a string
-     * @return the number of possibly overlapping "xx"
-     */
-    public static int countXX(String str) {
-        int count = 0;
-
-        for (int i = 0; i < str.length() - 1; i++) {
-            if (str.charAt(i) == 'x' && str.charAt(i + 1) == 'x') {
-                count += 1;
-            }
-        }
-
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p117334
      * 
      * @param str a string

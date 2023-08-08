@@ -74,12 +74,6 @@ class Warmup2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "abcxx,1", "xxx,2", "xxxx,3" })
-    void countXXExamples(String input, int expected) {
-        assertThat(Warmup2.countXX(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Code,CCoCodCode", "abc,aababc", "ab,aab" })
     void stringSplosionExamples(String input, String expected) {
         assertThat(Warmup2.stringSplosion(input)).isEqualTo(expected);
