@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class Recursion1Test {
     @ParameterizedTest
-    @CsvSource({"(()),true", "((())),true", "(((x)),false"})
-    void nestParenExamples(String input, boolean expected) {
-        assertThat(Recursion1.nestParen(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({"catcowcat,cat,2", "catcowcat,cow,1", "catcowcat,dog,0"})
     void strCountExamples(String s, String sub, int expected) {
         assertThat(Recursion1.strCount(s, sub)).isEqualTo(expected);

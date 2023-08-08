@@ -5,34 +5,6 @@ package com.codingbat;
 
 public class Recursion1 {
     /**
-     * codingbat.com/prob/p183174
-     *
-     * @param str a string
-     * @return true if matching open/close parenthesis
-     */
-    public static boolean nestParen(String str) {
-        return nestParen(str, 0, str.length() - 1);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion1#nestParen(String)}
-     *
-     * @param s string
-     * @param i left pos
-     * @param j right pos
-     * @return true if all matching from current in
-     */
-    private static boolean nestParen(String s, int i, int j) {
-        if (i > j) {
-            return true;
-        }
-        if (s.charAt(i) != '(' || s.charAt(j) != ')') {
-            return false;
-        }
-        return nestParen(s, i + 1, j - 1);
-    }
-
-    /**
      * codingbat.com/prob/p186177
      *
      * @param str string
