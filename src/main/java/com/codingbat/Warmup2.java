@@ -5,40 +5,6 @@ package com.codingbat;
 
 public class Warmup2 {
     /**
-     * codingbat.com/prob/p142270
-     *
-     * <p>
-     * Java 11 is currently _not_ supported by CodingBat
-     * <p>
-     * For a pre-11 solution see {@linkplain Warmup2#stringTimes(String, int)}
-     *
-     * @param str a possibly empty string
-     * @param n   multiplier
-     * @return the original string multiplied by n
-     */
-    public static String stringTimes11(String str, int n) {
-        return str.repeat(n);
-    }
-
-    /**
-     * codingbat.com/prob/p142270
-     *
-     * <p>
-     * For a Java 11 solution see {@linkplain Warmup2#stringTimes11(String, int)}
-     *
-     * @param str a possibly empty string
-     * @param n   multiplier
-     * @return the original string multiplied by n
-     */
-    public static String stringTimes(String str, int n) {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            result.append(str);
-        }
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p186759
      *
      * @param str a possibly empty string
@@ -94,7 +60,8 @@ public class Warmup2 {
      * codingbat.com/prob/p121596
      *
      * @param str a possibly empty string
-     * @return a substring extracting char in position 0, 1, 4, ..., prev + 1, prev + 3, ...
+     * @return a substring extracting char in position 0, 1, 4, ..., prev + 1, prev
+     *         + 3, ...
      */
     public static String altPairs(String str) {
         StringBuilder result = new StringBuilder();
@@ -155,7 +122,7 @@ public class Warmup2 {
      * Solution currently not supported by CodingBat (Java 11 required)
      * 
      * @param s a string
-     * @param n   a non negative number
+     * @param n a non negative number
      * @return n times the first 3 chars (or less)
      */
     public static String frontTimes11(String s, int n) {
