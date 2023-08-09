@@ -90,21 +90,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p165666
-     * 
-     * @param str a string
-     * @return copy of input string stripped of chars in odd position
-     */
-    public static String stringBits(String str) {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < str.length(); i += 2) {
-            result.append(str.charAt(i));
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p184031
      * 
      * @param nums an array

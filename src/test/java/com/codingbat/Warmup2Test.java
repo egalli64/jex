@@ -36,12 +36,6 @@ class Warmup2Test {
         assertThat(Warmup2.noTriples(input)).isTrue();
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Hello,Hlo", "Hi,H", "Heeololeo,Hello" })
-    void stringBitsExamples(String input, String expected) {
-        assertThat(Warmup2.stringBits(input)).isEqualTo(expected);
-    }
-
     @Test
     void arrayCount9Example1() {
         int[] input = { 1, 2, 9 };
