@@ -163,22 +163,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p117334
-     * 
-     * @param str a string
-     * @return the concatenation of all the substrings
-     */
-    public static String stringSplosion(String str) {
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < str.length(); i++) {
-            result.append(str, 0, i + 1);
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p186031
      * 
      * @param nums a possibly empty array
