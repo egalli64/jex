@@ -5,17 +5,6 @@ package com.codingbat;
 
 public class Warmup2 {
     /**
-     * codingbat.com/prob/p186759
-     *
-     * @param str a possibly empty string
-     * @return true if the first 'x' in it is immediately followed by another 'x'
-     */
-    public static boolean doubleX(String str) {
-        int x = str.indexOf('x');
-        return x >= 0 && x < str.length() - 1 && str.charAt(x + 1) == 'x';
-    }
-
-    /**
      * codingbat.com/prob/p178318
      *
      * @param str a possibly empty string
