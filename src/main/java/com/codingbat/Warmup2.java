@@ -126,21 +126,6 @@ public class Warmup2 {
         return false;
     }
 
-    /**
-     * codingbat.com/prob/p186031
-     * 
-     * @param nums a possibly empty array
-     * @return true if there is a 9 in the first four positions
-     */
-    public static boolean arrayFront9(int[] nums) {
-        int end = Math.min(nums.length, 4);
-        for (int i = 0; i < end; i++) {
-            if (nums[i] == 9) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     /**
      * codingbat.com/prob/p171260
