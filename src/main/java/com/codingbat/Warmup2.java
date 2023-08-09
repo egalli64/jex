@@ -5,27 +5,6 @@ package com.codingbat;
 
 public class Warmup2 {
     /**
-     * codingbat.com/prob/p136041
-     *
-     * @param nums a possibly empty array
-     * @return true if contains the sequence 1, 2, 3
-     */
-    public static boolean array123(int[] nums) {
-        int next = 1;
-        for (int num : nums) {
-            if (num == next) {
-                if (num == 3) {
-                    return true;
-                }
-                next += 1;
-            } else {
-                next = num == 1 ? 2 : 1;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p121596
      *
      * @param str a possibly empty string
@@ -125,7 +104,6 @@ public class Warmup2 {
         }
         return false;
     }
-
 
     /**
      * codingbat.com/prob/p171260

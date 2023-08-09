@@ -7,12 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup2Test {
-    @Test
-    void array123Example1() {
-        int[] input = { 1, 1, 2, 3, 1 };
-        assertThat(Warmup2.array123(input)).isTrue();
-    }
-
     @ParameterizedTest
     @CsvSource({ "kitten,kien", "Chocolate,Chole", "CodingHorror,Congrr" })
     void altPairsExamples(String input, String expected) {
