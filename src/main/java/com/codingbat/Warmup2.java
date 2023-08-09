@@ -5,26 +5,6 @@ package com.codingbat;
 
 public class Warmup2 {
     /**
-     * codingbat.com/prob/p178318
-     *
-     * @param str a possibly empty string
-     * @return how many times the last two chars are repeated in str
-     */
-    public static int last2(String str) {
-        if (str.length() < 3) {
-            return 0;
-        }
-
-        final int end = str.length() - 2;
-        String tag = str.substring(end);
-        int count = 0;
-        for (int pos = -1; (pos = str.indexOf(tag, pos + 1)) < end;) {
-            count += 1;
-        }
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p136041
      *
      * @param nums a possibly empty array
