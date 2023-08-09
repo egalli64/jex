@@ -70,22 +70,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p184031
-     * 
-     * @param nums an array
-     * @return the number of 9 in it
-     */
-    public static int arrayCount9(int[] nums) {
-        int counter = 0;
-        for (int i : nums) {
-            if (i == 9) {
-                counter += 1;
-            }
-        }
-        return counter;
-    }
-
-    /**
      * codingbat.com/prob/p198640
      * 
      * @param a first string

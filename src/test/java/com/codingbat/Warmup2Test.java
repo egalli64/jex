@@ -30,13 +30,6 @@ class Warmup2Test {
         assertThat(Warmup2.noTriples(input)).isTrue();
     }
 
-    @Test
-    void arrayCount9Example1() {
-        int[] input = { 1, 2, 9 };
-        int expected = 1;
-        assertThat(Warmup2.arrayCount9(input)).isEqualTo(expected);
-    }
-
     @ParameterizedTest
     @CsvSource({ "xxcaazz,xxbaaz,3", "abc,abc,2", "abc,axc,0" })
     void stringMatchExamples(String left, String right, int expected) {
