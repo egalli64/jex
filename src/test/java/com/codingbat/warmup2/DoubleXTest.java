@@ -1,3 +1,8 @@
+/*
+  CodingBat Java Warmup 2 - https://codingbat.com/java/Warmup-2
+
+  My repository - https://github.com/egalli64/jex/
+ */
 package com.codingbat.warmup2;
 
 import static org.assertj.core.api.Assertions.assertThat;
