@@ -25,12 +25,6 @@ class Warmup2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "xxcaazz,xxbaaz,3", "abc,abc,2", "abc,axc,0" })
-    void stringMatchExamples(String left, String right, int expected) {
-        assertThat(Warmup2.stringMatch(left, right)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "yakpak,pak", "pakyak,pak", "yak123ya,123ya" })
     void stringYakExamples(String input, String expected) {
         assertThat(Warmup2.stringYak(input)).isEqualTo(expected);

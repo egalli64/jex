@@ -49,26 +49,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p198640
-     * 
-     * @param a first string
-     * @param b second string
-     * @return how many same length 2 substring are in the same position
-     */
-    public static int stringMatch(String a, String b) {
-        int count = 0;
-
-        final int len = Math.min(a.length(), b.length());
-        for (int i = 0; i < len - 1; i++) {
-            if (a.charAt(i) == b.charAt(i) && a.charAt(i + 1) == b.charAt(i + 1)) {
-                count += 1;
-            }
-        }
-
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p126212
      * 
      * @param str a string
