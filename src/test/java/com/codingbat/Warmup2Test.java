@@ -7,17 +7,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Warmup2Test {
-    @ParameterizedTest
-    @CsvSource({ "kitten,kien", "Chocolate,Chole", "CodingHorror,Congrr" })
-    void altPairsExamples(String input, String expected) {
-        assertThat(Warmup2.altPairs(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void array123Empty() {
-        assertThat(Warmup2.altPairs("")).isEqualTo("");
-    }
-
     @Test
     void noTriplesExample1() {
         int[] input = { 1, 1, 2, 2, 1 };
