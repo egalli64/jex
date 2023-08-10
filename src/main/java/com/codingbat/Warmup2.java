@@ -32,27 +32,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p126212
-     * 
-     * @param str a string
-     * @return a copy of input, with all "y?k" removed
-     */
-    public static String stringYak(String str) {
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < str.length(); i++) {
-            char cur = str.charAt(i);
-            if (cur == 'y' && i < str.length() - 2 && str.charAt(i + 2) == 'k') {
-                i += 2;
-            } else {
-                result.append(cur);
-            }
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p167430
      * 
      * @param nums an array

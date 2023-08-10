@@ -1,22 +1,14 @@
 package com.codingbat;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
 
 class Warmup2Test {
     @Test
     void noTriplesExample1() {
         int[] input = { 1, 1, 2, 2, 1 };
         assertThat(Warmup2.noTriples(input)).isTrue();
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "yakpak,pak", "pakyak,pak", "yak123ya,123ya" })
-    void stringYakExamples(String input, String expected) {
-        assertThat(Warmup2.stringYak(input)).isEqualTo(expected);
     }
 
     @Test
