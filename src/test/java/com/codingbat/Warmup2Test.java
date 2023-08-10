@@ -16,11 +16,4 @@ class Warmup2Test {
         int[] input = { 1, 2, 7, 1 };
         assertThat(Warmup2.has271(input)).isTrue();
     }
-
-    @Test
-    void array667Example1() {
-        int[] input = { 6, 6, 2 };
-        int expected = 1;
-        assertThat(Warmup2.array667(input)).isEqualTo(expected);
-    }
 }

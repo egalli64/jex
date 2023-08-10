@@ -46,22 +46,4 @@ public class Warmup2 {
         }
         return false;
     }
-
-    /**
-     * codingbat.com/prob/p110019
-     * 
-     * @param nums an array
-     * @return count couples of 6 and 6 or 7
-     */
-    public static int array667(int[] nums) {
-        int result = 0;
-
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) {
-                result += 1;
-            }
-        }
-
-        return result;
-    }
 }
