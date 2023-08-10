@@ -36,12 +36,6 @@ class Warmup2Test {
         assertThat(Warmup2.has271(input)).isTrue();
     }
 
-    @ParameterizedTest
-    @CsvSource({ "xxHxix,xHix", "abxxxcd,abcd", "xabxxxcdx,xabcdx" })
-    void stringXExamples(String input, String expected) {
-        assertThat(Warmup2.stringX(input)).isEqualTo(expected);
-    }
-
     @Test
     void array667Example1() {
         int[] input = { 6, 6, 2 };

@@ -86,29 +86,6 @@ public class Warmup2 {
     }
 
     /**
-     * codingbat.com/prob/p171260
-     * 
-     * @param str a string
-     * @return remove all 'x' but the extreme ones
-     */
-    public static String stringX(String str) {
-        if (str.length() < 3) {
-            return str;
-        }
-
-        StringBuilder result = new StringBuilder();
-        result.append(str.charAt(0));
-        for (int i = 1; i < str.length() - 1; i++) {
-            char cur = str.charAt(i);
-            if (cur != 'x') {
-                result.append(cur);
-            }
-        }
-        result.append(str.charAt(str.length() - 1));
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p110019
      * 
      * @param nums an array
