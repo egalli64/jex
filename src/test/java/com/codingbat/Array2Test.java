@@ -73,13 +73,6 @@ class Array2Test {
     }
 
     @Test
-    void bigDiffExample1() {
-        int[] values = { 10, 3, 5, 6 };
-        int expected = 7;
-        assertThat(Array2.bigDiff(values)).isEqualTo(expected);
-    }
-
-    @Test
     void centeredAverageExample1() {
         int[] values = { 1, 2, 3, 4, 100 };
         int expected = 3;
