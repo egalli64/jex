@@ -6,27 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void countEvensExample1() {
-        int[] input = { 2, 1, 2, 3, 4 };
-        int expected = 3;
-        assertThat(Array2.countEvens(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void countEvensExample2() {
-        int[] input = { 2, 2, 0 };
-        int expected = 3;
-        assertThat(Array2.countEvens(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void countEvensExample3() {
-        int[] input = { 1, 3, 5 };
-        int expected = 0;
-        assertThat(Array2.countEvens(input)).isEqualTo(expected);
-    }
-
-    @Test
     void sum13Example1() {
         int[] input = { 1, 2, 2, 1 };
         int expected = 6;

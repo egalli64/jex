@@ -7,22 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p162010
-     *
-     * @param nums a possibly empty array of integers
-     * @return how many even values are in nums
-     */
-    public static int countEvens(int[] nums) {
-        int result = 0;
-        for (int num : nums) {
-            if (num % 2 == 0) {
-                result += 1;
-            }
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p127384
      *
      * @param nums a possibly empty array of integers
