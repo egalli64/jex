@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class StringMatchTest {
     @ParameterizedTest
     @CsvSource({ "xxcaazz,xxbaaz,3", "abc,abc,2", "abc,axc,0" })
-    void stringMatchExamples(String left, String right, int expected) {
+    void solutionExamples(String left, String right, int expected) {
         assertThat(StringMatch.solution(left, right)).isEqualTo(expected);
     }
 }
