@@ -61,26 +61,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p104627
-     * 
-     * @param nums an array
-     * @return are 1s more than 4s?
-     */
-    public static boolean more14(int[] nums) {
-        int deltaOneFour = 0;
-
-        for (int num : nums) {
-            if (num == 1) {
-                deltaOneFour += 1;
-            } else if (num == 4) {
-                deltaOneFour -= 1;
-            }
-        }
-
-        return deltaOneFour > 0;
-    }
-
-    /**
      * codingbat.com/prob/p186672
      * 
      * @param nums an array

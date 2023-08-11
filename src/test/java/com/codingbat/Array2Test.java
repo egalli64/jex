@@ -27,12 +27,6 @@ class Array2Test {
     }
 
     @Test
-    void more14Example1() {
-        int[] values = { 1, 4, 1 };
-        assertThat(Array2.more14(values)).isTrue();
-    }
-
-    @Test
     void only14Example1() {
         int[] values = { 1, 4, 1, 4 };
         assertThat(Array2.only14(values)).isTrue();
