@@ -7,22 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p194525
-     *
-     * @param nums a possibly empty array of integers
-     * @return true if nums does not contain 1 or 3
-     */
-    public static boolean lucky13(int[] nums) {
-        for (int num : nums) {
-            if (num == 1 || num == 3) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p180920
      *
      * @param n a non-negative integer

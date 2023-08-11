@@ -6,24 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void lucky13Example1() {
-        int[] input = { 0, 2, 4 };
-        assertThat(Array2.lucky13(input)).isTrue();
-    }
-
-    @Test
-    void lucky13Example2() {
-        int[] input = { 1, 2, 3 };
-        assertThat(Array2.lucky13(input)).isFalse();
-    }
-
-    @Test
-    void lucky13Example3() {
-        int[] input = { 1, 2, 4 };
-        assertThat(Array2.lucky13(input)).isFalse();
-    }
-
-    @Test
     void fizzArrayExample1() {
         int input = 4;
         int[] expected = { 0, 1, 2, 3 };
