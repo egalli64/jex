@@ -77,24 +77,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p121853
-     * 
-     * @param nums an array
-     * @return true if contains subsequence [2, 2]
-     */
-    public static boolean has22(int[] nums) {
-        boolean prev = nums.length == 0 || nums[0] == 2;
-        for (int i = 1; i < nums.length; i++) {
-            boolean cur = nums[i] == 2;
-            if (prev && cur) {
-                return true;
-            }
-            prev = cur;
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p199612
      * 
      * @param nums an array
