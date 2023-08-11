@@ -77,31 +77,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p111327
-     * 
-     * @param nums an array
-     * @return sum of elements, ignoring sections delimited by 6 and 7
-     */
-    public static int sum67(int[] nums) {
-        int result = 0;
-
-        boolean excluded = false;
-        for (int num : nums) {
-            if (num == 6) {
-                excluded = true;
-            }
-            if (!excluded) {
-                result += num;
-            }
-            if (num == 7) {
-                excluded = false;
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p121853
      * 
      * @param nums an array

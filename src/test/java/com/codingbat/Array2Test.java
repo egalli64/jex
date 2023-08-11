@@ -45,13 +45,6 @@ class Array2Test {
     }
 
     @Test
-    void sum67Example1() {
-        int[] values = { 1, 2, 2 };
-        int expected = 5;
-        assertThat(Array2.sum67(values)).isEqualTo(expected);
-    }
-
-    @Test
     void has22Example1() {
         int[] values = { 1, 2, 2 };
         assertThat(Array2.has22(values)).isTrue();
