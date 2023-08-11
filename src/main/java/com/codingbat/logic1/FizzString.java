@@ -40,6 +40,12 @@ public class FizzString {
         return result.toString();
     }
 
+    /**
+     * Check the chars, then build the result string
+     * 
+     * @param str a possibly empty string
+     * @return str, "Fizz", "Buzz", or "FizzBuzz"
+     */
     public static String compact(String str) {
         if (str.isEmpty()) {
             return str;
