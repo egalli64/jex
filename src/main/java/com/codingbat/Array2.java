@@ -7,26 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p127384
-     *
-     * @param nums a possibly empty array of integers
-     * @return sum of all the elements but the 13s and the next ones
-     */
-    public static int sum13(int[] nums) {
-        int result = 0;
-
-        boolean skip = false;
-        for (int num : nums) {
-            if (num != 13 && !skip) {
-                result += num;
-            }
-            skip = num == 13;
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p194525
      *
      * @param nums a possibly empty array of integers
@@ -82,7 +62,8 @@ public class Array2 {
      *
      * @param nums1 an array
      * @param nums2 another array, same size
-     * @return times that the elements in the same position differ by 2 or less, but are not equal
+     * @return times that the elements in the same position differ by 2 or less, but
+     *         are not equal
      */
     public static int matchUp(int[] nums1, int[] nums2) {
         int result = 0;

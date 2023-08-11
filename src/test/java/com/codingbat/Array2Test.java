@@ -6,34 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void sum13Example1() {
-        int[] input = { 1, 2, 2, 1 };
-        int expected = 6;
-        assertThat(Array2.sum13(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void sum13Example2() {
-        int[] input = { 1, 1 };
-        int expected = 2;
-        assertThat(Array2.sum13(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void sum13Example3() {
-        int[] input = { 1, 2, 2, 1, 13 };
-        int expected = 6;
-        assertThat(Array2.sum13(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void sum13Example3a() {
-        int[] input = { 1, 2, 2, 1, 13, 42 };
-        int expected = 6;
-        assertThat(Array2.sum13(input)).isEqualTo(expected);
-    }
-
-    @Test
     void lucky13Example1() {
         int[] input = { 0, 2, 4 };
         assertThat(Array2.lucky13(input)).isTrue();
