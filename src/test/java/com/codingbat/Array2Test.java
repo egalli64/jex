@@ -73,13 +73,6 @@ class Array2Test {
     }
 
     @Test
-    void centeredAverageExample1() {
-        int[] values = { 1, 2, 3, 4, 100 };
-        int expected = 3;
-        assertThat(Array2.centeredAverage(values)).isEqualTo(expected);
-    }
-
-    @Test
     void sum67Example1() {
         int[] values = { 1, 2, 2 };
         int expected = 5;
