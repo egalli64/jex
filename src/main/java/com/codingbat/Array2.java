@@ -61,22 +61,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p199612
-     * 
-     * @param nums an array
-     * @return true if sum of 2s is 8
-     */
-    public static boolean sum28(int[] nums) {
-        int count = 0;
-        for (int num : nums) {
-            if (num == 2) {
-                count += 1;
-            }
-        }
-        return count == 4;
-    }
-
-    /**
      * codingbat.com/prob/p104627
      * 
      * @param nums an array

@@ -27,12 +27,6 @@ class Array2Test {
     }
 
     @Test
-    void sum28Example1() {
-        int[] values = { 2, 3, 2, 2, 4, 2 };
-        assertThat(Array2.sum28(values)).isTrue();
-    }
-
-    @Test
     void more14Example1() {
         int[] values = { 1, 4, 1 };
         assertThat(Array2.more14(values)).isTrue();
