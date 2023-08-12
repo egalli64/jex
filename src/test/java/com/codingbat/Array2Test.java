@@ -6,13 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void fizzArrayExample1() {
-        int input = 4;
-        int[] expected = { 0, 1, 2, 3 };
-        assertThat(Array2.fizzArray(input)).containsExactly(expected);
-    }
-
-    @Test
     void no14Example1() {
         int[] input = { 1, 2, 3 };
         assertThat(Array2.no14(input)).isTrue();

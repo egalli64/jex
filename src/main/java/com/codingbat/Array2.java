@@ -7,22 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p180920
-     *
-     * @param n a non-negative integer
-     * @return an array sized n with the natural (zero-based) sequence
-     */
-    public static int[] fizzArray(int n) {
-        int[] result = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            result[i] = i;
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p136648
      *
      * @param nums an array of int
