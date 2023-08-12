@@ -20,12 +20,6 @@ class Array2Test {
     }
 
     @Test
-    void only14Example1() {
-        int[] values = { 1, 4, 1, 4 };
-        assertThat(Array2.only14(values)).isTrue();
-    }
-
-    @Test
     void fizzArray2Example1() {
         int input = 4;
         String[] expected = { "0", "1", "2", "3" };

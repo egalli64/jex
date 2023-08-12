@@ -45,21 +45,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p186672
-     * 
-     * @param nums an array
-     * @return true if only 1 and 4
-     */
-    public static boolean only14(int[] nums) {
-        for (int num : nums) {
-            if (num != 1 && num != 4) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p178353
      * 
      * @param n non-negative
