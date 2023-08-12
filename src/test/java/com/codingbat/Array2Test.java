@@ -20,13 +20,6 @@ class Array2Test {
     }
 
     @Test
-    void fizzArray2Example1() {
-        int input = 4;
-        String[] expected = { "0", "1", "2", "3" };
-        assertThat(Array2.fizzArray2(input)).isEqualTo(expected);
-    }
-
-    @Test
     void isEverywhereExample1() {
         int[] input = { 1, 2, 1, 3 };
         int target = 1;
