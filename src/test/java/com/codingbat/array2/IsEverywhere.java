@@ -8,8 +8,8 @@ package com.codingbat.array2;
 /**
  * isEverywhere - https://codingbat.com/prob/p110222
  * <p>
- * Check if the value is at least one value for each pair in the passed arrays,
- * of if the array is empty
+ * Check if the value is at least one value for each pair in the passed arrays.
+ * If the array is too short to be checked, true is expected
  */
 public class IsEverywhere {
     /**
@@ -18,7 +18,7 @@ public class IsEverywhere {
      * @param nums an array
      * @param val  a value
      * @return true if value is found for each pair
-     * @apiNote curiously, if the array is too short to be checked, true is expected
+     * @apiNote arrays sized less than 2 lead always to true
      */
     public static boolean solution(int[] nums, int val) {
         for (int i = 1; i < nums.length; i++) {
