@@ -26,31 +26,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p191878
-     * 
-     * @param nums an array
-     * @return true if contains sub [2, 2] of [4, 4], but not both
-     */
-    public static boolean either24(int[] nums) {
-        if (nums.length < 2) {
-            return false;
-        }
-
-        boolean sub2 = false;
-        boolean sub4 = false;
-
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == 2 && nums[i - 1] == 2) {
-                sub2 = true;
-            }
-            if (nums[i] == 4 && nums[i - 1] == 4) {
-                sub4 = true;
-            }
-        }
-        return sub2 ^ sub4;
-    }
-
-    /**
      * codingbat.com/prob/p168357
      * 
      * @param nums an array
