@@ -7,25 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p136648
-     *
-     * @param nums an array of int
-     * @return true if no 1, 4 in it
-     */
-    public static boolean no14(int[] nums) {
-        int count1 = 0;
-        int count4 = 0;
-        for (int num : nums) {
-            if (num == 1) {
-                count1 += 1;
-            } else if (num == 4) {
-                count4 += 1;
-            }
-        }
-        return count1 == 0 || count4 == 0;
-    }
-
-    /**
      * codingbat.com/prob/p136254
      *
      * @param nums1 an array
