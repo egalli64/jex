@@ -14,13 +14,6 @@ class Array2Test {
     }
 
     @Test
-    void isEverywhereExample1() {
-        int[] input = { 1, 2, 1, 3 };
-        int target = 1;
-        assertThat(Array2.isEverywhere(input, target)).isTrue();
-    }
-
-    @Test
     void either24Example1() {
         int[] input = { 1, 2, 2 };
         assertThat(Array2.either24(input)).isTrue();

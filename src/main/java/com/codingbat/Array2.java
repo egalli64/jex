@@ -26,26 +26,6 @@ public class Array2 {
     }
 
     /**
-     * codingbat.com/prob/p110222
-     * 
-     * @param nums an array
-     * @param val  a value
-     * @return true if any element is val or has val as neighbor
-     * @apiNote curiously, if the array is to short to check, true is expected
-     */
-    public static boolean isEverywhere(int[] nums, int val) {
-        if (nums.length == 0 || nums.length == 1 && nums[0] != val) {
-            return true;
-        }
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] != val && nums[i - 1] != val) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p191878
      * 
      * @param nums an array
