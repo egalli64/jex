@@ -7,23 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p134300
-     * 
-     * @param nums an array sized len or less
-     * @param len  an int less or equal to nums length
-     * @return true if the first len elements are also in the end
-     */
-    public static boolean sameEnds(int[] nums, int len) {
-        for (int i = 0; i < len; i++) {
-            int pos = nums.length - len + i;
-            if (nums[i] != nums[pos]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p137874
      * 
      * @param nums an array

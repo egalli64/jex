@@ -6,20 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void sameEndsExample1() {
-        int[] input = { 5, 6, 45, 99, 13, 5, 6 };
-        int len = 1;
-        assertThat(Array2.sameEnds(input, len)).isFalse();
-    }
-
-    @Test
-    void sameEndsExample2() {
-        int[] input = { 5, 6, 45, 99, 13, 5, 6 };
-        int len = 2;
-        assertThat(Array2.sameEnds(input, len)).isTrue();
-    }
-
-    @Test
     void tripleUpExample1() {
         int[] input = { 1, 4, 5, 6, 2 };
         assertThat(Array2.tripleUp(input)).isTrue();
