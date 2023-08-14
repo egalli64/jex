@@ -8,8 +8,8 @@ package com.codingbat.array2;
 /**
  * isEverywhere - https://codingbat.com/prob/p110222
  * <p>
- * Check if the value is at least one value for each pair in the passed arrays.
- * If the array is too short to be checked, true is expected
+ * Check if the given value is in each pair of element in the passed arrays. If
+ * the array is too short to be checked, return true.
  */
 public class IsEverywhere {
     /**
