@@ -7,27 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p169260
-     * 
-     * @param nums an array
-     * @return true if there is a 1 followed (maybe later) by 2
-     */
-    public static boolean has12(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1) {
-                for (int j = i + 1; j < nums.length; j++) {
-                    if (nums[j] == 2) {
-                        return true;
-                    }
-                }
-                break;
-            }
-        }
-
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p159979
      * 
      * @param nums an array
