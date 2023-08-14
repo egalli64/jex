@@ -7,28 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p159979
-     * 
-     * @param nums an array
-     * @return true if it has a sub of 3 even or odd values
-     */
-    public static boolean modThree(int[] nums) {
-        if (nums.length < 3) {
-            return false;
-        }
-
-        for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i - 1] % 2 == 0 && nums[i] % 2 == 0 && nums[i + 1] % 2 == 0) {
-                return true;
-            }
-            if (nums[i - 1] % 2 == 1 && nums[i] % 2 == 1 && nums[i + 1] % 2 == 1) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p109783
      * 
      * @param nums an array
