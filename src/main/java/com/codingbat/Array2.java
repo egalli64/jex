@@ -7,21 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p142539
-     * 
-     * @param start first (included)
-     * @param end   last (excluded), not smaller than first
-     * @return the generated array
-     */
-    public static int[] fizzArray3(int start, int end) {
-        int[] result = new int[end - start];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = start + i;
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p105031
      * 
      * @param nums an array

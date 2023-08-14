@@ -6,14 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void fizzArray3Example1() {
-        int begin = 5;
-        int end = 10;
-        int[] expected = { 5, 6, 7, 8, 9 };
-        assertThat(Array2.fizzArray3(begin, end)).isEqualTo(expected);
-    }
-
-    @Test
     void shiftLeftExample1() {
         int[] input = { 6, 2, 5, 3 };
         int[] expected = { 2, 5, 3, 6 };
