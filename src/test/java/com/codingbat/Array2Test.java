@@ -6,14 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void matchUpExample1() {
-        int[] left = { 1, 2, 3 };
-        int[] right = { 2, 3, 10 };
-        int expected = 2;
-        assertThat(Array2.matchUp(left, right)).isEqualTo(expected);
-    }
-
-    @Test
     void has77Example1() {
         int[] input = { 1, 7, 7 };
         assertThat(Array2.has77(input)).isTrue();

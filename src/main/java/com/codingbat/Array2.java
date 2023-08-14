@@ -7,25 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p136254
-     *
-     * @param nums1 an array
-     * @param nums2 another array, same size
-     * @return times that the elements in the same position differ by 2 or less, but
-     *         are not equal
-     */
-    public static int matchUp(int[] nums1, int[] nums2) {
-        int result = 0;
-        for (int i = 0; i < nums1.length; i++) {
-            int difference = Math.abs(nums1[i] - nums2[i]);
-            if (difference > 0 && difference < 3) {
-                result += 1;
-            }
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p168357
      * 
      * @param nums an array
