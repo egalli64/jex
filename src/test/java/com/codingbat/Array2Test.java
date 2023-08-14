@@ -6,12 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void tripleUpExample1() {
-        int[] input = { 1, 4, 5, 6, 2 };
-        assertThat(Array2.tripleUp(input)).isTrue();
-    }
-
-    @Test
     void fizzArray3Example1() {
         int begin = 5;
         int end = 10;

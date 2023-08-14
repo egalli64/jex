@@ -7,24 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p137874
-     * 
-     * @param nums an array
-     * @return true if contains a sub of three increasing adjacent ints
-     */
-    public static boolean tripleUp(int[] nums) {
-        if (nums.length < 3) {
-            return false;
-        }
-        for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i - 1] == nums[i] - 1 && nums[i] == nums[i + 1] - 1) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p142539
      * 
      * @param start first (included)
