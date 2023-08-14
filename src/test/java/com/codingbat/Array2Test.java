@@ -6,12 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void has77Example1() {
-        int[] input = { 1, 7, 7 };
-        assertThat(Array2.has77(input)).isTrue();
-    }
-
-    @Test
     void has12Example1() {
         int[] input = { 1, 3, 2 };
         assertThat(Array2.has12(input)).isTrue();

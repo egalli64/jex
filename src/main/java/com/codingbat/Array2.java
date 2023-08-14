@@ -7,26 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p168357
-     * 
-     * @param nums an array
-     * @return true if contains sub [7, 7] or [7, x, 7]
-     */
-    public static boolean has77(int[] nums) {
-        if (nums.length < 2) {
-            return false;
-        }
-        for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i - 1] == 7 && nums[i + 1] == 7) {
-                return true;
-            } else if (nums[i] == 7 && (nums[i - 1] == 7 || nums[i + 1] == 7)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p169260
      * 
      * @param nums an array
