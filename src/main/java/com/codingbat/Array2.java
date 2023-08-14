@@ -7,30 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p109783
-     * 
-     * @param nums an array
-     * @return true if there are exactly three _separated_ 3
-     */
-    public static boolean haveThree(int[] nums) {
-        if (nums.length < 5) {
-            return false;
-        }
-
-        int count = nums[0] == 3 ? 1 : 0;
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == 3) {
-                if (nums[i - 1] == 3) {
-                    return false;
-                }
-                count += 1;
-            }
-        }
-
-        return count == 3;
-    }
-
-    /**
      * codingbat.com/prob/p102145
      * 
      * @param nums an array

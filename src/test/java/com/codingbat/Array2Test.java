@@ -6,12 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void haveThreeExample1() {
-        int[] input = { 3, 1, 3, 1, 3 };
-        assertThat(Array2.haveThree(input)).isTrue();
-    }
-
-    @Test
     void twoTwoExample1() {
         int[] input = { 4, 2, 2, 3 };
         assertThat(Array2.twoTwo(input)).isTrue();
