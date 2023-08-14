@@ -7,30 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p102145
-     * 
-     * @param nums an array
-     * @return true if each 2 is not alone
-     */
-    public static boolean twoTwo(int[] nums) {
-        if (nums.length < 2) {
-            return nums.length == 0 || nums[0] != 2;
-        }
-
-        if (nums[0] == 2 && nums[1] != 2) {
-            return false;
-        }
-
-        for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i] == 2 && nums[i - 1] != 2 && nums[i + 1] != 2) {
-                return false;
-            }
-        }
-
-        return nums.length <= 2 || nums[nums.length - 1] != 2 || nums[nums.length - 2] == 2;
-    }
-
-    /**
      * codingbat.com/prob/p134300
      * 
      * @param nums an array sized len or less

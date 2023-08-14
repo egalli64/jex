@@ -6,12 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void twoTwoExample1() {
-        int[] input = { 4, 2, 2, 3 };
-        assertThat(Array2.twoTwo(input)).isTrue();
-    }
-
-    @Test
     void sameEndsExample1() {
         int[] input = { 5, 6, 45, 99, 13, 5, 6 };
         int len = 1;
