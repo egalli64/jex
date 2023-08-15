@@ -6,13 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void pre4Example1() {
-        int[] input = { 1, 2, 4, 1 };
-        int[] expected = { 1, 2 };
-        assertThat(Array2.pre4(input)).isEqualTo(expected);
-    }
-
-    @Test
     void post4Example1() {
         int[] input = { 2, 4, 1, 2 };
         int[] expected = { 1, 2 };

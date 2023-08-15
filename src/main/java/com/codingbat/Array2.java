@@ -7,20 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p100246
-     * 
-     * @param nums non-empty with at least a 4
-     * @return the array up to the first 4 in array
-     */
-    public static int[] pre4(int[] nums) {
-        int i = 0;
-        while (nums[i] != 4) {
-            i += 1;
-        }
-        return Arrays.copyOf(nums, i);
-    }
-
-    /**
      * codingbat.com/prob/p164144
      * 
      * @param nums non-empty, with at least a 4
