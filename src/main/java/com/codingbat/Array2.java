@@ -7,26 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p199484
-     * 
-     * @param nums an array
-     * @return 10x changes the followers to itself, until next 10x
-     */
-    public static int[] tenRun(int[] nums) {
-        boolean active = false;
-        int changer = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 10 == 0) {
-                changer = nums[i];
-                active = true;
-            } else if (active) {
-                nums[i] = changer;
-            }
-        }
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p100246
      * 
      * @param nums non-empty with at least a 4
