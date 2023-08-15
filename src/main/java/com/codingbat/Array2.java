@@ -7,25 +7,6 @@ import java.util.Arrays;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p105031
-     * 
-     * @param nums an array
-     * @return left shifted array
-     */
-    public static int[] shiftLeft(int[] nums) {
-        if (nums.length != 0) {
-            int buffer = nums[0];
-
-            for (int i = 1; i < nums.length; i++) {
-                nums[i - 1] = nums[i];
-            }
-            nums[nums.length - 1] = buffer;
-        }
-
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p199484
      * 
      * @param nums an array

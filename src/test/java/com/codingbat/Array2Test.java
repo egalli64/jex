@@ -6,13 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void shiftLeftExample1() {
-        int[] input = { 6, 2, 5, 3 };
-        int[] expected = { 2, 5, 3, 6 };
-        assertThat(Array2.shiftLeft(input)).isEqualTo(expected);
-    }
-
-    @Test
     void tenRunExample1() {
         int[] input = { 2, 10, 3, 4, 20, 5 };
         int[] expected = { 2, 10, 10, 10, 20, 20 };
