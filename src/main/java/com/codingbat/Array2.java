@@ -3,23 +3,7 @@
  */
 package com.codingbat;
 
-import java.util.Arrays;
-
 public class Array2 {
-    /**
-     * codingbat.com/prob/p164144
-     * 
-     * @param nums non-empty, with at least a 4
-     * @return the array following the last 4 in the array
-     */
-    public static int[] post4(int[] nums) {
-        int i = nums.length - 1;
-        while (nums[i] != 4) {
-            i -= 1;
-        }
-        return Arrays.copyOfRange(nums, i + 1, nums.length);
-    }
-
     /**
      * codingbat.com/prob/p169506
      * 
