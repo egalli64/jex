@@ -5,26 +5,6 @@ package com.codingbat;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p193753
-     * 
-     * @param nums an array
-     * @return rearrange with zeroes at the beginning
-     */
-    public static int[] zeroFront(int[] nums) {
-        int[] result = new int[nums.length];
-
-        int j = result.length - 1;
-        for (int num : nums) {
-            if (num != 0) {
-                result[j] = num;
-                j -= 1;
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p196976
      * 
      * @param nums an array

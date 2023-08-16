@@ -6,13 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void zeroFrontExample1() {
-        int[] input = { 1, 0, 0, 1 };
-        int[] expected = { 0, 0, 1, 1 };
-        assertThat(Array2.zeroFront(input)).isEqualTo(expected);
-    }
-
-    @Test
     void withoutTenExample1() {
         int[] input = { 1, 10, 10, 2 };
         int[] expected = { 1, 2, 0, 0 };
