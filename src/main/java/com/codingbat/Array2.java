@@ -5,24 +5,6 @@ package com.codingbat;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p196976
-     * 
-     * @param nums an array
-     * @return 10s go to 0 and to the right
-     */
-    public static int[] withoutTen(int[] nums) {
-        int[] result = new int[nums.length];
-        int j = 0;
-        for (int num : nums) {
-            if (num != 10) {
-                result[j] = num;
-                j += 1;
-            }
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p187050
      * 
      * @param nums an array
