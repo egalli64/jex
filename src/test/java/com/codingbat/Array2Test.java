@@ -6,14 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void notAloneExample10() {
-        int[] input = { 1, 1, 1, 2 };
-        int value = 1;
-        int[] expected = { 1, 1, 1, 2 };
-        assertThat(Array2.notAlone(input, value)).isEqualTo(expected);
-    }
-
-    @Test
     void zeroFrontExample1() {
         int[] input = { 1, 0, 0, 1 };
         int[] expected = { 0, 0, 1, 1 };

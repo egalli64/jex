@@ -5,22 +5,6 @@ package com.codingbat;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p169506
-     * 
-     * @param nums an array
-     * @param val  to be changed
-     * @return changed val with the highest neighbor, when not in extreme position
-     */
-    public static int[] notAlone(int[] nums, int val) {
-        for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i] == val && nums[i] != nums[i - 1] && nums[i] != nums[i + 1]) {
-                nums[i] = Math.max(nums[i - 1], nums[i + 1]);
-            }
-        }
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p193753
      * 
      * @param nums an array
