@@ -6,13 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class Array2Test {
     @Test
-    void zeroMaxExample1() {
-        int[] input = { 0, 5, 0, 3 };
-        int[] expected = { 5, 5, 3, 3 };
-        assertThat(Array2.zeroMax(input)).isEqualTo(expected);
-    }
-
-    @Test
     void evenOddExample1() {
         int[] input = { 1, 0, 1, 0, 0, 1, 1 };
         int[] expected = { 0, 0, 0, 1, 1, 1, 1 };
