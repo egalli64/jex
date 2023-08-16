@@ -12,14 +12,14 @@ package com.codingbat.warmup2;
  */
 public class Last2 {
     /**
-     * If the string has less than 3 chars, there could be no repetition. Use
-     * String::indexOf() to get all other previous instances.
+     * If the string has less than 4 chars, there could be no repetition. Use
+     * String::indexOf to get all other previous instances.
      *
      * @param str a possibly empty string
-     * @return how many times the last two chars are repeated in str
+     * @return number of repetition
      */
     public static int solution(String str) {
-        if (str.length() < 3) {
+        if (str.length() < 4) {
             return 0;
         }
 
@@ -28,6 +28,26 @@ public class Last2 {
         int count = 0;
         int pos = -1;
         while ((pos = str.indexOf(tag, pos + 1)) < end) {
+            count += 1;
+        }
+        return count;
+    }
+
+    /**
+     * variation using a for-loop
+     *
+     * @param str a possibly empty string
+     * @return number of repetition
+     */
+    public static int solutionFor(String str) {
+        if (str.length() < 4) {
+            return 0;
+        }
+
+        final int end = str.length() - 2;
+        String tag = str.substring(end);
+        int count = 0;
+        for (int pos = -1; (pos = str.indexOf(tag, pos + 1)) < end;) {
             count += 1;
         }
         return count;

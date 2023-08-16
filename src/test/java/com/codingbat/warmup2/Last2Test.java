@@ -16,4 +16,10 @@ class Last2Test {
     void solutionExamples(String input, int expected) {
         assertThat(Last2.solution(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "hixxhi,1", "xaxxaxaxx,1", "axxxaaxx,2" })
+    void solutionForExamples(String input, int expected) {
+        assertThat(Last2.solutionFor(input)).isEqualTo(expected);
+    }
 }
