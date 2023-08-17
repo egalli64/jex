@@ -5,22 +5,6 @@ package com.codingbat;
 
 public class Array2 {
     /**
-     * codingbat.com/prob/p105771
-     * 
-     * @param nums an array
-     * @return even numbers before odd ones
-     */
-    public static int[] evenOdd(int[] nums) {
-        int[] result = new int[nums.length];
-        int even = 0;
-        int odd = result.length - 1;
-        for (int num : nums) {
-            result[num % 2 == 0 ? even++ : odd--] = num;
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p153059
      * 
      * @param start first value
