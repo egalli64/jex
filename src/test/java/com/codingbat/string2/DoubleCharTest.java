@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class DoubleCharTest {
     @ParameterizedTest
     @CsvSource({ "The,TThhee", "AAbb,AAAAbbbb", "Hi-There,HHii--TThheerree" })
-    void doubleCharExamples(String input, String expected) {
+    void solutionExamples(String input, String expected) {
         assertThat(DoubleChar.solution(input)).isEqualTo(expected);
     }
 }
