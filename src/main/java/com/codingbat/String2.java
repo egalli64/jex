@@ -10,22 +10,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p165312
-     *
-     * @param str a string
-     * @return copy of str, where each char is duplicated
-     */
-    public static String doubleChar(String str) {
-        StringBuilder result = new StringBuilder();
-
-        for (char c : str.toCharArray()) {
-            result.append(c).append(c);
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p123614
      *
      * @param str a string
