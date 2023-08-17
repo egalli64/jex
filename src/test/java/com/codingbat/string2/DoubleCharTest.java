@@ -1,3 +1,8 @@
+/*
+  CodingBat Java String 2 - https://codingbat.com/java/String-2
+
+  My repository - https://github.com/egalli64/jex/
+ */
 package com.codingbat.string2;
 
 import static org.assertj.core.api.Assertions.assertThat;
