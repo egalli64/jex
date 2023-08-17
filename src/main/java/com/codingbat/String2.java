@@ -107,34 +107,6 @@ public class String2 {
         }
         return true;
     }
-
-    /**
-     * codingbat.com/prob/p111624
-     *
-     * @param str a string
-     * @return true if same number of "cat" and "dog"
-     */
-    public static boolean catDog(String str) {
-        return counter(str, "cat") == counter(str, "dog");
-    }
-
-    /**
-     * Helper for {@linkplain String2#catDog(String)}
-     *
-     * @param s      where to search
-     * @param target what to search
-     * @return number of targets
-     */
-    private static int counter(String s, String target) {
-        int count = 0;
-        int pos = 0;
-        while ((pos = s.indexOf(target, pos)) != -1) {
-            count += 1;
-            pos += 1;
-        }
-        return count;
-    }
-
     /**
      * codingbat.com/prob/p126880
      *

@@ -49,12 +49,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "catdog,true", "catcat,false", "1cat1cadodog,true" })
-    void catDogExamples(String input, boolean expected) {
-        assertThat(String2.catDog(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hiabc,abc,true", "AbC,HiaBc,true", "abc,abXabc,true" })
     void endOtherExamples(String a, String b, boolean expected) {
         assertThat(String2.endOther(a, b)).isEqualTo(expected);
