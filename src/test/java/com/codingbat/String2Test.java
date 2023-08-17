@@ -49,12 +49,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "abc hi ho,1", "ABChi hi,2", "hihi,2" })
-    void countHiExamples(String input, int expected) {
-        assertThat(String2.countHi(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "catdog,true", "catcat,false", "1cat1cadodog,true" })
     void catDogExamples(String input, boolean expected) {
         assertThat(String2.catDog(input)).isEqualTo(expected);

@@ -109,22 +109,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p147448
-     *
-     * @param str a string
-     * @return number of "hi" in the string
-     */
-    public static int countHi(String str) {
-        int count = 0;
-        int pos = 0;
-        while ((pos = str.indexOf("hi", pos)) != -1) {
-            count += 1;
-            pos += 1;
-        }
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p111624
      *
      * @param str a string
