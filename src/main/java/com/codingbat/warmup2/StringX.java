@@ -19,7 +19,7 @@ public class StringX {
      * @return a almost no-x string
      */
     public static String solution(String str) {
-        if (str.length() < 3) {
+        if (str.length() <= 2) {
             return str;
         }
 
@@ -44,7 +44,7 @@ public class StringX {
      * @return a almost no-x string
      */
     public static String alternative(String str) {
-        if (str.length() < 3) {
+        if (str.length() <= 2) {
             return str;
         }
 
