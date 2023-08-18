@@ -59,16 +59,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p134250
-     *
-     * @param str a string
-     * @return true if the string is x-y balanced - a y balances all the previous x
-     */
-    public static boolean xyBalance(String str) {
-        return str.indexOf('x', str.lastIndexOf('y') + 1) == -1;
-    }
-
-    /**
      * codingbat.com/prob/p125185
      *
      * @param a first
