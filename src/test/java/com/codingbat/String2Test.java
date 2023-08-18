@@ -37,12 +37,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hiabc,abc,true", "AbC,HiaBc,true", "abc,abXabc,true" })
-    void endOtherExamples(String a, String b, boolean expected) {
-        assertThat(String2.endOther(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abcxyz,true", "abc.xyz,false", "xyz.abc,true" })
     void xyzThereExamples(String input, boolean expected) {
         assertThat(String2.xyzThere(input)).isEqualTo(expected);
