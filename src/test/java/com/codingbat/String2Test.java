@@ -37,12 +37,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "abcxyz,true", "abc.xyz,false", "xyz.abc,true" })
-    void xyzThereExamples(String input, boolean expected) {
-        assertThat(String2.xyzThere(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "aaxbby,true", "aaxbb,false", "yaaxbb,false" })
     void xyBalanceExamples(String input, boolean expected) {
         assertThat(String2.xyBalance(input)).isEqualTo(expected);

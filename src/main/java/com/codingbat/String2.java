@@ -69,28 +69,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p136594
-     *
-     * @param str a string
-     * @return true if contains "xyz" _not_ prefixed by '.'
-     */
-    public static boolean xyzThere(String str) {
-        if (str.startsWith("xyz")) {
-            return true;
-        }
-
-        int pos = 1;
-        while ((pos = str.indexOf("xyz", pos)) != -1) {
-            if (str.charAt(pos - 1) != '.') {
-                return true;
-            }
-            pos += 1;
-        }
-
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p134250
      *
      * @param str a string
