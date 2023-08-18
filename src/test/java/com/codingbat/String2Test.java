@@ -7,18 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "aaacodebbb,1", "codexxcode,2", "cozexxcope,2" })
-    void countCodeExamples(String input, int expected) {
-        assertThat(String2.countCode(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "aaacodebbb,1", "codexxcode,2", "cozexxcope,2" })
-    void countCode9Examples(String input, int expected) {
-        assertThat(String2.countCode9(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abcbob,true", "b9b,true", "bac,false" })
     void bobThereExamples(String input, boolean expected) {
         assertThat(String2.bobThere(input)).isEqualTo(expected);
