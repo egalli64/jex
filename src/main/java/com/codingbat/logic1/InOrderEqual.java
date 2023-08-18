@@ -13,6 +13,14 @@ package com.codingbat.logic1;
  * be strictly increasing.
  */
 public class InOrderEqual {
+    public static boolean verbose(int a, int b, int c, boolean equalOk) {
+        if (equalOk) {
+            return a <= b && b <= c;
+        } else {
+            return a < b && b < c;
+        }
+    }
+
     /**
      * Two different checks, chosen by the flag
      * 
