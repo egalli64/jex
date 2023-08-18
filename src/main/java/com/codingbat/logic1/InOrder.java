@@ -36,7 +36,11 @@ public class InOrder {
      * @return true if the values are in order
      */
     public static boolean solution(int a, int b, int c, boolean bOk) {
-        return bOk ? c > b : c > b && b > a;
+        if (bOk) {
+            return c > b;
+        } else {
+            return c > b && b > a;
+        }
     }
 
     /**
