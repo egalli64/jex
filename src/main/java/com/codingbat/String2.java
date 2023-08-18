@@ -59,28 +59,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p125185
-     *
-     * @param a first
-     * @param b second
-     * @return mix a and b, one char for each, leftover as tail
-     */
-    public static String mixString(String a, String b) {
-        StringBuilder result = new StringBuilder();
-
-        final int len = Math.min(a.length(), b.length());
-        for (int i = 0; i < len; i++) {
-            result.append(a.charAt(i));
-            result.append(b.charAt(i));
-        }
-
-        String longest = a.length() > b.length() ? a : b;
-        result.append(longest.substring(len));
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p128796
      *
      * @param str a string

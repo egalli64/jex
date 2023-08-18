@@ -31,12 +31,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "abc,xyz,axbycz", "Hi,There,HTihere", "xxxx,There,xTxhxexre" })
-    void mixStringExamples(String a, String b, String expected) {
-        assertThat(String2.mixString(a, b)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Chocolate,4,ChocChoChC", "Chocolate,3,ChoChC", "Ice Cream,2,IcI" })
     void repeatFrontExamples(String s, int n, String expected) {
         assertThat(String2.repeatFront(s, n)).isEqualTo(expected);
