@@ -8,16 +8,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p175762
-     *
-     * @param str a string
-     * @return true if it contains the pattern "b.b"
-     */
-    public static boolean bobThere(String str) {
-        return str.matches(".*b.b.*");
-    }
-
-    /**
      * Java 11 not supported by CodingBat, see {@linkplain String2#repeatEnd(String, int)}
      */
     public static String repeatEnd11(String str, int n) {

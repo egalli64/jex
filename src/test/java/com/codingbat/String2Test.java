@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "abcbob,true", "b9b,true", "bac,false" })
-    void bobThereExamples(String input, boolean expected) {
-        assertThat(String2.bobThere(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Hello,3,llollollo", "Hello,2,lolo", "Hello,1,o" })
     void repeatEnd11Examples(String s, int n, String expected) {
         assertThat(String2.repeatEnd11(s, n)).isEqualTo(expected);
