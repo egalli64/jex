@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class MixStringTest {
     @ParameterizedTest
     @CsvSource({ "abc,xyz,axbycz", "Hi,There,HTihere", "xxxx,There,xTxhxexre" })
-    void mixStringExamples(String a, String b, String expected) {
+    void solutionExamples(String a, String b, String expected) {
         assertThat(MixString.solution(a, b)).isEqualTo(expected);
     }
 }

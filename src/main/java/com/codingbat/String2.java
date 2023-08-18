@@ -8,30 +8,6 @@ public class String2 {
     }
 
     /**
-     * Java 11 not supported by CodingBat, see {@linkplain String2#repeatEnd(String, int)}
-     */
-    public static String repeatEnd11(String str, int n) {
-        return str.substring(str.length() - n).repeat(n);
-    }
-
-    /**
-     * codingbat.com/prob/p152339
-     *
-     * @param str a possibly empty string
-     * @param n   a number in [0, string.length()]
-     * @return The last n char of str repeated n times
-     */
-    public static String repeatEnd(String str, int n) {
-        String base = str.substring(str.length() - n);
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            result.append(base);
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p136417
      *
      * @param str a non emtpy string

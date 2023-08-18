@@ -7,18 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "Hello,3,llollollo", "Hello,2,lolo", "Hello,1,o" })
-    void repeatEnd11Examples(String s, int n, String expected) {
-        assertThat(String2.repeatEnd11(s, n)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Hello,3,llollollo", "Hello,2,lolo", "Hello,1,o" })
-    void repeatEndExamples(String s, int n, String expected) {
-        assertThat(String2.repeatEnd(s, n)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abXYabc,1,true", "abXYabc,2,true", "abXYabc,3,false" })
     void prefixAgainExamples(String s, int n, boolean expected) {
         assertThat(String2.prefixAgain(s, n)).isEqualTo(expected);
