@@ -27,4 +27,10 @@ class CenteredAverageTest {
     void solutionExamples(int[] input, int expected) {
         assertThat(CenteredAverage.solution(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void alternativeExamples(int[] input, int expected) {
+        assertThat(CenteredAverage.alternative(input)).isEqualTo(expected);
+    }
 }

@@ -35,4 +35,24 @@ public class CenteredAverage {
 
         return (result - maximum - minimum) / (nums.length - 2);
     }
+
+    /**
+     * Same as other solution, but using Math::min/max
+     * 
+     * @param nums an array
+     * @return the "centered" integer average
+     */
+    public static int alternative(int[] nums) {
+        int minimum = nums[0];
+        int maximum = nums[0];
+        int result = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            result += nums[i];
+            minimum = Math.min(nums[i], minimum);
+            maximum = Math.max(nums[i], maximum);
+        }
+
+        return (result - maximum - minimum) / (nums.length - 2);
+    }
 }
