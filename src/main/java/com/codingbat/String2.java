@@ -8,18 +8,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p136417
-     *
-     * @param str a non emtpy string
-     * @param n   an int in [1,str.length()]
-     * @return true if the prefix till n is repeated in the string
-     */
-    public static boolean prefixAgain(String str, int n) {
-        String prefix = str.substring(0, n);
-        return str.indexOf(prefix, n) != -1;
-    }
-
-    /**
      * codingbat.com/prob/p194491
      *
      * @param str a string

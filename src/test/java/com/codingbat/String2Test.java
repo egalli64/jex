@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "abXYabc,1,true", "abXYabc,2,true", "abXYabc,3,false" })
-    void prefixAgainExamples(String s, int n, boolean expected) {
-        assertThat(String2.prefixAgain(s, n)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "xy*yzz,true", "xy*zzz,false", "*xa*az,true" })
     void sameStarCharExamples(String input, boolean expected) {
         assertThat(String2.sameStarChar(input)).isEqualTo(expected);
