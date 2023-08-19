@@ -18,8 +18,8 @@ public class Has22 {
      * @return true if contains subsequence [2, 2]
      */
     public static boolean solution(int[] nums) {
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i - 1] == 2 && nums[i] == 2) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) {
                 return true;
             }
         }
