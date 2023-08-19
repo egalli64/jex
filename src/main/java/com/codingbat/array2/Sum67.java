@@ -25,11 +25,9 @@ public class Sum67 {
         for (int num : nums) {
             if (num == 6) {
                 ignored = true;
-            }
-            if (!ignored) {
+            } else if (!ignored) {
                 result += num;
-            }
-            if (num == 7) {
+            } else if (num == 7) {
                 ignored = false;
             }
         }
