@@ -23,18 +23,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p129952
-     *
-     * @param str a string
-     * @return the substring enclosed in two extreme "bread", or empty
-     */
-    public static String getSandwich(String str) {
-        int first = str.indexOf("bread");
-        int second = str.lastIndexOf("bread");
-        return first == second ? "" : str.substring(first + 5, second);
-    }
-
-    /**
      * codingbat.com/prob/p122943
      *
      * @param str a string

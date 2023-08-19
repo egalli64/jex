@@ -13,12 +13,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "breadjambread,jam", "xxbreadjambreadyy,jam", "xxbreadyy,''" })
-    void getSandwichExamples(String s, String expected) {
-        assertThat(String2.getSandwich(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abc,bca", "tca,cat", "tcagdo,catdog" })
     void oneTwoExamples(String s, String expected) {
         assertThat(String2.oneTwo(s)).isEqualTo(expected);
