@@ -35,30 +35,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p109637
-     *
-     * @param word  a word
-     * @param sep   a connector
-     * @param count an integer
-     * @return count times word connected by sep
-     */
-    public static String repeatSeparator(String word, String sep, int count) {
-        if (count == 0) {
-            return "";
-        }
-
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 1; i < count; i++) {
-            result.append(word);
-            result.append(sep);
-        }
-        result.append(word);
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p159772
      *
      * @param str a string
