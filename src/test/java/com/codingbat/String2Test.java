@@ -13,12 +13,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "AAxyzBB,true", "AxyzBB,true", "AxyzBBB,false" })
-    void xyzMiddleExamples(String input, boolean expected) {
-        assertThat(String2.xyzMiddle(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "breadjambread,jam", "xxbreadjambreadyy,jam", "xxbreadyy,''" })
     void getSandwichExamples(String s, String expected) {
         assertThat(String2.getSandwich(s)).isEqualTo(expected);

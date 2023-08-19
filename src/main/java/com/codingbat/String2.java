@@ -23,18 +23,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p159772
-     *
-     * @param str a string
-     * @return true if "xyz" is in the middle
-     */
-    public static boolean xyzMiddle(String str) {
-        int len = str.length();
-        int pos = str.indexOf("xyz", len / 2 - 3);
-        return len > 2 && Math.abs(pos - (len - (pos + 3))) < 2;
-    }
-
-    /**
      * codingbat.com/prob/p129952
      *
      * @param str a string
