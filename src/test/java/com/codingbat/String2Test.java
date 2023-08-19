@@ -19,12 +19,6 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Chocolate,4,ChocChoChC", "Chocolate,3,ChoChC", "Ice Cream,2,IcI" })
-    void repeatFrontExamples(String s, int n, String expected) {
-        assertThat(String2.repeatFront(s, n)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Word,X,3,WordXWordXWord", "This,And,2,ThisAndThis", "This,And,1,This" })
     void repeatSeparatorExamples(String word, String separator, int n, String expected) {
         assertThat(String2.repeatSeparator(word, separator, n)).isEqualTo(expected);

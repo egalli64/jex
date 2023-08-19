@@ -35,23 +35,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p128796
-     *
-     * @param str a string
-     * @param n   [0..len]
-     * @return scaling n concatenated fragments of str
-     */
-    public static String repeatFront(String str, int n) {
-        StringBuilder result = new StringBuilder();
-
-        for (int i = n; i > 0; i--) {
-            result.append(str, 0, i);
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p109637
      *
      * @param word  a word
