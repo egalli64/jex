@@ -20,7 +20,7 @@ public class Sum13 {
      * @param nums a possibly empty array of integers
      * @return the conditional sum
      */
-    public static int solution(int[] nums) {
+    public static int skipper(int[] nums) {
         int result = 0;
 
         boolean skip = false;
@@ -29,6 +29,26 @@ public class Sum13 {
                 result += num;
             }
             skip = num == 13;
+        }
+
+        return result;
+    }
+
+    /**
+     * Initialize the accumulator with the first element in the array, if available
+     * and not 13. Then loop on all the other elements, increasing the accumulator,
+     * when required.
+     * 
+     * @param nums a possibly empty array of integers
+     * @return the conditional sum
+     */
+    public static int solution(int[] nums) {
+        int result = (nums.length == 0 || nums[0] == 13) ? 0 : nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != 13 && nums[i - 1] != 13) {
+                result += nums[i];
+            }
         }
 
         return result;
