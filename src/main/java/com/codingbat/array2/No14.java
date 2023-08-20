@@ -12,21 +12,47 @@ package com.codingbat.array2;
  */
 public class No14 {
     /**
-     * Keep track of 1 and 4 seen when looping on the array
+     * Loop on the array, keep track when a 1 or a 4 is seen
      *
      * @param nums an array of int
      * @return true if no 1 or no 4 in it
      */
     public static boolean solution(int[] nums) {
-        int count1 = 0;
-        int count4 = 0;
+        boolean no1 = true;
+        boolean no4 = true;
         for (int num : nums) {
             if (num == 1) {
-                count1 += 1;
+                no1 = false;
             } else if (num == 4) {
-                count4 += 1;
+                no4 = false;
             }
         }
-        return count1 == 0 || count4 == 0;
+        return no1 || no4;
+    }
+
+    /**
+     * Loop on the array, keep track when a 1 or a 4 is seen, and, if the other is
+     * already seen, the loop could be interrupted
+     *
+     * @param nums an array of int
+     * @return true if no 1 or no 4 in it
+     */
+    public static boolean alternative(int[] nums) {
+        boolean has1 = false;
+        boolean has4 = false;
+        for (int num : nums) {
+            if (num == 1) {
+                if (has4) {
+                    return false;
+                }
+                has1 = true;
+            } else if (num == 4) {
+                if (has1) {
+                    return false;
+                }
+                has4 = true;
+            }
+        }
+        return true;
     }
 }

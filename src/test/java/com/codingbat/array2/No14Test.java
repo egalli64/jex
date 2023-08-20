@@ -27,4 +27,10 @@ class No14Test {
     void solutionExamples(int[] input, boolean expected) {
         assertThat(No14.solution(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void alternativeExamples(int[] input, boolean expected) {
+        assertThat(No14.alternative(input)).isEqualTo(expected);
+    }
 }
