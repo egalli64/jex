@@ -21,8 +21,8 @@ public class IsEverywhere {
      * @apiNote arrays sized less than 2 lead always to true
      */
     public static boolean solution(int[] nums, int val) {
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] != val && nums[i - 1] != val) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] != val && nums[i + 1] != val) {
                 return false;
             }
         }
