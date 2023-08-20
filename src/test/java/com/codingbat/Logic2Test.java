@@ -19,12 +19,6 @@ class Logic2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1,2,3,6", "3,2,3,2", "3,3,3,0" })
-    void loneSumExamples(int first, int second, int third, int expected) {
-        assertThat(Logic2.loneSum(first, second, third)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "16,17,18,60", "12,13,14,30", "6,4,4,10" })
     void roundSumExamples(int first, int second, int third, int expected) {
         assertThat(Logic2.roundSum(first, second, third)).isEqualTo(expected);

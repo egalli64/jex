@@ -50,28 +50,6 @@ public class Logic2 {
     }
 
     /**
-     * codingbat.com/prob/p148972
-     * 
-     * @param a a value
-     * @param b a value
-     * @param c a value
-     * @return the sum of the passed value, if not duplicated
-     */
-    public static int loneSum(int a, int b, int c) {
-        int sum = 0;
-        if (a != b && a != c) {
-            sum += a;
-        }
-        if (b != a && b != c) {
-            sum += b;
-        }
-        if (c != a && c != b) {
-            sum += c;
-        }
-        return sum;
-    }
-
-    /**
      * codingbat.com/prob/p186753
      * 
      * @param a a value
