@@ -8,24 +8,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p122943
-     *
-     * @param str a string
-     * @return swap each three letter group so that 123 -> 231
-     */
-    public static String oneTwo(String str) {
-        StringBuilder result = new StringBuilder();
-        int len = str.length() - str.length() % 3;
-        for (int i = 0; i < len; i += 3) {
-            result.append(str.charAt(i + 1));
-            result.append(str.charAt(i + 2));
-            result.append(str.charAt(i));
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p180759
      *
      * @param str a string
