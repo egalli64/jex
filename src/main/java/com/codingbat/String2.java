@@ -8,44 +8,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p139564
-     *
-     * @param str a string
-     * @return remove '*' and preceding/following non-star char
-     */
-    public static String starOut(String str) {
-        if (str.isEmpty()) {
-            return str;
-        } else if (str.length() == 1) {
-            return str.charAt(0) == '*' ? "" : str;
-        }
-
-        StringBuilder result = new StringBuilder();
-        char first = str.charAt(0);
-        char second = str.charAt(1);
-        if (first != '*' && second != '*') {
-            result.append(first);
-        }
-
-        for (int i = 1; i < str.length() - 1; i++) {
-            char prev = str.charAt(i - 1);
-            char cur = str.charAt(i);
-            char next = str.charAt(i + 1);
-            if (!(prev == '*' || cur == '*' || next == '*')) {
-                result.append(cur);
-            }
-        }
-
-        char prev = str.charAt(str.length() - 2);
-        char last = str.charAt(str.length() - 1);
-        if (prev != '*' && last != '*') {
-            result.append(last);
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p170829
      *
      * @param str  a string

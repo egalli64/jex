@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "ab*cd,ad", "ab**cd,ad", "sm*eilly,silly" })
-    void starOutExamples(String s, String expected) {
-        assertThat(String2.starOut(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "12xy34,xy,++xy++", "12xy34,1,1+++++", "12xy34xyabcxy,xy,++xy++xy+++xy" })
     void plusOutExamples(String s, String w, String expected) {
         assertThat(String2.plusOut(s, w)).isEqualTo(expected);
