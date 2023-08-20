@@ -8,28 +8,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p180759
-     *
-     * @param str a string
-     * @return remove each central char in "z?p" patterns
-     */
-    public static String zipZap(String str) {
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < str.length(); i++) {
-            char cur = str.charAt(i);
-            result.append(cur);
-
-            if (cur == 'z' && i < str.length() - 2 && str.charAt(i + 2) == 'p') {
-                result.append('p');
-                i += 2;
-            }
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p139564
      *
      * @param str a string

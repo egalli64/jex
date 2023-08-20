@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "zipXzap,zpXzp", "zopzop,zpzp", "zzzopzop,zzzpzp" })
-    void zipZapExamples(String s, String expected) {
-        assertThat(String2.zipZap(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "ab*cd,ad", "ab**cd,ad", "sm*eilly,silly" })
     void starOutExamples(String s, String expected) {
         assertThat(String2.starOut(s)).isEqualTo(expected);
