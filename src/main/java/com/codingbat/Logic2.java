@@ -10,18 +10,6 @@ public class Logic2 {
     }
 
     /**
-     * codingbat.com/prob/p183562
-     *
-     * @param small number of bricks sized 1
-     * @param big   number of bricks sized 5
-     * @param goal  wall size
-     * @return true if we can build a wall sized goal with the given bricks
-     */
-    public static boolean makeBricks(int small, int big, int goal) {
-        return goal <= big * 5 + small && goal % 5 <= small;
-    }
-
-    /**
      * helper for {@linkplain Logic2#noTeenSum(int, int, int)}
      *
      * @param n an age
@@ -112,7 +100,8 @@ public class Logic2 {
      * @param a an int
      * @param b an int
      * @param c an int
-     * @return true if the three values are evenly spaced (but not necessary ordered)
+     * @return true if the three values are evenly spaced (but not necessary
+     *         ordered)
      */
     public static boolean evenlySpaced(int a, int b, int c) {
         int[] values = { a, b, c };
