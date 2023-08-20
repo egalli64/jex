@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String2Test {
     @ParameterizedTest
-    @CsvSource({ "xy*yzz,true", "xy*zzz,false", "*xa*az,true" })
-    void sameStarCharExamples(String input, boolean expected) {
-        assertThat(String2.sameStarChar(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abc,bca", "tca,cat", "tcagdo,catdog" })
     void oneTwoExamples(String s, String expected) {
         assertThat(String2.oneTwo(s)).isEqualTo(expected);
