@@ -8,32 +8,6 @@ public class String2 {
     }
 
     /**
-     * codingbat.com/prob/p170829
-     *
-     * @param str  a string
-     * @param word a non-empty string
-     * @return keep the words, replace other chars with '+'
-     */
-    public static String plusOut(String str, String word) {
-        StringBuilder result = new StringBuilder();
-
-        int cur = 0;
-
-        do {
-            int next = str.indexOf(word, cur);
-            for (int end = next == -1 ? str.length() : next; cur < end; cur++) {
-                result.append('+');
-            }
-            if (next != -1) {
-                result.append(word);
-                cur += word.length();
-            }
-        } while (cur < str.length());
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p147538
      *
      * @param str  a string
