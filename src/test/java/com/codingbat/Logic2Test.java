@@ -31,12 +31,6 @@ class Logic2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "1, 2, 3, 6", "1, 2, 13, 3", "1, 13, 3, 1" })
-    void luckySumExamples(int first, int second, int third, int expected) {
-        assertThat(Logic2.luckySum(first, second, third)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "1, 2, 10, true", "1, 2, 3, false", "4, 1, 3, true" })
     void closeFarExamples(int first, int second, int third, boolean expected) {
         assertThat(Logic2.closeFar(first, second, third)).isEqualTo(expected);

@@ -88,37 +88,6 @@ public class Logic2 {
     }
 
     /**
-     * codingbat.com/prob/p130788
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return sum, but 13 and follower do not count
-     */
-    public static int luckySum(int a, int b, int c) {
-        boolean skip = false;
-        int sum = 0;
-
-        if (a == 13) {
-            skip = true;
-        } else {
-            sum += a;
-        }
-
-        if (b == 13) {
-            skip = true;
-        } else if (!skip) {
-            sum += b;
-        }
-
-        if (c != 13 && !skip) {
-            sum += c;
-        }
-
-        return sum;
-    }
-
-    /**
      * codingbat.com/prob/p138990
      * 
      * @param a first value
