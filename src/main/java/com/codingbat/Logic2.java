@@ -43,28 +43,6 @@ public class Logic2 {
     }
 
     /**
-     * codingbat.com/prob/p138990
-     * 
-     * @param a first value
-     * @param b second value
-     * @param c third value
-     * @return true if, considering b and c,
-     *         <li>one is close (<2) to a
-     *         <li>the other is far (>1) to both the others
-     */
-    public static boolean closeFar(int a, int b, int c) {
-        return close(b, a) && far(c, a, b) || close(c, a) && far(b, a, c);
-    }
-
-    private static boolean close(int checked, int a) {
-        return Math.abs(checked - a) < 2;
-    }
-
-    private static boolean far(int checked, int first, int second) {
-        return Math.abs(checked - first) > 1 && Math.abs(checked - second) > 1;
-    }
-
-    /**
      * codingbat.com/prob/p191363
      * 
      * @param small number of chunks sized one
