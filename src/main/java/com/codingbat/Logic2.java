@@ -28,29 +28,6 @@ public class Logic2 {
     }
 
     /**
-     * codingbat.com/prob/p186753
-     * 
-     * @param a a value
-     * @param b a value
-     * @param c a value
-     * @return sum each value rounded to multiple of 10
-     */
-    public static int roundSum(int a, int b, int c) {
-        return round10(a) + round10(b) + round10(c);
-    }
-
-    /**
-     * Helper for {@linkplain Logic2#roundSum(int, int, int)}
-     * 
-     * @param num a value
-     * @return the value rounded to multiple of 10
-     */
-    private static int round10(int num) {
-        int last = num % 10;
-        return last < 5 ? num - last : num + 10 - last;
-    }
-
-    /**
      * codingbat.com/prob/p198700
      * 
      * @param a an int

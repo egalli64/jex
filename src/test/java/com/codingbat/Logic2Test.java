@@ -13,12 +13,6 @@ class Logic2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "16,17,18,60", "12,13,14,30", "6,4,4,10" })
-    void roundSumExamples(int first, int second, int third, int expected) {
-        assertThat(Logic2.roundSum(first, second, third)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2,4,6,true", "4,6,2,true", "4,6,3,false" })
     void evenlySpacedExamples(int first, int second, int third, boolean expected) {
         assertThat(Logic2.evenlySpaced(first, second, third)).isEqualTo(expected);
