@@ -19,7 +19,7 @@ class RoundSumTest {
 
     @ParameterizedTest
     @CsvSource({ "17,20", "12,10", "4,0" })
-    void solutionExamples(int value, int expected) {
+    void round10Examples(int value, int expected) {
         assertThat(RoundSum.round10(value)).isEqualTo(expected);
     }
 }
