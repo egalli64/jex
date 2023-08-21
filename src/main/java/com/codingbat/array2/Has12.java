@@ -21,11 +21,11 @@ public class Has12 {
     public static boolean solution(int[] nums) {
         boolean hasOne = false;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (hasOne && nums[i] == 2) {
-                return true;
-            } else if (nums[i] == 1) {
+        for (int num : nums) {
+            if (num == 1) {
                 hasOne = true;
+            } else if (hasOne && num == 2) {
+                return true;
             }
         }
 
