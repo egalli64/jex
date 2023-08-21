@@ -27,4 +27,35 @@ public class EvenlySpaced {
         Arrays.sort(values);
         return values[1] - values[0] == values[2] - values[1];
     }
+
+    /**
+     * Ensure a, b, c are in natural order, using the bubble sort idea, than check
+     * their gap.
+     * 
+     * @param a an int
+     * @param b an int
+     * @param c an int
+     * @return true if the three values are evenly spaced
+     */
+    public static boolean verbose(int a, int b, int c) {
+        if (a > b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        if (b > c) {
+            int temp = b;
+            b = c;
+            c = temp;
+        }
+
+        if (a > b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        return b - a == c - b;
+    }
 }

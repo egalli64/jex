@@ -16,4 +16,10 @@ class EvenlySpacedTest {
     void solutionExamples(int first, int second, int third, boolean expected) {
         assertThat(EvenlySpaced.solution(first, second, third)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "2,4,6,true", "4,6,2,true", "4,6,3,false" })
+    void verboseExamples(int first, int second, int third, boolean expected) {
+        assertThat(EvenlySpaced.verbose(first, second, third)).isEqualTo(expected);
+    }
 }
