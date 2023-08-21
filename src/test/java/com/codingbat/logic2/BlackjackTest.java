@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class BlackjackTest {
     @ParameterizedTest
     @CsvSource({ "19,21,21", "21,19,21", "19,22,19" })
-    void blackjackExamples(int first, int second, int expected) {
+    void solutionExamples(int first, int second, int expected) {
         assertThat(Blackjack.solution(first, second)).isEqualTo(expected);
     }
 }
