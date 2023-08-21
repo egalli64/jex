@@ -68,32 +68,6 @@ public class Recursion2 {
     }
 
     /**
-     * codingbat.com/prob/p199368
-     *
-     * @param start  first index to consider
-     * @param nums   array
-     * @param target summing up elements
-     * @return true if target could be reach, all 6 in array must be used!
-     */
-    public static boolean groupSum6(int start, int[] nums, int target) {
-        if (start == nums.length) {
-            return target == 0;
-        }
-        if (target < 0) {
-            return false;
-        }
-
-        if (groupSum6(start + 1, nums, target - nums[start])) {
-            return true;
-        } else {
-            if (nums[start] == 6) {
-                return false;
-            }
-            return groupSum6(start + 1, nums, target);
-        }
-    }
-
-    /**
      * codingbat.com/prob/p169605
      *
      * @param start  first element to consider

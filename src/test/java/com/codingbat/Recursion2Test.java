@@ -45,13 +45,6 @@ class Recursion2Test {
     }
 
     @Test
-    void groupSum6Example1() {
-        int[] values = {5, 6, 2};
-        int target = 8;
-        assertThat(Recursion2.groupSum6(0, values, target)).isTrue();
-    }
-
-    @Test
     void groupNoAdjExample1() {
         int[] values = {2, 5, 10, 4};
         int target = 12;
