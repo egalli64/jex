@@ -3,25 +3,8 @@
  */
 package com.codingbat;
 
-import java.util.Arrays;
-
 public class Logic2 {
     private Logic2() {
-    }
-
-    /**
-     * codingbat.com/prob/p198700
-     * 
-     * @param a an int
-     * @param b an int
-     * @param c an int
-     * @return true if the three values are evenly spaced (but not necessary
-     *         ordered)
-     */
-    public static boolean evenlySpaced(int a, int b, int c) {
-        int[] values = { a, b, c };
-        Arrays.sort(values);
-        return values[1] - values[0] == values[2] - values[1];
     }
 
     /**
