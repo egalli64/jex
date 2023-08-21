@@ -22,7 +22,7 @@ public class Has77 {
     public static boolean solution(int[] nums) {
         if (nums.length <= 1) {
             return false;
-        } else if (nums.length <= 2) {
+        } else if (nums.length == 2) {
             return nums[0] == 7 && nums[1] == 7;
         }
 
