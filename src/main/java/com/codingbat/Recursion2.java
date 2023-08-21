@@ -5,28 +5,11 @@ package com.codingbat;
 
 public class Recursion2 {
     /**
-     * codingbat.com/prob/p145416
-     *
-     * @param start  first index in the array to consider
-     * @param nums   a possibly empty array
-     * @param target expected sum of a sequence in the array
-     * @return true if there is a sequence in the array with given target sum
-     */
-    public static boolean groupSum(int start, int[] nums, int target) {
-        if (start == nums.length) {
-            return target == 0;
-        }
-
-        // check next, with or without picking up the current value
-        int next = start + 1;
-        return groupSum(next, nums, target - nums[start]) || groupSum(next, nums, target);
-    }
-
-    /**
      * codingbat.com/prob/p138907
      *
-     * <p>Like {@linkplain Recursion2#groupSum(int, int[], int)}
-     * but all multiple of 5 should be included, but the following 1s should be excluded
+     * <p>
+     * Like {@linkplain Recursion2#groupSum(int, int[], int)} but all multiple of 5
+     * should be included, but the following 1s should be excluded
      *
      * @param start  first index in the array to consider
      * @param nums   a possibly empty array
@@ -45,7 +28,8 @@ public class Recursion2 {
             return groupSum5(next, nums, target - nums[start]);
         }
 
-        // if the value immediately following a multiple of 5 is 1, it must not be chosen
+        // if the value immediately following a multiple of 5 is 1, it must not be
+        // chosen
         if (start > 0 && nums[start - 1] % 5 == 0 && nums[start] == 1) {
             return groupSum5(next, nums, target);
         }
@@ -57,7 +41,8 @@ public class Recursion2 {
      * codingbat.com/prob/p171660
      *
      * @param nums a possibly empty array
-     * @return true if it is possible to split the elements in two groups, one with sum multiple of ten, the other odd
+     * @return true if it is possible to split the elements in two groups, one with
+     *         sum multiple of ten, the other odd
      */
     public static boolean splitOdd10(int[] nums) {
         return so10Impl(0, nums, 0, 0);
@@ -114,7 +99,8 @@ public class Recursion2 {
      * @param start  first element to consider
      * @param nums   array
      * @param target the required total
-     * @return true if target could be reached without using adjacent element in the array
+     * @return true if target could be reached without using adjacent element in the
+     *         array
      */
     public static boolean groupNoAdj(int start, int[] nums, int target) {
         return groupNoAdj(start, nums, target, true);
@@ -201,7 +187,8 @@ public class Recursion2 {
      * codingbat.com/prob/p168295
      *
      * @param nums an array
-     * @return true if could be split in two equal subs (all %5 in one, %3 in the other)
+     * @return true if could be split in two equal subs (all %5 in one, %3 in the
+     *         other)
      */
     public static boolean split53(int[] nums) {
         return s53Impl(nums, 0, 0, 0);
