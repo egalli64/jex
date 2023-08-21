@@ -17,20 +17,20 @@ public class Either24 {
      * result
      * 
      * @param nums an array
-     * @return true if contains sub [2, 2] of [4, 4], but not both
+     * @return true if contains a pair [2, 2] or [4, 4], but not both
      */
     public static boolean solution(int[] nums) {
-        boolean sub2 = false;
-        boolean sub4 = false;
+        boolean pair2 = false;
+        boolean pair4 = false;
 
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == 2 && nums[i - 1] == 2) {
-                sub2 = true;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) {
+                pair2 = true;
             }
-            if (nums[i] == 4 && nums[i - 1] == 4) {
-                sub4 = true;
+            if (nums[i] == 4 && nums[i + 1] == 4) {
+                pair4 = true;
             }
         }
-        return sub2 ^ sub4;
+        return pair2 ^ pair4;
     }
 }
