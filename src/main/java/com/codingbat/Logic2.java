@@ -10,28 +10,6 @@ public class Logic2 {
     }
 
     /**
-     * helper for {@linkplain Logic2#noTeenSum(int, int, int)}
-     *
-     * @param n an age
-     * @return n or zero
-     */
-    private static int fixTeen(int n) {
-        return n < 13 || n == 15 || n == 16 || n > 19 ? n : 0;
-    }
-
-    /**
-     * codingbat.com/prob/p182879
-     *
-     * @param a first age
-     * @param b second age
-     * @param c third age
-     * @return the sum of the three input values, with a fix in some special cases
-     */
-    public static int noTeenSum(int a, int b, int c) {
-        return fixTeen(a) + fixTeen(b) + fixTeen(c);
-    }
-
-    /**
      * codingbat.com/prob/p117019
      *
      * @param a first positive number
