@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Logic2Test {
     @ParameterizedTest
-    @CsvSource({ "19,21,21", "21,19,21", "19,22,19" })
-    void blackjackExamples(int first, int second, int expected) {
-        assertThat(Logic2.blackjack(first, second)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "2,4,6,true", "4,6,2,true", "4,6,3,false" })
     void evenlySpacedExamples(int first, int second, int third, boolean expected) {
         assertThat(Logic2.evenlySpaced(first, second, third)).isEqualTo(expected);

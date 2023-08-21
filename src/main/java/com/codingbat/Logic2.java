@@ -10,24 +10,6 @@ public class Logic2 {
     }
 
     /**
-     * codingbat.com/prob/p117019
-     *
-     * @param a first positive number
-     * @param b second positive number
-     * @return the closest to 21, but not over it, or zero
-     */
-    public static int blackjack(int a, int b) {
-        if (a > 21) {
-            a = 0;
-        }
-        if (b > 21) {
-            b = 0;
-        }
-
-        return Math.max(a, b);
-    }
-
-    /**
      * codingbat.com/prob/p198700
      * 
      * @param a an int
