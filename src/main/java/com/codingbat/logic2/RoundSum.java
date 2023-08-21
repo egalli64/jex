@@ -25,7 +25,7 @@ public class RoundSum {
     }
 
     /**
-     * Helper for {@linkplain Logic2#solution(int, int, int)}
+     * Helper for {@linkplain RoundSum#solution(int, int, int)}
      * <p>
      * Extract the last decimal digit for the passed value, use it to decide to go
      * up or down
