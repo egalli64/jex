@@ -5,36 +5,6 @@ package com.codingbat;
 
 public class Recursion2 {
     /**
-     * codingbat.com/prob/p171660
-     *
-     * @param nums a possibly empty array
-     * @return true if it is possible to split the elements in two groups, one with
-     *         sum multiple of ten, the other odd
-     */
-    public static boolean splitOdd10(int[] nums) {
-        return so10Impl(0, nums, 0, 0);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion2#splitOdd10(int[])}
-     *
-     * @param pos  the current position
-     * @param nums a possibly empty array
-     * @param ten  sum of the partition that should be multiple of ten
-     * @param odd  sum of the partition that should be odd
-     * @return true when good partitions are found
-     */
-    private static boolean so10Impl(int pos, int[] nums, int ten, int odd) {
-        if (pos == nums.length) {
-            return ten % 10 == 0 && odd % 2 != 0;
-        }
-
-        int next = pos + 1;
-        int curVal = nums[pos];
-        return so10Impl(next, nums, ten + curVal, odd) || so10Impl(next, nums, ten, odd + curVal);
-    }
-
-    /**
      * codingbat.com/prob/p168295
      *
      * @param nums an array
