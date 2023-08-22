@@ -9,21 +9,6 @@ import java.util.List;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p146974
-     *
-     * @param scores a sequence of int with at least two values
-     * @return true if the sequence is not decreasing
-     */
-    public static boolean scoresIncreasing(int[] scores) {
-        for (int i = 0; i < scores.length - 1; i++) {
-            if (scores[i] > scores[i + 1]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p123837
      *
      * @param scores an int array sized two or more

@@ -10,24 +10,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class AP1Test {
     @Test
-    void scoresIncreasingExample1() {
-        int[] input = {1, 3, 4};
-        assertThat(AP1.scoresIncreasing(input)).isTrue();
-    }
-
-    @Test
-    void scoresIncreasingExample2() {
-        int[] input = {1, 3, 2};
-        assertThat(AP1.scoresIncreasing(input)).isFalse();
-    }
-
-    @Test
-    void scoresIncreasingExample3() {
-        int[] input = {1, 1, 4};
-        assertThat(AP1.scoresIncreasing(input)).isTrue();
-    }
-
-    @Test
     void scoresAverageExample1() {
         int[] input = {2, 2, 4, 4};
         int expected = 4;
