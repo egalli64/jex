@@ -35,33 +35,6 @@ public class Recursion2 {
     }
 
     /**
-     * codingbat.com/prob/p105136
-     *
-     * @param start  first element to consider
-     * @param nums   array
-     * @param target the required total
-     * @return true if target could be reached (with groups of equal values)
-     */
-    public static boolean groupSumClump(int start, int[] nums, int target) {
-        if (start == nums.length) {
-            return target == 0;
-        }
-        if (target < 0) {
-            return false;
-        }
-
-        int size = 1;
-        while (start + size < nums.length && nums[start] == nums[start + size]) {
-            size += 1;
-        }
-
-        int value = nums[start] * size;
-        int next = start + size;
-
-        return groupSumClump(next, nums, target - value) || groupSumClump(next, nums, target);
-    }
-
-    /**
      * codingbat.com/prob/p185204
      *
      * @param nums an array
