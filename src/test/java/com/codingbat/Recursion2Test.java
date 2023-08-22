@@ -6,27 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Recursion2Test {
     @Test
-    void groupSum5Example1() {
-        int[] values = {2, 5, 10, 4};
-        int target = 19;
-        assertThat(Recursion2.groupSum5(0, values, target)).isTrue();
-    }
-
-    @Test
-    void groupSum5Example2() {
-        int[] values = {2, 5, 10, 4};
-        int target = 17;
-        assertThat(Recursion2.groupSum5(0, values, target)).isTrue();
-    }
-
-    @Test
-    void groupSum5Example3() {
-        int[] values = {2, 5, 10, 4};
-        int target = 12;
-        assertThat(Recursion2.groupSum5(0, values, target)).isFalse();
-    }
-
-    @Test
     void splitOdd10Example1() {
         int[] values = {5, 5, 5};
         assertThat(Recursion2.splitOdd10(values)).isTrue();

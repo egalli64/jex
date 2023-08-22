@@ -5,39 +5,6 @@ package com.codingbat;
 
 public class Recursion2 {
     /**
-     * codingbat.com/prob/p138907
-     *
-     * <p>
-     * Like {@linkplain Recursion2#groupSum(int, int[], int)} but all multiple of 5
-     * should be included, but the following 1s should be excluded
-     *
-     * @param start  first index in the array to consider
-     * @param nums   a possibly empty array
-     * @param target expected sum of a sequence in the array
-     * @return true if there is a sequence in the array with given target sum
-     */
-    public static boolean groupSum5(int start, int[] nums, int target) {
-        if (start == nums.length) {
-            return target == 0;
-        }
-
-        int next = start + 1;
-
-        // all multiples of 5 in the array must be included in the group
-        if (nums[start] % 5 == 0) {
-            return groupSum5(next, nums, target - nums[start]);
-        }
-
-        // if the value immediately following a multiple of 5 is 1, it must not be
-        // chosen
-        if (start > 0 && nums[start - 1] % 5 == 0 && nums[start] == 1) {
-            return groupSum5(next, nums, target);
-        }
-
-        return groupSum5(next, nums, target - nums[start]) || groupSum5(next, nums, target);
-    }
-
-    /**
      * codingbat.com/prob/p171660
      *
      * @param nums a possibly empty array
