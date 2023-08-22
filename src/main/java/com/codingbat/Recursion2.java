@@ -68,43 +68,6 @@ public class Recursion2 {
     }
 
     /**
-     * codingbat.com/prob/p169605
-     *
-     * @param start  first element to consider
-     * @param nums   array
-     * @param target the required total
-     * @return true if target could be reached without using adjacent element in the
-     *         array
-     */
-    public static boolean groupNoAdj(int start, int[] nums, int target) {
-        return groupNoAdj(start, nums, target, true);
-    }
-
-    /**
-     * Helper for {@linkplain Recursion2#groupNoAdj(int, int[], int)}
-     *
-     * @param start      first element to consider
-     * @param nums       array
-     * @param target     the required total
-     * @param selectable true if the current element could be considered
-     * @return true if target could be reached
-     */
-    private static boolean groupNoAdj(int start, int[] nums, int target, boolean selectable) {
-        if (start == nums.length) {
-            return target == 0;
-        }
-        if (target < 0) {
-            return false;
-        }
-
-        if (selectable && groupNoAdj(start + 1, nums, target - nums[start], false)) {
-            return true;
-        } else {
-            return groupNoAdj(start + 1, nums, target, true);
-        }
-    }
-
-    /**
      * codingbat.com/prob/p105136
      *
      * @param start  first element to consider
