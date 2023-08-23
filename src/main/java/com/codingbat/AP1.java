@@ -55,21 +55,6 @@ public class AP1 {
     }
 
     /**
-     * codingbat.com/prob/p179487
-     *
-     * @param scores an array sized 2+
-     * @return if there is at least a couple of 100 next to each other
-     */
-    public static boolean scores100(int[] scores) {
-        for (int i = 0; i < scores.length - 1; i++) {
-            if (scores[i] == 100 && scores[i + 1] == 100) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p124620
      *
      * @param words an array
