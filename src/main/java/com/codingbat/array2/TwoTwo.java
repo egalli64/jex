@@ -25,9 +25,7 @@ public class TwoTwo {
      * @return true if each 2 is not alone
      */
     public static boolean solution(int[] nums) {
-        if (nums.length == 0) {
-            return true;
-        } else if (nums.length == 1) {
+        if (nums.length <= 1) {
             return nums.length == 0 ? true : nums[0] != 2;
         } else if (nums.length == 2) {
             return !(nums[0] == 2 ^ nums[1] == 2);
