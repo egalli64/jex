@@ -69,18 +69,6 @@ class AP1Test {
     }
 
     @Test
-    void scoresClumpExample2() {
-        int[] input = { 3, 4, 6 };
-        assertThat(AP1.scoresClump(input)).isFalse();
-    }
-
-    @Test
-    void scoresClumpExample3() {
-        int[] input = { 1, 3, 5, 5 };
-        assertThat(AP1.scoresClump(input)).isTrue();
-    }
-
-    @Test
     void wordsFrontExample1() {
         String[] input = { "a", "b", "c", "d" };
         int n = 1;

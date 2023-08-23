@@ -87,21 +87,6 @@ public class AP1 {
     }
 
     /**
-     * codingbat.com/prob/p194530
-     *
-     * @param scores in non-decreasing order
-     * @return true if 3 adjacent scores differ from min to max by at most 2
-     */
-    public static boolean scoresClump(int[] scores) {
-        for (int i = 2; i < scores.length; i++) {
-            if (scores[i] - scores[i - 2] < 3) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p183837
      *
      * @param words an array
@@ -154,7 +139,8 @@ public class AP1 {
      *
      * @param nums  an array with at least count "endy" values
      * @param count non-negative
-     * @return the first count "endy", in range [0..10] or [90..100], elements from input
+     * @return the first count "endy", in range [0..10] or [90..100], elements from
+     *         input
      */
     public static int[] copyEndy(int[] nums, int count) {
         int[] result = new int[count];
@@ -228,7 +214,6 @@ public class AP1 {
     public static String[] wordsWithout(String[] words, String target) {
         return Arrays.stream(words).filter(x -> !x.equals(target)).toArray(String[]::new);
     }
-
 
     /**
      * A classic alternative to {@linkplain AP1#wordsWithout(String[], String)}
@@ -404,4 +389,3 @@ public class AP1 {
         return result;
     }
 }
-
