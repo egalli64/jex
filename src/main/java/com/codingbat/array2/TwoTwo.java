@@ -12,8 +12,8 @@ package com.codingbat.array2;
  */
 public class TwoTwo {
     /**
-     * Accept empty array, single element equals to 2, pair with both 2 or both
-     * not-2.
+     * Accept empty array, single element not 2, two elements both 2 or both not-2.
+     * Reject the other same sized cases.
      * <p>
      * For each triplet in the array check the central element, if it is an isolated
      * 2, the requested condition is not satisfied.
@@ -22,7 +22,7 @@ public class TwoTwo {
      * element should be a 2, too.
      * 
      * @param nums an array
-     * @return true if each 2 is not alone
+     * @return true if accepted
      */
     public static boolean solution(int[] nums) {
         if (nums.length <= 1) {

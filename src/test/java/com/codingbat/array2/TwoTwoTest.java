@@ -34,6 +34,7 @@ class TwoTwoTest {
                 Arguments.of(new int[] { 2 }, false), //
                 Arguments.of(new int[] { 1 }, true), //
                 Arguments.of(new int[] { 2, 2 }, true), //
+                Arguments.of(new int[] { 1, 2 }, false), //
                 Arguments.of(new int[] { 2, 1 }, false) //
         );
     }
