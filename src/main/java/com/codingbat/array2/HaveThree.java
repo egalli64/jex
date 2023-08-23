@@ -26,8 +26,9 @@ public class HaveThree {
             if (nums[i] == 3) {
                 if (nums[i - 1] == 3) {
                     return false;
+                } else {
+                    count += 1;
                 }
-                count += 1;
             }
         }
 
