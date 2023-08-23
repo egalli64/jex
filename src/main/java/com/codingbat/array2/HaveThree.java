@@ -14,17 +14,14 @@ public class HaveThree {
     /**
      * If the array is not empty, check it first element and initialize a 3-counter
      * accordingly. Then loop on all the other values checking for 3 that are not
-     * preceded by another 3.
+     * followed by another 3.
      * 
      * @param nums an array
      * @return true if there is a "sparse" 3 triplet
      */
     public static boolean solution(int[] nums) {
-        if (nums.length == 0) {
-            return false;
-        }
+        int count = nums.length > 0 && nums[0] == 3 ? 1 : 0;
 
-        int count = nums[0] == 3 ? 1 : 0;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] == 3) {
                 if (nums[i - 1] == 3) {
