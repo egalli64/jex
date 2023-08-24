@@ -15,12 +15,32 @@ import java.util.regex.Pattern;
  */
 public class CountCode {
     /**
-     * Use String::indexOf in a loop, until there is room for the target
+     * Check all 4-char substrings in the passed string looking for the required
+     * pattern
      *
      * @param str a string
      * @return the counter
      */
     public static int solution(String str) {
+        int count = 0;
+
+        for (int i = 0; i < str.length() - 3; i++) {
+            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'o' && str.charAt(i + 3) == 'e') {
+                count += 1;
+                i += 3;
+            }
+        }
+
+        return count;
+    }
+
+    /**
+     * Use String::indexOf in a loop, until there is room for the target
+     *
+     * @param str a string
+     * @return the counter
+     */
+    public static int byIndexOf(String str) {
         int count = 0;
 
         int pos = -1;

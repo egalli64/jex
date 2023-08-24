@@ -19,6 +19,12 @@ class CountCodeTest {
 
     @ParameterizedTest
     @CsvSource({ "aaacodebbb,1", "codexxcode,2", "cozexxcope,2", "cocode,1" })
+    void byIndexOfExamples(String input, int expected) {
+        assertThat(CountCode.byIndexOf(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "aaacodebbb,1", "codexxcode,2", "cozexxcope,2", "cocode,1" })
     void unsupportedClassicMatchExamples(String input, int expected) {
         assertThat(CountCode.unsupportedClassicMatch(input)).isEqualTo(expected);
     }
