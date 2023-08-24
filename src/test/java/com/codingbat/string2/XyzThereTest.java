@@ -19,6 +19,12 @@ class XyzThereTest {
 
     @ParameterizedTest
     @CsvSource({ "abcxyz,true", "abc.xyz,false", "xyz.abc,true" })
+    void byIndexOfExamples(String input, boolean expected) {
+        assertThat(XyzThere.byIndexOf(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abcxyz,true", "abc.xyz,false", "xyz.abc,true" })
     void unsupportedExamples(String input, boolean expected) {
         assertThat(XyzThere.unsupported(input)).isEqualTo(expected);
     }
