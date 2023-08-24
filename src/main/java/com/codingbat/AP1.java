@@ -7,21 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p191212
-     *
-     * @param n a positive number
-     * @return true if it contains the cipher 1
-     */
-    public static boolean hasOne(int n) {
-        for (; n > 0; n /= 10) {
-            if (n % 10 == 1) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * codingbat.com/prob/p165941
      *
      * @param n positive, non-zero

@@ -8,12 +8,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
     @ParameterizedTest
-    @CsvSource({ "10,true", "22,false", "220,false" })
-    void hasOneExamples(int number, boolean expected) {
-        assertThat(AP1.hasOne(number)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "128,true", "12,true", "120,false" })
     void dividesSelfExamples(int number, boolean expected) {
         assertThat(AP1.dividesSelf(number)).isEqualTo(expected);
