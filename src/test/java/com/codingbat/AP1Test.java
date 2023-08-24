@@ -39,14 +39,6 @@ class AP1Test {
         assertThat(AP1.hasOne(number)).isEqualTo(expected);
     }
 
-    @Test
-    void wordsFrontExample1() {
-        String[] input = { "a", "b", "c", "d" };
-        int n = 1;
-        String[] expected = { "a" };
-        assertThat(AP1.wordsFront(input, n)).isEqualTo(expected);
-    }
-
     @ParameterizedTest
     @CsvSource({ "128,true", "12,true", "120,false" })
     void dividesSelfExamples(int number, boolean expected) {

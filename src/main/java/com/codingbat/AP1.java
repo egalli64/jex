@@ -41,17 +41,6 @@ public class AP1 {
     }
 
     /**
-     * codingbat.com/prob/p183837
-     *
-     * @param words an array
-     * @param n     size of the new array
-     * @return the first n strings from input
-     */
-    public static String[] wordsFront(String[] words, int n) {
-        return Arrays.copyOf(words, n);
-    }
-
-    /**
      * codingbat.com/prob/p165941
      *
      * @param n positive, non-zero
