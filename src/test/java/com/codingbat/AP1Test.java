@@ -7,12 +7,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
-    @ParameterizedTest
-    @CsvSource({ "128,true", "12,true", "120,false" })
-    void dividesSelfExamples(int number, boolean expected) {
-        assertThat(AP1.dividesSelf(number)).isEqualTo(expected);
-    }
-
     @Test
     void copyEvensExample2() {
         int[] input = { 3, 2, 4, 5, 8 };

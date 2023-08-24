@@ -7,24 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p165941
-     *
-     * @param n positive, non-zero
-     * @return true if each digit is a divisor of n
-     */
-    public static boolean dividesSelf(int n) {
-        int partial = n;
-        while (partial > 0) {
-            int digit = partial % 10;
-            if (digit == 0 || n % digit != 0) {
-                return false;
-            }
-            partial /= 10;
-        }
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p134174
      *
      * @param nums  an array size count+, with at least count even integers
