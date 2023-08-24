@@ -3,28 +3,9 @@
  */
 package com.codingbat;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class AP1 {
-    /**
-     * codingbat.com/prob/p183407
-     *
-     * @param words a string array
-     * @param len   the forbidden length
-     * @return the strings in input not having the forbidden length
-     */
-    public static List<String> wordsWithoutList(String[] words, int len) {
-        List<String> result = new ArrayList<>();
-        for (String word : words) {
-            if (word.length() != len) {
-                result.add(word);
-            }
-        }
-        return result;
-    }
-
     /**
      * codingbat.com/prob/p191212
      *

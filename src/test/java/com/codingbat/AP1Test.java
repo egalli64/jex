@@ -1,38 +1,12 @@
 package com.codingbat;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 class AP1Test {
-    @Test
-    void wordsWithoutListExample1() {
-        String[] input = { "a", "bb", "b", "ccc" };
-        int forbiddenLen = 1;
-        List<String> expected = List.of("bb", "ccc");
-        assertThat(AP1.wordsWithoutList(input, forbiddenLen)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
-    void wordsWithoutListExample2() {
-        String[] input = { "a", "bb", "b", "ccc" };
-        int forbiddenLen = 3;
-        List<String> expected = List.of("a", "bb", "b");
-        assertThat(AP1.wordsWithoutList(input, forbiddenLen)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
-    void wordsWithoutListExample3() {
-        String[] input = { "a", "bb", "b", "ccc" };
-        int forbiddenLen = 4;
-        List<String> expected = List.of("a", "bb", "b", "ccc");
-        assertThat(AP1.wordsWithoutList(input, forbiddenLen)).containsExactlyElementsOf(expected);
-    }
-
     @ParameterizedTest
     @CsvSource({ "10,true", "22,false", "220,false" })
     void hasOneExamples(int number, boolean expected) {
