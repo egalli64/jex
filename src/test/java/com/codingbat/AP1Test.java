@@ -33,14 +33,6 @@ class AP1Test {
         assertThat(AP1.wordsWithoutList(input, forbiddenLen)).containsExactlyElementsOf(expected);
     }
 
-    @Test
-    void wordsCountExample1() {
-        String[] input = { "a", "bb", "b", "ccc" };
-        int len = 1;
-        int expected = 2;
-        assertThat(AP1.wordsCount(input, len)).isEqualTo(expected);
-    }
-
     @ParameterizedTest
     @CsvSource({ "10,true", "22,false", "220,false" })
     void hasOneExamples(int number, boolean expected) {

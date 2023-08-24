@@ -26,23 +26,6 @@ public class AP1 {
     }
 
     /**
-     * codingbat.com/prob/p124620
-     *
-     * @param words an array
-     * @param len   a string length
-     * @return how may string of the given length are in the input array
-     */
-    public static int wordsCount(String[] words, int len) {
-        int count = 0;
-        for (String word : words) {
-            if (word.length() == len) {
-                count += 1;
-            }
-        }
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p191212
      *
      * @param n a positive number
