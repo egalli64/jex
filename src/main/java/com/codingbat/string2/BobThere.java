@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  */
 public class BobThere {
     /**
-     * Using String::matches
+     * Check all the triplets in the passed string for the pattern
      *
      * @param str a string
      * @return true for success
