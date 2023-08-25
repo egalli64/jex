@@ -7,36 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p130124
-     *
-     * @param nums  an array with at least count "endy" values
-     * @param count non-negative
-     * @return the first count "endy", in range [0..10] or [90..100], elements from
-     *         input
-     */
-    public static int[] copyEndy(int[] nums, int count) {
-        int[] result = new int[count];
-
-        for (int i = 0, j = 0; j < count; i++) {
-            if (isEndy(nums[i])) {
-                result[j++] = nums[i];
-            }
-        }
-
-        return result;
-    }
-
-    /**
-     * Helper for {@linkplain AP1#copyEndy(int[], int)}
-     *
-     * @param value a value
-     * @return true if in [0..10] or [90..100]
-     */
-    private static boolean isEndy(int value) {
-        return value >= 0 && value <= 10 || value >= 90 && value <= 100;
-    }
-
-    /**
      * codingbat.com/prob/p139677
      *
      * @param a an array of possibly empty strings

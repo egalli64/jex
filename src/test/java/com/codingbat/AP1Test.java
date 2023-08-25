@@ -8,14 +8,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
     @Test
-    void copyEndyExample1() {
-        int[] input = { 9, 11, 90, 22, 6 };
-        int n = 2;
-        int[] expected = { 9, 90 };
-        assertThat(AP1.copyEndy(input, n)).isEqualTo(expected);
-    }
-
-    @Test
     void matchUpExample1() {
         String[] left = { "aa", "bb", "cc" };
         String[] right = { "aaa", "xx", "bb" };
