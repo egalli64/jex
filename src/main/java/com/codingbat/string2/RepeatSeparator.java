@@ -30,8 +30,7 @@ public class RepeatSeparator {
             result.append(word);
         }
         for (int i = 1; i < count; i++) {
-            result.append(sep);
-            result.append(word);
+            result.append(sep).append(word);
         }
 
         return result.toString();
