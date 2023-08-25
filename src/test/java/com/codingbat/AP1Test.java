@@ -8,14 +8,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
     @Test
-    void copyEvensExample2() {
-        int[] input = { 3, 2, 4, 5, 8 };
-        int n = 3;
-        int[] expected = { 2, 4, 8 };
-        assertThat(AP1.copyEvens(input, n)).isEqualTo(expected);
-    }
-
-    @Test
     void copyEndyExample1() {
         int[] input = { 9, 11, 90, 22, 6 };
         int n = 2;

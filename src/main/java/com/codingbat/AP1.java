@@ -7,25 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p134174
-     *
-     * @param nums  an array size count+, with at least count even integers
-     * @param count non-negative
-     * @return the first count non-negative values in input
-     */
-    public static int[] copyEvens(int[] nums, int count) {
-        int[] result = new int[count];
-
-        for (int i = 0, j = 0; j < count; i++) {
-            if (nums[i] % 2 == 0) {
-                result[j++] = nums[i];
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p130124
      *
      * @param nums  an array with at least count "endy" values
