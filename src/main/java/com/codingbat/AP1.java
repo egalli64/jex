@@ -7,35 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p121236
-     *
-     * @param words  an array
-     * @param target a string
-     * @return input without any target in it
-     */
-    public static String[] wordsWithout(String[] words, String target) {
-        return Arrays.stream(words).filter(x -> !x.equals(target)).toArray(String[]::new);
-    }
-
-    /**
-     * A classic alternative to {@linkplain AP1#wordsWithout(String[], String)}
-     *
-     * @param words  an array
-     * @param target a string
-     * @return input without any target in it
-     */
-    public static String[] wordsWithoutClassic(String[] words, String target) {
-        String[] result = new String[words.length];
-        int count = 0;
-        for (String word : words) {
-            if (!word.equals(target)) {
-                result[count++] = word;
-            }
-        }
-        return Arrays.copyOf(result, count);
-    }
-
-    /**
      * codingbat.com/prob/p140485
      *
      * @param a non-negatives

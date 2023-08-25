@@ -8,22 +8,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
     @Test
-    void wordsWithoutExample1() {
-        String[] input = { "a", "b", "c", "a" };
-        String target = "a";
-        String[] expected = { "b", "c" };
-        assertThat(AP1.wordsWithout(input, target)).isEqualTo(expected);
-    }
-
-    @Test
-    void wordsWithoutClassicExample1() {
-        String[] input = { "a", "b", "c", "a" };
-        String target = "a";
-        String[] expected = { "b", "c" };
-        assertThat(AP1.wordsWithoutClassic(input, target)).isEqualTo(expected);
-    }
-
-    @Test
     void scoresSpecialExample1() {
         int[] left = { 12, 10, 4 };
         int[] right = { 2, 20, 30 };
