@@ -25,8 +25,7 @@ public class MixString {
 
         final int len = Math.min(a.length(), b.length());
         for (int i = 0; i < len; i++) {
-            result.append(a.charAt(i));
-            result.append(b.charAt(i));
+            result.append(a.charAt(i)).append(b.charAt(i));
         }
 
         String longest = a.length() > b.length() ? a : b;
