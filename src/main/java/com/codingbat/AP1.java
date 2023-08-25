@@ -7,25 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p139677
-     *
-     * @param a an array of possibly empty strings
-     * @param b another array, same size
-     * @return how many strings in the same position starts with the same letter
-     */
-    public static int matchUp(String[] a, String[] b) {
-        int count = 0;
-
-        for (int i = 0; i < a.length; i++) {
-            if (!a[i].isEmpty() && !b[i].isEmpty() && a[i].charAt(0) == b[i].charAt(0)) {
-                count += 1;
-            }
-        }
-
-        return count;
-    }
-
-    /**
      * codingbat.com/prob/p180365
      *
      * @param key     right answers, not empty

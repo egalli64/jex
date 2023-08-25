@@ -8,14 +8,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
     @Test
-    void matchUpExample1() {
-        String[] left = { "aa", "bb", "cc" };
-        String[] right = { "aaa", "xx", "bb" };
-        int expected = 1;
-        assertThat(AP1.matchUp(left, right)).isEqualTo(expected);
-    }
-
-    @Test
     void scoreUpExample1() {
         String[] keys = { "a", "a", "b", "b" };
         String[] answers = { "a", "c", "b", "c" };
