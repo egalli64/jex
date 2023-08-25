@@ -7,27 +7,6 @@ import java.util.Arrays;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p180365
-     *
-     * @param key     right answers, not empty
-     * @param answers actual answers, same size
-     * @return score, +4 correct, -1 wrong, 0 skip "?"
-     */
-    public static int scoreUp(String[] key, String[] answers) {
-        int result = 0;
-
-        for (int i = 0; i < key.length; i++) {
-            if (answers[i].equals(key[i])) {
-                result += 4;
-            } else if (!answers[i].equals("?")) {
-                result -= 1;
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p121236
      *
      * @param words  an array
