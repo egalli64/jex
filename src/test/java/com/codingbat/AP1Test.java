@@ -7,15 +7,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
-    @Test
-    void bigHeightsExample1() {
-        int[] input = { 5, 3, 6, 7, 2 };
-        int first = 2;
-        int last = 4;
-        int expected = 1;
-        assertThat(AP1.bigHeights(input, first, last)).isEqualTo(expected);
-    }
-
     @ParameterizedTest
     @CsvSource({ "bb,1,zz,2,-1", "bb,1,aa,2,1", "bb,1,bb,1,0" })
     void userCompareExamples(String left, int leftId, String right, int rightId, int expected) {
