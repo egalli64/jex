@@ -5,24 +5,6 @@ package com.codingbat;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p148138
-     *
-     * @param heights an array
-     * @param start   good index, first of sub
-     * @param end     good index, last of sub
-     * @return sum of deltas in subs
-     */
-    public static int sumHeights(int[] heights, int start, int end) {
-        int result = 0;
-
-        for (int i = start + 1; i <= end; i++) {
-            result += Math.abs(heights[i] - heights[i - 1]);
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p157900
      *
      * @param heights an array
