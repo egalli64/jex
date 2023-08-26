@@ -20,9 +20,9 @@ public class SumHeights2 {
      * element and the next one to the buffer.
      *
      * @param heights an array
-     * @param start   good index, first of sub
-     * @param end     good index, last of sub
-     * @return sum of deltas in subs, positive gaps count x2
+     * @param start   first index
+     * @param end     last index
+     * @return sum of deltas
      */
     public static int solution(int[] heights, int start, int end) {
         int result = 0;
