@@ -5,25 +5,6 @@ package com.codingbat;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p157900
-     *
-     * @param heights an array
-     * @param start   good index, first of sub
-     * @param end     good index, last of sub
-     * @return sum of deltas in subs, positive gaps count x2
-     */
-    public static int sumHeights2(int[] heights, int start, int end) {
-        int result = 0;
-
-        for (int i = start + 1; i <= end; i++) {
-            int gap = heights[i] - heights[i - 1];
-            result += gap < 0 ? -gap : 2 * gap;
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p197710
      *
      * @param heights an array

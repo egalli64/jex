@@ -8,15 +8,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
     @Test
-    void sumHeights2Example1() {
-        int[] input = { 5, 3, 6, 7, 2 };
-        int first = 2;
-        int last = 4;
-        int expected = 7;
-        assertThat(AP1.sumHeights2(input, first, last)).isEqualTo(expected);
-    }
-
-    @Test
     void bigHeightsExample1() {
         int[] input = { 5, 3, 6, 7, 2 };
         int first = 2;
