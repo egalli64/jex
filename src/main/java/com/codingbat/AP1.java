@@ -5,29 +5,6 @@ package com.codingbat;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p139150
-     *
-     * @param a sorted array, no duplicates, sized n+
-     * @param b sorted array, no duplicates, sized n+
-     * @param n positive
-     * @return n items from the input arrays, keeping the order, no duplicates!
-     */
-    public static String[] mergeTwo(String[] a, String[] b, int n) {
-        String[] result = new String[n];
-
-        for (int i = 0, j = 0, k = 0; i < n; i++) {
-            if (a[j].equals(b[k])) {
-                result[i] = a[j++];
-                k++;
-            } else {
-                result[i] = (a[j].compareTo(b[k]) < 0) ? a[j++] : b[k++];
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p100369
      *
      * @param a ordered array, possibly with duplicates
