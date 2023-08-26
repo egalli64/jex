@@ -1,3 +1,8 @@
+/*
+  CodingBat Java AP (Advanced Placement) 1 - https://codingbat.com/java/AP-1
+
+  My repository with solutions - https://github.com/egalli64/jex/
+ */
 package com.codingbat.ap1;
 
 import static org.assertj.core.api.Assertions.assertThat;
