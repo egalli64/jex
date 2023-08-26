@@ -3,33 +3,7 @@
  */
 package com.codingbat;
 
-import java.util.Arrays;
-
 public class AP1 {
-    /**
-     * codingbat.com/prob/p140485
-     *
-     * @param a non-negatives
-     * @param b non-negatives
-     * @return the sum of largest 10x value in both array (or zero)
-     */
-    public static int scoresSpecial(int[] a, int[] b) {
-        int result = 0;
-        result += largestSpecialScore(a);
-        result += largestSpecialScore(b);
-        return result;
-    }
-
-    /**
-     * Helper for {@linkplain AP1#scoresSpecial(int[], int[])}
-     *
-     * @param values an array
-     * @return the largest 10x value in it, or zero
-     */
-    private static int largestSpecialScore(int[] values) {
-        return Arrays.stream(values).filter(x -> x % 10 == 0).max().orElse(0);
-    }
-
     /**
      * codingbat.com/prob/p148138
      *
