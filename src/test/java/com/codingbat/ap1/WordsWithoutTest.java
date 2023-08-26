@@ -37,6 +37,12 @@ class WordsWithoutTest {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void byCollectionExamples(String[] words, String target, String[] expected) {
+        assertThat(WordsWithout.byCollection(words, target)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void byStreamExamples(String[] words, String target, String[] expected) {
         assertThat(WordsWithout.byStream(words, target)).isEqualTo(expected);
     }

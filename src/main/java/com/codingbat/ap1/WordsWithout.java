@@ -5,7 +5,9 @@
  */
 package com.codingbat.ap1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * wordsWithout - https://codingbat.com/prob/p121236
@@ -37,6 +39,7 @@ public class WordsWithout {
                 result[i++] = word;
             }
         }
+
         return result;
     }
 
@@ -56,7 +59,20 @@ public class WordsWithout {
                 result[len++] = word;
             }
         }
+
         return Arrays.copyOf(result, len);
+    }
+
+    public static String[] byCollection(String[] words, String target) {
+        Collection<String> result = new ArrayList<String>();
+
+        for (String word : words) {
+            if (!word.equals(target)) {
+                result.add(word);
+            }
+        }
+
+        return result.toArray(new String[result.size()]);
     }
 
     /**
