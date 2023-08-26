@@ -3,16 +3,8 @@ package com.codingbat;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 class AP1Test {
-    @ParameterizedTest
-    @CsvSource({ "bb,1,zz,2,-1", "bb,1,aa,2,1", "bb,1,bb,1,0" })
-    void userCompareExamples(String left, int leftId, String right, int rightId, int expected) {
-        assertThat(AP1.userCompare(left, leftId, right, rightId)).isEqualTo(expected);
-    }
-
     @Test
     void mergeTwoExample1() {
         String[] left = { "a", "c", "z" };

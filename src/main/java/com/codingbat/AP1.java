@@ -5,26 +5,6 @@ package com.codingbat;
 
 public class AP1 {
     /**
-     * codingbat.com/prob/p143482
-     *
-     * @param aName first name
-     * @param aId   first id
-     * @param bName second name
-     * @param bId   second id
-     * @return -1, 0, 1, comparing name and id
-     */
-    public static int userCompare(String aName, int aId, String bName, int bId) {
-        int name = aName.compareTo(bName);
-        if (name != 0) {
-            return name < 0 ? -1 : 1;
-        }
-        if (aId != bId) {
-            return aId < bId ? -1 : 1;
-        }
-        return 0;
-    }
-
-    /**
      * codingbat.com/prob/p139150
      *
      * @param a sorted array, no duplicates, sized n+
