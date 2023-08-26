@@ -63,6 +63,14 @@ public class WordsWithout {
         return Arrays.copyOf(result, len);
     }
 
+    /**
+     * Create a Collection, an ArrayList will do. Add to the collection the words
+     * meeting the requirement. Convert the collection to a string array.
+     *
+     * @param words  an array
+     * @param target a string
+     * @return input without any target in it
+     */
     public static String[] byCollection(String[] words, String target) {
         Collection<String> result = new ArrayList<String>();
 
