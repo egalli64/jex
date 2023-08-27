@@ -19,12 +19,6 @@ class String3Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "Hello there,llo,He there", "Hello there,e,Hllo thr", "Hello there,x,Hello there" })
-    void withoutStringExamples(String base, String remove, String expected) {
-        assertThat(String3.withoutString(base, remove)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abcXXXabc,1", "xxxabyyyycd,3", "a,0" })
     void countTripleExamples(String s, int expected) {
         assertThat(String3.countTriple(s)).isEqualTo(expected);

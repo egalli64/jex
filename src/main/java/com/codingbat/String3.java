@@ -58,17 +58,6 @@ public class String3 {
     }
 
     /**
-     * codingbat.com/prob/p192570
-     *
-     * @param base   a string
-     * @param remove a non-empty string to be removed
-     * @return a copy of base without any remove (case-insensitive!) in it
-     */
-    public static String withoutString(String base, String remove) {
-        return base.replaceAll("(?i)" + remove, "");
-    }
-
-    /**
      * codingbat.com/prob/p195714
      *
      * @param str a string
