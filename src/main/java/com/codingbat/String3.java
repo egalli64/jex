@@ -5,30 +5,6 @@ package com.codingbat;
 
 public class String3 {
     /**
-     * codingbat.com/prob/p199171
-     *
-     * @param str a non-empty string
-     * @return how many case-insensitive y,z are at the end of words in the string
-     */
-    public static int countYZ(String str) {
-        int result = 0;
-
-        for (int i = 0; i < str.length() - 1; i++) {
-            char current = Character.toUpperCase(str.charAt(i));
-            if ((current == 'Y' || current == 'Z') && !Character.isLetter(str.charAt(i + 1))) {
-                result += 1;
-            }
-        }
-
-        char last = Character.toUpperCase(str.charAt(str.length() - 1));
-        if (last == 'Y' || last == 'Z') {
-            result += 1;
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p198664
      *
      * @param str a string
