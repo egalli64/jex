@@ -57,15 +57,16 @@ public class CountCode {
     }
 
     /**
-     * Package java.util.regex is not (currently) supported in CodingBat
+     * Create a matcher on the input string for the pattern "co.e". Find all its
+     * occurrences, keeping track of them in a counter.
      * 
      * @param str a string
      * @return the counter
      */
-    public static int unsupportedClassicMatch(String str) {
+    public static int matching(String str) {
         int count = 0;
 
-        Matcher code = Pattern.compile("(co.e)").matcher(str);
+        Matcher code = Pattern.compile("co.e").matcher(str);
         while (code.find()) {
             count += 1;
         }
@@ -80,6 +81,6 @@ public class CountCode {
      * @return the counter
      */
     public static int unsupportedModernMatch(String str) {
-        return (int) Pattern.compile("(co.e)").matcher(str).results().count();
+        return (int) Pattern.compile("co.e").matcher(str).results().count();
     }
 }
