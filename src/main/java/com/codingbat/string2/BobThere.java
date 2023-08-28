@@ -29,22 +29,23 @@ public class BobThere {
     }
 
     /**
-     * Using String::matches
+     * Using {@linkplain String#matches(String)} for the pattern: any char 0+ times,
+     * 'b', any char exactly once, 'b', any char 0+ times.
      *
      * @param str a string
      * @return true for success
      */
-    public static boolean simpleRegex(String str) {
+    public static boolean simpleMatch(String str) {
         return str.matches(".*b.b.*");
     }
 
     /**
-     * Package java.util.regex is not (currently) supported in CodingBat
+     * Find anywhere on the input string the regular expression "b.b"
      *
      * @param str a string
      * @return true for success
      */
-    public static boolean unsupported(String str) {
+    public static boolean match(String str) {
         return Pattern.compile("b.b").matcher(str).find();
     }
 }
