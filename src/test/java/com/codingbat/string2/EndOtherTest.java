@@ -20,6 +20,6 @@ class EndOtherTest {
     @ParameterizedTest
     @CsvSource({ "Hiabc,abc,true", "AbC,HiaBc,true", "abc,abXabc,true" })
     void matchExamples(String a, String b, boolean expected) {
-        assertThat(EndOther.unsupported(a, b)).isEqualTo(expected);
+        assertThat(EndOther.matching(a, b)).isEqualTo(expected);
     }
 }

@@ -34,20 +34,19 @@ public class EndOther {
     }
 
     /**
-     * Package java.util.regex is not (currently) supported in CodingBat
+     * Find on the matcher on the longer input string built on the pattern
+     * determined by the regular expression: case insensitive shorter input string
+     * at the end.
      *
      * @param a first
      * @param b second
      * @return true for success
      */
-    public static boolean unsupported(String a, String b) {
-        a = a.toLowerCase();
-        b = b.toLowerCase();
+    public static boolean matching(String a, String b) {
+        String shorter = a.length() <= b.length() ? a : b;
+        String longer = a.length() > b.length() ? a : b;
+        String regex = String.format("(?i)%s$", shorter);
 
-        if (a.length() < b.length()) {
-            return Pattern.compile(a).matcher(b).find();
-        } else {
-            return Pattern.compile(b).matcher(a).find();
-        }
+        return Pattern.compile(regex).matcher(longer).find();
     }
 }
