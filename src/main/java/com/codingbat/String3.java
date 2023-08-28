@@ -92,26 +92,6 @@ public class String3 {
     }
 
     /**
-     * codingbat.com/prob/p141736
-     * 
-     * @param str a string
-     * @return true if number "is" == number "not"
-     */
-    public static boolean equalIsNot(String str) {
-        String[] tags = { "is", "not" };
-        int[] counters = new int[2];
-
-        for (int i = 0; i < tags.length; i++) {
-            int pos = 0;
-            while ((pos = str.indexOf(tags[i], pos)) != -1) {
-                counters[i] += 1;
-                pos += 1;
-            }
-        }
-        return counters[0] == counters[1];
-    }
-
-    /**
      * codingbat.com/prob/p197890
      * 
      * @param str a string

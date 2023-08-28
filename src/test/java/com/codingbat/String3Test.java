@@ -31,12 +31,6 @@ class String3Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "This is not,false", "This is notnot,true", "noisxxnotyynotxisi,true" })
-    void equalIsNotExamples(String s, boolean expected) {
-        assertThat(String3.equalIsNot(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "aa1bc2d3,6", "aa11b33,8", "Chocolate,0" })
     void sumDigitsExamples(String s, int expected) {
         assertThat(String3.sumDigits(s)).isEqualTo(expected);
