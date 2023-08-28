@@ -5,38 +5,6 @@ package com.codingbat;
 
 public class String3 {
     /**
-     * codingbat.com/prob/p198664
-     *
-     * @param str a string
-     * @return true if there is no isolated g in the string
-     */
-    public static boolean gHappy(String str) {
-        if (str.isEmpty()) {
-            return true;
-        }
-
-        if (str.length() == 1) {
-            return str.charAt(0) != 'g';
-        }
-
-        if (str.charAt(0) == 'g' && str.charAt(1) != 'g') {
-            return false;
-        }
-
-        if (str.charAt(str.length() - 1) == 'g' && str.charAt(str.length() - 2) != 'g') {
-            return false;
-        }
-
-        for (int i = 1; i < str.length() - 1; i++) {
-            if (str.charAt(i) == 'g' && str.charAt(i - 1) != 'g' && str.charAt(i + 1) != 'g') {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    /**
      * codingbat.com/prob/p131516
      *
      * @param string a string

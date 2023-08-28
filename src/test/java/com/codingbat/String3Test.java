@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String3Test {
     @ParameterizedTest
-    @CsvSource({ "xxggxx,true", "xxgxx,false", "xxggyygxx,false" })
-    void gHappyExamples(String input, boolean expected) {
-        assertThat(String3.gHappy(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abXYab,ab", "xx,x", "xxx,x" })
     void sameEndsExamples(String input, String expected) {
         assertThat(String3.sameEnds(input)).isEqualTo(expected);
