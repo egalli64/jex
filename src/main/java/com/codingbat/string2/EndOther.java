@@ -5,8 +5,6 @@
  */
 package com.codingbat.string2;
 
-import java.util.regex.Pattern;
-
 /**
  * endOther - https://codingbat.com/prob/p126880
  * <p>
@@ -46,6 +44,6 @@ public class EndOther {
         String longer = a.length() > b.length() ? a : b;
         String regex = String.format(".*(?i)%s$", shorter);
 
-        return Pattern.matches(regex, longer);
+        return longer.matches(regex);
     }
 }
