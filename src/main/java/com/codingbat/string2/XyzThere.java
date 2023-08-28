@@ -5,8 +5,6 @@
  */
 package com.codingbat.string2;
 
-import java.util.regex.Pattern;
-
 /**
  * xyzThere - https://codingbat.com/prob/p136594
  * <p>
@@ -74,13 +72,14 @@ public class XyzThere {
     }
 
     /**
-     * Match the string against a pattern that accepts "xyz" (1) at the beginning,
-     * (2) everywhere else, but only if the previous char is _not_ a '.'
+     * Check if the passed string matches against: begin with "xyz" possibly
+     * followed by 0+ any char _OR_ 0+ any char, _not_ a dot, "xyz" possibly
+     * followed by 0+ any char.
      *
      * @param str a string
      * @return true for success
      */
     public static boolean match(String str) {
-        return Pattern.compile("^xyz|[^.]xyz").matcher(str).find();
+        return str.matches("^xyz.*|.*[^.]xyz.*");
     }
 }
