@@ -52,7 +52,8 @@ public class XyzThere {
 
     /**
      * If the string starts with the pattern, return success. Otherwise use
-     * String::indexOf and ensure the previous char is _not_ a '.'
+     * {@linkplain String#indexOf(String, int))} and ensure the previous char is
+     * _not_ a '.'
      *
      * @param str a string
      * @return true for success
@@ -79,7 +80,7 @@ public class XyzThere {
      * @param str a string
      * @return true for success
      */
-    public static boolean unsupported(String str) {
+    public static boolean match(String str) {
         return Pattern.compile("^xyz|[^.]xyz").matcher(str).find();
     }
 }
