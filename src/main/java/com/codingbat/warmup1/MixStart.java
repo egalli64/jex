@@ -14,27 +14,27 @@ import java.util.regex.Pattern;
  */
 public class MixStart {
     /**
-     * check by charAt()
+     * check char by char
      * 
      * @param str a string
      * @return true if it begins by ".ix"
      */
     public static boolean byChar(String str) {
-        return str.length() > 2 && str.charAt(1) == 'i' && str.charAt(2) == 'x';
+        return str.length() >= 3 && str.charAt(1) == 'i' && str.charAt(2) == 'x';
     }
 
     /**
-     * check by substring()
+     * check by {@linkplain String#substring(int, int)}
      * 
      * @param str a string
      * @return true if it begins by ".ix"
      */
     public static boolean sub(String str) {
-        return str.length() > 2 && str.substring(1, 3).equals("ix");
+        return str.length() >= 3 && str.substring(1, 3).equals("ix");
     }
 
     /**
-     * check by indexOf()
+     * check by {@linkplain String#indexOf(String)}
      * 
      * @param str a string
      * @return true if it begins by ".ix"
@@ -44,7 +44,17 @@ public class MixStart {
     }
 
     /**
-     * check by regular expression
+     * check by {@linkplain String#lastIndexOf(String, int)}
+     * 
+     * @param str a string
+     * @return true if it begins by ".ix"
+     */
+    public static boolean lastIndex(String str) {
+        return str.lastIndexOf("ix", 1) == 1;
+    }
+
+    /**
+     * check the regular expression by {@linkplain String#matches(String)}
      * 
      * @param str a string
      * @return true if it begins by "?ix"

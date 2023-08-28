@@ -30,6 +30,12 @@ class MixStartTest {
 
     @ParameterizedTest
     @CsvSource({ "mix snacks,true", "pix snacks,true", "piz snacks,false" })
+    void lastIndexExamples(String input, boolean expected) {
+        assertThat(MixStart.lastIndex(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "mix snacks,true", "pix snacks,true", "piz snacks,false" })
     void simpleMatchExamples(String input, boolean expected) {
         assertThat(MixStart.simpleMatch(input)).isEqualTo(expected);
     }
