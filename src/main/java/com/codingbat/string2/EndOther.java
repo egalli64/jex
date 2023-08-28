@@ -34,9 +34,8 @@ public class EndOther {
     }
 
     /**
-     * Find on the matcher on the longer input string built on the pattern
-     * determined by the regular expression: case insensitive shorter input string
-     * at the end.
+     * Check if the longer input string matches as regular expression: case
+     * insensitive 0+ any char then the shorter input string at its end.
      *
      * @param a first
      * @param b second
@@ -45,8 +44,8 @@ public class EndOther {
     public static boolean matching(String a, String b) {
         String shorter = a.length() <= b.length() ? a : b;
         String longer = a.length() > b.length() ? a : b;
-        String regex = String.format("(?i)%s$", shorter);
+        String regex = String.format(".*(?i)%s$", shorter);
 
-        return Pattern.compile(regex).matcher(longer).find();
+        return Pattern.matches(regex, longer);
     }
 }
