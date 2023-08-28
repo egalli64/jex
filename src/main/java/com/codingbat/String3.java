@@ -42,22 +42,6 @@ public class String3 {
     }
 
     /**
-     * codingbat.com/prob/p197890
-     * 
-     * @param str a string
-     * @return sum of all the digits in the string
-     */
-    public static int sumDigits(String str) {
-        int result = 0;
-        for (char c : str.toCharArray()) {
-            if (Character.isDigit(c)) {
-                result += c - '0';
-            }
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p179479
      * 
      * @param str a string

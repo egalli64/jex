@@ -19,12 +19,6 @@ class String3Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "aa1bc2d3,6", "aa11b33,8", "Chocolate,0" })
-    void sumDigitsExamples(String s, int expected) {
-        assertThat(String3.sumDigits(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "hoopla,2", "abbCCCddBBBxx,3", "'',0" })
     void maxBlockExamples(String s, int expected) {
         assertThat(String3.maxBlock(s)).isEqualTo(expected);
