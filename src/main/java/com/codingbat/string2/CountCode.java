@@ -35,7 +35,8 @@ public class CountCode {
     }
 
     /**
-     * Use String::indexOf in a loop, until there is room for the target
+     * Use {@linkplain String#indexOf(String, int)} in a loop, until there is room
+     * for the target
      *
      * @param str a string
      * @return the counter
@@ -75,7 +76,8 @@ public class CountCode {
     }
 
     /**
-     * Neither java.util.regex nor Java 9 are (currently) supported in CodingBat
+     * The use of {@linkplain Matcher#results()} is (currently) not supported in
+     * CodingBat - Java 9 feature.
      * 
      * @param str a string
      * @return the counter
