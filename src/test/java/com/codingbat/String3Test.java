@@ -13,12 +13,6 @@ class String3Test {
     }
 
     @ParameterizedTest
-    @CsvSource({ "abcXXXabc,1", "xxxabyyyycd,3", "a,0" })
-    void countTripleExamples(String s, int expected) {
-        assertThat(String3.countTriple(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abXYZba,ab", "abca,a", "aba,aba", "123and then 321,123" })
     void mirrorEndsExamples(String s, String expected) {
         assertThat(String3.mirrorEnds(s)).isEqualTo(expected);

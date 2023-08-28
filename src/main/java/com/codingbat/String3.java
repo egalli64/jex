@@ -26,24 +26,6 @@ public class String3 {
     }
 
     /**
-     * codingbat.com/prob/p195714
-     *
-     * @param str a string
-     * @return how many (possibly overlapping) same char triplet are in the string
-     */
-    public static int countTriple(String str) {
-        int result = 0;
-
-        for (int i = 0; i < str.length() - 2; i++) {
-            if (str.charAt(i) == str.charAt(i + 1) && str.charAt(i) == str.charAt(i + 2)) {
-                result += 1;
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p139411
      *
      * @param string a string
