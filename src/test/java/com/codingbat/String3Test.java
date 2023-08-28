@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String3Test {
     @ParameterizedTest
-    @CsvSource({ "abXYab,ab", "xx,x", "xxx,x" })
-    void sameEndsExamples(String input, String expected) {
-        assertThat(String3.sameEnds(input)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abXYZba,ab", "abca,a", "aba,aba", "123and then 321,123" })
     void mirrorEndsExamples(String s, String expected) {
         assertThat(String3.mirrorEnds(s)).isEqualTo(expected);

@@ -5,27 +5,6 @@ package com.codingbat;
 
 public class String3 {
     /**
-     * codingbat.com/prob/p131516
-     *
-     * @param string a string
-     * @return the longest matching substring at the beginning and end of the string
-     */
-    public static String sameEnds(String string) {
-        StringBuilder result = new StringBuilder(string.substring(0, string.length() / 2));
-
-        while (result.length() > 0) {
-            String current = result.toString();
-            if (string.endsWith(current)) {
-                break;
-            } else {
-                result.deleteCharAt(result.length() - 1);
-            }
-        }
-
-        return result.toString();
-    }
-
-    /**
      * codingbat.com/prob/p139411
      *
      * @param string a string
