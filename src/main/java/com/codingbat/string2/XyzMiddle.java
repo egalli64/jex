@@ -21,10 +21,6 @@ public class XyzMiddle {
      * @return true if accepted
      */
     public static boolean solution(String str) {
-        if (str.length() < 3) {
-            return false;
-        }
-
         int head = str.indexOf("xyz", str.length() / 2 - 3);
         if (head == -1) {
             return false;
