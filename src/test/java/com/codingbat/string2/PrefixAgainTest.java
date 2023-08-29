@@ -22,4 +22,10 @@ class PrefixAgainTest {
     void byContainsExamples(String s, int n, boolean expected) {
         assertThat(PrefixAgain.byContains(s, n)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "abXYabc,1,true", "abXYabc,2,true", "abXYabc,3,false", "aa,1,true" })
+    void vanillaExamples(String s, int n, boolean expected) {
+        assertThat(PrefixAgain.vanilla(s, n)).isEqualTo(expected);
+    }
 }
