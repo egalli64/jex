@@ -8,7 +8,7 @@ package com.codingbat.string3;
 /**
  * sameEnds - https://codingbat.com/prob/p131516
  * <p>
- * Get the longest substring appearing both at both begin and end without
+ * Get the longest substring appearing both at begin and end without
  * overlapping.
  */
 public class SameEnds {
