@@ -12,8 +12,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class XyzMiddleTest {
     @ParameterizedTest
-    @CsvSource({ "AAxyzBB,true", "AxyzBB,true", "AxyzBBB,false" })
-    void xyzMiddleExamples(String input, boolean expected) {
+    @CsvSource({ "AAxyzBB,true", "AxyzBB,true", "AxyzBBB,false", "AAAxyzB,false" })
+    void solutionExamples(String input, boolean expected) {
         assertThat(XyzMiddle.solution(input)).isEqualTo(expected);
     }
 }
