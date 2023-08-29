@@ -28,12 +28,12 @@ class XyzMiddleTest {
     @Test
     void checkXyzOutOfBound() {
         assertThatExceptionOfType(StringIndexOutOfBoundsException.class) //
-                .isThrownBy(() -> XyzMiddle.checkXyz("xyz", 42));
+                .isThrownBy(() -> XyzMiddle.isCenteredXyz("xyz", 0));
     }
 
     @ParameterizedTest
-    @CsvSource({ "AAxyzBB,2,true", "AxyzBB,1,true", "AxyzBBB,0,false", "AAAxyzB,4,false" })
-    void checkXyzExamples(String input, int index, boolean expected) {
-        assertThat(XyzMiddle.checkXyz(input, index)).isEqualTo(expected);
+    @CsvSource({ "AAxyzBB,3,true", "AxyzBB,2,true", "AxyzBBB,1,false", "AAAxyzB,3,false" })
+    void isCenteredXyzExamples(String input, int index, boolean expected) {
+        assertThat(XyzMiddle.isCenteredXyz(input, index)).isEqualTo(expected);
     }
 }

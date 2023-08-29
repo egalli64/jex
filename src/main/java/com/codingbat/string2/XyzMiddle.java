@@ -14,13 +14,12 @@ package com.codingbat.string2;
 public class XyzMiddle {
     /**
      * Ensure the string is long enough to contain the target. If it has an even
-     * size, the target can't be exactly centered, check if it is more to the left.
-     * Otherwise check if it the target starts from the center minus one. In case of
-     * odd-sized input, this means that it is exactly centered, for a even-sized
-     * input it means it is a one step more to the right.
+     * size, the target can't be exactly centered, check if it is one step to the
+     * left or right. In case of odd-sized input, this means that it is exactly
+     * centered.
      * <p>
-     * The check for "xyz" is delegated to
-     * {@linkplain XyzMiddle#checkXyz(String, int)}
+     * The check for centered "xyz" is delegated to
+     * {@linkplain XyzMiddle#isCenteredXyz(String, int)}
      * 
      * @param str a string
      * @return true if accepted
@@ -28,23 +27,23 @@ public class XyzMiddle {
     public static boolean solution(String str) {
         if (str.length() < 3) {
             return false;
-        } else if (str.length() % 2 == 0 && checkXyz(str, str.length() / 2 - 2)) {
+        } else if (str.length() % 2 == 0 && isCenteredXyz(str, str.length() / 2 - 1)) {
             return true;
         } else {
-            return checkXyz(str, str.length() / 2 - 1);
+            return isCenteredXyz(str, str.length() / 2);
         }
     }
 
     /**
-     * Check if "xyz" is a substring of s from i
+     * Check if "xyz" is centered in i
      * 
      * @param s a string
      * @param i an index in s
      * @return true if matches
      * @throws StringIndexOutOfBoundsException for "bad" i
      */
-    static boolean checkXyz(String s, int i) {
-        return s.charAt(i) == 'x' && s.charAt(i + 1) == 'y' && s.charAt(i + 2) == 'z';
+    static boolean isCenteredXyz(String s, int i) {
+        return s.charAt(i - 1) == 'x' && s.charAt(i) == 'y' && s.charAt(i + 1) == 'z';
     }
 
     /**
