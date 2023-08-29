@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String3Test {
     @ParameterizedTest
-    @CsvSource({ "abXYZba,ab", "abca,a", "aba,aba", "123and then 321,123" })
-    void mirrorEndsExamples(String s, String expected) {
-        assertThat(String3.mirrorEnds(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "hoopla,2", "abbCCCddBBBxx,3", "'',0" })
     void maxBlockExamples(String s, int expected) {
         assertThat(String3.maxBlock(s)).isEqualTo(expected);

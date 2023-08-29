@@ -5,22 +5,6 @@ package com.codingbat;
 
 public class String3 {
     /**
-     * codingbat.com/prob/p139411
-     *
-     * @param string a string
-     * @return the longest palindromic section of the string
-     */
-    public static String mirrorEnds(String string) {
-        int i = 0;
-        for (int j = string.length() - 1; i < j; i++, j--) {
-            if (string.charAt(i) != string.charAt(j)) {
-                break;
-            }
-        }
-        return i == string.length() / 2 ? string : string.substring(0, i);
-    }
-
-    /**
      * codingbat.com/prob/p179479
      * 
      * @param str a string
