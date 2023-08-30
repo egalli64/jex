@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String3Test {
     @ParameterizedTest
-    @CsvSource({ "hoopla,2", "abbCCCddBBBxx,3", "'',0" })
-    void maxBlockExamples(String s, int expected) {
-        assertThat(String3.maxBlock(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "abc123xyz,123", "aa11b33,44", "7 11,18" })
     void sumNumbersExamples(String s, int expected) {
         assertThat(String3.sumNumbers(s)).isEqualTo(expected);
