@@ -5,29 +5,6 @@ package com.codingbat;
 
 public class Array3 {
     /**
-     * codingbat.com/prob/p189576
-     *
-     * @param nums an array of int
-     * @return the max distance between elements with the same value (Efficiency not a priority)
-     */
-    public static int maxSpan(int[] nums) {
-        int result = 0;
-
-        for (int i = 0; i < nums.length; i++) {
-            int j = nums.length - 1;
-            for (; j >= i; j--) {
-                if (nums[i] == nums[j]) {
-                    break;
-                }
-            }
-
-            result = Math.max(result, j - i + 1);
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p158767
      *
      * @param nums a non-empty array of int
