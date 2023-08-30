@@ -34,4 +34,14 @@ public class ZipZap {
 
         return result.toString();
     }
+
+    /**
+     * Replace all occurrences of the regular expression "z.p" with "zp"
+     * 
+     * @param str a string
+     * @return the generated string
+     */
+    public static String matching(String str) {
+        return str.replaceAll("z.p", "zp");
+    }
 }

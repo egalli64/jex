@@ -13,7 +13,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 class ZipZapTest {
     @ParameterizedTest
     @CsvSource({ "zipXzap,zpXzp", "zopzop,zpzp", "zzzopzop,zzzpzp" })
-    void zipZapExamples(String s, String expected) {
+    void solutionExamples(String s, String expected) {
         assertThat(ZipZap.solution(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "zipXzap,zpXzp", "zopzop,zpzp", "zzzopzop,zzzpzp" })
+    void matchingExamples(String s, String expected) {
+        assertThat(ZipZap.matching(s)).isEqualTo(expected);
     }
 }
