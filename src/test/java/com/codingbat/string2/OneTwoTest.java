@@ -13,7 +13,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 class OneTwoTest {
     @ParameterizedTest
     @CsvSource({ "abc,bca", "tca,cat", "tcagdo,catdog" })
-    void oneTwoExamples(String s, String expected) {
+    void solutionExamples(String s, String expected) {
         assertThat(OneTwo.solution(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abc,bca", "tca,cat", "tcagdo,catdog" })
+    void alternativeExamples(String s, String expected) {
+        assertThat(OneTwo.alternative(s)).isEqualTo(expected);
     }
 }

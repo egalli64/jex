@@ -17,15 +17,29 @@ public class OneTwo {
      * string, append it to a builder in the required order
      *
      * @param str a string
-     * @return swap each three letter group so that
+     * @return truncated string with swapped chars
      */
     public static String solution(String str) {
         StringBuilder result = new StringBuilder();
         int len = str.length() - str.length() % 3;
         for (int i = 0; i < len; i += 3) {
-            result.append(str.charAt(i + 1));
-            result.append(str.charAt(i + 2));
-            result.append(str.charAt(i));
+            result.append(str.charAt(i + 1)).append(str.charAt(i + 2)).append(str.charAt(i));
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * Loop on triplets, basing the loop variable on its third element. Append the
+     * rearranged chars to the builder that keep the result.
+     * 
+     * @param str a string
+     * @return truncated string with swapped chars
+     */
+    public static String alternative(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 2; i < str.length(); i += 3) {
+            result.append(str.charAt(i - 1)).append(str.charAt(i)).append(str.charAt(i - 2));
         }
 
         return result.toString();
