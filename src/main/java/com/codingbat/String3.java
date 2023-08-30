@@ -5,29 +5,6 @@ package com.codingbat;
 
 public class String3 {
     /**
-     * codingbat.com/prob/p121193
-     * 
-     * @param str a string
-     * @return sum of numbers (sequence of digit) in the string
-     */
-    public static int sumNumbers(String str) {
-        int result = 0;
-
-        for (int i = 0; i < str.length(); i++) {
-            char cur = str.charAt(i);
-            int number = Character.isDigit(cur) ? cur - '0' : 0;
-            for (int j = i + 1; j < str.length() && Character.isDigit(cur = str.charAt(j)); j++) {
-                i++;
-                number *= 10;
-                number += cur - '0';
-            }
-            result += number;
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p154137
      * 
      * @param str a string

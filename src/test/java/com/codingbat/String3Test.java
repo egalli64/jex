@@ -7,12 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class String3Test {
     @ParameterizedTest
-    @CsvSource({ "abc123xyz,123", "aa11b33,44", "7 11,18" })
-    void sumNumbersExamples(String s, int expected) {
-        assertThat(String3.sumNumbers(s)).isEqualTo(expected);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "is test,is not test", "is-is,is not-is not", "This is right,This is not right" })
     void notReplaceExamples(String s, String expected) {
         assertThat(String3.notReplace(s)).isEqualTo(expected);
