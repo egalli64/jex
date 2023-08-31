@@ -35,4 +35,17 @@ class Fix34Test {
         int[] expected = { 5, 3, 4, 5, 5, 5, 5, 5, 3, 4, 3, 4 };
         assertThat(Fix34.solution(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void alternativeExamples(int[] input, int[] expected) {
+        assertThat(Fix34.alternative(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void alternativeMixed() {
+        int[] input = { 5, 3, 5, 4, 5, 4, 5, 4, 3, 5, 3, 5 };
+        int[] expected = { 5, 3, 4, 5, 5, 5, 5, 5, 3, 4, 3, 4 };
+        assertThat(Fix34.alternative(input)).isEqualTo(expected);
+    }
 }
