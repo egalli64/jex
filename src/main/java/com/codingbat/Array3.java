@@ -92,30 +92,6 @@ public class Array3 {
     }
 
     /**
-     * codingbat.com/prob/p125819
-     *
-     * @param nums contains the same number of 4s and 5s, each 4 is followed by ~4,
-     *             5s could be anywhere
-     * @return 4s are in same positions, 5s should follow
-     */
-    public static int[] fix45(int[] nums) {
-        int pos5 = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == 4 && nums[i + 1] != 5) {
-                i += 1;
-                while (nums[pos5] != 5 || (pos5 != 0 && nums[pos5 - 1] == 4)) {
-                    pos5++;
-                }
-
-                nums[pos5] = nums[i];
-                nums[i] = 5;
-            }
-        }
-
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p155405
      *
      * @param n non-negative

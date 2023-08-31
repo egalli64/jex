@@ -59,20 +59,6 @@ class Array3Test {
     }
 
     @Test
-    void fix45Example1() {
-        int[] input = { 5, 4, 9, 4, 9, 5 };
-        int[] expected = { 9, 4, 5, 4, 5, 9 };
-        assertThat(Array3.fix45(input)).isEqualTo(expected);
-    }
-
-    @Test
-    void fix45FiveOverlap() {
-        int[] input = { 5, 4, 5, 4, 1 };
-        int[] expected = { 1, 4, 5, 4, 5 };
-        assertThat(Array3.fix45(input)).isEqualTo(expected);
-    }
-
-    @Test
     void squareUpExample1() {
         int input = 3;
         int[] expected = { 0, 0, 1, 0, 2, 1, 3, 2, 1 };
