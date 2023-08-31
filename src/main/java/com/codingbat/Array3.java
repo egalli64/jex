@@ -47,22 +47,6 @@ public class Array3 {
     }
 
     /**
-     * codingbat.com/prob/p155405
-     *
-     * @param n non-negative
-     * @return size n^2, n sub from 0..1 to n..1
-     */
-    public static int[] squareUp(int n) {
-        int[] result = new int[n * n];
-        for (int i = 0; i < n; i++) {
-            for (int j = n - 1; j >= n - 1 - i; j--) {
-                result[i * n + j] = n - j;
-            }
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p193817
      *
      * @param nums an array

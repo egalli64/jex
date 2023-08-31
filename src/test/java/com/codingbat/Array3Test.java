@@ -34,13 +34,6 @@ class Array3Test {
     }
 
     @Test
-    void squareUpExample1() {
-        int input = 3;
-        int[] expected = { 0, 0, 1, 0, 2, 1, 3, 2, 1 };
-        assertThat(Array3.squareUp(input)).containsExactly(expected);
-    }
-
-    @Test
     void countClumpsExample1() {
         int[] input = { 1, 2, 2, 3, 4, 4 };
         int expected = 2;
