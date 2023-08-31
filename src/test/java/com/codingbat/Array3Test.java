@@ -6,24 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array3Test {
     @Test
-    void canBalanceExample1() {
-        int[] input = { 1, 1, 1, 2, 1 };
-        assertThat(Array3.canBalance(input)).isTrue();
-    }
-
-    @Test
-    void canBalanceExample2() {
-        int[] input = { 2, 1, 1, 2, 1 };
-        assertThat(Array3.canBalance(input)).isFalse();
-    }
-
-    @Test
-    void canBalanceExample3() {
-        int[] input = { 10, 10 };
-        assertThat(Array3.canBalance(input)).isTrue();
-    }
-
-    @Test
     void seriesUpExample1() {
         int input = 3;
         int[] expected = { 1, 1, 2, 1, 2, 3 };

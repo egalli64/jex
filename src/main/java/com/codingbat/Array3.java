@@ -5,30 +5,6 @@ package com.codingbat;
 
 public class Array3 {
     /**
-     * codingbat.com/prob/p158767
-     *
-     * @param nums a non-empty array of int
-     * @return true if it could be split in a balanced way
-     */
-    public static boolean canBalance(int[] nums) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
-        }
-
-        if (sum % 2 == 1) {
-            return false;
-        }
-
-        sum /= 2;
-        for (int i = 0; sum > 0; i++) {
-            sum -= nums[i];
-        }
-
-        return sum == 0;
-    }
-
-    /**
      * codingbat.com/prob/p104090
      *
      * @param n a (small) int
