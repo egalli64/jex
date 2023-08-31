@@ -47,31 +47,6 @@ public class Array3 {
     }
 
     /**
-     * codingbat.com/prob/p159339
-     *
-     * @param nums contains the same number of 3 and 4
-     * @return 3 are in fixed position, 4 should follow
-     */
-    public static int[] fix34(int[] nums) {
-        int fourPos = -1;
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == 3) {
-                i += 1;
-                for (int j = fourPos + 1; j < nums.length; j++) {
-                    if (nums[j] == 4) {
-                        nums[j] = nums[i];
-                        nums[i] = 4;
-                        fourPos = j;
-                        break;
-                    }
-                }
-            }
-        }
-
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p134022
      *
      * @param outer a "container" sorted array
@@ -80,7 +55,7 @@ public class Array3 {
      */
     public static boolean linearIn(int[] outer, int[] inner) {
         int i = 0;
-        for (int j = 0; i < inner.length && j < outer.length; ) {
+        for (int j = 0; i < inner.length && j < outer.length;) {
             if (inner[i] > outer[j]) {
                 j += 1;
             } else if (inner[i] != outer[j]) {
@@ -116,11 +91,11 @@ public class Array3 {
         return result;
     }
 
-
     /**
      * codingbat.com/prob/p125819
      *
-     * @param nums contains the same number of 4s and 5s, each 4 is followed by ~4, 5s could be anywhere
+     * @param nums contains the same number of 4s and 5s, each 4 is followed by ~4,
+     *             5s could be anywhere
      * @return 4s are in same positions, 5s should follow
      */
     public static int[] fix45(int[] nums) {
