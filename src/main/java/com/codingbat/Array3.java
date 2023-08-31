@@ -23,27 +23,6 @@ public class Array3 {
     }
 
     /**
-     * codingbat.com/prob/p134022
-     *
-     * @param outer a "container" sorted array
-     * @param inner a "contained" sorted array
-     * @return true if inner is actually in outer
-     */
-    public static boolean linearIn(int[] outer, int[] inner) {
-        int i = 0;
-        for (int j = 0; i < inner.length && j < outer.length;) {
-            if (inner[i] > outer[j]) {
-                j += 1;
-            } else if (inner[i] != outer[j]) {
-                return false;
-            } else {
-                i += 1;
-            }
-        }
-        return i == inner.length;
-    }
-
-    /**
      * codingbat.com/prob/p196409
      *
      * @param nums an array

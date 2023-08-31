@@ -27,13 +27,6 @@ class Array3Test {
     }
 
     @Test
-    void linearInExample1() {
-        int[] outer = { 1, 2, 4, 6 };
-        int[] inner = { 2, 4 };
-        assertThat(Array3.linearIn(outer, inner)).isTrue();
-    }
-
-    @Test
     void maxMirrorExample1() {
         int[] input = { 1, 2, 3, 8, 9, 3, 2, 1 };
         int expected = 3;
