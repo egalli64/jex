@@ -6,27 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Array3Test {
     @Test
-    void seriesUpExample1() {
-        int input = 3;
-        int[] expected = { 1, 1, 2, 1, 2, 3 };
-        assertThat(Array3.seriesUp(input)).containsExactly(expected);
-    }
-
-    @Test
-    void seriesUpExample2() {
-        int input = 4;
-        int[] expected = { 1, 1, 2, 1, 2, 3, 1, 2, 3, 4 };
-        assertThat(Array3.seriesUp(input)).containsExactly(expected);
-    }
-
-    @Test
-    void seriesUpExample3() {
-        int input = 2;
-        int[] expected = { 1, 1, 2 };
-        assertThat(Array3.seriesUp(input)).containsExactly(expected);
-    }
-
-    @Test
     void maxMirrorExample1() {
         int[] input = { 1, 2, 3, 8, 9, 3, 2, 1 };
         int expected = 3;

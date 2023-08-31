@@ -5,24 +5,6 @@ package com.codingbat;
 
 public class Array3 {
     /**
-     * codingbat.com/prob/p104090
-     *
-     * @param n a (small) int
-     * @return an array for all the natural series from 1 to n
-     */
-    public static int[] seriesUp(int n) {
-        int[] result = new int[n * (n + 1) / 2];
-
-        for (int i = 0, j = 0; i < n; i++) {
-            for (int k = 0; k <= i; j++, k++) {
-                result[j] = k + 1;
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p196409
      *
      * @param nums an array
