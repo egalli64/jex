@@ -39,21 +39,6 @@ public class Map1 {
     }
 
     /**
-     * codingbat.com/prob/p148813
-     *
-     * @param map a map
-     * @return the map, if key "a" has a value, set it to "b" too; remove "c"
-     */
-    public static Map<String, String> mapShare(Map<String, String> map) {
-        String aValue = map.get("a");
-        if (aValue != null) {
-            map.put("b", aValue);
-        }
-        map.remove("c");
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p107259
      *
      * @param map a map

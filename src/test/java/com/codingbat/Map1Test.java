@@ -61,17 +61,6 @@ class Map1Test {
     }
 
     @Test
-    void mapShareExample1() {
-        Map<String, String> input = new HashMap<>();
-        input.put("a", "aaa");
-        input.put("b", "bbb");
-        input.put("c", "ccc");
-        Map<String, String> expected = Map.of("a", "aaa", "b", "aaa");
-
-        assertThat(Map1.mapShare(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
     void mapABExample1() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "Hi");
