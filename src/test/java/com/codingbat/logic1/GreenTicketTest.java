@@ -16,4 +16,10 @@ class GreenTicketTest {
     void solutionExamples(int a, int b, int c, int expected) {
         assertThat(GreenTicket.solution(a, b, c)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1, 2, 3, 0", "2, 2, 2, 20", "1, 1, 2, 10" })
+    void alternativeExamples(int a, int b, int c, int expected) {
+        assertThat(GreenTicket.alternative(a, b, c)).isEqualTo(expected);
+    }
 }

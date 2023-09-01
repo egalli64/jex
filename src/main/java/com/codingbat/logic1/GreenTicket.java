@@ -15,7 +15,8 @@ package com.codingbat.logic1;
  */
 public class GreenTicket {
     /**
-     * Check for a triplet, then for no match, the default is going to be a couple
+     * Check for a triplet, then, if not a triplet, check for a couple. By default
+     * all three tickets are different.
      * 
      * @param a ticket
      * @param b ticket
@@ -23,6 +24,25 @@ public class GreenTicket {
      * @return 0, 10, or 20
      */
     public static int solution(int a, int b, int c) {
+        if (a == b && b == c) {
+            return 20;
+        } else if (a == b || b == c || a == c) {
+            return 10;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * Check for a triplet, then for no match. Finally, having ruled out triplet and
+     * no match, it is going to be a couple.
+     * 
+     * @param a ticket
+     * @param b ticket
+     * @param c ticket
+     * @return 0, 10, or 20
+     */
+    public static int alternative(int a, int b, int c) {
         if (a == b && b == c) {
             return 20;
         } else if (a != b && b != c && a != c) {
