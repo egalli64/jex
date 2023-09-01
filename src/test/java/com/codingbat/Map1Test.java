@@ -1,3 +1,8 @@
+/*
+  CodingBat Map 1 - https://codingbat.com/java/Map-1
+
+  My repository with solutions - https://github.com/egalli64/jex/
+ */
 package com.codingbat;
 
 import org.junit.jupiter.api.Test;
@@ -8,36 +13,6 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Map1Test {
-    @Test
-    void mapBullyExample1() {
-        Map<String, String> input = new HashMap<>();
-        input.put("a", "candy");
-        input.put("b", "dirt");
-        Map<String, String> expected = Map.of("a", "", "b", "candy");
-
-        assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
-    void mapBullyExample2() {
-        Map<String, String> input = new HashMap<>();
-        input.put("a", "candy");
-        Map<String, String> expected = Map.of("a", "", "b", "candy");
-
-        assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
-    void mapBullyExample3() {
-        Map<String, String> input = new HashMap<>();
-        input.put("a", "candy");
-        input.put("b", "carrot");
-        input.put("c", "meh");
-        Map<String, String> expected = Map.of("a", "", "b", "candy", "c", "meh");
-
-        assertThat(Map1.mapBully(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
     @Test
     void topping1Example1() {
         Map<String, String> input = new HashMap<>();

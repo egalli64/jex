@@ -7,24 +7,11 @@ import java.util.Map;
 
 public class Map1 {
     /**
-     * codingbat.com/prob/p197888
-     *
-     * @param map a map
-     * @return map, after moving the value associated to a, if exists, in b
-     */
-    public static Map<String, String> mapBully(Map<String, String> map) {
-        if (map.containsKey("a")) {
-            map.put("b", map.get("a"));
-            map.put("a", "");
-        }
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p182712
      *
      * @param map a map
-     * @return a map with bread set to butter and, if already present, ice cream set to cherry
+     * @return a map with bread set to butter and, if already present, ice cream set
+     *         to cherry
      */
     public static Map<String, String> topping1(Map<String, String> map) {
         String toBeChanged = "ice cream";
@@ -40,7 +27,8 @@ public class Map1 {
      * codingbat.com/prob/p115011
      *
      * @param map a map
-     * @return the input map, if the keys "a" and "b" are both in the map and have equal values, remove them
+     * @return the input map, if the keys "a" and "b" are both in the map and have
+     *         equal values, remove them
      */
     public static Map<String, String> mapAB2(Map<String, String> map) {
         if (map.containsKey("a") && map.containsKey("b") && map.get("a").equals(map.get("b"))) {
@@ -85,10 +73,12 @@ public class Map1 {
      * codingbat.com/prob/p196458
      *
      * @param map a map
-     * @return <pre>
+     * @return
+     * 
+     *         <pre>
      * if key "ice cream" -> value, set key "yogurt" -> value;
      * if key "spinach" -> value, set it to "nuts";
-     * </pre>
+     *         </pre>
      */
     public static Map<String, String> topping2(Map<String, String> map) {
         String value = map.get("ice cream");
@@ -103,10 +93,12 @@ public class Map1 {
      * codingbat.com/prob/p128461
      *
      * @param map a map
-     * @return <pre>
+     * @return
+     * 
+     *         <pre>
      * if key "potato" -> value, then "fries" -> value
      * if key "salad" -> value, then "spinach" -> value
-     * </pre>
+     *         </pre>
      */
     public static Map<String, String> topping3(Map<String, String> map) {
         String potato = map.get("potato");
@@ -126,7 +118,8 @@ public class Map1 {
      * codingbat.com/prob/p115012
      *
      * @param map a map
-     * @return if only one between keys "a" or "b" has a value, set the other to that value
+     * @return if only one between keys "a" or "b" has a value, set the other to
+     *         that value
      */
     public static Map<String, String> mapAB3(Map<String, String> map) {
         String a = map.get("a");
@@ -145,10 +138,12 @@ public class Map1 {
      * codingbat.com/prob/p136950
      *
      * @param map a map
-     * @return <pre>
+     * @return
+     * 
+     *         <pre>
      * if key "a" and key "b" have values with different lengths, set "c" -> the longest
      * if they have the same length -> set both to empty strings
-     * </pre>
+     *         </pre>
      */
     public static Map<String, String> mapAB4(Map<String, String> map) {
         String a = map.get("a");
