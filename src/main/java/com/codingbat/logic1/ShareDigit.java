@@ -20,9 +20,11 @@ public class ShareDigit {
      * @return true if same digit appears in both numbers
      */
     public static boolean solution(int a, int b) {
-        int[] as = { a % 10, a / 10 };
-        int[] bs = { b % 10, b / 10 };
+        int at = a / 10;
+        int au = a % 10;
+        int bt = b / 10;
+        int bu = b % 10;
 
-        return as[0] == bs[0] || as[1] == bs[0] || as[0] == bs[1] || as[1] == bs[1];
+        return at == bt || au == bt || at == bu || au == bu;
     }
 }
