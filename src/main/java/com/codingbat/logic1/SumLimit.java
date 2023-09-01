@@ -39,4 +39,17 @@ public class SumLimit {
         }
         return count;
     }
+
+    /**
+     * Generate the sum of the two parameters, convert both a and the sum to string,
+     * check their size.
+     * 
+     * @param a non-negative
+     * @param b non-negative
+     * @return the sum, if in the same magnitude of a; else a
+     */
+    public static int alternative(int a, int b) {
+        int sum = a + b;
+        return String.valueOf(a).length() == String.valueOf(sum).length() ? sum : a;
+    }
 }
