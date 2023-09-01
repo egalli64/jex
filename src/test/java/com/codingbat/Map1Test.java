@@ -35,15 +35,6 @@ class Map1Test {
     }
 
     @Test
-    void topping2Example1() {
-        Map<String, String> input = new HashMap<>();
-        input.put("ice cream", "cherry");
-        Map<String, String> expected = Map.of("yogurt", "cherry", "ice cream", "cherry");
-
-        assertThat(Map1.topping2(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
     void topping3Example1() {
         Map<String, String> input = new HashMap<>();
         input.put("potato", "ketchup");

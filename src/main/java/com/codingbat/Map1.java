@@ -22,26 +22,6 @@ public class Map1 {
     }
 
     /**
-     * codingbat.com/prob/p196458
-     *
-     * @param map a map
-     * @return
-     * 
-     *         <pre>
-     * if key "ice cream" -> value, set key "yogurt" -> value;
-     * if key "spinach" -> value, set it to "nuts";
-     *         </pre>
-     */
-    public static Map<String, String> topping2(Map<String, String> map) {
-        String value = map.get("ice cream");
-        if (value != null) {
-            map.put("yogurt", value);
-        }
-        map.replace("spinach", "nuts");
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p128461
      *
      * @param map a map
