@@ -39,22 +39,6 @@ public class Map1 {
     }
 
     /**
-     * codingbat.com/prob/p107259
-     *
-     * @param map a map
-     * @return if keys a and b are both present, add "ab" -> value a + value b
-     */
-    public static Map<String, String> mapAB(Map<String, String> map) {
-        String a = map.get("a");
-        String b = map.get("b");
-        if (a != null && b != null) {
-            map.put("ab", a + b);
-        }
-
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p196458
      *
      * @param map a map
