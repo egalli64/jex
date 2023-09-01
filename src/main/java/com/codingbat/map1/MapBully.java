@@ -10,8 +10,8 @@ import java.util.Map;
 /**
  * mapBully - https://codingbat.com/prob/p197888
  * <p>
- * If the passed map has a pair with key "a", put its value the pair having key
- * "b", and reset the value for "a" as an empty string.
+ * If the passed map has an entry with key "a", put its value in the entry
+ * having key "b", and reset the value for "a" as an empty string.
  */
 public class MapBully {
     /**

@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * mapAB - https://codingbat.com/prob/p107259
  * <p>
- * If the passed map has both pair with key "a" and "b", concatenate their
+ * If the passed map has two entries with key "a" and "b", concatenate their
  * values and put the result as value for the key "ab"
  */
 public class MapAB {
