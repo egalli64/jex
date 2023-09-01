@@ -26,9 +26,11 @@ public class SumLimit {
     }
 
     /**
+     * Calculate the number of decimal digits in the passed positive integer
+     * <p>
      * Helper for {@linkplain SumLimit#solution(int, int)}
      * 
-     * @param value non-negative
+     * @param value positive integer
      * @return the number of digits
      */
     static int digits(int value) {
