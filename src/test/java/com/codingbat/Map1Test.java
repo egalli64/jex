@@ -14,32 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Map1Test {
     @Test
-    void topping1Example1() {
-        Map<String, String> input = new HashMap<>();
-        input.put("ice cream", "peanuts");
-        Map<String, String> expected = Map.of("bread", "butter", "ice cream", "cherry");
-
-        assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
-    void topping1Example2() {
-        Map<String, String> input = new HashMap<>();
-        Map<String, String> expected = Map.of("bread", "butter");
-
-        assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
-    void topping1Example3() {
-        Map<String, String> input = new HashMap<>();
-        input.put("pancake", "syrup");
-        Map<String, String> expected = Map.of("bread", "butter", "pancake", "syrup");
-
-        assertThat(Map1.topping1(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
     void mapAB2Example1() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "aaa");

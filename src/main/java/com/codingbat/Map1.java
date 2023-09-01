@@ -7,23 +7,6 @@ import java.util.Map;
 
 public class Map1 {
     /**
-     * codingbat.com/prob/p182712
-     *
-     * @param map a map
-     * @return a map with bread set to butter and, if already present, ice cream set
-     *         to cherry
-     */
-    public static Map<String, String> topping1(Map<String, String> map) {
-        String toBeChanged = "ice cream";
-        if (map.containsKey(toBeChanged)) {
-            map.put(toBeChanged, "cherry");
-        }
-        map.put("bread", "butter");
-
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p115011
      *
      * @param map a map
