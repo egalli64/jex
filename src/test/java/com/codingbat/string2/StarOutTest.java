@@ -19,6 +19,12 @@ class StarOutTest {
 
     @ParameterizedTest
     @CsvSource({ "ab*cd,ad", "ab**cd,ad", "sm*eilly,silly" })
+    void verboseExamples(String s, String expected) {
+        assertThat(StarOut.verbose(s)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "ab*cd,ad", "ab**cd,ad", "sm*eilly,silly" })
     void byReplaceAllExamples(String s, String expected) {
         assertThat(StarOut.byReplaceAll(s)).isEqualTo(expected);
     }

@@ -13,6 +13,28 @@ package com.codingbat.string2;
  */
 public class StarOut {
     /**
+     * Loop on all chars in the string. If the current one is not a star and there
+     * is no star before or after it, put it in the result. Pay attention to first
+     * and last chars!
+     * 
+     * @param str a string
+     * @return cleaned string
+     */
+    public static String solution(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char cur = str.charAt(i);
+            if (cur != '*' && (i == 0 || str.charAt(i - 1) != '*')
+                    && (i == str.length() - 1 || str.charAt(i + 1) != '*')) {
+                result.append(cur);
+            }
+        }
+
+        return result.toString();
+    }
+
+    /**
      * Nothing to do for an empty string or a single char one, if it is not a "*".
      * Otherwise, check all triplets in the string, if a triplet is star-free, its
      * central char can safely be appended in the resulting string. First and last
@@ -21,9 +43,11 @@ public class StarOut {
      * @param str a string
      * @return cleaned string
      */
-    public static String solution(String str) {
-        if (str.length() < 2) {
-            return str.isEmpty() || str.charAt(0) == '*' ? "" : str;
+    public static String verbose(String str) {
+        if (str.isEmpty()) {
+            return str;
+        } else if (str.length() == 1) {
+            return str.charAt(0) == '*' ? "" : str;
         } else {
             StringBuilder result = new StringBuilder();
 
