@@ -12,15 +12,14 @@ package com.codingbat.array2;
  */
 public class TripleUp {
     /**
-     * Check each triplet from the middle element, if the previous is -1 and the
-     * next is +1, the triplet is found
+     * Check each triplet for the required configuration
      * 
      * @param nums an array
-     * @return true if contains a sub of three increasing adjacent ints
+     * @return true if accepted
      */
     public static boolean solution(int[] nums) {
-        for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i - 1] == nums[i] - 1 && nums[i] == nums[i + 1] - 1) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i + 1] == nums[i] + 1 && nums[i + 2] == nums[i] + 2) {
                 return true;
             }
         }
