@@ -12,8 +12,10 @@ package com.codingbat.array2;
  */
 public class TwoTwo {
     /**
-     * Accept empty array, single element not 2, two elements both 2 or both not-2.
-     * Reject the other same sized cases.
+     * Accept empty array and array with single element not 2.
+     * <p>
+     * If there are at least 2 elements, check the first element, if it is a 2, also
+     * the second one should a 2.
      * <p>
      * For each triplet in the array check the central element, if it is an isolated
      * 2, the requested condition is not satisfied.
@@ -25,10 +27,14 @@ public class TwoTwo {
      * @return true if accepted
      */
     public static boolean solution(int[] nums) {
-        if (nums.length <= 1) {
-            return nums.length == 0 ? true : nums[0] != 2;
-        } else if (nums.length == 2) {
-            return !(nums[0] == 2 ^ nums[1] == 2);
+        if (nums.length == 0) {
+            return true;
+        } else if (nums.length == 1) {
+            return nums[0] != 2;
+        }
+
+        if (nums[0] == 2 && nums[1] != 2) {
+            return false;
         }
 
         for (int i = 1; i < nums.length - 1; i++) {
