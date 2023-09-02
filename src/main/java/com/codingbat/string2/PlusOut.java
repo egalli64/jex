@@ -27,21 +27,21 @@ public class PlusOut {
         StringBuilder result = new StringBuilder();
 
         int i = 0;
-        do {
+        while (i < str.length()) {
             int end = str.indexOf(word, i);
             if (end == -1) {
                 end = str.length();
             }
-            while (i < end) {
+
+            for (; i < end; i++) {
                 result.append('+');
-                i += 1;
             }
 
             if (end != str.length()) {
                 result.append(word);
                 i += word.length();
             }
-        } while (i < str.length());
+        }
 
         return result.toString();
     }
