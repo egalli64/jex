@@ -26,8 +26,7 @@ public class PlusOut {
     public static String solution(String str, String word) {
         StringBuilder result = new StringBuilder();
 
-        int i = 0;
-        while (i < str.length()) {
+        for (int i = 0; i < str.length();) {
             int end = str.indexOf(word, i);
             if (end == -1) {
                 end = str.length();
