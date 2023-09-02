@@ -22,31 +22,6 @@ public class Map1 {
     }
 
     /**
-     * codingbat.com/prob/p128461
-     *
-     * @param map a map
-     * @return
-     * 
-     *         <pre>
-     * if key "potato" -> value, then "fries" -> value
-     * if key "salad" -> value, then "spinach" -> value
-     *         </pre>
-     */
-    public static Map<String, String> topping3(Map<String, String> map) {
-        String potato = map.get("potato");
-        if (potato != null) {
-            map.put("fries", potato);
-        }
-
-        String salad = map.get("salad");
-        if (salad != null) {
-            map.put("spinach", salad);
-        }
-
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p115012
      *
      * @param map a map
