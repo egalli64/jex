@@ -7,26 +7,6 @@ import java.util.Map;
 
 public class Map1 {
     /**
-     * codingbat.com/prob/p115012
-     *
-     * @param map a map
-     * @return if only one between keys "a" or "b" has a value, set the other to
-     *         that value
-     */
-    public static Map<String, String> mapAB3(Map<String, String> map) {
-        String a = map.get("a");
-        String b = map.get("b");
-
-        if (a != null && b == null) {
-            map.put("b", a);
-        }
-        if (a == null && b != null) {
-            map.put("a", b);
-        }
-        return map;
-    }
-
-    /**
      * codingbat.com/prob/p136950
      *
      * @param map a map
