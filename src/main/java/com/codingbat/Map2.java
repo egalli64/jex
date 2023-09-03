@@ -46,25 +46,11 @@ public class Map2 {
     }
 
     /**
-     * codingbat.com/prob/p125327
-     *
-     * @param strings a string
-     * @return each input string -> its length
-     */
-    public static Map<String, Integer> wordLen(String[] strings) {
-        Map<String, Integer> result = new HashMap<>();
-        for (String s : strings) {
-            result.putIfAbsent(s, s.length());
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p126332
      *
      * @param strings array of non-empty strings
      * @return for each string: first char -> last char
-     * <li>if two strings have the same first char, the last string wins
+     *         <li>if two strings have the same first char, the last string wins
      */
     public static Map<String, String> pairs(String[] strings) {
         Map<String, String> result = new HashMap<>();
@@ -79,7 +65,7 @@ public class Map2 {
      *
      * @param strings array of non-empty strings
      * @return for each string: first char -> string
-     * <li>if two strings have the same first char, concatenation
+     *         <li>if two strings have the same first char, concatenation
      */
     public static Map<String, String> firstChar(String[] strings) {
         Map<String, String> result = new HashMap<>();
@@ -99,7 +85,7 @@ public class Map2 {
      *
      * @param strings an array
      * @return each string appearing even times concatenated
-     * <li>if a string appears 2n times, should be concatenated n times
+     *         <li>if a string appears 2n times, should be concatenated n times
      */
     public static String wordAppend(String[] strings) {
         StringBuilder result = new StringBuilder();
@@ -122,7 +108,7 @@ public class Map2 {
      *
      * @param strings an array
      * @return swap strings with same first char
-     * <li>each string could swap just once
+     *         <li>each string could swap just once
      */
     public static String[] allSwap(String[] strings) {
         Map<Character, Integer> match = new HashMap<>();
@@ -150,7 +136,7 @@ public class Map2 {
      *
      * @param strings an array
      * @return swap strings with same first char
-     * <li>each first-char-string could swap just once
+     *         <li>each first-char-string could swap just once
      */
     public static String[] firstSwap(String[] strings) {
         Map<Character, Integer> match = new HashMap<>();

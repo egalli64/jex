@@ -23,14 +23,6 @@ class Map2Test {
     }
 
     @Test
-    void wordLenExample1() {
-        String[] input = { "a", "bb", "a", "bb" };
-        Map<String, Integer> expected = Map.of("bb", 2, "a", 1);
-
-        Assertions.assertThat(Map2.wordLen(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
     void pairsExample1() {
         String[] input = { "code", "bug" };
         Map<String, String> expected = Map.of("b", "g", "c", "e");
