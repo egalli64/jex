@@ -4,9 +4,7 @@
 package com.codingbat;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class Map2 {
     /**
@@ -25,30 +23,6 @@ public class Map2 {
         }
 
         return result;
-    }
-
-    /**
-     * codingbat.com/prob/p103593 <br>
-     * Actually, no map required
-     *
-     * @param strings an array
-     * @return each string appearing even times concatenated
-     *         <li>if a string appears 2n times, should be concatenated n times
-     */
-    public static String wordAppend(String[] strings) {
-        StringBuilder result = new StringBuilder();
-
-        Set<String> checker = new HashSet<>();
-        for (String s : strings) {
-            if (checker.contains(s)) {
-                checker.remove(s);
-                result.append(s);
-            } else {
-                checker.add(s);
-            }
-        }
-
-        return result.toString();
     }
 
     /**

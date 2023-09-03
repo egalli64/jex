@@ -15,14 +15,6 @@ class Map2Test {
     }
 
     @Test
-    void wordAppendExample1() {
-        String[] input = { "a", "b", "a" };
-        String expected = "a";
-
-        Assertions.assertThat(Map2.wordAppend(input)).isEqualTo(expected);
-    }
-
-    @Test
     void allSwapExample1() {
         String[] input = { "ab", "ac" };
         String[] expected = { "ac", "ab" };
