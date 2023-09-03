@@ -14,16 +14,16 @@ package com.codingbat.array2;
  */
 public class ShiftLeft {
     /**
-     * In-place solution. If the array is empty there is nothing to do. Otherwise
-     * perform a generalized swap, putting the value of the first element in a
-     * buffer, shifting all the other elements to the left, and finally putting the
-     * buffer value in the last element.
+     * In-place solution. If the array has less than two elements, there is nothing
+     * to do. Otherwise perform a generalized swap, putting the value of the first
+     * element in a buffer, shifting all the other elements to the left, and finally
+     * putting the buffer value in the last element.
      * 
      * @param nums an array
      * @return left shifted array
      */
     public static int[] solution(int[] nums) {
-        if (nums.length != 0) {
+        if (nums.length > 1) {
             int buffer = nums[0];
 
             for (int i = 1; i < nums.length; i++) {
