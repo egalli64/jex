@@ -23,14 +23,6 @@ class Map2Test {
     }
 
     @Test
-    void pairsExample1() {
-        String[] input = { "code", "bug" };
-        Map<String, String> expected = Map.of("b", "g", "c", "e");
-
-        Assertions.assertThat(Map2.pairs(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
     void firstCharExample1() {
         String[] input = { "salt", "tea", "soda", "toast" };
         Map<String, String> expected = Map.of("s", "saltsoda", "t", "teatoast");

@@ -46,21 +46,6 @@ public class Map2 {
     }
 
     /**
-     * codingbat.com/prob/p126332
-     *
-     * @param strings array of non-empty strings
-     * @return for each string: first char -> last char
-     *         <li>if two strings have the same first char, the last string wins
-     */
-    public static Map<String, String> pairs(String[] strings) {
-        Map<String, String> result = new HashMap<>();
-        for (String s : strings) {
-            result.put(String.valueOf(s.charAt(0)), String.valueOf(s.charAt(s.length() - 1)));
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p168493
      *
      * @param strings array of non-empty strings
