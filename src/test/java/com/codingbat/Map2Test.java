@@ -15,14 +15,6 @@ class Map2Test {
     }
 
     @Test
-    void firstCharExample1() {
-        String[] input = { "salt", "tea", "soda", "toast" };
-        Map<String, String> expected = Map.of("s", "saltsoda", "t", "teatoast");
-
-        Assertions.assertThat(Map2.firstChar(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
-    @Test
     void wordAppendExample1() {
         String[] input = { "a", "b", "a" };
         String expected = "a";

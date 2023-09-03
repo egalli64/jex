@@ -28,25 +28,6 @@ public class Map2 {
     }
 
     /**
-     * codingbat.com/prob/p168493
-     *
-     * @param strings array of non-empty strings
-     * @return for each string: first char -> string
-     *         <li>if two strings have the same first char, concatenation
-     */
-    public static Map<String, String> firstChar(String[] strings) {
-        Map<String, String> result = new HashMap<>();
-        for (String s : strings) {
-            String key = String.valueOf(s.charAt(0));
-            String value = result.putIfAbsent(key, s);
-            if (value != null) {
-                result.put(key, value + s);
-            }
-        }
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p103593 <br>
      * Actually, no map required
      *
