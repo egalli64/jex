@@ -10,24 +10,6 @@ import java.util.Set;
 
 public class Map2 {
     /**
-     * codingbat.com/prob/p117630
-     *
-     * @param strings a string array
-     * @return a map having strings as keys, each associated its counter
-     */
-    public static Map<String, Integer> wordCount(String[] strings) {
-        Map<String, Integer> result = new HashMap<>(strings.length);
-        for (String key : strings) {
-            Integer previous = result.putIfAbsent(key, 1);
-            if (previous != null) {
-                result.put(key, previous + 1);
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p190862
      *
      * @param strings a string array
