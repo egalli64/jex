@@ -10,21 +10,6 @@ import java.util.Set;
 
 public class Map2 {
     /**
-     * codingbat.com/prob/p152303
-     *
-     * @param strings a string array
-     * @return a map having strings as keys, each associated to a zero value
-     */
-    public static Map<String, Integer> word0(String[] strings) {
-        Map<String, Integer> result = new HashMap<>(strings.length);
-        for (String key : strings) {
-            result.put(key, 0);
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p117630
      *
      * @param strings a string array
