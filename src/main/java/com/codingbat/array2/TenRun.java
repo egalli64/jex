@@ -8,8 +8,9 @@ package com.codingbat.array2;
 /**
  * tenRun - https://codingbat.com/prob/p199484
  * <p>
- * Modify the passed and then return it, changing all the elements following a
- * 10 multiple with that value, until another 10 multiple is seen.
+ * Change all the elements in the passed array from the first multiple of ten
+ * on. The followers get the 10x value, until another multiple of ten is seen
+ * and used for its followers (and so on).
  */
 public class TenRun {
     /**
@@ -24,6 +25,7 @@ public class TenRun {
     public static int[] solution(int[] nums) {
         boolean active = false;
         int changer = 0;
+
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 10 == 0) {
                 changer = nums[i];
@@ -32,6 +34,7 @@ public class TenRun {
                 nums[i] = changer;
             }
         }
+
         return nums;
     }
 }
