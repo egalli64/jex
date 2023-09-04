@@ -23,11 +23,11 @@ public class ZeroFront {
     public static int[] solution(int[] nums) {
         int[] result = new int[nums.length];
 
-        int j = result.length - 1;
+        int i = result.length - 1;
         for (int num : nums) {
             if (num != 0) {
-                result[j] = num;
-                j -= 1;
+                result[i] = num;
+                i -= 1;
             }
         }
 
