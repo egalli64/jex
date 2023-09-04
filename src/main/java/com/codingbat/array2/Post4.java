@@ -22,11 +22,12 @@ public class Post4 {
      * @return the resulting array
      */
     public static int[] solution(int[] nums) {
-        int i = nums.length - 1;
-        while (nums[i] != 4) {
-            i -= 1;
+        int first = nums.length;
+        while (nums[first - 1] != 4) {
+            first -= 1;
         }
-        return Arrays.copyOfRange(nums, i + 1, nums.length);
+
+        return Arrays.copyOfRange(nums, first, nums.length);
     }
 
     /**
