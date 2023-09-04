@@ -22,11 +22,11 @@ public class WithoutTen {
      */
     public static int[] solution(int[] nums) {
         int[] result = new int[nums.length];
-        int j = 0;
+        int i = 0;
         for (int num : nums) {
             if (num != 10) {
-                result[j] = num;
-                j += 1;
+                result[i] = num;
+                i += 1;
             }
         }
         return result;
