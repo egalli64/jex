@@ -24,7 +24,7 @@ public class NotAlone {
      */
     public static int[] solution(int[] nums, int val) {
         for (int i = 1; i < nums.length - 1; i++) {
-            if (nums[i] == val && nums[i] != nums[i - 1] && nums[i] != nums[i + 1]) {
+            if (nums[i] == val && nums[i - 1] != val && nums[i + 1] != val) {
                 nums[i] = Math.max(nums[i - 1], nums[i + 1]);
             }
         }
