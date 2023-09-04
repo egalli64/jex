@@ -3,17 +3,7 @@ package com.codingbat;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
-
 class Map2Test {
-    @Test
-    void wordMultipleExample1() {
-        String[] input = { "a", "b", "a", "c", "b" };
-        Map<String, Boolean> expected = Map.of("a", true, "b", true, "c", false);
-
-        Assertions.assertThat(Map2.wordMultiple(input)).containsExactlyInAnyOrderEntriesOf(expected);
-    }
-
     @Test
     void allSwapExample1() {
         String[] input = { "ab", "ac" };

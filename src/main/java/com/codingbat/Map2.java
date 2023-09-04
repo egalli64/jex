@@ -8,24 +8,6 @@ import java.util.Map;
 
 public class Map2 {
     /**
-     * codingbat.com/prob/p190862
-     *
-     * @param strings a string array
-     * @return a map having strings as keys, associated to true if multiple
-     */
-    public static Map<String, Boolean> wordMultiple(String[] strings) {
-        Map<String, Boolean> result = new HashMap<>(strings.length);
-        for (String key : strings) {
-            Boolean previous = result.putIfAbsent(key, false);
-            if (previous != null && !previous) {
-                result.put(key, true);
-            }
-        }
-
-        return result;
-    }
-
-    /**
      * codingbat.com/prob/p134133
      *
      * @param strings an array
