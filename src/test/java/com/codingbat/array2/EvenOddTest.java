@@ -30,6 +30,12 @@ class EvenOddTest {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void compactExamples(int[] data, int[] expected) {
+        assertThat(EvenOdd.compact(data)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(int[] data, int[] expected) {
         assertThat(EvenOdd.inPlace(data)).isEqualTo(expected);
     }

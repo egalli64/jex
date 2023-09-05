@@ -25,6 +25,32 @@ public class EvenOdd {
         int even = 0;
         int odd = result.length - 1;
         for (int num : nums) {
+            if (num % 2 == 0) {
+                result[even] = num;
+                even += 1;
+            } else {
+                result[odd] = num;
+                odd -= 1;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Create a new array with the same size of the original one. Loop on the input
+     * array, copy the even elements on the left and the odd ones on the right.
+     * <p>
+     * The ternary operator makes the code more compact but (probably) less
+     * readable.
+     * 
+     * @param nums an array
+     * @return the rearranged array copy
+     */
+    public static int[] compact(int[] nums) {
+        int[] result = new int[nums.length];
+        int even = 0;
+        int odd = result.length - 1;
+        for (int num : nums) {
             result[num % 2 == 0 ? even++ : odd--] = num;
         }
         return result;
