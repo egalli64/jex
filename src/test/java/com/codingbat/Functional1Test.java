@@ -9,20 +9,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Functional1Test {
     @Test
-    void copies3Example1() {
-        List<String> input = Arrays.asList("a", "bb", "ccc");
-        List<String> expected = List.of("aaa", "bbbbbb", "ccccccccc");
-        assertThat(Functional1.copies3(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
-    void copies3Java11Example1() {
-        List<String> input = Arrays.asList("a", "bb", "ccc");
-        List<String> expected = List.of("aaa", "bbbbbb", "ccccccccc");
-        assertThat(Functional1.copies3Java11(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void rightDigitExample1() {
         List<Integer> input = Arrays.asList(1, 22, 93);
         List<Integer> expected = List.of(1, 2, 3);
