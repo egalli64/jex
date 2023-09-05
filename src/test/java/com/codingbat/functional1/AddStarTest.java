@@ -19,8 +19,8 @@ class AddStarTest {
     static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(Arrays.asList("a", "bb", "ccc"), List.of("a*", "bb*", "ccc*")), //
-                Arguments.of(Arrays.asList("a", "bb", "ccc"), List.of("a*", "bb*", "ccc*")), //
-                Arguments.of(Arrays.asList("a", "bb", "ccc"), List.of("a*", "bb*", "ccc*")) //
+                Arguments.of(Arrays.asList("hello", "there"), List.of("hello*", "there*")), //
+                Arguments.of(Arrays.asList("*"), List.of("**")) //
         );
     }
 
