@@ -37,13 +37,6 @@ class Functional1Test {
     }
 
     @Test
-    void addStarExample1() {
-        List<String> input = Arrays.asList("a", "bb", "ccc");
-        List<String> expected = List.of("a*", "bb*", "ccc*");
-        assertThat(Functional1.addStar(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void moreYExample1() {
         List<String> input = Arrays.asList("a", "b", "c");
         List<String> expected = List.of("yay", "yby", "ycy");

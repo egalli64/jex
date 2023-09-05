@@ -55,17 +55,6 @@ public class Functional1 {
     }
 
     /**
-     * codingbat.com/prob/p170181
-     *
-     * @param strings a list
-     * @return each string with a '*' in the end
-     */
-    public static List<String> addStar(List<String> strings) {
-        strings.replaceAll(x -> x + '*');
-        return strings;
-    }
-
-    /**
      * codingbat.com/prob/p177528
      *
      * @param strings a list
