@@ -30,17 +30,6 @@ public class Functional1 {
     }
 
     /**
-     * codingbat.com/prob/p177528
-     *
-     * @param strings a list
-     * @return each string prefixed and postfixed by 'y'
-     */
-    public static List<String> moreY(List<String> strings) {
-        strings.replaceAll(x -> 'y' + x + 'y');
-        return strings;
-    }
-
-    /**
      * codingbat.com/prob/p103869
      *
      * @param nums a list

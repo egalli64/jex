@@ -23,13 +23,6 @@ class Functional1Test {
     }
 
     @Test
-    void moreYExample1() {
-        List<String> input = Arrays.asList("a", "b", "c");
-        List<String> expected = List.of("yay", "yby", "ycy");
-        assertThat(Functional1.moreY(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void math1Example1() {
         List<Integer> input = Arrays.asList(1, 2, 3);
         List<Integer> expected = List.of(20, 30, 40);
