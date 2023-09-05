@@ -6,6 +6,7 @@
 package com.codingbat.functional1;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * doubling - https://codingbat.com/prob/p117665
@@ -21,6 +22,18 @@ public class Doubling {
      * @return the changed list
      */
     public static List<Integer> solution(List<Integer> nums) {
+        return nums.stream().map(x -> x * 2).collect(Collectors.toList());
+    }
+
+    /**
+     * Stream the passed list, map it to a new stream with doubled values, collect
+     * the results to a new list
+     * 
+     * @param nums a list
+     * @return the changed list
+     * @apiNote Stream::toList() is a Java 16 feature
+     */
+    public static List<Integer> modern(List<Integer> nums) {
         return nums.stream().map(x -> x * 2).toList();
     }
 
