@@ -10,7 +10,8 @@ public class Functional1 {
     /**
      * codingbat.com/prob/p181634
      * <p>
-     * Java 11 not supported by CodingBat, see {@linkplain Functional1#copies3(List)}
+     * Java 11 not supported by CodingBat, see
+     * {@linkplain Functional1#copies3(List)}
      *
      * @param strings a string list
      * @return each string tripled
@@ -43,34 +44,14 @@ public class Functional1 {
     }
 
     /**
-     * Variation to {@linkplain Functional1#rightDigit(List)}, new list is generated and returned
+     * Variation to {@linkplain Functional1#rightDigit(List)}, new list is generated
+     * and returned
      *
      * @param nums a int list of non-negative numbers
      * @return for each number just the rightmost decimal cipher is kept
      */
     public static List<Integer> rightDigitOther(List<Integer> nums) {
         return nums.stream().map(x -> x % 10).collect(Collectors.toList());
-    }
-
-    /**
-     * codingbat.com/prob/p139586
-     *
-     * @param nums integers
-     * @return each value squared
-     */
-    public static List<Integer> square(List<Integer> nums) {
-        nums.replaceAll(x -> x * x);
-        return nums;
-    }
-
-    /**
-     * Variation to {@linkplain Functional1#square(List)}, new list is generated and returned
-     *
-     * @param nums integers
-     * @return each value squared
-     */
-    public static List<Integer> squareByMapping(List<Integer> nums) {
-        return nums.stream().map(x -> x * x).collect(Collectors.toList());
     }
 
     /**

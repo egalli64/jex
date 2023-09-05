@@ -37,20 +37,6 @@ class Functional1Test {
     }
 
     @Test
-    void squareExample1() {
-        List<Integer> input = Arrays.asList(1, 2, 3);
-        List<Integer> expected = List.of(1, 4, 9);
-        assertThat(Functional1.square(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
-    void squareByMappingExample1() {
-        List<Integer> input = Arrays.asList(1, 2, 3);
-        List<Integer> expected = List.of(1, 4, 9);
-        assertThat(Functional1.squareByMapping(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void addStarExample1() {
         List<String> input = Arrays.asList("a", "bb", "ccc");
         List<String> expected = List.of("a*", "bb*", "ccc*");
