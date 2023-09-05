@@ -30,17 +30,6 @@ public class Functional1 {
     }
 
     /**
-     * codingbat.com/prob/p103869
-     *
-     * @param nums a list
-     * @return each element is increased and multiplied by 10
-     */
-    public static List<Integer> math1(List<Integer> nums) {
-        nums.replaceAll(x -> (x + 1) * 10);
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p186894
      *
      * @param strings a list
