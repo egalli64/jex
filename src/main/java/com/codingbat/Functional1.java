@@ -8,17 +8,6 @@ import java.util.stream.Collectors;
 
 public class Functional1 {
     /**
-     * codingbat.com/prob/p117665
-     *
-     * @param nums a list
-     * @return list with doubled values
-     */
-    public static List<Integer> doubling(List<Integer> nums) {
-        nums.replaceAll(x -> x * 2);
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p181634
      * <p>
      * Java 11 not supported by CodingBat, see {@linkplain Functional1#copies3(List)}
