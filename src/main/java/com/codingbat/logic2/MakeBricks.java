@@ -25,12 +25,11 @@ public class MakeBricks {
     public static boolean stepByStep(int small, int big, int goal) {
         if (goal % 5 > small) {
             return false;
-        }
-        if (goal > big * 5 + small) {
+        } else if (goal > big * 5 + small) {
             return false;
+        } else {
+            return true;
         }
-
-        return true;
     }
 
     /**
