@@ -22,4 +22,10 @@ class NoTeenSumTest {
     void fixTeenExamples(int value, int expected) {
         assertThat(NoTeenSum.fixTeen(value)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1,1", "13,0", "14,0" })
+    void fixTeenVerboseExamples(int value, int expected) {
+        assertThat(NoTeenSum.fixTeenVerbose(value)).isEqualTo(expected);
+    }
 }

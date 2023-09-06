@@ -35,4 +35,20 @@ public class NoTeenSum {
     static int fixTeen(int n) {
         return n < 13 || n == 15 || n == 16 || n > 19 ? n : 0;
     }
+
+    /**
+     * Convert the passed value to 0 if in [14..19] but it is not 15 nor 16
+     *
+     * @param n an age
+     * @return n or zero
+     */
+    static int fixTeenVerbose(int n) {
+        if (n < 13 || n > 19) {
+            return n;
+        } else if (n == 15 || n == 16) {
+            return n;
+        } else {
+            return 0;
+        }
+    }
 }
