@@ -8,17 +8,6 @@ import java.util.stream.Collectors;
 
 public class Functional1 {
     /**
-     * codingbat.com/prob/p152194
-     *
-     * @param nums a int list of non-negative numbers
-     * @return for each number just the rightmost decimal cipher is kept
-     */
-    public static List<Integer> rightDigit(List<Integer> nums) {
-        nums.replaceAll(x -> x % 10);
-        return nums;
-    }
-
-    /**
      * Variation to {@linkplain Functional1#rightDigit(List)}, new list is generated
      * and returned
      *

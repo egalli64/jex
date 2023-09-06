@@ -9,13 +9,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Functional1Test {
     @Test
-    void rightDigitExample1() {
-        List<Integer> input = Arrays.asList(1, 22, 93);
-        List<Integer> expected = List.of(1, 2, 3);
-        assertThat(Functional1.rightDigit(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void rightDigitOtherExample1() {
         List<Integer> input = Arrays.asList(1, 22, 93);
         List<Integer> expected = List.of(1, 2, 3);
