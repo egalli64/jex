@@ -18,6 +18,12 @@ class CloseFarTest {
     }
 
     @ParameterizedTest
+    @CsvSource({ "1, 2, 10, true", "1, 2, 3, false", "4, 1, 3, true" })
+    void exclusiveExamples(int first, int second, int third, boolean expected) {
+        assertThat(CloseFar.exclusive(first, second, third)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
     @CsvSource({ "1, 2, true", "1, 3, false", "4, 3, true" })
     void closeExamples(int value, int target, boolean expected) {
         assertThat(CloseFar.isClose(value, target)).isEqualTo(expected);

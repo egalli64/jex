@@ -19,10 +19,24 @@ public class CloseFar {
      * @param a first value
      * @param b second value
      * @param c third value
-     * @return true if acceptable
+     * @return true if b is close to a and c is far from the other ones OR if c is
+     *         close and b is far
      */
     public static boolean solution(int a, int b, int c) {
         return isClose(b, a) && isFar(c, a, b) || isClose(c, a) && isFar(b, a, c);
+    }
+
+    /**
+     * Delegate the close/far check to {@linkplain CloseFar#isClose(int, int)} and
+     * {@linkplain CloseFar#isFar(int, int, int)}
+     * 
+     * @param a first value
+     * @param b second value
+     * @param c third value
+     * @return true if b is close and c is far EXOR c is close and b is far
+     */
+    public static boolean exclusive(int a, int b, int c) {
+        return (isClose(b, a) && isFar(c, a, b)) ^ (isClose(c, a) && isFar(b, a, c));
     }
 
     /**
@@ -35,7 +49,7 @@ public class CloseFar {
      * @return true if value is close to target
      */
     static boolean isClose(int value, int target) {
-        return Math.abs(value - target) < 2;
+        return Math.abs(value - target) <= 1;
     }
 
     /**
@@ -49,6 +63,6 @@ public class CloseFar {
      * @return true if the value is far
      */
     static boolean isFar(int value, int first, int second) {
-        return Math.abs(value - first) > 1 && Math.abs(value - second) > 1;
+        return Math.abs(value - first) >= 2 && Math.abs(value - second) >= 2;
     }
 }
