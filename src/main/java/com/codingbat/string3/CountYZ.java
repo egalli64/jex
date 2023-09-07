@@ -8,15 +8,15 @@ package com.codingbat.string3;
 /**
  * countYZ - https://codingbat.com/prob/p199171
  * <p>
- * The passed string could contain many words. A character is ending a word if
- * it is not followed by a letter, as defined by
+ * The passed string could contain many words. A character is said to end a word
+ * if it is not followed by a letter, as defined by
  * {@linkplain Character#isLetter(char)}. Return the number of 'Y' and 'Z' (case
- * insensitive) ending chars.
+ * insensitive) ending words.
  */
 public class CountYZ {
     /**
      * Loop on all char pairs in the given string. Increase the counter for each Y/Z
-     * followed by non-letter. Then check the last char and check if it is a Y/Z.
+     * followed by non-letter. Then check if the last char is a Y/Z.
      *
      * @param str a non-empty string
      * @return how many case-insensitive y,z are at the end of words in the string
