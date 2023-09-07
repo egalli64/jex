@@ -15,6 +15,28 @@ import java.util.regex.Pattern;
  */
 public class EqualIsNot {
     /**
+     * Loop two times on the passed string to count by
+     * {@linkplain String#indexOf(String, int)} how many instances of the two tags
+     * are in it. Then compare them.
+     * 
+     * @param str a string
+     * @return true if number "is" == number "not"
+     */
+    public static boolean solution(String str) {
+        String[] tags = { "is", "not" };
+        int[] counters = { 0, 0 };
+
+        for (int i = 0; i < tags.length; i++) {
+            int pos = -1;
+            while ((pos = str.indexOf(tags[i], pos + 1)) != -1) {
+                counters[i] += 1;
+            }
+        }
+
+        return counters[0] == counters[1];
+    }
+
+    /**
      * Keep track of "is" and "not" count in an accumulator. If input string is
      * sized 2+, check if it ends with "is". Otherwise, if it is sized 3+, check if
      * it has, from the third last on, "not" in it. Then loop, up to the fourth
@@ -23,7 +45,7 @@ public class EqualIsNot {
      * @param str a string
      * @return true if number "is" == number "not"
      */
-    public static boolean solution(String str) {
+    public static boolean verbose(String str) {
         int delta = 0;
 
         if (str.length() >= 2 && str.charAt(str.length() - 2) == 'i' && str.charAt(str.length() - 1) == 's') {
@@ -48,29 +70,8 @@ public class EqualIsNot {
                 i += 2;
             }
         }
+
         return delta == 0;
-    }
-
-    /**
-     * Loop two times on the passed string to count by
-     * {@linkplain String#indexOf(String, int)} how many instances of the two tags
-     * are in it. Then compare them.
-     * 
-     * @param str a string
-     * @return true if number "is" == number "not"
-     */
-    public static boolean byIndexOf(String str) {
-        String[] tags = { "is", "not" };
-        int[] counters = new int[2];
-
-        for (int i = 0; i < tags.length; i++) {
-            int pos = 0;
-            while ((pos = str.indexOf(tags[i], pos)) != -1) {
-                counters[i] += 1;
-                pos += 1;
-            }
-        }
-        return counters[0] == counters[1];
     }
 
     /**

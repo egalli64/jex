@@ -20,7 +20,7 @@ class EqualIsNotTest {
     @ParameterizedTest
     @CsvSource({ "This is not,false", "This is notnot,true", "noisxxnotyynotxisi,true" })
     void byIndexOfExamples(String s, boolean expected) {
-        assertThat(EqualIsNot.byIndexOf(s)).isEqualTo(expected);
+        assertThat(EqualIsNot.verbose(s)).isEqualTo(expected);
     }
 
     @ParameterizedTest
