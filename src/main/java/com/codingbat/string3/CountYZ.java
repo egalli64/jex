@@ -28,6 +28,7 @@ public class CountYZ {
             char cur = Character.toUpperCase(str.charAt(i));
             if ((cur == 'Y' || cur == 'Z') && !Character.isLetter(str.charAt(i + 1))) {
                 counter += 1;
+                i += 1;
             }
         }
 
