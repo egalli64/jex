@@ -8,16 +8,6 @@ import java.util.stream.Collectors;
 
 public class Functional2 {
     /**
-     * codingbat.com/prob/p103456
-     *
-     * @param nums a list
-     * @return just the non-negative numbers
-     */
-    public static List<Integer> noNeg(List<Integer> nums) {
-        return nums.stream().filter(x -> x >= 0).collect(Collectors.toList());
-    }
-
-    /**
      * codingbat.com/prob/p105671
      *
      * @param strings a list
