@@ -24,14 +24,6 @@ class Functional2Test {
     }
 
     @Test
-    void no9Example1() {
-        List<Integer> input = new ArrayList<>(List.of(1, 2, 19));
-        List<Integer> expected = List.of(1, 2);
-
-        Assertions.assertThat(Functional2.no9(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void noTeenExample1() {
         List<Integer> input = new ArrayList<>(List.of(12, 13, 19, 20));
         List<Integer> expected = List.of(12, 20);

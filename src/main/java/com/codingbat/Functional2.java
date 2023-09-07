@@ -21,21 +21,11 @@ public class Functional2 {
      * codingbat.com/prob/p115967
      *
      * @param strings a string list
-     * @return each string has a "y" added at the end, but strings containing "yy" are discarded
+     * @return each string has a "y" added at the end, but strings containing "yy"
+     *         are discarded
      */
     public static List<String> noYY(List<String> strings) {
         return strings.stream().map(x -> x + "y").filter(x -> !x.contains("yy")).collect(Collectors.toList());
-    }
-
-    /**
-     * codingbat.com/prob/p124510
-     *
-     * @param nums a list of non-negative integers
-     * @return discard numbers endings by 9 (base 10)
-     */
-    public static List<Integer> no9(List<Integer> nums) {
-        nums.removeIf(x -> x % 10 == 9);
-        return nums;
     }
 
     /**
@@ -67,7 +57,7 @@ public class Functional2 {
      * @return no string sized 3 or 4 allowed
      */
     public static List<String> no34(List<String> strings) {
-        strings.removeIf(x-> {
+        strings.removeIf(x -> {
             final int size = x.length();
             return size > 2 && size < 5;
         });
@@ -81,7 +71,7 @@ public class Functional2 {
      * @return doubled, but discarded if in base-10 it ends by 2
      */
     public static List<Integer> two2(List<Integer> nums) {
-        return nums.stream().map(x -> x*2).filter(x -> x % 10 != 2).collect(Collectors.toList());
+        return nums.stream().map(x -> x * 2).filter(x -> x % 10 != 2).collect(Collectors.toList());
     }
 
     /**
