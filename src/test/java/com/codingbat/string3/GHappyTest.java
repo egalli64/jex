@@ -18,8 +18,21 @@ class GHappyTest {
     }
 
     @ParameterizedTest
+    @CsvSource({ "g,false", "gx,false", "xg,false", "gg,true" })
+    void solutionShort(String input, boolean expected) {
+        assertThat(GHappy.solution(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
     @CsvSource({ "xxggxx,true", "xxgxx,false", "xxggyygxx,false" })
     void matchExamples(String input, boolean expected) {
+        assertThat(GHappy.match(input)).isEqualTo(expected);
+    }
+    
+
+    @ParameterizedTest
+    @CsvSource({ "g,false", "gx,false", "xg,false", "gg,true" })
+    void matchShort(String input, boolean expected) {
         assertThat(GHappy.match(input)).isEqualTo(expected);
     }
 }

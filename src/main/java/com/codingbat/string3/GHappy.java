@@ -22,7 +22,9 @@ public class GHappy {
      * @return true if accepted
      */
     public static boolean solution(String str) {
-        if (str.length() == 1 && str.charAt(0) != 'g') {
+        if (str.length() == 1 && str.charAt(0) == 'g') {
+            return false;
+        } else if (str.length() == 2 && str.charAt(0) == 'g' && str.charAt(1) != 'g') {
             return false;
         } else if (str.length() >= 2 && str.charAt(str.length() - 2) != 'g' && str.charAt(str.length() - 1) == 'g') {
             return false;
@@ -45,6 +47,6 @@ public class GHappy {
      * @return true if accepted
      */
     public static boolean match(String str) {
-        return !str.matches("g|.*[^g]g|.*[^g]g[^g].*");
+        return !str.matches("g[^g]*|.*[^g]g|.*[^g]g[^g].*");
     }
 }
