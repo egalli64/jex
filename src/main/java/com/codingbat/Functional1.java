@@ -19,17 +19,6 @@ public class Functional1 {
     }
 
     /**
-     * codingbat.com/prob/p186894
-     *
-     * @param strings a list
-     * @return each string is lowercase
-     */
-    public static List<String> lower(List<String> strings) {
-        strings.replaceAll(String::toLowerCase);
-        return strings;
-    }
-
-    /**
      * codingbat.com/prob/p105967
      *
      * @param strings a list

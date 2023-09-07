@@ -16,13 +16,6 @@ class Functional1Test {
     }
 
     @Test
-    void lowerExample1() {
-        List<String> input = Arrays.asList("Hello", "Hi");
-        List<String> expected = List.of("hello", "hi");
-        assertThat(Functional1.lower(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void noXExample1() {
         List<String> input = Arrays.asList("ax", "bb", "cx");
         List<String> expected = List.of("a", "bb", "c");
