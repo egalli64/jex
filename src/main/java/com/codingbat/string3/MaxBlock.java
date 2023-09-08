@@ -26,20 +26,20 @@ public class MaxBlock {
     public static int solution(String str) {
         if (str.length() == 0) {
             return 0;
-        }
-
-        int maxSize = 1;
-        int current = 1;
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(i - 1)) {
-                current += 1;
-            } else {
-                maxSize = Math.max(current, maxSize);
-                current = 1;
+        } else {
+            int maxSize = 1;
+            int current = 1;
+            for (int i = 1; i < str.length(); i++) {
+                if (str.charAt(i) == str.charAt(i - 1)) {
+                    current += 1;
+                } else {
+                    maxSize = Math.max(current, maxSize);
+                    current = 1;
+                }
             }
-        }
 
-        return Math.max(current, maxSize);
+            return Math.max(current, maxSize);
+        }
     }
 
     /**
