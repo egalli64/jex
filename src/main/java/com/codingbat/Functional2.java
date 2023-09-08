@@ -29,17 +29,6 @@ public class Functional2 {
     }
 
     /**
-     * codingbat.com/prob/p137274
-     *
-     * @param nums a list
-     * @return no values in [13..19] allowed
-     */
-    public static List<Integer> noTeen(List<Integer> nums) {
-        nums.removeIf(x -> x > 12 && x < 20);
-        return nums;
-    }
-
-    /**
      * codingbat.com/prob/p194496
      *
      * @param strings a list
