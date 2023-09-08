@@ -13,7 +13,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 class SameEndsTest {
     @ParameterizedTest
     @CsvSource({ "abXYab,ab", "xx,x", "xxx,x" })
-    void sameEndsExamples(String input, String expected) {
+    void solutionExamples(String input, String expected) {
         assertThat(SameEnds.solution(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abXYab,ab", "xx,x", "xxx,x" })
+    void alternativeExamples(String input, String expected) {
+        assertThat(SameEnds.alternative(input)).isEqualTo(expected);
     }
 }

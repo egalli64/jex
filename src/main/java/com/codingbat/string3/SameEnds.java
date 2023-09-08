@@ -34,4 +34,25 @@ public class SameEnds {
 
         return result.toString();
     }
+
+    /**
+     * Extract from the input string all the begin/end same-size substrings and
+     * compare them. Keep track of the biggest matching one.
+     * 
+     * @param string a string
+     * @return the begin/end substring
+     */
+    public static String alternative(String string) {
+        String result = "";
+
+        for (int len = 1; len <= string.length() / 2; len++) {
+            String left = string.substring(0, len);
+            String right = string.substring(string.length() - len);
+            if (left.equals(right)) {
+                result = left;
+            }
+        }
+
+        return result;
+    }
 }
