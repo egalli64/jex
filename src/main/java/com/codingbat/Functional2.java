@@ -8,16 +8,6 @@ import java.util.stream.Collectors;
 
 public class Functional2 {
     /**
-     * codingbat.com/prob/p105671
-     *
-     * @param strings a list
-     * @return only strings without 'z'
-     */
-    public static List<String> noZ(List<String> strings) {
-        return strings.stream().filter(x -> !x.contains("z")).collect(Collectors.toList());
-    }
-
-    /**
      * codingbat.com/prob/p115967
      *
      * @param strings a string list
