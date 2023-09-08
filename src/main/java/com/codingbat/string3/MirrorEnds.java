@@ -22,12 +22,11 @@ public class MirrorEnds {
      * @return the longest palindrome section of the string
      */
     public static String solution(String string) {
-        int i = 0;
-        for (int j = string.length() - 1; i < j; i++, j--) {
+        for (int i = 0, j = string.length() - 1; i < j; i++, j--) {
             if (string.charAt(i) != string.charAt(j)) {
-                break;
+                return string.substring(0, i);
             }
         }
-        return i == string.length() / 2 ? string : string.substring(0, i);
+        return string;
     }
 }
