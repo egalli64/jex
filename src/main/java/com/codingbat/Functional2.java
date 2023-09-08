@@ -19,17 +19,6 @@ public class Functional2 {
     }
 
     /**
-     * codingbat.com/prob/p194496
-     *
-     * @param strings a list
-     * @return no string with length 4+ allowed
-     */
-    public static List<String> noLong(List<String> strings) {
-        strings.removeIf(x -> x.length() > 3);
-        return strings;
-    }
-
-    /**
      * codingbat.com/prob/p184496
      *
      * @param strings a list

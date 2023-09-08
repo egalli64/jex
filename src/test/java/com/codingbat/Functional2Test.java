@@ -16,14 +16,6 @@ class Functional2Test {
     }
 
     @Test
-    void noLongExample1() {
-        List<String> input = new ArrayList<>(List.of("this", "not", "too", "long"));
-        List<String> expected = List.of("not", "too");
-
-        Assertions.assertThat(Functional2.noLong(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void no34Example1() {
         List<String> input = new ArrayList<>(List.of("a", "bb", "ccc"));
         List<String> expected = List.of("a", "bb");
