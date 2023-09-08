@@ -19,20 +19,6 @@ public class Functional2 {
     }
 
     /**
-     * codingbat.com/prob/p184496
-     *
-     * @param strings a list
-     * @return no string sized 3 or 4 allowed
-     */
-    public static List<String> no34(List<String> strings) {
-        strings.removeIf(x -> {
-            final int size = x.length();
-            return size > 2 && size < 5;
-        });
-        return strings;
-    }
-
-    /**
      * codingbat.com/prob/p148198
      *
      * @param nums non-negatives
