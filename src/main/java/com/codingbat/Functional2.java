@@ -8,17 +8,6 @@ import java.util.stream.Collectors;
 
 public class Functional2 {
     /**
-     * codingbat.com/prob/p115967
-     *
-     * @param strings a string list
-     * @return each string has a "y" added at the end, but strings containing "yy"
-     *         are discarded
-     */
-    public static List<String> noYY(List<String> strings) {
-        return strings.stream().map(x -> x + "y").filter(x -> !x.contains("yy")).collect(Collectors.toList());
-    }
-
-    /**
      * codingbat.com/prob/p148198
      *
      * @param nums non-negatives

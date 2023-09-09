@@ -8,14 +8,6 @@ import java.util.List;
 
 class Functional2Test {
     @Test
-    void noYYExample1() {
-        List<String> input = List.of("a", "b", "c");
-        List<String> expected = List.of("ay", "by", "cy");
-
-        Assertions.assertThat(Functional2.noYY(input)).containsExactlyElementsOf(expected);
-    }
-
-    @Test
     void two2Example1() {
         List<Integer> input = new ArrayList<>(List.of(1, 2, 3));
         List<Integer> expected = List.of(4, 6);
