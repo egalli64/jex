@@ -8,16 +8,6 @@ import java.util.stream.Collectors;
 
 public class Functional2 {
     /**
-     * codingbat.com/prob/p148198
-     *
-     * @param nums non-negatives
-     * @return doubled, but discarded if in base-10 it ends by 2
-     */
-    public static List<Integer> two2(List<Integer> nums) {
-        return nums.stream().map(x -> x * 2).filter(x -> x % 10 != 2).collect(Collectors.toList());
-    }
-
-    /**
      * codingbat.com/prob/p132748
      *
      * @param nums a list
