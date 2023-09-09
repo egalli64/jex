@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * no34 - https://codingbat.com/prob/p194496
+ * no34 - https://codingbat.com/prob/p184496
  * <p>
  * Filter out from the passed list the strings sized 3 or 4
  */
