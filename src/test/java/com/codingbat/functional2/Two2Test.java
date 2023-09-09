@@ -18,7 +18,9 @@ import org.junit.jupiter.params.provider.MethodSource;
 class Two2Test {
     static Stream<Arguments> provider() {
         return Stream.of( //
-                Arguments.of(new ArrayList<Integer>(List.of(1, 2, 3)), List.of(4, 6)) //
+                Arguments.of(new ArrayList<Integer>(List.of(1, 2, 3)), List.of(4, 6)), //
+                Arguments.of(new ArrayList<Integer>(List.of(2, 6, 11)), List.of(4)), //
+                Arguments.of(new ArrayList<Integer>(List.of(0)), List.of(0)) //
         );
     }
 
