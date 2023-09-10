@@ -19,8 +19,8 @@ class NotReplaceTest {
 
     @ParameterizedTest
     @CsvSource({ "is test,is not test", "is-is,is not-is not", "This is right,This is not right" })
-    void byInsertExamples(String s, String expected) {
-        assertThat(NotReplace.byInsert(s)).isEqualTo(expected);
+    void verboseExamples(String s, String expected) {
+        assertThat(NotReplace.verbose(s)).isEqualTo(expected);
     }
 
     @ParameterizedTest
