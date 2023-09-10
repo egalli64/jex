@@ -31,8 +31,8 @@ public class SumNumbers {
                     i += 1;
                 }
 
-                String current = str.substring(begin, i);
-                result += Integer.parseInt(current);
+                String number = str.substring(begin, i);
+                result += Integer.parseInt(number);
             }
         }
 
