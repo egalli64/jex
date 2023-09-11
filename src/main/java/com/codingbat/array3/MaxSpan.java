@@ -26,7 +26,7 @@ public class MaxSpan {
 
         for (int i = 0; i < nums.length; i++) {
             int j = nums.length - 1;
-            while (j >= i && nums[i] != nums[j]) {
+            while (nums[i] != nums[j]) {
                 j -= 1;
             }
             result = Math.max(result, j - i + 1);
@@ -48,10 +48,7 @@ public class MaxSpan {
 
         for (int i = 0; i < nums.length; i++) {
             int j = nums.length - 1;
-            for (; j >= i; j--) {
-                if (nums[i] == nums[j]) {
-                    break;
-                }
+            for (; nums[i] != nums[j]; j--) {
             }
 
             result = Math.max(result, j - i + 1);
