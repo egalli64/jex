@@ -38,14 +38,14 @@ class Fix34Test {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void alternativeExamples(int[] input, int[] expected) {
-        assertThat(Fix34.alternative(input)).isEqualTo(expected);
+    void doubleForExamples(int[] input, int[] expected) {
+        assertThat(Fix34.doubleFor(input)).isEqualTo(expected);
     }
 
     @Test
-    void alternativeMixed() {
+    void doubleForMixed() {
         int[] input = { 5, 3, 5, 4, 5, 4, 5, 4, 3, 5, 3, 5 };
         int[] expected = { 5, 3, 4, 5, 5, 5, 5, 5, 3, 4, 3, 4 };
-        assertThat(Fix34.alternative(input)).isEqualTo(expected);
+        assertThat(Fix34.doubleFor(input)).isEqualTo(expected);
     }
 }
