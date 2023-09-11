@@ -17,8 +17,10 @@ public class Fix34 {
     /**
      * Two nested loop. The external one looks for each pair where the first element
      * is a 3 and the second is _not_ a 4. When found, the internal loop looks for a
-     * 4 _not_ in a 3/4 pair and swap it to the element next to the current 3.
-     * <li>to save time, keep track of the last found, and look for the next one
+     * 4 _not_ in a 3/4 pair and swap it to the element next to the current 3
+     * <li>to save time, keep track of the last 4 found, and look for the next one -
+     * the first 4, as precondition, could in in position 1, if the first 3 is in
+     * position zero
      * <li>the preconditions stating that each 3 has a matching 4, and no 4 is
      * before the first 3 help to keep the code simple
      *
@@ -26,7 +28,7 @@ public class Fix34 {
      * @return the fixed array
      */
     public static int[] solution(int[] nums) {
-        int j4 = 0;
+        int j4 = 1;
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == 3 && nums[i + 1] != 4) {
                 while (nums[j4] != 4 || nums[j4 - 1] == 3) {
@@ -45,10 +47,12 @@ public class Fix34 {
     /**
      * Two nested loop. The external one looks for each pair where the first element
      * is a 3 and the second is _not_ a 4. When found, the internal loop looks for a
-     * 4 _not_ in a 3/4 pair and swap it to the element next to the current 3.
-     * <li>to save time, keep track of the last found, and look for the next one
+     * 4 _not_ in a 3/4 pair and swap it to the element next to the current 3
+     * <li>to save time, keep track of the last 4 found, and look for the next one -
+     * the first 4, as precondition, could in in position 1, if the first 3 is in
+     * position zero
      * <li>the preconditions stating that each 3 has a matching 4, and no 4 is
-     * before the first 3 help to keep the code simple.
+     * before the first 3 help to keep the code simple
      * <p>
      * Here, the internal loop could be a for but is more readable using a while
      *
@@ -56,7 +60,7 @@ public class Fix34 {
      * @return the fixed array
      */
     public static int[] doubleFor(int[] nums) {
-        int j4 = -1;
+        int j4 = 0;
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == 3 && nums[i + 1] != 4) {
                 for (j4 += 1; nums[j4] != 4 || nums[j4 - 1] == 3; j4++) {
