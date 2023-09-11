@@ -16,12 +16,34 @@ public class MaxSpan {
     /**
      * Loop on all the elements from left to right. In a nested loop from right to
      * left find the max span for the left-current value. Keep track of the biggest
-     * span, and reset it when required.
+     * span, and change it as required.
      *
      * @param nums an array
      * @return the max span
      */
     public static int solution(int[] nums) {
+        int result = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            int j = nums.length - 1;
+            while (j >= i && nums[i] != nums[j]) {
+                j -= 1;
+            }
+            result = Math.max(result, j - i + 1);
+        }
+
+        return result;
+    }
+
+    /**
+     * Loop on all the elements from left to right. In a nested loop from right to
+     * left find the max span for the left-current value. Keep track of the biggest
+     * span, and change it as required.
+     *
+     * @param nums an array
+     * @return the max span
+     */
+    public static int doubleFor(int[] nums) {
         int result = 0;
 
         for (int i = 0; i < nums.length; i++) {

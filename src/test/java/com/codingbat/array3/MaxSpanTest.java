@@ -30,10 +30,24 @@ class MaxSpanTest {
     }
 
     @Test
-    void maxSpanSingle() {
+    void solutionSingle() {
         int[] input = { 42 };
         int expected = 1;
 
         assertThat(MaxSpan.solution(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void doubleForExamples(int[] input, int expected) {
+        assertThat(MaxSpan.doubleFor(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void doubleForSingle() {
+        int[] input = { 42 };
+        int expected = 1;
+
+        assertThat(MaxSpan.doubleFor(input)).isEqualTo(expected);
     }
 }
