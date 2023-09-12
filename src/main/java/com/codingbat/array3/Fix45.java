@@ -24,15 +24,14 @@ public class Fix45 {
      * @return the input array, fixed
      */
     public static int[] solution(int[] nums) {
-        int j5 = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
+        for (int i = 0, j = 0; i < nums.length - 1; i++) {
             if (nums[i] == 4 && nums[i + 1] != 5) {
-                while (nums[j5] != 5 || (j5 != 0 && nums[j5 - 1] == 4)) {
-                    j5 += 1;
+                while (nums[j] != 5 || (j != 0 && nums[j - 1] == 4)) {
+                    j += 1;
                 }
 
                 i += 1;
-                nums[j5] = nums[i];
+                nums[j] = nums[i];
                 nums[i] = 5;
             }
         }
