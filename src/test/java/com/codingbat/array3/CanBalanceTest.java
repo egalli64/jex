@@ -22,6 +22,10 @@ class CanBalanceTest {
         );
     }
 
+    static Stream<Arguments> singleProvider() {
+        return Stream.of(Arguments.of(new int[] { 0 }, true), Arguments.of(new int[] { 1 }, false));
+    }
+
     @ParameterizedTest
     @MethodSource("provider")
     void solutionExamples(int[] input, boolean expected) {
@@ -31,6 +35,18 @@ class CanBalanceTest {
     @ParameterizedTest
     @MethodSource("provider")
     void alternativeExamples(int[] input, boolean expected) {
+        assertThat(CanBalance.alternative(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("singleProvider")
+    void solutionSingle(int[] input, boolean expected) {
+        assertThat(CanBalance.solution(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("singleProvider")
+    void alternativeSingle(int[] input, boolean expected) {
         assertThat(CanBalance.alternative(input)).isEqualTo(expected);
     }
 }

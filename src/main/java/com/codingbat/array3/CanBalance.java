@@ -29,14 +29,14 @@ public class CanBalance {
         int right = Arrays.stream(nums).sum();
 
         for (int num : nums) {
-            left += num;
-            right -= num;
             if (left == right) {
                 return true;
             }
+            left += num;
+            right -= num;
         }
 
-        return false;
+        return left == right;
     }
 
     /**
