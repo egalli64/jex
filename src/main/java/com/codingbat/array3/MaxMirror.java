@@ -24,10 +24,10 @@ public class MaxMirror {
         int result = 0;
 
         for (int left = 0; left < nums.length; left++) {
-            for (int right = nums.length - 1; right > -1; right--) {
+            for (int right = nums.length - 1; right >= left; right--) {
                 int current = 0;
 
-                for (int i = left, j = right; i < nums.length && j > -1 && nums[i] == nums[j]; i++, j--) {
+                for (int i = left, j = right; i <= right && nums[i] == nums[j]; i++, j--) {
                     current += 1;
                 }
 
