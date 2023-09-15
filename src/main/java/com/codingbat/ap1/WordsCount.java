@@ -5,6 +5,8 @@
  */
 package com.codingbat.ap1;
 
+import java.util.Arrays;
+
 /**
  * wordsCount - https://codingbat.com/prob/p124620
  * <p>
@@ -26,5 +28,16 @@ public class WordsCount {
             }
         }
         return counter;
+    }
+
+    /**
+     * Stream the array, filter to keep only the required strings, count them.
+     * 
+     * @param words an array
+     * @param len   a string length
+     * @return the counter
+     */
+    public static int modern(String[] words, int len) {
+        return (int) Arrays.stream(words).filter(s -> s.length() == len).count();
     }
 }

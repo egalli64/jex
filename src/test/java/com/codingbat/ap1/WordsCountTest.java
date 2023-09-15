@@ -28,4 +28,10 @@ class WordsCountTest {
     void solutionExamples(String[] data, int len, int expected) {
         assertThat(WordsCount.solution(data, len)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void modernExamples(String[] data, int len, int expected) {
+        assertThat(WordsCount.modern(data, len)).isEqualTo(expected);
+    }
 }
