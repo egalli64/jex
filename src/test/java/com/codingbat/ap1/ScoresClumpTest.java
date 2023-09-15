@@ -28,4 +28,10 @@ class ScoresClumpTest {
     void solutionExamples(int[] data, boolean expected) {
         assertThat(ScoresClump.solution(data)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void alternativeExamples(int[] data, boolean expected) {
+        assertThat(ScoresClump.alternative(data)).isEqualTo(expected);
+    }
 }
