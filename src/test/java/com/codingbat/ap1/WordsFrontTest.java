@@ -34,4 +34,10 @@ class WordsFrontTest {
     void delegatorExamples(String[] data, int n, String[] expected) {
         assertThat(WordsFront.delegator(data, n)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void modernExamples(String[] data, int n, String[] expected) {
+        assertThat(WordsFront.modern(data, n)).isEqualTo(expected);
+    }
 }

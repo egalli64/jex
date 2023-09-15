@@ -40,4 +40,16 @@ public class WordsFront {
     public static String[] delegator(String[] words, int n) {
         return Arrays.copyOf(words, n);
     }
+
+    /**
+     * Stream the input array, keep just the first n elements, collect them to a new
+     * array of strings
+     * 
+     * @param words an array
+     * @param n     size of the new array
+     * @return the "front" array
+     */
+    public static String[] modern(String[] words, int n) {
+        return Arrays.stream(words).limit(n).toArray(String[]::new);
+    }
 }
