@@ -26,8 +26,9 @@ public class DividesSelf {
             int digit = temp % 10;
             if (digit == 0 || n % digit != 0) {
                 return false;
+            } else {
+                temp /= 10;
             }
-            temp /= 10;
         }
 
         return true;
