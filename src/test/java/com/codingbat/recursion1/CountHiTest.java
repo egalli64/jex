@@ -12,8 +12,15 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class CountHiTest {
     @ParameterizedTest
-    @CsvSource({"xxhixx,1", "xhixhix,2", "hi,1"})
+    @CsvSource({ "xxhixx,1", "xhixhix,2", "hi,1" })
     void countHiExamples(String input, int expected) {
         assertThat(CountHi.countHi(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "xxhixx,1", "xhixhix,2", "hi,1" })
+    void cheatExamples(String input, int expected) {
+        assertThat(CountHi.cheat(input)).isEqualTo(expected);
+    }
+
 }

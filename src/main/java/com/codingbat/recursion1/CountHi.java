@@ -29,4 +29,25 @@ public class CountHi {
         int hi = str.charAt(0) == 'h' && str.charAt(1) == 'i' ? 1 : 0;
         return hi + countHi(str.substring(1 + hi));
     }
+
+    /**
+     * Base case: if there is no 'hi' in the string, there is nothing more to do
+     * <p>
+     * Recursive part: if the target has been found, return 1 plus the result of
+     * calling recursively on the substring after the target
+     * <p>
+     * Even tough we don't see it in the code, the call to String::indexOf implies a
+     * loop (so, this is kind of cheating)
+     *
+     * @param str a string
+     * @return number of "hi" in it
+     */
+    public static int cheat(String str) {
+        int pos = str.indexOf("hi");
+        if (pos == -1) {
+            return 0;
+        }
+
+        return 1 + cheat(str.substring(pos + 2));
+    }
 }
