@@ -29,7 +29,7 @@ public class Triangle {
      * @return the number of block
      */
     public static int triangle(int rows) {
-        if (rows < 2) {
+        if (rows <= 1) {
             return rows;
         }
 
