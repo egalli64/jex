@@ -16,4 +16,10 @@ class ChangeXYTest {
     void changeXYExamples(String input, String expected) {
         assertThat(ChangeXY.changeXY(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "codex,codey", "xxhixx,yyhiyy", "xhixhix,yhiyhiy" })
+    void cheatExamples(String input, String expected) {
+        assertThat(ChangeXY.cheat(input)).isEqualTo(expected);
+    }
 }
