@@ -30,7 +30,7 @@ public class Count8 {
 
         int count = n % 10 == 8 ? 1 : 0;
         if (n % 100 == 88) {
-            count += 1;
+            count = 2;
         }
 
         return count + count8(n / 10);
