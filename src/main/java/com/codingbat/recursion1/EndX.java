@@ -21,7 +21,7 @@ public class EndX {
      * @return all 'x' moved to the end
      */
     public static String endX(String str) {
-        if (str.isEmpty()) {
+        if (str.length() < 2) {
             return str;
         }
 
