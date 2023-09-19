@@ -26,6 +26,7 @@ public class Array11 {
             return 0;
         }
 
-        return (nums[index] == 11 ? 1 : 0) + array11(nums, index + 1);
+        int counter = nums[index] == 11 ? 1 : 0;
+        return counter + array11(nums, index + 1);
     }
 }
