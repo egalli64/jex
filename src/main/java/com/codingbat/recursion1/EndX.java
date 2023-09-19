@@ -34,6 +34,26 @@ public class EndX {
     }
 
     /**
+     * Base solution rewritten in a more fun way
+     *
+     * @param str a string
+     * @return all 'x' moved to the end
+     */
+    public static String alternative(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+
+        char cur = str.charAt(0);
+        String rest = alternative(str.substring(1));
+        if (cur == 'x') {
+            return rest + cur;
+        } else {
+            return cur + rest;
+        }
+    }
+
+    /**
      * Inception for {@linkplain EndX#tailRec(String, int, int, StringBuilder)}
      * <p>
      * Generate the solution in the passed builder

@@ -19,6 +19,12 @@ class EndXTest {
 
     @ParameterizedTest
     @CsvSource({ "xxre,rexx", "xxhixx,hixxxx", "xhixhix,hihixxx", "x,x", "'',''" })
+    void alternativeExamples(String input, String expected) {
+        assertThat(EndX.alternative(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "xxre,rexx", "xxhixx,hixxxx", "xhixhix,hihixxx", "x,x", "'',''" })
     void tailRecExamples(String input, String expected) {
         assertThat(EndX.tailRec(input)).isEqualTo(expected);
     }
