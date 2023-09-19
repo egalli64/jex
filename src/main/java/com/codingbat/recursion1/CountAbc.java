@@ -25,8 +25,11 @@ public class CountAbc {
             return 0;
         }
 
-        int count = isGood(str) ? 1 : 0;
-        return count + countAbc(str.substring(1));
+        if (isGood(str)) {
+            return 1 + countAbc(str.substring(2));
+        } else {
+            return countAbc(str.substring(1));
+        }
     }
 
     /**
