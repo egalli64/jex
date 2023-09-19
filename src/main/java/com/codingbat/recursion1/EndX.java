@@ -32,4 +32,48 @@ public class EndX {
             return cur + endX(str.substring(1));
         }
     }
+
+    /**
+     * Inception for {@linkplain EndX#tailRec(String, int, int, StringBuilder)}
+     * <p>
+     * Generate the solution in the passed builder
+     *
+     * @param str a string
+     * @return all 'x' moved to the end
+     */
+    public static String tailRec(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
+
+        return tailRec(str, 0, 0, new StringBuilder());
+    }
+
+    /**
+     * Base case: input is consumed, return the accumulator as string
+     * <p>
+     * Recursive part: check the current input char, if 'x' append it to the end of
+     * the accumulator, otherwise insert it in the current builder position
+     * 
+     * @param s   the input string
+     * @param i   current position in input
+     * @param j   current position in output
+     * @param acc the accumulator for result
+     * @return the resulting string
+     */
+    static String tailRec(String s, int i, int j, StringBuilder acc) {
+        if (i == s.length()) {
+            return acc.toString();
+        }
+
+        char cur = s.charAt(i);
+        if (cur == 'x') {
+            acc.append(cur);
+        } else {
+            acc.insert(j, cur);
+            j += 1;
+        }
+
+        return tailRec(s, i + 1, j, acc);
+    }
 }

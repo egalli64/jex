@@ -16,4 +16,10 @@ class EndXTest {
     void endXExamples(String input, String expected) {
         assertThat(EndX.endX(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({ "xxre,rexx", "xxhixx,hixxxx", "xhixhix,hihixxx", "x,x", "'',''" })
+    void tailRecExamples(String input, String expected) {
+        assertThat(EndX.tailRec(input)).isEqualTo(expected);
+    }
 }
