@@ -25,10 +25,11 @@ public class StringClean {
             return str;
         }
 
-        if (str.charAt(0) == str.charAt(1)) {
+        char first = str.charAt(0);
+        if (first == str.charAt(1)) {
             return stringClean(str.substring(1));
         } else {
-            return str.charAt(0) + stringClean(str.substring(1));
+            return first + stringClean(str.substring(1));
         }
     }
 
@@ -45,7 +46,7 @@ public class StringClean {
             return str;
         }
 
-        return tailRec(str, 0, new StringBuilder()).toString();
+        return tailRec(str, 0, new StringBuilder());
     }
 
     /**
@@ -60,11 +61,11 @@ public class StringClean {
      * @param i  current position
      * @return no double chars from i on
      */
-    static StringBuilder tailRec(String s, int i, StringBuilder acc) {
+    static String tailRec(String s, int i, StringBuilder acc) {
         char cur = s.charAt(i);
 
         if (i == s.length() - 1) {
-            return acc.append(cur);
+            return acc.append(cur).toString();
         }
 
         if (cur != s.charAt(i + 1)) {
