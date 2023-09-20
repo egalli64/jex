@@ -13,12 +13,11 @@ package com.codingbat.recursion1;
  */
 public class StrCopies {
     /**
-     * Base case: if sub is longer than the string, no occurrences, return true if n
-     * should be zero, false otherwise.
+     * Base case: if no sub should be found, return true, otherwise, if the searched
+     * string is shorter than sub, return false
      * <p>
-     * Recursive part: if sub is at the beginning of str, decrease n; if n is
-     * greater than zero, recurse after dropping the first char, otherwise return
-     * true.
+     * Recursive part: if sub is at the beginning of str, decrease n; in any case,
+     * recurse after dropping the first char.
      *
      * @param str a string
      * @param sub a substring
@@ -53,11 +52,11 @@ public class StrCopies {
     /**
      * Tail recursive version
      * <p>
-     * Base case: if the index implies no more occurrences of sub in s, return false
-     * if at least one more sub was expected, true otherwise.
+     * Base case: if no occurrence of sub is expected, return true; otherwise, if
+     * the index implies no more occurrences of sub are in s, return false
      * <p>
-     * Recursive part: if sub is at the beginning of str, decrease n; recurse after
-     * increasing the index.
+     * Recursive part: if sub is at the beginning of str, decrease n; in any case
+     * recurse after increasing the index.
      *
      * @param s   string
      * @param i   current position
@@ -66,8 +65,10 @@ public class StrCopies {
      * @return true if there are enough sub is s
      */
     static boolean tailRec(String s, int i, String sub, int n) {
-        if (s.length() - i < sub.length()) {
-            return n == 0;
+        if (n == 0) {
+            return true;
+        } else if (s.length() - i < sub.length()) {
+            return false;
         }
 
         if (s.startsWith(sub, i)) {
