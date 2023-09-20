@@ -26,14 +26,16 @@ public class StrCopies {
      * @return true if there are at least the required copies
      */
     public static boolean strCopies(String str, String sub, int n) {
-        if (str.length() < sub.length()) {
+        if (n == 0) {
+            return true;
+        } else if (str.length() < sub.length()) {
             return n == 0;
         }
 
         if (str.startsWith(sub)) {
             n -= 1;
         }
-        return n > 0 ? strCopies(str.substring(1), sub, n) : true;
+        return strCopies(str.substring(1), sub, n);
     }
 
     /**
@@ -65,7 +67,7 @@ public class StrCopies {
      */
     static boolean tailRec(String s, int i, String sub, int n) {
         if (s.length() - i < sub.length()) {
-            return n <= 0;
+            return n == 0;
         }
 
         if (s.startsWith(sub, i)) {
