@@ -25,9 +25,9 @@ public class NestParen {
             return true;
         } else if (str.charAt(0) != '(' || str.charAt(str.length() - 1) != ')') {
             return false;
-        } else {
-            return nestParen(str.substring(1, str.length() - 1));
         }
+
+        return nestParen(str.substring(1, str.length() - 1));
     }
 
     /**
@@ -56,10 +56,10 @@ public class NestParen {
     static boolean tailRec(String s, int i, int j) {
         if (i > j) {
             return true;
-        }
-        if (s.charAt(i) != '(' || s.charAt(j) != ')') {
+        } else if (s.charAt(i) != '(' || s.charAt(j) != ')') {
             return false;
         }
+
         return tailRec(s, i + 1, j - 1);
     }
 }
