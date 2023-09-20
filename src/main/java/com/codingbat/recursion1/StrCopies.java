@@ -29,7 +29,7 @@ public class StrCopies {
         if (n == 0) {
             return true;
         } else if (str.length() < sub.length()) {
-            return n == 0;
+            return false;
         }
 
         if (str.startsWith(sub)) {
