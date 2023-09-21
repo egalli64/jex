@@ -16,6 +16,64 @@ package com.codingbat.recursion2;
  */
 public class GroupSum5 {
     /**
+     * Delegate to {@linkplain GroupSum5#recursion(int, int[], int, boolean)},
+     * assuming that the passed start index is 0, so that it makes sense to specify
+     * selectable as true
+     * 
+     * @param start  first index
+     * @param nums   array
+     * @param target the target
+     * @return true if found
+     */
+    public static boolean groupSum5(int start, int[] nums, int target) {
+        return recursion(start, nums, target, true);
+    }
+
+    /**
+     * Delegate to {@linkplain GroupSum5#recursion(int, int[], int, boolean)}
+     * <p>
+     * For robustness, the caller can't specify the starting index
+     * 
+     * @param start  first index
+     * @param nums   array
+     * @param target the target
+     * @return true if found
+     */
+    public static boolean groupSum5(int[] nums, int target) {
+        return recursion(0, nums, target, true);
+    }
+
+    /**
+     * Delegate to {@linkplain GroupSum5#recursion(int, int[], int, boolean)}
+     * <p>
+     * If the caller wants to be able to specify the starting index, check if the
+     * starting element is selectable before starting recursion
+     * 
+     * @param start  first index
+     * @param nums   array
+     * @param target the target
+     * @return true if found
+     */
+    public static boolean checkStart(int start, int[] nums, int target) {
+        boolean selectable = start > 0 && nums[start - 1] == 5 && nums[start] == 1 ? false : true;
+        return recursion(start, nums, target, selectable);
+    }
+
+    static boolean recursion(int i, int[] nums, int target, boolean selectable) {
+        if (i == nums.length) {
+            return target == 0;
+        }
+
+        if (nums[i] % 5 == 0) {
+            return recursion(i + 1, nums, target - nums[i], false);
+        } else if (nums[i] == 1 && !selectable) {
+            return recursion(i + 1, nums, target, true);
+        } else {
+            return recursion(i + 1, nums, target - nums[i], true) || recursion(i + 1, nums, target, true);
+        }
+    }
+
+    /**
      * Solution by backtracking recursion
      * <p>
      * Base case: if the start index is not good, return true only if target is
@@ -32,17 +90,17 @@ public class GroupSum5 {
      * @param target the target
      * @return true if succeeded
      */
-    public static boolean groupSum5(int start, int[] nums, int target) {
+    public static boolean alternative(int start, int[] nums, int target) {
         if (start == nums.length) {
             return target == 0;
         }
 
         if (nums[start] % 5 == 0) {
-            return groupSum5(start + 1, nums, target - nums[start]);
+            return alternative(start + 1, nums, target - nums[start]);
         } else if (start > 0 && nums[start - 1] % 5 == 0 && nums[start] == 1) {
-            return groupSum5(start + 1, nums, target);
+            return alternative(start + 1, nums, target);
         } else {
-            return groupSum5(start + 1, nums, target - nums[start]) || groupSum5(start + 1, nums, target);
+            return alternative(start + 1, nums, target - nums[start]) || alternative(start + 1, nums, target);
         }
     }
 }

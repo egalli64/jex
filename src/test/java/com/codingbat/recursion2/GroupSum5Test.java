@@ -28,10 +28,29 @@ class GroupSum5Test {
         assertThat(GroupSum5.groupSum5(0, data, target)).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @MethodSource("provider")
+    void alternativeExamples(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.alternative(0, data, target)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void noStartExamples(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.groupSum5(data, target)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void checkStartExamples(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.checkStart(0, data, target)).isEqualTo(expected);
+    }
+
     static Stream<Arguments> oneProvider() {
         return Stream.of( //
                 Arguments.of(new int[] { 3, 5, 1 }, 4, false), //
                 Arguments.of(new int[] { 3, 5, 1 }, 5, true), //
+                Arguments.of(new int[] { 3, 5, 1 }, 9, false), //
                 Arguments.of(new int[] { 1, 3, 5 }, 8, true) //
         );
     }
@@ -40,5 +59,23 @@ class GroupSum5Test {
     @MethodSource("oneProvider")
     void groupSum5One(int[] data, int target, boolean expected) {
         assertThat(GroupSum5.groupSum5(0, data, target)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("oneProvider")
+    void noStartOne(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.groupSum5(data, target)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("oneProvider")
+    void checkStartOne(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.checkStart(0, data, target)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("oneProvider")
+    void alternativeOne(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.alternative(0, data, target)).isEqualTo(expected);
     }
 }
