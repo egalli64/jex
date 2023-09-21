@@ -25,7 +25,7 @@ public class GroupSum5 {
      * @param target the target
      * @return true if found
      */
-    public static boolean groupSum5(int start, int[] nums, int target) {
+    public static boolean solution(int start, int[] nums, int target) {
         return recursion(start, nums, target, true);
     }
 
@@ -39,7 +39,7 @@ public class GroupSum5 {
      * @param target the target
      * @return true if found
      */
-    public static boolean groupSum5(int[] nums, int target) {
+    public static boolean solution(int[] nums, int target) {
         return recursion(0, nums, target, true);
     }
 

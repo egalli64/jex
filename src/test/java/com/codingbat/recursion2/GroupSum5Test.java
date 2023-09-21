@@ -24,8 +24,8 @@ class GroupSum5Test {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void groupSum5Examples(int[] data, int target, boolean expected) {
-        assertThat(GroupSum5.groupSum5(0, data, target)).isEqualTo(expected);
+    void solutionExamples(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.solution(0, data, target)).isEqualTo(expected);
     }
 
     @ParameterizedTest
@@ -37,7 +37,7 @@ class GroupSum5Test {
     @ParameterizedTest
     @MethodSource("provider")
     void noStartExamples(int[] data, int target, boolean expected) {
-        assertThat(GroupSum5.groupSum5(data, target)).isEqualTo(expected);
+        assertThat(GroupSum5.solution(data, target)).isEqualTo(expected);
     }
 
     @ParameterizedTest
@@ -57,14 +57,14 @@ class GroupSum5Test {
 
     @ParameterizedTest
     @MethodSource("oneProvider")
-    void groupSum5One(int[] data, int target, boolean expected) {
-        assertThat(GroupSum5.groupSum5(0, data, target)).isEqualTo(expected);
+    void solutionOne(int[] data, int target, boolean expected) {
+        assertThat(GroupSum5.solution(0, data, target)).isEqualTo(expected);
     }
 
     @ParameterizedTest
     @MethodSource("oneProvider")
     void noStartOne(int[] data, int target, boolean expected) {
-        assertThat(GroupSum5.groupSum5(data, target)).isEqualTo(expected);
+        assertThat(GroupSum5.solution(data, target)).isEqualTo(expected);
     }
 
     @ParameterizedTest
