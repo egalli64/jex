@@ -33,10 +33,10 @@ public class WordsWithout {
         }
 
         String[] result = new String[len];
-        int i = 0;
-        for (String word : words) {
-            if (!word.equals(target)) {
-                result[i++] = word;
+        for (int i = 0, j = 0; j < len; i++) {
+            if (!words[i].equals(target)) {
+                result[j] = words[i];
+                j += 1;
             }
         }
 
