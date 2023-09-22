@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class ScoreUpTest {
@@ -33,5 +34,11 @@ class ScoreUpTest {
     @MethodSource("provider")
     void modernExamples(String[] keys, String[] answers, int expected) {
         assertThat(ScoreUp.modern(keys, answers)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "a,a,4", "a,b,-1", "a,?,0" })
+    void mapperPlain(String key, String answer, int expected) {
+        assertThat(ScoreUp.mapper(key, answer)).isEqualTo(expected);
     }
 }
