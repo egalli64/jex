@@ -31,7 +31,23 @@ class BigHeightsTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void unsupportedExamples(int[] heights, int start, int end, int expected) {
-        assertThat(BigHeights.unsupported(heights, start, end)).isEqualTo(expected);
+    void modernExamples(int[] heights, int start, int end, int expected) {
+        assertThat(BigHeights.modern(heights, start, end)).isEqualTo(expected);
+    }
+
+    static Stream<Arguments> mapperProvider() {
+        int[] heights = { 5, 3, 6, 7, 2 };
+        return Stream.of( //
+                Arguments.of(heights, 0, 0), //
+                Arguments.of(heights, 1, 0), //
+                Arguments.of(heights, 2, 0), //
+                Arguments.of(heights, 3, 1) //
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("mapperProvider")
+    void mapperExamples(int[] heights, int start, int expected) {
+        assertThat(BigHeights.mapper(heights, start)).isEqualTo(expected);
     }
 }
