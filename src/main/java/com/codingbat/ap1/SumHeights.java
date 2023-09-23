@@ -35,8 +35,6 @@ public class SumHeights {
     }
 
     /**
-     * IntStream is (currently) not supported in CodingBat.
-     * <p>
      * Stream on the passed range (open to the right). Map each index to the delta
      * between the associated element in the array and its follower. Add up all the
      * deltas.
@@ -46,7 +44,7 @@ public class SumHeights {
      * @param end     last index
      * @return sum of deltas
      */
-    public static int unsupported(int[] heights, int start, int end) {
+    public static int modern(int[] heights, int start, int end) {
         return IntStream.range(start, end).map(i -> Math.abs(heights[i] - heights[i + 1])).sum();
     }
 }

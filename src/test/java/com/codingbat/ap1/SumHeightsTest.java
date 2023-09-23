@@ -31,7 +31,7 @@ class SumHeightsTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void unsupportedExamples(int[] heights, int start, int end, int expected) {
-        assertThat(SumHeights.unsupported(heights, start, end)).isEqualTo(expected);
+    void modernExamples(int[] heights, int start, int end, int expected) {
+        assertThat(SumHeights.modern(heights, start, end)).isEqualTo(expected);
     }
 }
