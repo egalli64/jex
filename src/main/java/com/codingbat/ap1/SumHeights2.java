@@ -16,8 +16,8 @@ import java.util.stream.IntStream;
  */
 public class SumHeights2 {
     /**
-     * Loop on the interval, add the delta (doubled or negated) between the current
-     * element and the next one to the buffer.
+     * Loop on the interval, delegate to {@linkplain SumHeights2#mapper(int[], int)}
+     * the delta generation, add them up.
      *
      * @param heights an array
      * @param start   first index
@@ -28,29 +28,38 @@ public class SumHeights2 {
         int result = 0;
 
         for (int i = start; i < end; i++) {
-            int delta = heights[i + 1] - heights[i];
-            result += delta < 0 ? -delta : 2 * delta;
+            result += mapper(heights, i);
         }
 
         return result;
     }
 
     /**
-     * IntStream is (currently) not supported in CodingBat.
-     * <p>
-     * Stream on the passed range (open to the right). Map each index to the delta
-     * (doubled or negated) between the associated element in the array and its
-     * follower. Add up all the deltas.
+     * Stream on the passed range (open to the right). Delegate to
+     * {@linkplain SumHeights2#mapper(int[], int)} the delta generation, map the
+     * each array element having index in the range to such delta. Add up all of
+     * them.
      *
      * @param heights an array
      * @param start   first index
      * @param end     last index
      * @return sum of deltas
      */
-    public static int unsupported(int[] heights, int start, int end) {
-        return IntStream.range(start, end).map(i -> {
-            int delta = heights[i + 1] - heights[i];
-            return delta < 0 ? -delta : 2 * delta;
-        }).sum();
+    public static int modern(int[] heights, int start, int end) {
+        return IntStream.range(start, end).map(i -> mapper(heights, i)).sum();
+    }
+
+    /**
+     * Map the element in the passed position to the delta to its right neighbor,
+     * calculated as defined by the problem. It is caller responsibility passing
+     * good values.
+     * 
+     * @param xs an array
+     * @param i  index of the first element to consider
+     * @return delta
+     */
+    static int mapper(int[] xs, int i) {
+        int delta = xs[i + 1] - xs[i];
+        return delta < 0 ? -delta : 2 * delta;
     }
 }
