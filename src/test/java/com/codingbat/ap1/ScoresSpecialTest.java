@@ -38,8 +38,8 @@ class ScoresSpecialTest {
 
     @ParameterizedTest
     @MethodSource("singleProvider")
-    void solutionExamples(int[] values, int expected) {
-        assertThat(ScoresSpecial.solution(values)).isEqualTo(expected);
+    void largestSpecialExamples(int[] values, int expected) {
+        assertThat(ScoresSpecial.largestSpecial(values)).isEqualTo(expected);
     }
 
     @ParameterizedTest

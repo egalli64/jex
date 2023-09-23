@@ -16,15 +16,15 @@ import java.util.Arrays;
  */
 public class ScoresSpecial {
     /**
-     * Delegate to {@linkplain ScoresSpecial#solution(int[])} the search for the max
-     * special scores in the two arrays, then add them up.
+     * Delegate to {@linkplain ScoresSpecial#largestSpecial(int[])} the search for
+     * the max special scores in the two arrays, then add them up.
      *
      * @param a an array
      * @param b another array
      * @return the max special scores sum
      */
     public static int solution(int[] a, int[] b) {
-        return solution(a) + solution(b);
+        return largestSpecial(a) + largestSpecial(b);
     }
 
     /**
@@ -33,7 +33,7 @@ public class ScoresSpecial {
      * @param values an array
      * @return the largest special value, or zero
      */
-    static int solution(int[] values) {
+    static int largestSpecial(int[] values) {
         int result = 0;
 
         for (int value : values) {
