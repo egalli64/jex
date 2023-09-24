@@ -53,6 +53,6 @@ class SolutionTest {
     void testSolutionWindowTooBig() {
         String data = "3 5\n1 2 2 3 3 3";
         InputStream is = new ByteArrayInputStream(data.getBytes());
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> Solution.solution(is));
+        assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> Solution.solution(is));
     }
 }
