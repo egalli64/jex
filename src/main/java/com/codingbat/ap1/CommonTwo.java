@@ -16,9 +16,9 @@ import java.util.Set;
  */
 public class CommonTwo {
     /**
-     * Loop on both arrays, using i for a and j for b. When equals, discard other
-     * copies (if any), and increase the counter. Otherwise, discard the "smaller"
-     * one.
+     * Loop on both arrays, using i for a and j for b. When equals, increase the
+     * counter and discard other copies (if any). Otherwise, increase the counter to
+     * get rid of the "smaller" one.
      *
      * @param a an ordered array
      * @param b another ordered array
@@ -31,14 +31,16 @@ public class CommonTwo {
         int j = 0;
         while (i < a.length && j < b.length) {
             if (a[i].equals(b[j])) {
-                String cur = a[i];
-                while (i < a.length && a[i].equals(cur)) {
-                    i++;
-                }
-                while (j < b.length && b[j].equals(cur)) {
-                    j++;
-                }
                 result += 1;
+
+                String cur = a[i];
+                do {
+                    i++;
+                } while (i < a.length && a[i].equals(cur));
+
+                do {
+                    j++;
+                } while (j < b.length && b[j].equals(cur));
             } else if (a[i].compareTo(b[j]) < 0) {
                 i++;
             } else {
