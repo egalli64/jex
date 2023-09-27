@@ -31,6 +31,12 @@ public class Topping2 {
         return map;
     }
 
+    /**
+     * Calling containsKey and put instead of replace
+     * 
+     * @param map a map
+     * @return the changed map
+     */
     public static Map<String, String> classic(Map<String, String> map) {
         String value = map.get("ice cream");
         if (value != null) {
