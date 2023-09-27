@@ -27,4 +27,21 @@ public class Topping1 {
 
         return map;
     }
+
+    /**
+     * Put cherry as value for ice cream only if it is already in the map. Always
+     * put bread/butter.
+     * 
+     * @param map a map
+     * @return the modified map
+     */
+    public static Map<String, String> classic(Map<String, String> map) {
+        String toBeChanged = "ice cream";
+        if (map.containsKey(toBeChanged)) {
+            map.put(toBeChanged, "cherry");
+        }
+        map.put("bread", "butter");
+
+        return map;
+    }
 }

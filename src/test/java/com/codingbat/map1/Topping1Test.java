@@ -38,4 +38,10 @@ class Topping1Test {
     void solutionExamples(Map<String, String> input, Map<String, String> expected) {
         assertThat(Topping1.solution(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void classicExamples(Map<String, String> input, Map<String, String> expected) {
+        assertThat(Topping1.classic(input)).isEqualTo(expected);
+    }
 }
