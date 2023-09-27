@@ -15,16 +15,20 @@ import java.util.Map;
  */
 public class MapAB2 {
     /**
-     * Check by containsKey, compare the values, if same, remove both entries.
+     * Get the values, if not null and same, remove both entries.
      *
      * @param map a map
      * @return the changed map
      */
     public static Map<String, String> solution(Map<String, String> map) {
-        if (map.containsKey("a") && map.containsKey("b") && map.get("a").equals(map.get("b"))) {
+        String a = map.get("a");
+        String b = map.get("b");
+
+        if (a != null && a.equals(b)) {
             map.remove("a");
             map.remove("b");
         }
+
         return map;
     }
 }
