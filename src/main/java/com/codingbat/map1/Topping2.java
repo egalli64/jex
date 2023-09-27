@@ -27,6 +27,21 @@ public class Topping2 {
             map.put("yogurt", value);
         }
         map.replace("spinach", "nuts");
+
+        return map;
+    }
+
+    public static Map<String, String> classic(Map<String, String> map) {
+        String value = map.get("ice cream");
+        if (value != null) {
+            map.put("yogurt", value);
+        }
+
+        String key = "spinach";
+        if (map.containsKey(key)) {
+            map.put(key, "nuts");
+        }
+
         return map;
     }
 }
