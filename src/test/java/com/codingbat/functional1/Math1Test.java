@@ -32,6 +32,12 @@ class Math1Test {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void modernExamples(List<Integer> input, List<Integer> expected) {
+        assertThat(Math1.modern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<Integer> input, List<Integer> expected) {
         assertThat(Math1.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);

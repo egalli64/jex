@@ -26,10 +26,22 @@ public class Math1 {
     }
 
     /**
-     * Each value in the input list is replaced with the new required value
+     * Stream the input list, map its elements to the changed values as required,
+     * collect the results in a new list
      *
      * @param nums a list
      * @return the changed list
+     * @apiNote Using Stream::toList, a version 16 feature
+     */
+    public static List<Integer> modern(List<Integer> nums) {
+        return nums.stream().map(x -> (x + 1) * 10).toList();
+    }
+
+    /**
+     * Each value in the input list is replaced with the new required value
+     *
+     * @param nums a list
+     * @return the list after changes
      */
     public static List<Integer> inPlace(List<Integer> nums) {
         nums.replaceAll(x -> (x + 1) * 10);
