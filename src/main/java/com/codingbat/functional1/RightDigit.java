@@ -26,6 +26,18 @@ public class RightDigit {
     }
 
     /**
+     * Stream the input list, map each element to its modulo 10, collect the
+     * resulting list
+     *
+     * @param nums a list
+     * @return the changed list
+     * @apiNote Using Stream::toList, a version 16 feature
+     */
+    public static List<Integer> modern(List<Integer> nums) {
+        return nums.stream().map(x -> x % 10).toList();
+    }
+
+    /**
      * Replace each value in the input list with its modulo 10
      *
      * @param nums a list
