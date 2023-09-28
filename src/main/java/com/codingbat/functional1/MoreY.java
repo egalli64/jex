@@ -26,6 +26,18 @@ public class MoreY {
     }
 
     /**
+     * Stream the input list, map its elements to the changed string, as required,
+     * collect the results in a new list
+     *
+     * @param strings a string list
+     * @return changed list
+     * @apiNote Stream::toList requires Java 16
+     */
+    public static List<String> modern(List<String> strings) {
+        return strings.stream().map(s -> "y" + s + "y").toList();
+    }
+
+    /**
      * Replace each string in the passed list with the required one
      *
      * @param strings a list

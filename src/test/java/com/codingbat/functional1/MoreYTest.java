@@ -32,6 +32,12 @@ class MoreYTest {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void modernExamples(List<String> input, List<String> expected) {
+        assertThat(MoreY.modern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<String> input, List<String> expected) {
         assertThat(MoreY.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
