@@ -32,6 +32,12 @@ class LowerTest {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void modernExamples(List<String> input, List<String> expected) {
+        assertThat(Lower.modern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<String> input, List<String> expected) {
         assertThat(Lower.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);

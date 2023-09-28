@@ -26,6 +26,18 @@ public class Lower {
     }
 
     /**
+     * Stream the passed list, map each element to its lowercase version, collect
+     * them in a new list
+     * 
+     * @param strings a list
+     * @return the changed list
+     * @apiNote Using Stream::toList, a version 16 feature
+     */
+    public static List<String> modern(List<String> strings) {
+        return strings.stream().map(String::toLowerCase).toList();
+    }
+
+    /**
      * Replace each string in the passed list to its lowercase version
      *
      * @param strings a list
