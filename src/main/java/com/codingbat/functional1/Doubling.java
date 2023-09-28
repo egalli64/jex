@@ -43,8 +43,23 @@ public class Doubling {
      * @param nums a list
      * @return the changed list
      */
-    public static List<Integer> inPlace(List<Integer> nums) {
+    public static List<Integer> byReplace(List<Integer> nums) {
         nums.replaceAll(x -> x * 2);
+        return nums;
+    }
+
+    /**
+     * Loop on all element to replace each value
+     *
+     * @param nums a list
+     * @return the changed list
+     */
+    public static List<Integer> classic(List<Integer> nums) {
+        for (int i = 0; i < nums.size(); i++) {
+            int cur = nums.get(i);
+            nums.set(i, cur * 2);
+        }
+
         return nums;
     }
 }

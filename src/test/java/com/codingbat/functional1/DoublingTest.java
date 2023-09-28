@@ -38,8 +38,15 @@ class DoublingTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void inPlaceExamples(List<Integer> input, List<Integer> expected) {
-        assertThat(Doubling.inPlace(input)).isEqualTo(expected);
+    void byReplaceExamples(List<Integer> input, List<Integer> expected) {
+        assertThat(Doubling.byReplace(input)).isEqualTo(expected);
+        assertThat(input).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void classicExamples(List<Integer> input, List<Integer> expected) {
+        assertThat(Doubling.classic(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
     }
 }
