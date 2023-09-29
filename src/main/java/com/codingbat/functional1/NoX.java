@@ -15,14 +15,25 @@ import java.util.stream.Collectors;
  */
 public class NoX {
     /**
-     * Stream the list, map each list to its "clean" version, collect the changes in
-     * a new list. The string cleanup is delegated to {@linkplain NoX#clean(String)}
+     * Stream the list, map each string to its "clean" version, replacing each "x"
+     * with an empty string, then collect the changes in a new list.
      * 
      * @param strings a list
      * @return the clean list
      */
     public static List<String> solution(List<String> strings) {
-        return strings.stream().map(NoX::clean).collect(Collectors.toList());
+        return strings.stream().map(s -> s.replace("x", "")).collect(Collectors.toList());
+    }
+
+    /**
+     * Stream the list, map each string to its "clean" version, replacing each "x"
+     * with an empty string, then collect the changes in a new list.
+     * 
+     * @param strings a list
+     * @return the clean list
+     */
+    public static List<String> modern(List<String> strings) {
+        return strings.stream().map(s -> s.replace("x", "")).toList();
     }
 
     /**

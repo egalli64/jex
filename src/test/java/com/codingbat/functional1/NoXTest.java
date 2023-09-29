@@ -33,6 +33,12 @@ class NoXTest {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void modernExamples(List<String> input, List<String> expected) {
+        assertThat(NoX.modern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<String> input, List<String> expected) {
         assertThat(NoX.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
