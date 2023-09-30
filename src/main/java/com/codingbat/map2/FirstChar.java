@@ -37,4 +37,27 @@ public class FirstChar {
 
         return result;
     }
+
+    /**
+     * Create a map, loop on all the strings, put the string with its first char as
+     * key, if it is not already in, otherwise put as value the previous value
+     * concatenated with the current string.
+     *
+     * @param strings array of non-empty strings
+     * @return the generated map
+     */
+    public static Map<String, String> classic(String[] strings) {
+        Map<String, String> result = new HashMap<>();
+
+        for (String s : strings) {
+            String key = String.valueOf(s.charAt(0));
+            if (result.containsKey(key)) {
+                result.put(key, result.get(key) + s);
+            } else {
+                result.put(key, s);
+            }
+        }
+
+        return result;
+    }
 }

@@ -37,4 +37,10 @@ class FirstCharTest {
     void solutionExamples(String[] input, Map<String, Integer> expected) {
         assertThat(FirstChar.solution(input)).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void classicExamples(String[] input, Map<String, Integer> expected) {
+        assertThat(FirstChar.classic(input)).isEqualTo(expected);
+    }
 }
