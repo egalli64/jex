@@ -35,4 +35,25 @@ public class WordCount {
 
         return result;
     }
+
+    /**
+     * Generate a map. Loop on the input array. Put the current string in the map,
+     * if not already in, with value 1, or, if the string is a key in the map,
+     * increase its value (that is, its counter).
+     *
+     * @param strings a string array
+     * @return the generated map
+     */
+    public static Map<String, Integer> classic(String[] strings) {
+        Map<String, Integer> result = new HashMap<>();
+        for (String key : strings) {
+            if (result.containsKey(key)) {
+                result.put(key, result.get(key) + 1);
+            } else {
+                result.put(key, 1);
+            }
+        }
+
+        return result;
+    }
 }
