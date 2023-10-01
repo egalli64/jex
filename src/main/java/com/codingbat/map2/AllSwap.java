@@ -31,6 +31,10 @@ public class AllSwap {
     public static String[] solution(String[] strings) {
         Map<Character, Integer> match = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
+            if (strings[i].isEmpty()) {
+                continue;
+            }
+
             Character key = strings[i].charAt(0);
             Integer pos = match.remove(key);
             if (pos != null) {
