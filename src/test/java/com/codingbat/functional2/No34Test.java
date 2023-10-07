@@ -32,6 +32,12 @@ class No34Test {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void compactModernExamples(List<String> input, List<String> expected) {
+        assertThat(No34.compactModern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<String> input, List<String> expected) {
         assertThat(No34.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
