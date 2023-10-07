@@ -41,4 +41,27 @@ public class Two2 {
         nums.replaceAll(x -> x * 2);
         return nums;
     }
+
+    /**
+     * Stream the passed list, filter to keep the required elements, map them as
+     * required, collect the result to a new list
+     *
+     * @param strings a list
+     * @return the filtered list
+     * @apiNote requires 16+ for Stream::toList
+     */
+    public static List<Integer> compactModern(List<Integer> strings) {
+        return strings.stream().filter(Two2::isGood).map(x -> x * 2).toList();
+    }
+
+    /**
+     * Implementation detail to simplify caller code
+     * 
+     * @param x an integer
+     * @return true if the passed integer should be kept
+     */
+    private static boolean isGood(int x) {
+        int lastDigit = x % 10;
+        return lastDigit != 1 && lastDigit != 6;
+    }
 }

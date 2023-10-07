@@ -32,6 +32,12 @@ class Two2Test {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void compactModernExamples(List<Integer> input, List<Integer> expected) {
+        assertThat(Two2.compactModern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<Integer> input, List<Integer> expected) {
         assertThat(Two2.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
