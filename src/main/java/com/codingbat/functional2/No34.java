@@ -52,7 +52,7 @@ public class No34 {
      * Implementation detail to simplify caller code
      * 
      * @param s a string
-     * @return true if the passed string is short enough
+     * @return true if the passed string is acceptable
      */
     private static boolean isGood(String s) {
         return s.length() < 3 || s.length() > 4;
