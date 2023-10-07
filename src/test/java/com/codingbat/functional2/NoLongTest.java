@@ -36,4 +36,10 @@ class NoLongTest {
         assertThat(NoLong.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void compactModernExamples(List<String> input, List<String> expected) {
+        assertThat(NoLong.compactModern(input)).isEqualTo(expected);
+    }
 }

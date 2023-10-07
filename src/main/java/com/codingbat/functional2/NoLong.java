@@ -35,4 +35,26 @@ public class NoLong {
         strings.removeIf(x -> x.length() >= 4);
         return strings;
     }
+
+    /**
+     * Stream the input list, filter to keep just the required elements, collect
+     * them in a new list
+     *
+     * @param strings a list
+     * @return the filtered list
+     * @apiNote requires 16+ for Stream::toList
+     */
+    public static List<String> compactModern(List<String> strings) {
+        return strings.stream().filter(NoLong::isShort).toList();
+    }
+
+    /**
+     * Implementation detail to simplify caller code
+     * 
+     * @param s a string
+     * @return true if the passed string is short enough
+     */
+    private static boolean isShort(String s) {
+        return s.length() < 4;
+    }
 }
