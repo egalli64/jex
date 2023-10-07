@@ -32,6 +32,12 @@ class NoYYTest {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void compactModernExamples(List<String> input, List<String> expected) {
+        assertThat(NoYY.compactModern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<String> input, List<String> expected) {
         assertThat(NoYY.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);

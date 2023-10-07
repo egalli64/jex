@@ -16,7 +16,8 @@ import java.util.stream.Collectors;
  */
 public class NoYY {
     /**
-     * codingbat.com/prob/
+     * Stream the passed list, filter to keep the required elements, map them as
+     * required, collect the result to a new list
      *
      * @param strings a string list
      * @return the changed list
@@ -26,9 +27,38 @@ public class NoYY {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Remove from the passed list the non-complying elements, adjust the surviving
+     * ones as required before returning the list
+     *
+     * @param strings a list
+     * @return the filtered list
+     */
     public static List<String> inPlace(List<String> strings) {
         strings.removeIf(s -> s.contains("yy") || s.endsWith("y"));
         strings.replaceAll(s -> s + "y");
         return strings;
+    }
+
+    /**
+     * Stream the passed list, filter to keep the required elements, map them as
+     * required, collect the result to a new list
+     *
+     * @param strings a list
+     * @return the filtered list
+     * @apiNote requires 16+ for Stream::toList
+     */
+    public static List<String> compactModern(List<String> strings) {
+        return strings.stream().filter(NoYY::isGood).map(s -> s + "y").toList();
+    }
+
+    /**
+     * Implementation detail to simplify caller code
+     * 
+     * @param s a string
+     * @return true if the passed string should be kept
+     */
+    private static boolean isGood(String s) {
+        return !s.contains("yy") && !s.endsWith("y");
     }
 }
