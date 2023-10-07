@@ -45,4 +45,30 @@ public class Square56 {
         nums.replaceAll(x -> x * x + 10);
         return nums;
     }
+
+    /**
+     * Stream the passed list, filter to keep the required elements, map them as
+     * required, collect the result to a new list
+     *
+     * @param strings a list
+     * @return the filtered list
+     * @apiNote requires 16+ for Stream::toList
+     */
+    public static List<Integer> compactModern(List<Integer> strings) {
+        return strings.stream().filter(Square56::isGood).map(x -> x * x + 10).toList();
+    }
+
+    /**
+     * Implementation detail to simplify caller code
+     * <p>
+     * Do not accept a value having as last digit 4, 5, or 6 (base 10) since its
+     * squared value ends by 5 or 6
+     * 
+     * @param x an integer
+     * @return true if the passed integer should be kept
+     */
+    private static boolean isGood(int x) {
+        int last = Math.abs(x) % 10;
+        return last < 4 || last > 6;
+    }
 }

@@ -32,6 +32,12 @@ class Square56Test {
 
     @ParameterizedTest
     @MethodSource("provider")
+    void compactModernExamples(List<Integer> input, List<Integer> expected) {
+        assertThat(Square56.compactModern(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
     void inPlaceExamples(List<Integer> input, List<Integer> expected) {
         assertThat(Square56.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
