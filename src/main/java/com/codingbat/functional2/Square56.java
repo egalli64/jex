@@ -31,15 +31,20 @@ public class Square56 {
 
     /**
      * Drop from the passed list the numbers having as last digit 4, 5, or 6 (since
-     * their last digit, when squared, is 5 or 6), do not consider the number sign,
-     * since, for example, -4 modulo 10 is 6. Then apply the required transformation
+     * their last digit, when squared, is 5 or 6).
+     * <p>
+     * To get the last digit use Math::floorMod (Java 8+) or Math::abs to work
+     * correctly on negative values. In Java the operator % returns the _remainder_,
+     * keeping the original sign. Here we need the "real" modulo, an unsigned value.
+     * <p>
+     * Then apply the required transformation
      * 
      * @param nums a list
      * @return the changed list
      */
     public static List<Integer> inPlace(List<Integer> nums) {
         nums.removeIf(x -> {
-            int last = Math.abs(x) % 10;
+            int last = Math.floorMod(x, 10);
             return last >= 4 && last <= 6;
         });
         nums.replaceAll(x -> x * x + 10);
@@ -50,12 +55,12 @@ public class Square56 {
      * Stream the passed list, filter to keep the required elements, map them as
      * required, collect the result to a new list
      *
-     * @param strings a list
+     * @param nums a list
      * @return the filtered list
      * @apiNote requires 16+ for Stream::toList
      */
-    public static List<Integer> compactModern(List<Integer> strings) {
-        return strings.stream().filter(Square56::isGood).map(x -> x * x + 10).toList();
+    public static List<Integer> compactModern(List<Integer> nums) {
+        return nums.stream().filter(Square56::isGood).map(x -> x * x + 10).toList();
     }
 
     /**
@@ -63,12 +68,16 @@ public class Square56 {
      * <p>
      * Do not accept a value having as last digit 4, 5, or 6 (base 10) since its
      * squared value ends by 5 or 6
+     * <p>
+     * To get the last digit use Math::floorMod (Java 8+) or Math::abs to work
+     * correctly on negative values. In Java the operator % returns the _remainder_,
+     * keeping the original sign. Here we need the "real" modulo, an unsigned value.
      * 
      * @param x an integer
      * @return true if the passed integer should be kept
      */
     private static boolean isGood(int x) {
-        int last = Math.abs(x) % 10;
+        int last = Math.floorMod(x, 10);
         return last < 4 || last > 6;
     }
 }
