@@ -54,16 +54,29 @@ public class Square56 {
     /**
      * Implementation detail to simplify filtering
      * <p>
-     * Check the last digit of the passed integer against 4, 5, 6
+     * Check the last digit of the passed integer against 4, 5, 6. Since the passed
+     * integer could be negative, use Math::abs on the result of the % operator
+     * 
+     * @param x an integer
+     * @return true if the passed integer does not end by [4..6]
+     */
+    private static boolean notEndingBy456(int x) {
+        int last = Math.abs(x % 10);
+        return last < 4 || last > 6;
+    }
+
+    /**
+     * Implementation detail to simplify filtering
      * <p>
-     * Since the passed integer could be negative, use Math::floorMod or Math::abs
-     * on the result of the % operator.
+     * Check the last digit of the passed integer against 4, 5, 6. Since the passed
+     * integer could be negative, use Math::floorMod. Debug unit test to appreciate
+     * the non trivial behavior
      * 
      * @param x an integer
      * @return true if the passed integer does not end by [4..6]
      * @apiNote requires 8+ for Math::floorMod
      */
-    private static boolean notEndingBy456(int x) {
+    static boolean notEndingBy456Alternative(int x) {
         int last = Math.floorMod(x, 10);
         return last < 4 || last > 6;
     }
@@ -86,16 +99,29 @@ public class Square56 {
     /**
      * Implementation detail to simplify filtering
      * <p>
-     * Check the last digit of the passed integer against 4, 5, 6
+     * Check the last digit of the passed integer against 4, 5, 6. Since the passed
+     * integer could be negative, use Math::abs on the result of the % operator
+     * 
+     * @param x an integer
+     * @return true if the passed integer ends by [4..6]
+     */
+    private static boolean endsBy456(int x) {
+        int last = Math.abs(x % 10);
+        return last >= 4 && last <= 6;
+    }
+
+    /**
+     * Implementation detail to simplify filtering
      * <p>
-     * Since the passed integer could be negative, use Math::floorMod (or Math::abs
-     * on the result of the % operator)
+     * Check the last digit of the passed integer against 4, 5, 6. Since the passed
+     * integer could be negative, use Math::floorMod. Debug unit test to appreciate
+     * the non trivial behavior
      * 
      * @param x an integer
      * @return true if the passed integer ends by [4..6]
      * @apiNote requires 8+ for Math::floorMod
      */
-    private static boolean endsBy456(int x) {
+    static boolean endsBy456Alternative(int x) {
         int last = Math.floorMod(x, 10);
         return last >= 4 && last <= 6;
     }

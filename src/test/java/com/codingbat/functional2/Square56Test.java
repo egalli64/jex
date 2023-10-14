@@ -13,6 +13,7 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class Square56Test {
@@ -47,5 +48,17 @@ class Square56Test {
     void inPlaceExamples(List<Integer> input, List<Integer> expected) {
         assertThat(Square56.inPlace(input)).isEqualTo(expected);
         assertThat(input).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "3, false", "4, true", "7, false" })
+    void endsBy456AlternativeExamples(int input, boolean expected) {
+        assertThat(Square56.endsBy456Alternative(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "3, true", "4, false", "7, true" })
+    void notEndingBy456AlternativeExamples(int input, boolean expected) {
+        assertThat(Square56.notEndingBy456Alternative(input)).isEqualTo(expected);
     }
 }
