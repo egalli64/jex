@@ -19,13 +19,19 @@ class BobThereTest {
 
     @ParameterizedTest
     @CsvSource({ "abcbob,true", "b9b,true", "bac,false" })
-    void simpleMatchExamples(String input, boolean expected) {
-        assertThat(BobThere.simpleMatch(input)).isEqualTo(expected);
+    void stringMatchesExamples(String input, boolean expected) {
+        assertThat(BobThere.stringMatches(input)).isEqualTo(expected);
     }
 
     @ParameterizedTest
     @CsvSource({ "abcbob,true", "b9b,true", "bac,false" })
-    void matchExamples(String input, boolean expected) {
-        assertThat(BobThere.match(input)).isEqualTo(expected);
+    void patternMatchesExamples(String input, boolean expected) {
+        assertThat(BobThere.patternMatches(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "abcbob,true", "b9b,true", "bac,false" })
+    void patternMatcherFindExamples(String input, boolean expected) {
+        assertThat(BobThere.patternMatcherFind(input)).isEqualTo(expected);
     }
 }

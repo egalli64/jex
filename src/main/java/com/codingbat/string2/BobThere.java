@@ -35,17 +35,32 @@ public class BobThere {
      * @param str a string
      * @return true for success
      */
-    public static boolean simpleMatch(String str) {
+    public static boolean stringMatches(String str) {
         return str.matches(".*b.b.*");
     }
 
     /**
-     * Find anywhere on the input string the regular expression "b.b"
+     * Using {@linkplain Pattern#matches(String, CharSequence)} to match the passed
+     * string for the pattern: any char 0+ times, 'b', any char exactly once, 'b',
+     * any char 0+ times.
      *
      * @param str a string
      * @return true for success
      */
-    public static boolean match(String str) {
+    public static boolean patternMatches(String str) {
+        return Pattern.matches(".*b.b.*", str);
+    }
+
+    /**
+     * Find anywhere on the input string the regular expression "b.b"
+     * <li>Compile the pattern "b.b"
+     * <li>Create a matcher for it against the passed string
+     * <li>Check if the matcher find the pattern in the string
+     *
+     * @param str a string
+     * @return true for success
+     */
+    public static boolean patternMatcherFind(String str) {
         return Pattern.compile("b.b").matcher(str).find();
     }
 }
