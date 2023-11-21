@@ -49,6 +49,6 @@ public class GHappy {
      * @return true if accepted
      */
     public static boolean match(String str) {
-        return !str.matches("^g[^g]*|.*[^g]g$|.*[^g]g[^g].*");
+        return !str.matches("^g[^g]?|.*[^g]g$|.*[^g]g[^g].*");
     }
 }
