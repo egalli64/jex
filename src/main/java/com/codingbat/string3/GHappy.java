@@ -40,15 +40,15 @@ public class GHappy {
     }
 
     /**
-     * The input string should not match:
-     * <li>a starting 'g' followed by a non-'g'
-     * <li>a final 'g' preceded by a non-'g'
+     * The input string should _not_ match:
+     * <li>a starting 'g', followed by a non-'g', or single char
+     * <li>a terminal 'g' preceded by a non-'g'
      * <li>a triplet anywhere with a 'g' in the middle of non-'g'.
      * 
      * @param str a string
      * @return true if accepted
      */
     public static boolean match(String str) {
-        return !str.matches("^g[^g]?|.*[^g]g$|.*[^g]g[^g].*");
+        return !str.matches("^g[^g]?$|.*[^g]g$|.*[^g]g[^g].*");
     }
 }
