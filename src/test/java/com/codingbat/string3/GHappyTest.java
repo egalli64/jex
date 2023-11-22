@@ -7,6 +7,7 @@ package com.codingbat.string3;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -28,11 +29,15 @@ class GHappyTest {
     void matchExamples(String input, boolean expected) {
         assertThat(GHappy.match(input)).isEqualTo(expected);
     }
-    
 
     @ParameterizedTest
     @CsvSource({ "g,false", "gx,false", "xg,false", "gg,true" })
     void matchShort(String input, boolean expected) {
         assertThat(GHappy.match(input)).isEqualTo(expected);
+    }
+
+    @Test
+    void matchUnhappyEnding() {
+        assertThat(GHappy.match("xxgggxyg")).isFalse();
     }
 }
