@@ -17,7 +17,7 @@ class LongestSubstringWithoutRepeatingCharactersTest {
 
     @ParameterizedTest
     @CsvSource({ "abcabcbb,3", "bbbbb,1", "pwwkew,3", "dvdf,3", "aabaab!bb,3", "umvejcuuk,6" })
-    void countSubstringsExamples(String input, int expected) {
+    void lengthOfLongestSubstringExamples(String input, int expected) {
         int actual = instance.lengthOfLongestSubstring(input);
         assertThat(actual).isEqualTo(expected);
     }

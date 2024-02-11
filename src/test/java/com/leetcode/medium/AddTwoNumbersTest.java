@@ -15,7 +15,7 @@ class AddTwoNumbersTest {
     private static final AddTwoNumbers instance = new AddTwoNumbers();
 
     @Test
-    void mergeTwoListsExample1() {
+    void addTwoNumbersExample1() {
         var left = new ListNode(3);
         left = new ListNode(4, left);
         left = new ListNode(2, left);
@@ -38,7 +38,7 @@ class AddTwoNumbersTest {
     }
     
     @Test
-    void mergeTwoListsExample2() {
+    void addTwoNumbersExample2() {
         var left = new ListNode(0);
         var right = new ListNode(0);
 
