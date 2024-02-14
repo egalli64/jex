@@ -1,0 +1,17 @@
+package com.leetcode.medium;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+class ReverseIntegerTest {
+    private static final ReverseInteger instance = new ReverseInteger();
+
+    @ParameterizedTest
+    @CsvSource({ "123,321", "-123,-321", "120,21", "2_000_000_009,0" })
+    void reverseExamples(int input, int expected) {
+        int actual = instance.reverse(input);
+        assertThat(actual).isEqualTo(expected);
+    }
+}
