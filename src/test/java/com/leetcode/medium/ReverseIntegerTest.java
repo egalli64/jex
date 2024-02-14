@@ -1,3 +1,10 @@
+/*
+ * LeetCode 7. Reverse Integer
+ * https://leetcode.com/problems/reverse-integer/description/
+ * 
+ * My repository with solutions
+ * https://github.com/egalli64/jex/
+ */
 package com.leetcode.medium;
 
 import static org.assertj.core.api.Assertions.assertThat;
