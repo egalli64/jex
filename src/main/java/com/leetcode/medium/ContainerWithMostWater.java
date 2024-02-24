@@ -1,9 +1,8 @@
 /*
- * LeetCode 11. Container With Most Water
- * https://leetcode.com/problems/container-with-most-water/description/
+ * 11. Container With Most Water - https://leetcode.com/problems/container-with-most-water/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 

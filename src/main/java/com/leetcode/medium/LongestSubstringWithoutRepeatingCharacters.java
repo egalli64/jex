@@ -1,9 +1,8 @@
 /*
- * LeetCode 3. Longest Substring Without Repeating Characters
- * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ * 3. Longest Substring Without Repeating Characters - https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 

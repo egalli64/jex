@@ -1,8 +1,8 @@
 /*
- * LeetCode Problems - Medium difficulty
- * https://leetcode.com/problemset/?difficulty=MEDIUM
+ * 15. 3Sum - https://leetcode.com/problems/3sum/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My solutions - https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -10,11 +10,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * LeetCode 15. 3Sum
- * 
- * https://leetcode.com/problems/3sum/description/
- */
 public class ThreeSum {
     /**
      * Find zero-sum triplets

@@ -1,9 +1,8 @@
 /*
- * LeetCode 7. Reverse Integer
- * https://leetcode.com/problems/reverse-integer/description/
+ * 7. Reverse Integer - https://leetcode.com/problems/reverse-integer/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 

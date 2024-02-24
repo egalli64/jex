@@ -1,9 +1,8 @@
 /*
- * LeetCode 2. Add Two Numbers
- * https://leetcode.com/problems/add-two-numbers/description/
+ * 2. Add Two Numbers - https://leetcode.com/problems/add-two-numbers/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 

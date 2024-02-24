@@ -1,9 +1,8 @@
 /*
- * LeetCode 5. Longest Palindromic Substring
- * https://leetcode.com/problems/longest-palindromic-substring/description/
+ * 5. Longest Palindromic Substring - https://leetcode.com/problems/longest-palindromic-substring/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 

@@ -1,9 +1,8 @@
 /*
- * LeetCode 6. Zigzag Conversion
- * https://leetcode.com/problems/zigzag-conversion/description/
+ * 6. Zigzag Conversion - https://leetcode.com/problems/zigzag-conversion/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
