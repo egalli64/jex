@@ -1,9 +1,8 @@
 /*
- * LeetCode 26. Remove Duplicates from Sorted Array
- * https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+ * 26. Remove Duplicates from Sorted Array - https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 

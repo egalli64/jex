@@ -1,9 +1,8 @@
 /*
- * LeetCode 27. Remove Element
- * https://leetcode.com/problems/remove-element/description/
+ * 27. Remove Element - https://leetcode.com/problems/remove-element/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 

@@ -1,9 +1,8 @@
 /*
- * LeetCode 14. Longest Common Prefix
- * https://leetcode.com/problems/longest-common-prefix/description/
+ * 14. Longest Common Prefix - https://leetcode.com/problems/longest-common-prefix/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 

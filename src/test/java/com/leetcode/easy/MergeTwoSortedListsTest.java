@@ -1,9 +1,8 @@
 /*
- * LeetCode 21. Merge Two Sorted Lists
- * https://leetcode.com/problems/merge-two-sorted-lists/description/
+ * 21. Merge Two Sorted Lists - https://leetcode.com/problems/merge-two-sorted-lists/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 

@@ -1,9 +1,8 @@
 /*
- * LeetCode 9. Palindrome Number
- * https://leetcode.com/problems/palindrome-number/description/
+ * 9. Palindrome Number - https://leetcode.com/problems/palindrome-number/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 

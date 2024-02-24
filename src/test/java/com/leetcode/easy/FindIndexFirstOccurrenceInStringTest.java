@@ -1,9 +1,8 @@
 /*
- * LeetCode 28. Find the Index of the First Occurrence in a String
- * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+ * 28. Find the Index of the First Occurrence in a String - https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 
