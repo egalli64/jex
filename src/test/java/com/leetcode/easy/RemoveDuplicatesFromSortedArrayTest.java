@@ -27,7 +27,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void removeDuplicatesExamples(int[] input, int[] expected, int k) {
+    void examples(int[] input, int[] expected, int k) {
         int actual = instance.removeDuplicates(input);
         assertThat(actual).isEqualTo(k);
 

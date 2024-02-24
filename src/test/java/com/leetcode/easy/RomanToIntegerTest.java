@@ -16,7 +16,7 @@ class RomanToIntegerTest {
 
     @ParameterizedTest
     @CsvSource({ "III,3", "LVIII,58", "MCMXCIV,1994" })
-    void romanToIntExamples(String input, int expected) {
+    void examples(String input, int expected) {
         int actual = instance.romanToInt(input);
         assertThat(actual).isEqualTo(expected);
     }

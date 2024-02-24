@@ -16,7 +16,7 @@ class PalindromeNumberTest {
 
     @ParameterizedTest
     @CsvSource({ "121,true", "-12,false", "10,false" })
-    void isPalindromeExamples(int input, boolean expected) {
+    void examples(int input, boolean expected) {
         boolean actual = instance.isPalindrome(input);
         assertThat(actual).isEqualTo(expected);
     }

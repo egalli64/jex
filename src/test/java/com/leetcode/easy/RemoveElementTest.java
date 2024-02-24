@@ -27,7 +27,7 @@ class RemoveElementTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void removeElementExamples(int[] input, int value, int[] expected, int k) {
+    void examples(int[] input, int value, int[] expected, int k) {
         int actual = instance.removeElement(input, value);
         assertThat(actual).isEqualTo(k);
 

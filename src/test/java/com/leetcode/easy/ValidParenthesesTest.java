@@ -16,14 +16,14 @@ class ValidParenthesesTest {
 
     @ParameterizedTest
     @CsvSource({ "(),true", "()[]{},true", "(],false" })
-    void isValidExamples(String input, boolean expected) {
+    void examples(String input, boolean expected) {
         boolean actual = instance.isValid(input);
         assertThat(actual).isEqualTo(expected);
     }
     
     @ParameterizedTest
     @CsvSource({ "'',true", "(,false", "],false" })
-    void isValidBasic(String input, boolean expected) {
+    void basic(String input, boolean expected) {
         boolean actual = instance.isValid(input);
         assertThat(actual).isEqualTo(expected);        
     }

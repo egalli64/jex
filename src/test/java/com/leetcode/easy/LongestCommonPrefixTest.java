@@ -25,7 +25,7 @@ class LongestCommonPrefixTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void longestCommonPrefixExamples(String[] input, String expected) {
+    void examples(String[] input, String expected) {
         String actual = instance.longestCommonPrefix(input);
         Assertions.assertThat(actual).isEqualTo(expected);
     }

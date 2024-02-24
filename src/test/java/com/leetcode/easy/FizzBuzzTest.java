@@ -28,7 +28,7 @@ class FizzBuzzTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void fizzBuzzExamples(int n, List<String> expected) {
+    void examples(int n, List<String> expected) {
         List<String> actual = instance.fizzBuzz(n);
         Assertions.assertThat(actual).isEqualTo(expected);
     }

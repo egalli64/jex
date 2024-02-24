@@ -26,7 +26,7 @@ class TwoSumTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void twoSumExamples(int[] nums, int target, int[] expected) {
+    void examples(int[] nums, int target, int[] expected) {
         int[] actual = instance.twoSum(nums, target);
         Assertions.assertThat(actual).containsExactlyInAnyOrder(expected);
     }
