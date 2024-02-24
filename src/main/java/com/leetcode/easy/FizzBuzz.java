@@ -1,5 +1,6 @@
 /*
- * https://leetcode.com/problems/fizz-buzz/
+ * 412. Fizz Buzz - https://leetcode.com/problems/fizz-buzz/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
  * My repository with solutions - https://github.com/egalli64/jex/
  */

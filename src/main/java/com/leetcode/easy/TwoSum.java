@@ -1,5 +1,6 @@
 /*
- * https://leetcode.com/problems/two-sum/description/
+ * 1. Two Sum - https://leetcode.com/problems/two-sum/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
  * My repository with solutions - https://github.com/egalli64/jex/
  */

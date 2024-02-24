@@ -1,7 +1,6 @@
 /*
- * LeetCode 35. Search Insert Position
- * Leetcode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
- * https://leetcode.com/problems/search-insert-position/description/
+ * 35. Search Insert Position - https://leetcode.com/problems/search-insert-position/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
  * My repository with solutions - https://github.com/egalli64/jex/
  */

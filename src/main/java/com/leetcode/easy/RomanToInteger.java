@@ -1,9 +1,8 @@
 /*
- * LeetCode 13. Roman to Integer
- * https://leetcode.com/problems/roman-to-integer/description/
+ * 13. Roman to Integer - https://leetcode.com/problems/roman-to-integer/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.easy;
 
