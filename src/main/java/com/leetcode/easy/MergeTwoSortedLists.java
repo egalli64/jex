@@ -11,7 +11,8 @@ package com.leetcode.easy;
  * <ul>
  * <li>The number of nodes in both lists is in the range [0, 50]
  * <li>-100 <= Node.val <= 100
- * <li>Both list1 and list2 are sorted in non-decreasing order.
+ * <li>Both list1 and list2 are sorted in non-decreasing order
+ * <li>An empty list is rendered with a null
  */
 public class MergeTwoSortedLists {
     /**
@@ -64,6 +65,14 @@ class ListNode {
 
     @Override
     public String toString() {
-        return "[" + val + "]";
+        StringBuilder sb = new StringBuilder("[ ");
+        ListNode cur = this;
+        do {
+            sb.append(cur.val);
+            sb.append(' ');
+            cur = cur.next;
+        } while (cur != null);
+        sb.append(']');
+        return sb.toString();
     }
 }
