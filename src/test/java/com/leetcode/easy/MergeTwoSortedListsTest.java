@@ -8,29 +8,34 @@ package com.leetcode.easy;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.Test;
+import java.util.stream.Stream;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class MergeTwoSortedListsTest {
     private static final MergeTwoSortedLists instance = new MergeTwoSortedLists();
 
-    @Test
-    void mergeTwoListsExample1() {
-        var left = new ListNode(4);
-        left = new ListNode(2, left);
-        left = new ListNode(1, left);
+    private static final Stream<Arguments> provider() {
+        ListNode left = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode right = new ListNode(1, new ListNode(3, new ListNode(4)));
+        ListNode expected = new ListNode(1,
+                new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))));
 
-        var right = new ListNode(4);
-        right = new ListNode(3, right);
-        right = new ListNode(1, right);
+        ListNode zero = new ListNode(0);
 
-        var expected = new ListNode(4);
-        expected = new ListNode(4, expected);
-        expected = new ListNode(3, expected);
-        expected = new ListNode(2, expected);
-        expected = new ListNode(1, expected);
-        expected = new ListNode(1, expected);
+        return Stream.of( //
+                Arguments.of(left, right, expected), //
+                Arguments.of(null, null, null), //
+                Arguments.of(null, zero, zero) //
+        );
+    }
 
-        var actual = instance.mergeTwoLists(left, right);
+    @ParameterizedTest
+    @MethodSource("provider")
+    void examples(ListNode left, ListNode right, ListNode expected) {
+        ListNode actual = instance.mergeTwoLists(left, right);
         while (actual != null) {
             assertThat(actual.val).isEqualTo(expected.val);
             actual = actual.next;
