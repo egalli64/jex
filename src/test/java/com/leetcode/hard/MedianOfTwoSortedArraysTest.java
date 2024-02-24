@@ -27,7 +27,37 @@ class MedianOfTwoSortedArraysTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void removeDuplicatesExamples(int[] left, int[] right, double expected) {
+    void examples(int[] left, int[] right, double expected) {
+        double actual = instance.findMedianSortedArrays(left, right);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void linearExamples(int[] left, int[] right, double expected) {
+        double actual = instance.linearSolution(left, right);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void shuffledExamples(int[] left, int[] right, double expected) {
+        double actual = instance.findMedianSortedArrays(right, left);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    static Stream<Arguments> singleProvider() {
+        return Stream.of( //
+                Arguments.of(new int[] { 2 }, new int[] {}, 2.0), //
+                Arguments.of(new int[] { 2, 5, 7 }, new int[] {}, 5.0), //
+                Arguments.of(new int[] { 2, 5, 7, 9 }, new int[] {}, 6.0), //
+                Arguments.of(new int[] {}, new int[] { 2 }, 2.0) //
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("singleProvider")
+    void single(int[] left, int[] right, double expected) {
         double actual = instance.findMedianSortedArrays(left, right);
         assertThat(actual).isEqualTo(expected);
     }
