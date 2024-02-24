@@ -1,7 +1,6 @@
 /*
- * LeetCode 4. Median of Two Sorted Arrays
- * Leetcode Hard Problems - https://leetcode.com/problemset/?difficulty=HARD
- * https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+ * 4. Median of Two Sorted Arrays - https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+ * LeetCode Hard Problems - https://leetcode.com/problemset/?difficulty=HARD
  * 
  * My repository with solutions - https://github.com/egalli64/jex/
  */
