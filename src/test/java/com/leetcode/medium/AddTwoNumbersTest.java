@@ -1,34 +1,39 @@
 /*
- * LeetCode 2. Add Two Numbers
- * https://leetcode.com/problems/add-two-numbers/description/
+ * 2. Add Two Numbers - https://leetcode.com/problems/add-two-numbers/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.Test;
+import java.util.stream.Stream;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class AddTwoNumbersTest {
     private static final AddTwoNumbers instance = new AddTwoNumbers();
 
-    @Test
-    void addTwoNumbersExample1() {
-        var left = new ListNode(3);
-        left = new ListNode(4, left);
-        left = new ListNode(2, left);
+    private static final Stream<Arguments> provider() {
+        return Stream.of( //
+                Arguments.of(new ListNode(2, new ListNode(4, new ListNode(3))),
+                        new ListNode(5, new ListNode(6, new ListNode(4))),
+                        new ListNode(7, new ListNode(0, new ListNode(8)))),
+                Arguments.of(new ListNode(0), new ListNode(0), new ListNode(0)),
+                Arguments.of(new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, //
+                        new ListNode(9, new ListNode(9, new ListNode(9))))))),
+                        new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))),
+                        new ListNode(8, new ListNode(9, new ListNode(9, new ListNode(9,
+                                new ListNode(0, new ListNode(0, new ListNode(0, new ListNode(1))))))))));
+    }
 
-        var right = new ListNode(4);
-        right = new ListNode(6, right);
-        right = new ListNode(5, right);
-
-        var expected = new ListNode(8);
-        expected = new ListNode(0, expected);
-        expected = new ListNode(7, expected);
-
-        var actual = instance.addTwoNumbers(left, right);
+    @ParameterizedTest
+    @MethodSource("provider")
+    void examples(ListNode left, ListNode right, ListNode expected) {
+        ListNode actual = instance.addTwoNumbers(left, right);
         while (actual != null) {
             assertThat(actual.val).isEqualTo(expected.val);
             actual = actual.next;
@@ -36,13 +41,4 @@ class AddTwoNumbersTest {
         }
         assertThat(expected).isNull();
     }
-    
-    @Test
-    void addTwoNumbersExample2() {
-        var left = new ListNode(0);
-        var right = new ListNode(0);
-
-        var actual = instance.addTwoNumbers(left, right);
-        assertThat(actual.val).isZero();
-    }    
 }
