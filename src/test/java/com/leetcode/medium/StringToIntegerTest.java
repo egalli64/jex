@@ -1,9 +1,8 @@
 /*
- * LeetCode 8. String to Integer (atoi)
- * https://leetcode.com/problems/string-to-integer-atoi/description/
+ * 8. String to Integer (atoi) - https://leetcode.com/problems/string-to-integer-atoi/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -17,7 +16,7 @@ class StringToIntegerTest {
 
     @ParameterizedTest
     @CsvSource({ "42,42", "'   -42',-42", "4193 with words,4193", "9223372036854775808,2147483647" })
-    void reverseExamples(String input, int expected) {
+    void examples(String input, int expected) {
         int actual = instance.myAtoi(input);
         assertThat(actual).isEqualTo(expected);
     }

@@ -1,9 +1,8 @@
 /*
- * LeetCode 3. Longest Substring Without Repeating Characters
- * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ * 3. Longest Substring Without Repeating Characters - https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -17,7 +16,7 @@ class LongestSubstringWithoutRepeatingCharactersTest {
 
     @ParameterizedTest
     @CsvSource({ "abcabcbb,3", "bbbbb,1", "pwwkew,3", "dvdf,3", "aabaab!bb,3", "umvejcuuk,6" })
-    void lengthOfLongestSubstringExamples(String input, int expected) {
+    void examples(String input, int expected) {
         int actual = instance.lengthOfLongestSubstring(input);
         assertThat(actual).isEqualTo(expected);
     }

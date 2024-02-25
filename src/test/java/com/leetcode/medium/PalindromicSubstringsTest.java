@@ -1,9 +1,8 @@
 /*
- * LeetCode 647. Palindromic Substrings
- * https://leetcode.com/problems/palindromic-substrings/description/
+ * 647. Palindromic Substrings - https://leetcode.com/problems/palindromic-substrings/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -17,7 +16,7 @@ class PalindromicSubstringsTest {
 
     @ParameterizedTest
     @CsvSource({ "abc,3", "aaa,6" })
-    void countSubstringsExamples(String input, int expected) {
+    void examples(String input, int expected) {
         int actual = instance.countSubstrings(input);
         assertThat(actual).isEqualTo(expected);
     }

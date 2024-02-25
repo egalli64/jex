@@ -1,9 +1,8 @@
 /*
- * LeetCode 5. Longest Palindromic Substring
- * https://leetcode.com/problems/longest-palindromic-substring/description/
+ * 5. Longest Palindromic Substring - https://leetcode.com/problems/longest-palindromic-substring/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -17,7 +16,7 @@ class LongestPalindromicSubstringTest {
 
     @ParameterizedTest
     @CsvSource({ "babad,bab", "cbbd,bb", "a,a", "aa,aa", "aacabdkacaa,aca" })
-    void longestPalindromeExamples(String input, String expected) {
+    void examples(String input, String expected) {
         String actual = instance.longestPalindrome(input);
         assertThat(actual).isEqualTo(expected);
     }

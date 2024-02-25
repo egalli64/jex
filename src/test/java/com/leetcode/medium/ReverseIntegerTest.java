@@ -1,9 +1,8 @@
 /*
- * LeetCode 7. Reverse Integer
- * https://leetcode.com/problems/reverse-integer/description/
+ * 7. Reverse Integer - https://leetcode.com/problems/reverse-integer/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -17,7 +16,7 @@ class ReverseIntegerTest {
 
     @ParameterizedTest
     @CsvSource({ "123,321", "-123,-321", "120,21", "2_000_000_009,0" })
-    void reverseExamples(int input, int expected) {
+    void examples(int input, int expected) {
         int actual = instance.reverse(input);
         assertThat(actual).isEqualTo(expected);
     }

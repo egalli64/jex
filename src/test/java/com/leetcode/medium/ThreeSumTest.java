@@ -1,3 +1,9 @@
+/*
+ * 15. 3Sum - https://leetcode.com/problems/3sum/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
+ * 
+ * My repository with solutions - https://github.com/egalli64/jex/
+ */
 package com.leetcode.medium;
 
 import java.util.List;
@@ -21,7 +27,7 @@ class ThreeSumTest {
 
     @ParameterizedTest
     @MethodSource("provider")
-    void maxAreaExamples(int[] input, List<List<Integer>> expected) {
+    void examples(int[] input, List<List<Integer>> expected) {
         var actual = instance.threeSum(input);
         Assertions.assertThat(actual).containsExactlyInAnyOrderElementsOf(expected);
     }

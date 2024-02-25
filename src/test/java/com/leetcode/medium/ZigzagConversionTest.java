@@ -1,9 +1,8 @@
 /*
- * LeetCode 6. Zigzag Conversion
- * https://leetcode.com/problems/zigzag-conversion/description/
+ * 6. Zigzag Conversion - https://leetcode.com/problems/zigzag-conversion/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
  * 
- * My repository with solutions
- * https://github.com/egalli64/jex/
+ * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
@@ -17,7 +16,7 @@ class ZigzagConversionTest {
 
     @ParameterizedTest
     @CsvSource({ "PAYPALISHIRING,3,PAHNAPLSIIGYIR", "PAYPALISHIRING,4,PINALSIGYAHRPI", "a,1,a" })
-    void convertExamples(String input, int key, String expected) {
+    void examples(String input, int key, String expected) {
         String actual = instance.convert(input, key);
         assertThat(actual).isEqualTo(expected);
     }
