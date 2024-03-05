@@ -21,16 +21,18 @@ class MergeKSortedListsTest {
         ListNode left = new ListNode(1, new ListNode(4, new ListNode(5)));
         ListNode center = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode right = new ListNode(2, new ListNode(6));
+        ListNode[] empty = {};
+        ListNode[] longer = new ListNode[] { new ListNode(1), new ListNode(2, new ListNode(6)), //
+                new ListNode(4), null, new ListNode(5), new ListNode(1), new ListNode(3), new ListNode(4), null };
+
         ListNode expected = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, //
                 new ListNode(4, new ListNode(4, new ListNode(5, new ListNode(6))))))));
-
-        ListNode[] empty = {};
 
         return Stream.of( //
                 Arguments.of(new ListNode[] { left, center, right }, expected), //
                 Arguments.of(empty, null), //
-                Arguments.of(new ListNode[] { null }, null) //
-        );
+                Arguments.of(new ListNode[] { null }, null), //
+                Arguments.of(longer, expected));
     }
 
     @ParameterizedTest
