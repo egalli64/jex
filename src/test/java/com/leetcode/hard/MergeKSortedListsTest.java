@@ -46,4 +46,16 @@ class MergeKSortedListsTest {
         }
         assertThat(expected).isNull();
     }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void polyMergeExamples(ListNode[] input, ListNode expected) {
+        ListNode actual = instance.polyMerge(input);
+        while (actual != null) {
+            assertThat(actual.val).isEqualTo(expected.val);
+            actual = actual.next;
+            expected = expected.next;
+        }
+        assertThat(expected).isNull();
+    }
 }

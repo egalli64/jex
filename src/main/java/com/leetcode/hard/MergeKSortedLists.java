@@ -7,8 +7,8 @@
 package com.leetcode.hard;
 
 /**
- * Given an array of k naturally sorted linked-lists lists, merge them into one
- * and return it
+ * Given an array of k naturally sorted linked lists, merge them into one and
+ * return it
  * <p>
  * Constraints:
  * <li>0 <= k <= 10^4
@@ -33,6 +33,13 @@ public class MergeKSortedLists {
         return result;
     }
 
+    /**
+     * Algorithms based on plain merge are more efficient
+     * 
+     * @param left  a list
+     * @param right another list
+     * @return the merged list
+     */
     private ListNode merge(ListNode left, ListNode right) {
         ListNode result = new ListNode();
         ListNode tail = result;
@@ -54,7 +61,16 @@ public class MergeKSortedLists {
         return result.next;
     }
 
-    public ListNode mergeKListsA(ListNode[] lists) {
+    /**
+     * Choosing the minimal value comparing the elements in each list. It is kind of
+     * an extended merging algorithm.
+     * 
+     * Not efficient, each element could be compared many times.
+     * 
+     * @param lists naturally sorted linked lists
+     * @return the merge of all the passed lists
+     */
+    public ListNode polyMerge(ListNode[] lists) {
         ListNode result = new ListNode();
         ListNode tail = result;
         while (true) {
