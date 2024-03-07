@@ -6,6 +6,9 @@
  */
 package com.leetcode.hard;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Given an array of k naturally sorted linked lists, merge them into one and
  * return it
@@ -16,6 +19,22 @@ package com.leetcode.hard;
  */
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
+        List<ListNode> buffer = new ArrayList<>(lists.length);
+        for (ListNode list : lists) {
+            if (list != null) {
+                buffer.add(list);
+            }
+        }
+        while (buffer.size() > 1) {
+            for (int i = 0, j = buffer.size() - 1; i < j; i++, j--) {
+                buffer.set(i, merge(buffer.get(i), buffer.remove(j)));
+            }
+        }
+
+        return buffer.isEmpty() ? null : buffer.get(0);
+    }
+
+    public ListNode mergeKListsC(ListNode[] lists) {
         for (int i = 1; i < lists.length; i *= 2) {
             for (int j = 0; j < lists.length - i; j += 2 * i) {
                 lists[j] = merge(lists[j], lists[j + i]);
