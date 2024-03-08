@@ -18,20 +18,30 @@ import java.util.List;
  * <li>0 <= lists[i].length <= 500
  */
 public class MergeKSortedLists {
+    /**
+     * Loop repeatedly the lists from the extremes to the center in the left one,
+     * discarding the right one, until just one merged list survives
+     * 
+     * @param lists naturally sorted linked lists
+     * @return the merge of all the passed lists
+     */
     public ListNode mergeKLists(ListNode[] lists) {
-        for (int i = 1; i < lists.length; i *= 2) {
-            for (int j = 0; j < lists.length - i; j += 2 * i) {
-                lists[j] = merge(lists[j], lists[j + i]);
+        int size = lists.length;
+
+        while (size > 1) {
+            for (int i = 0, j = size - 1; i < j; i++, j--) {
+                lists[i] = merge(lists[i], lists[j]);
+                size -= 1;
             }
         }
 
-        return lists.length > 0 ? lists[0] : null;
+        return size == 0 ? null : lists[0];
     }
 
     /**
-     * Push the non-empty lists in an ArrayList; loop repeatedly the lists from the
-     * extremes to the center in the left one, discarding the right one, until just
-     * one merged list survives
+     * Push the non-empty lists in an ArrayList; loop repeatedly on the lists from
+     * the extremes to the center in the left one, discarding the right one, until
+     * just one merged list survives
      * 
      * @param lists naturally sorted linked lists
      * @return the merge of all the passed lists
