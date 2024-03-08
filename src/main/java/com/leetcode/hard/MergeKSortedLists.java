@@ -19,6 +19,24 @@ import java.util.List;
  */
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
+        for (int i = 1; i < lists.length; i *= 2) {
+            for (int j = 0; j < lists.length - i; j += 2 * i) {
+                lists[j] = merge(lists[j], lists[j + i]);
+            }
+        }
+
+        return lists.length > 0 ? lists[0] : null;
+    }
+
+    /**
+     * Push the non-empty lists in an ArrayList; loop repeatedly the lists from the
+     * extremes to the center in the left one, discarding the right one, until just
+     * one merged list survives
+     * 
+     * @param lists naturally sorted linked lists
+     * @return the merge of all the passed lists
+     */
+    public ListNode arrayBuffer(ListNode[] lists) {
         List<ListNode> buffer = new ArrayList<>(lists.length);
         for (ListNode list : lists) {
             if (list != null) {
@@ -34,17 +52,14 @@ public class MergeKSortedLists {
         return buffer.isEmpty() ? null : buffer.get(0);
     }
 
-    public ListNode mergeKListsC(ListNode[] lists) {
-        for (int i = 1; i < lists.length; i *= 2) {
-            for (int j = 0; j < lists.length - i; j += 2 * i) {
-                lists[j] = merge(lists[j], lists[j + i]);
-            }
-        }
-
-        return lists.length > 0 ? lists[0] : null;
-    }
-
-    public ListNode mergeKListsB(ListNode[] lists) {
+    /**
+     * Merge all the other lists in the first one. Not efficient, the elements of
+     * the first list are merged many times, and each step makes it growing
+     * 
+     * @param lists naturally sorted linked lists
+     * @return the merge of all the passed lists
+     */
+    public ListNode simpleMerge(ListNode[] lists) {
         ListNode result = lists.length > 0 ? lists[0] : null;
         for (int i = 1; i < lists.length; i++) {
             result = merge(result, lists[i]);
