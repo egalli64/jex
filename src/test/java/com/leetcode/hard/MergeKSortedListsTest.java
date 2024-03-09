@@ -14,6 +14,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import com.leetcode.ListNode;
+
 class MergeKSortedListsTest {
     private static final MergeKSortedLists instance = new MergeKSortedLists();
 
