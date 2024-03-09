@@ -9,6 +9,8 @@ package com.leetcode.hard;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.leetcode.ListNode;
+
 /**
  * Given an array of k naturally sorted linked lists, merge them into one and
  * return it
@@ -135,35 +137,5 @@ public class MergeKSortedLists {
             }
         }
         return result.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("[ ");
-        ListNode cur = this;
-        do {
-            sb.append(cur.val);
-            sb.append(' ');
-            cur = cur.next;
-        } while (cur != null);
-        sb.append(']');
-        return sb.toString();
     }
 }

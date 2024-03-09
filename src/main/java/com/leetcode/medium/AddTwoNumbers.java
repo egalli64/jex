@@ -6,6 +6,8 @@
  */
 package com.leetcode.medium;
 
+import com.leetcode.ListNode;
+
 /**
  * Given two non-empty linked lists representing two non-negative integers. The
  * digits are stored in reverse order, and each of their nodes contains a single
@@ -57,27 +59,5 @@ public class AddTwoNumbers {
         }
 
         return dummy.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + val + "]";
     }
 }

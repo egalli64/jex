@@ -6,6 +6,8 @@
  */
 package com.leetcode.easy;
 
+import com.leetcode.ListNode;
+
 /**
  * Constraints:
  * <ul>
@@ -44,35 +46,5 @@ public class MergeTwoSortedLists {
             cur.next = list2;
 
         return dummy.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("[ ");
-        ListNode cur = this;
-        do {
-            sb.append(cur.val);
-            sb.append(' ');
-            cur = cur.next;
-        } while (cur != null);
-        sb.append(']');
-        return sb.toString();
     }
 }
