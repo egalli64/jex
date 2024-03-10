@@ -1,0 +1,21 @@
+/*
+ * 100. Same Tree - https://leetcode.com/problems/same-tree/description/
+ * LeetCode Easy Problems - https://leetcode.com/problemset/?difficulty=EASY
+ * 
+ * My repository with solutions - https://github.com/egalli64/jex/
+ */
+package com.leetcode.easy;
+
+import com.leetcode.TreeNode;
+
+public class SameTree {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            return true;
+        } else if (p == null || q == null || p.val != q.val) {
+            return false;
+        } else {
+            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+        }
+    }
+}
