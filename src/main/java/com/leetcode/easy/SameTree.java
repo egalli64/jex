@@ -8,7 +8,18 @@ package com.leetcode.easy;
 
 import com.leetcode.TreeNode;
 
+/**
+ * Check if two trees are equal, meaning that they have the same structure and
+ * the nodes have the same value
+ */
 public class SameTree {
+    /**
+     * Compare two TreeNode trees for equality
+     * 
+     * @param p a binary tree
+     * @param q another binary tree
+     * @return true if they are considered equal
+     */
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
