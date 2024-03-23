@@ -14,9 +14,50 @@ import com.leetcode.ListNode;
  * The list size is in [1 .. 100_000]
  */
 public class PalindromeLinkedList {
+    /**
+     * Split the list in two parts, first one reversed, then compare them
+     * 
+     * @param head the input list
+     * @return true if palindrome
+     */
+    public boolean isPalindrome(ListNode head) {
+        ListNode left = null;
+        ListNode right = head;
+
+        ListNode tail = head;
+        while (tail != null && tail.next != null) {
+            ListNode cur = right.next;
+            tail = tail.next.next;
+            right.next = left;
+            left = right;
+            right = cur;
+        }
+
+        if (tail != null) {
+            right = right.next;
+        }
+
+        while (left != null && right != null) {
+            if (left.val != right.val) {
+                return false;
+            }
+
+            left = left.next;
+            right = right.next;
+        }
+
+        return true;
+    }
+
     private static final int MAX_SIZE = 100_000;
 
-    public boolean isPalindrome(ListNode head) {
+    /**
+     * Copy the values in an array, check from extremes toward the center
+     * 
+     * @param head the input list
+     * @return true if palindrome
+     */
+    public boolean isPalindromeBuffer(ListNode head) {
         int[] buffer = new int[MAX_SIZE];
 
         int size = 0;
