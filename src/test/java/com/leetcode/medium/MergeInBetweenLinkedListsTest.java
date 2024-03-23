@@ -41,11 +41,6 @@ class MergeInBetweenLinkedListsTest {
     @MethodSource("provider")
     void examples(ListNode left, int a, int b, ListNode right, ListNode expected) {
         ListNode actual = instance.mergeInBetween(left, a, b, right);
-        while (actual != null) {
-            assertThat(actual.val).isEqualTo(expected.val);
-            actual = actual.next;
-            expected = expected.next;
-        }
-        assertThat(expected).isNull();
+        assertThat(actual).isEqualTo(expected);
     }
 }

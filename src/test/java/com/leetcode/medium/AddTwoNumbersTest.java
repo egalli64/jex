@@ -36,11 +36,6 @@ class AddTwoNumbersTest {
     @MethodSource("provider")
     void examples(ListNode left, ListNode right, ListNode expected) {
         ListNode actual = instance.addTwoNumbers(left, right);
-        while (actual != null) {
-            assertThat(actual.val).isEqualTo(expected.val);
-            actual = actual.next;
-            expected = expected.next;
-        }
-        assertThat(expected).isNull();
+        assertThat(actual).isEqualTo(expected);
     }
 }

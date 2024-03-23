@@ -41,12 +41,7 @@ class MergeKSortedListsTest {
     @MethodSource("provider")
     void examples(ListNode[] input, ListNode expected) {
         ListNode actual = instance.mergeKLists(input);
-        while (actual != null) {
-            assertThat(actual.val).isEqualTo(expected.val);
-            actual = actual.next;
-            expected = expected.next;
-        }
-        assertThat(expected).isNull();
+        assertThat(actual).isEqualTo(expected);
     }
 
     @ParameterizedTest
