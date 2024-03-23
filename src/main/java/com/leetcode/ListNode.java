@@ -5,6 +5,8 @@
  */
 package com.leetcode;
 
+import java.util.Objects;
+
 /**
  * A simple linked list used in a few LeetCode problems
  * 
@@ -27,6 +29,19 @@ public class ListNode {
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof ListNode)) {
+            return false;
+        } else {
+            ListNode other = (ListNode) obj;
+            return Objects.equals(next, other.next) && val == other.val;
+        }
     }
 
     /**
