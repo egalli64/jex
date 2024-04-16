@@ -33,7 +33,6 @@ public class TreeNode {
 
     @Override
     public boolean equals(Object obj) {
-        System.out.println(this + " - " + obj);
         if (this == obj) {
             return true;
         }
