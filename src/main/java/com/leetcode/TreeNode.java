@@ -31,6 +31,32 @@ public class TreeNode {
         this.right = right;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        System.out.println(this + " - " + obj);
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof TreeNode)) {
+            return false;
+        } else {
+            TreeNode other = (TreeNode) obj;
+            if (val != other.val) {
+                return false;
+            }
+            if (left == null ^ other.left == null || right == null ^ other.right == null) {
+                return false;
+            }
+            if (left == null && right == null) {
+                return other.left == null && other.right == null;
+            }
+
+            boolean isLeftOK = left == null && other.left == null || left.equals(other.left);
+            boolean isRightOK = right == null && other.right == null || right.equals(other.right);
+            return isLeftOK && isRightOK;
+        }
+    }
+
     /**
      * Added as debug helper
      */
