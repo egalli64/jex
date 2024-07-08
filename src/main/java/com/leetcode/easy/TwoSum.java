@@ -6,6 +6,9 @@
  */
 package com.leetcode.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Given an array of integers and an integer target, return indices of the two
  * _distinct_ elements such that they add up to target
@@ -28,6 +31,28 @@ public class TwoSum {
                 if (nums[i] + nums[j] == target) {
                     return new int[] { i, j };
                 }
+            }
+        }
+
+        return new int[] {};
+    }
+
+    /**
+     * Caching in a map the values
+     * 
+     * @param nums   the array of integers
+     * @param target look for this target
+     * @return indices found, or an empty array
+     */
+    public int[] linear(int[] nums, int target) {
+        Map<Integer, Integer> cache = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            Integer other = target - nums[i];
+            if (cache.containsKey(other)) {
+                return new int[] { i, cache.get(other) };
+            } else {
+                cache.put(nums[i], i);
             }
         }
 
