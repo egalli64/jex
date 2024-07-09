@@ -18,13 +18,22 @@ class ArrayFront9Test {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 2, 9, 3, 4 }, true), //
                 Arguments.of(new int[] { 1, 2, 3, 4, 9 }, false), //
-                Arguments.of(new int[] { 1, 2, 3, 4, 5 }, false) //
+                Arguments.of(new int[] { 1, 2, 3, 4, 5 }, false), //
+                Arguments.of(new int[] {}, false), // empty
+                Arguments.of(new int[] { 9 }, true), // single element positive
+                Arguments.of(new int[] { 42 }, false) // single element negative
         );
     }
 
     @ParameterizedTest
     @MethodSource("provider")
-    public void solutionExamples(int[] input, boolean expected) {
+    public void examples(int[] input, boolean expected) {
         assertThat(ArrayFront9.solution(input)).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    public void examplesStream(int[] input, boolean expected) {
+        assertThat(ArrayFront9.streamedSolution(input)).isEqualTo(expected);
     }
 }
