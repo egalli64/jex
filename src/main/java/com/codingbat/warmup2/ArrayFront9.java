@@ -5,6 +5,8 @@
  */
 package com.codingbat.warmup2;
 
+import java.util.Arrays;
+
 /**
  * arrayFront9 - https://codingbat.com/prob/p186031
  * <p>
@@ -25,5 +27,15 @@ public class ArrayFront9 {
             }
         }
         return false;
+    }
+
+    /**
+     * Stream-based solution
+     * 
+     * @param nums a possibly empty array
+     * @return true if there is a 9 in the first four positions
+     */
+    public static boolean streamedSolution(int[] nums) {
+        return Arrays.stream(nums).limit(4).anyMatch(x -> x == 9);
     }
 }
