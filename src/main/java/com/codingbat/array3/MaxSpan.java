@@ -5,6 +5,10 @@
  */
 package com.codingbat.array3;
 
+import java.util.AbstractMap.SimpleEntry;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * maxSpan - https://codingbat.com/prob/p189576
  * <p>
@@ -52,6 +56,34 @@ public class MaxSpan {
             }
 
             result = Math.max(result, j - i + 1);
+        }
+
+        return result;
+    }
+
+    /**
+     * Push in a map the first/last position for each element in the input array.
+     * Look for the max span in the map.
+     * 
+     * @param nums an array
+     * @return the max span
+     */
+    public static int linear(int[] nums) {
+        Map<Integer, SimpleEntry<Integer, Integer>> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            var span = map.putIfAbsent(nums[i], new SimpleEntry<>(i, i));
+            if (span != null) {
+                span.setValue(i);
+            }
+        }
+
+        int result = 0;
+
+        for (var entry : map.entrySet()) {
+            var span = entry.getValue();
+            int len = span.getValue() - span.getKey() + 1;
+            result = Math.max(len, result);
         }
 
         return result;
