@@ -18,6 +18,8 @@ class DefuseTheBombTest {
 
     static Stream<Arguments> provider() {
         return Stream.of( //
+                Arguments.of(new int[] { 1, 2, 3, 4 }, 2, new int[] { 5, 7, 5, 3 }), //
+                Arguments.of(new int[] { 1, 2, 3, 4 }, -2, new int[] { 7, 5, 3, 5 }), //
                 Arguments.of(new int[] { 5, 7, 1, 4 }, 3, new int[] { 12, 10, 16, 13 }), //
                 Arguments.of(new int[] { 1, 2, 3, 4 }, 0, new int[] { 0, 0, 0, 0 }), //
                 Arguments.of(new int[] { 2, 4, 9, 3 }, -2, new int[] { 12, 5, 6, 13 }) //
@@ -28,6 +30,13 @@ class DefuseTheBombTest {
     @MethodSource("provider")
     void examples(int[] input, int span, int[] expected) {
         var actual = instance.decrypt(input, span);
+        Assertions.assertThat(actual).isEqualTo(expected);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provider")
+    void examplesPartialSum(int[] input, int span, int[] expected) {
+        var actual = instance.decryptPartialSum(input, span);
         Assertions.assertThat(actual).isEqualTo(expected);
     }
 }
