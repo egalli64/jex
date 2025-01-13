@@ -1,3 +1,9 @@
+/*
+ * 2116. Check if a Parentheses String Can Be Valid - https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/
+ * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
+ * 
+ * My repository with solutions - https://github.com/egalli64/jex/
+ */
 package com.leetcode.medium;
 
 import static org.assertj.core.api.Assertions.assertThat;
