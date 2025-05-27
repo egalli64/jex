@@ -8,7 +8,7 @@ package com.leetcode.easy;
 
 /**
  * Given two binary strings a and b, return their sum as a binary string
- * 
+ * <p>
  * Constraints: the strings are non-empty, no leading zero
  */
 public class AddBinary {
@@ -16,7 +16,8 @@ public class AddBinary {
         String longy = a.length() > b.length() ? a : b;
         String shorty = b.length() < a.length() ? b : a;
 
-        StringBuilder result = new StringBuilder(longy.length());
+        // to simplify the algorithm, work from right to left
+        StringBuilder result = new StringBuilder(longy.length() + 1);
         int carry = 0;
         for (int i = 0; i < shorty.length(); i++) {
             int lCur = longy.charAt(longy.length() - i - 1) - '0';
@@ -34,6 +35,8 @@ public class AddBinary {
         if (carry == 1) {
             result.append('1');
         }
+
+        // remember to turn the string around
         return result.reverse().toString();
     }
 }
