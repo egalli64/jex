@@ -20,7 +20,7 @@ import com.leetcode.TreeNode;
 class BinaryTreeInorderTraversalTest {
     private static final BinaryTreeInorderTraversal instance = new BinaryTreeInorderTraversal();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null)), List.of(1, 3, 2)), //
                 Arguments.of(null, List.of()), //

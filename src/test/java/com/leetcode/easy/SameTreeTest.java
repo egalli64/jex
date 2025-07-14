@@ -19,7 +19,7 @@ import com.leetcode.TreeNode;
 class SameTreeTest {
     private static final SameTree instance = new SameTree();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         TreeNode t213 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
         TreeNode t213b = new TreeNode(1, new TreeNode(2), new TreeNode(3));
         TreeNode t21_ = new TreeNode(1, new TreeNode(2), null);

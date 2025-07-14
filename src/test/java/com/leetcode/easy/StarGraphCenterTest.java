@@ -17,7 +17,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class StarGraphCenterTest {
     private static final StarGraphCenter instance = new StarGraphCenter();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[][] { { 1, 2 }, { 2, 3 }, { 4, 2 } }, 2), //
                 Arguments.of(new int[][] { { 1, 2 }, { 5, 1 }, { 1, 3 }, { 1, 4 } }, 1) //

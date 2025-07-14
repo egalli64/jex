@@ -17,7 +17,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class ReverseStringTest {
     private static final ReverseString instance = new ReverseString();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new char[] { 'h', 'e', 'l', 'l', 'o' }, new char[] { 'o', 'l', 'l', 'e', 'h' }), //
                 Arguments.of(new char[] { 'H', 'a', 'n', 'n', 'a', 'h' }, new char[] { 'h', 'a', 'n', 'n', 'a', 'H' }));

@@ -13,7 +13,7 @@ import com.leetcode.ListNode;
 class PalindromeLinkedListTest {
     private static final PalindromeLinkedList instance = new PalindromeLinkedList();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1)))), true), //
                 Arguments.of(new ListNode(1, new ListNode(2, new ListNode(1))), true), //

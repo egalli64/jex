@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class PlusOneTest {
     private static final PlusOne instance = new PlusOne();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 2, 3 }, new int[] { 1, 2, 4 }),
                 Arguments.of(new int[] { 4, 3, 2, 1 }, new int[] { 4, 3, 2, 2 }),

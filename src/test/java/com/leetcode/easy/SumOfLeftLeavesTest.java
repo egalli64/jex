@@ -19,7 +19,7 @@ import com.leetcode.TreeNode;
 class SumOfLeftLeavesTest {
     private static final SumOfLeftLeaves instance = new SumOfLeftLeaves();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(15))),
                         24), //

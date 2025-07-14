@@ -19,7 +19,7 @@ import com.leetcode.ListNode;
 class MergeTwoSortedListsTest {
     private static final MergeTwoSortedLists instance = new MergeTwoSortedLists();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         ListNode left = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode right = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode expected = new ListNode(1,

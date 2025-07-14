@@ -17,7 +17,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class CountPrefixAndSuffixPairsITest {
     private static final CountPrefixAndSuffixPairsI instance = new CountPrefixAndSuffixPairsI();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new String[] { "a", "aba", "ababa", "aa" }, 4), //
                 Arguments.of(new String[] { "pa", "papa", "ma", "mama" }, 2), //

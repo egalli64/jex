@@ -20,7 +20,7 @@ import com.leetcode.Node;
 class NaryTreePostorderTraversalTest {
     private static final NaryTreePostorderTraversal instance = new NaryTreePostorderTraversal();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new Node(1, List.of( //
                         new Node(3, List.of(new Node(5), new Node(6))), new Node(2), new Node(4))), //

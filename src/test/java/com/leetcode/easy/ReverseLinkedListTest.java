@@ -19,7 +19,7 @@ import com.leetcode.ListNode;
 class ReverseLinkedListTest {
     private static final ReverseLinkedList instance = new ReverseLinkedList();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))),
                         new ListNode(5, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(1)))))), //

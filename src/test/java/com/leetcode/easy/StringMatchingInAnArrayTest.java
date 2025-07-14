@@ -18,7 +18,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class StringMatchingInAnArrayTest {
     private static final StringMatchingInAnArray instance = new StringMatchingInAnArray();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new String[] {"mass","as","hero","superhero"}, List.of("as","hero")), //
                 Arguments.of(new String[] {"leetcode","et","code"}, List.of("et","code")), //

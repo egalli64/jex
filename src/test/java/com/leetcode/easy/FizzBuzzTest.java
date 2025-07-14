@@ -17,7 +17,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class FizzBuzzTest {
     private static final FizzBuzz instance = new FizzBuzz();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(3, List.of("1", "2", "Fizz")), //
                 Arguments.of(5, List.of("1", "2", "Fizz", "4", "Buzz")), //
