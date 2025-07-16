@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class SubarrayProductLessThanKTest {
     private static final SubarrayProductLessThanK instance = new SubarrayProductLessThanK();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 10, 5, 2, 6 }, 100, 8), //
                 Arguments.of(new int[] { 1, 2, 3 }, 0, 0) //

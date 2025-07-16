@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class CountDaysWithoutMeetingsTest {
     private static final CountDaysWithoutMeetings instance = new CountDaysWithoutMeetings();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(10, new int[][] { { 5, 7 }, { 1, 3 }, { 9, 10 } }, 2), //
                 Arguments.of(5, new int[][] { { 2, 4 }, { 1, 3 } }, 1), //

@@ -19,7 +19,7 @@ import com.leetcode.ListNode;
 class MergeInBetweenLinkedListsTest {
     private static final MergeInBetweenLinkedLists instance = new MergeInBetweenLinkedLists();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new ListNode(10, new ListNode(1, new ListNode(13, //
                         new ListNode(6, new ListNode(9, new ListNode(5)))))), //

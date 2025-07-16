@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class TaskSchedulerTest {
     private static final TaskScheduler instance = new TaskScheduler();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new char[] { 'A', 'A', 'A', 'B', 'B', 'B' }, 2, 8), //
                 Arguments.of(new char[] { 'A', 'C', 'A', 'B', 'D', 'B' }, 1, 6), //

@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class BinarySubarraysWithSumTest {
     private static final BinarySubarraysWithSum instance = new BinarySubarraysWithSum();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 0, 1, 0, 1 }, 2, 4), //
                 Arguments.of(new int[] { 0, 0, 0, 0, 0 }, 0, 15) //

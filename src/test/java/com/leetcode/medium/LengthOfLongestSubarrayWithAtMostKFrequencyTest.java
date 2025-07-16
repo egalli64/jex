@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class LengthOfLongestSubarrayWithAtMostKFrequencyTest {
     private static final LengthOfLongestSubarrayWithAtMostKFrequency instance = new LengthOfLongestSubarrayWithAtMostKFrequency();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 2, 3, 1, 2, 3, 1, 2 }, 2, 6), //
                 Arguments.of(new int[] { 1, 2, 1, 2, 1, 2, 1, 2 }, 1, 2), //

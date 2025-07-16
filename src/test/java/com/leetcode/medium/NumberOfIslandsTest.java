@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class NumberOfIslandsTest {
     private static final NumberOfIslands instance = new NumberOfIslands();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new char[][] { //
                         { '1', '1', '1', '1', '0' }, { '1', '1', '0', '1', '0' }, //

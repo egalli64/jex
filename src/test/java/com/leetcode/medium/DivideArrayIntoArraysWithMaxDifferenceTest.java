@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class DivideArrayIntoArraysWithMaxDifferenceTest {
     private static final DivideArrayIntoArraysWithMaxDifference instance = new DivideArrayIntoArraysWithMaxDifference();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 3, 4, 8, 7, 9, 3, 5, 1 }, 2,
                         new int[][] { { 1, 1, 3 }, { 3, 4, 5 }, { 7, 8, 9 } }), //

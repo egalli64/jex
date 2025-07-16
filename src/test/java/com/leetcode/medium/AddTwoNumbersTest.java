@@ -19,7 +19,7 @@ import com.leetcode.ListNode;
 class AddTwoNumbersTest {
     private static final AddTwoNumbers instance = new AddTwoNumbers();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new ListNode(2, new ListNode(4, new ListNode(3))),
                         new ListNode(5, new ListNode(6, new ListNode(4))),

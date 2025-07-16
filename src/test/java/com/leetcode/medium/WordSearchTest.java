@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class WordSearchTest {
     private static final WordSearch instance = new WordSearch();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new char[][] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } },
                         "ABCCED", true),

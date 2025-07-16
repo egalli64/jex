@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class NumberOfWaysToSplitArrayTest {
     private static final NumberOfWaysToSplitArray instance = new NumberOfWaysToSplitArray();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 10, 4, -8, 7 }, 2), //
                 Arguments.of(new int[] { 2, 3, 1, 0 }, 2) //

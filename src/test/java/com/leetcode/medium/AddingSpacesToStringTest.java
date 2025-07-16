@@ -17,7 +17,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class AddingSpacesToStringTest {
     private static final AddingSpacesToString instance = new AddingSpacesToString();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of("EnjoyYourCoffee", new int[] { 5, 9 }, "Enjoy Your Coffee"), //
                 Arguments.of("LeetcodeHelpsMeLearn", new int[] { 8, 13, 15 }, "Leetcode Helps Me Learn"), //

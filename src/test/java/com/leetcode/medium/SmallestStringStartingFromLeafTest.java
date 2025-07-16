@@ -19,7 +19,7 @@ import com.leetcode.TreeNode;
 class SmallestStringStartingFromLeafTest {
     private static final SmallestStringStartingFromLeaf instance = new SmallestStringStartingFromLeaf();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new TreeNode(0, new TreeNode(1, new TreeNode(3), new TreeNode(4)),
                         new TreeNode(2, new TreeNode(3), new TreeNode(4))), "dba"), //

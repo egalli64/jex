@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class MaxSumOfPairWithEqualSumOfDigitsTest {
     private static final MaxSumOfPairWithEqualSumOfDigits instance = new MaxSumOfPairWithEqualSumOfDigits();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 18, 43, 36, 13, 7 }, 54), //
                 Arguments.of(new int[] { 10, 12, 19, 14 }, -1), //

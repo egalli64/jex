@@ -19,7 +19,7 @@ import com.leetcode.ListNode;
 class RemoveZeroSumConsecutiveNodesFromLinkedListTest {
     private static final RemoveZeroSumConsecutiveNodesFromLinkedList instance = new RemoveZeroSumConsecutiveNodesFromLinkedList();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new ListNode(1, new ListNode(2, new ListNode(-3, new ListNode(3, new ListNode(1))))),
                         new ListNode(3, new ListNode(1))),

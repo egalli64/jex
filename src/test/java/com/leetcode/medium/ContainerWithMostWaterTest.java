@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class ContainerWithMostWaterTest {
     private static final ContainerWithMostWater instance = new ContainerWithMostWater();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }, 49), //
                 Arguments.of(new int[] { 1, 1 }, 1), //

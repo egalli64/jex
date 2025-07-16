@@ -17,7 +17,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class FindDuplicatesInArrayTest {
     private static final FindDuplicatesInArray instance = new FindDuplicatesInArray();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 }, new Integer[] { 2, 3 }), //
                 Arguments.of(new int[] { 1, 1, 2 }, new Integer[] { 1 }), //

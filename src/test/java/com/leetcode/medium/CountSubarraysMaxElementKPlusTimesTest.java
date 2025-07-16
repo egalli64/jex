@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class CountSubarraysMaxElementKPlusTimesTest {
     private static final CountSubarraysMaxElementKPlusTimes instance = new CountSubarraysMaxElementKPlusTimes();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 1, 3, 2, 3, 3 }, 2, 6), //
                 Arguments.of(new int[] { 1, 4, 2, 1 }, 3, 0) //

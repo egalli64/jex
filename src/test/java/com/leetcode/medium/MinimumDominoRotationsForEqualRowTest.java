@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class MinimumDominoRotationsForEqualRowTest {
     private static final MinimumDominoRotationsForEqualRow instance = new MinimumDominoRotationsForEqualRow();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 2, 1, 2, 4, 2, 2 }, new int[] { 5, 2, 6, 2, 3, 2 }, 2), //
                 Arguments.of(new int[] { 3, 5, 1, 2, 3 }, new int[] { 3, 6, 3, 3, 4 }, -1) //

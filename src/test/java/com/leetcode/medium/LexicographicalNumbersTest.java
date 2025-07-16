@@ -18,7 +18,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class LexicographicalNumbersTest {
     private static final LexicographicalNumbers instance = new LexicographicalNumbers();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(13, List.of(1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9)), //
                 Arguments.of(2, List.of(1, 2)) //

@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class RevealCardsInIncreasingOrderTest {
     private static final RevealCardsInIncreasingOrder instance = new RevealCardsInIncreasingOrder();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 17, 13, 11, 2, 3, 5, 7 }, new int[] { 2, 13, 3, 11, 5, 17, 7 }), //
                 Arguments.of(new int[] { 1, 1000 }, new int[] { 1, 1000 }) //

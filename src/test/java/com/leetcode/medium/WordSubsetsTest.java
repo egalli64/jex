@@ -18,7 +18,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class WordSubsetsTest {
     private static final WordSubsets instance = new WordSubsets();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new String[] { "amazon", "apple", "facebook", "google", "leetcode" }, //
                         new String[] { "lo", "eo" }, List.of("google", "leetcode")), //

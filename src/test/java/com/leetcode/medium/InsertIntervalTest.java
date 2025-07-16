@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class InsertIntervalTest {
     private static final InsertInterval instance = new InsertInterval();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[][] { new int[] { 1, 3 }, new int[] { 6, 9 } }, //
                         new int[] { 2, 5 }, //

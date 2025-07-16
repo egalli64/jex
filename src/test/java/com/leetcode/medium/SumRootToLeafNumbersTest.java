@@ -13,7 +13,7 @@ import com.leetcode.TreeNode;
 class SumRootToLeafNumbersTest {
     private static final SumRootToLeafNumbers instance = new SumRootToLeafNumbers();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new TreeNode(1, new TreeNode(2), new TreeNode(3)), 25), //
                 Arguments.of(new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0)), 1026), //

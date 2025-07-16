@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class PartitionArrayAccordingGivenPivotTest {
     private static final PartitionArrayAccordingGivenPivot instance = new PartitionArrayAccordingGivenPivot();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 9, 12, 5, 10, 14, 3, 10 }, 10, new int[] { 9, 5, 3, 10, 10, 12, 14 }), //
                 Arguments.of(new int[] { -3, 4, 3, 2 }, 2, new int[] { -3, 2, 4, 3 }) //

@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class SetMatrixZeroesTest {
     private static final SetMatrixZeroes instance = new SetMatrixZeroes();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[][] { { 1, 1, 1 }, { 1, 0, 1 }, { 1, 1, 1 } },
                         new int[][] { { 1, 0, 1 }, { 0, 0, 0 }, { 1, 0, 1 } }), //

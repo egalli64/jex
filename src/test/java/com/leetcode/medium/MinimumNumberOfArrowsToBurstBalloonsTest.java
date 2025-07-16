@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class MinimumNumberOfArrowsToBurstBalloonsTest {
     private static final MinimumNumberOfArrowsToBurstBalloons instance = new MinimumNumberOfArrowsToBurstBalloons();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[][] { new int[] { 10, 16 }, new int[] { 2, 8 }, new int[] { 1, 6 },
                         new int[] { 7, 12 } }, 2), //

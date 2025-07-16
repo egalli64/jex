@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class LargestCombinationWithBitwiseAndGreaterThanZeroTest {
     private static final LargestCombinationWithBitwiseAndGreaterThanZero instance = new LargestCombinationWithBitwiseAndGreaterThanZero();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new int[] { 8388608 }, 1), //
                 Arguments.of(new int[] { 16, 17, 71, 62, 12, 24, 14 }, 4), //

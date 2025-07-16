@@ -20,7 +20,7 @@ import com.leetcode.TreeNode;
 class FindLargestValueInEachTreeRowTest {
     private static final FindLargestValueInEachTreeRow instance = new FindLargestValueInEachTreeRow();
 
-    private static final Stream<Arguments> provider() {
+    private static Stream<Arguments> provider() {
         return Stream.of( //
                 Arguments.of(new TreeNode(1, new TreeNode(3, new TreeNode(5), new TreeNode(3)),
                         new TreeNode(2, null, new TreeNode(9))), List.of(1, 3, 9)),
