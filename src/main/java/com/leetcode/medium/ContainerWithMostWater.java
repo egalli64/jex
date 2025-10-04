@@ -1,23 +1,23 @@
 /*
  * 11. Container With Most Water - https://leetcode.com/problems/container-with-most-water/description/
  * LeetCode Medium Problems - https://leetcode.com/problemset/?difficulty=MEDIUM
- * 
+ *
  * My repository with solutions - https://github.com/egalli64/jex/
  */
 package com.leetcode.medium;
 
 /**
- * Given the length of n vertical lines starting on the y axis at x as the
- * index, find two lines that together with the x-axis form a container, such
- * that the container contains the most water
- * 
+ * Given the length of n vertical lines starting on the y-axis at x as index,
+ * find two lines that together with the x-axis form a container,
+ * such that the container contains the most water
+ * <p>
  * Return the maximum amount of water a container can store
  */
 public class ContainerWithMostWater {
     /**
      * Max water in container
-     * 
-     * @param height at least 2 elements in it
+     *
+     * @param height there are at least 2 elements in it
      * @return the maximum amount of water a container can store
      */
     public int maxArea(int[] height) {
