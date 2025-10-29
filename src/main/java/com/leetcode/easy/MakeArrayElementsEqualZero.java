@@ -12,6 +12,16 @@ import java.util.stream.IntStream;
  * Ew!
  */
 public class MakeArrayElementsEqualZero {
+    /**
+     * Smoke Test
+     */
+    static void main() {
+        MakeArrayElementsEqualZero x = new MakeArrayElementsEqualZero();
+
+        System.out.println(x.countValidSelections(new int[]{1, 0, 2, 0, 3}) == 2);
+        System.out.println(x.countValidSelections(new int[]{2, 3, 4, 0, 4, 1, 0}) == 0);
+    }
+
     public int countValidSelections(int[] nums) {
         int result = 0;
         int total = IntStream.of(nums).sum();
@@ -32,13 +42,5 @@ public class MakeArrayElementsEqualZero {
 
         return result;
     }
-}
 
-class SmokeTest {
-    static void main() {
-        MakeArrayElementsEqualZero problem = new MakeArrayElementsEqualZero();
-
-        System.out.println(problem.countValidSelections(new int[]{1, 0, 2, 0, 3}) == 2);
-        System.out.println(problem.countValidSelections(new int[]{2, 3, 4, 0, 4, 1, 0}) == 0);
-    }
 }
