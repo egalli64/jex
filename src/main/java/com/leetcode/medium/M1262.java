@@ -1,7 +1,7 @@
 /*
  * 1262. Greatest Sum Divisible by Three
- * https://leetcode.com/problems/adding-spaces-to-a-string/description/
- * LeetCode Medium Problems - greatest-sum-divisible-by-three
+ * https://leetcode.com/problems/greatest-sum-divisible-by-three/description/
+ * LeetCode Medium Problems
  *
  * My repository with solutions - https://github.com/egalli64/jex/
  */
