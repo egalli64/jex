@@ -7,7 +7,7 @@ package com.leetcode;
 
 /**
  * A simple binary tree used in a few LeetCode problems
- * 
+ * <p>
  * The data member are public (yuck!), as the constructors, to be compatible
  * with the original class - they are package-private in LeetCode implementation
  * - since my version is in another package - required by my package structure,
@@ -36,10 +36,9 @@ public class TreeNode {
         if (this == obj) {
             return true;
         }
-        if (obj == null || !(obj instanceof TreeNode)) {
+        if (!(obj instanceof TreeNode other)) {
             return false;
         } else {
-            TreeNode other = (TreeNode) obj;
             if (val != other.val) {
                 return false;
             }
@@ -47,11 +46,11 @@ public class TreeNode {
                 return false;
             }
             if (left == null && right == null) {
-                return other.left == null && other.right == null;
+                return true;
             }
 
-            boolean isLeftOK = left == null && other.left == null || left.equals(other.left);
-            boolean isRightOK = right == null && other.right == null || right.equals(other.right);
+            boolean isLeftOK = left == null || left.equals(other.left);
+            boolean isRightOK = right == null || right.equals(other.right);
             return isLeftOK && isRightOK;
         }
     }
@@ -63,13 +62,13 @@ public class TreeNode {
     public String toString() {
         StringBuilder result = new StringBuilder();
         if (left != null) {
-            result.append(left + " ");
+            result.append(left).append(" ");
         }
 
         result.append(val);
 
         if (right != null) {
-            result.append(" " + right);
+            result.append(" ").append(right);
         }
 
         return result.toString();
